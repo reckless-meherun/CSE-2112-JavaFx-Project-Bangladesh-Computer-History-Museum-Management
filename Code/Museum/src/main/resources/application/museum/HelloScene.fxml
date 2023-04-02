@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="791.0" style="-fx-background-color: GRAY;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.HelloController">
+   <children>
+      <ImageView fx:id="logo" fitHeight="176.0" fitWidth="452.0" layoutX="331.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../SmallLogo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="header" alignment="CENTER" layoutX="342.0" layoutY="128.0" prefHeight="50.0" prefWidth="222.0" text=" Bangladesh " textFill="#ffb700">
+         <font>
+            <Font name="Colonna MT" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="subheader" alignment="CENTER" layoutX="342.0" layoutY="278.0" prefHeight="30.0" prefWidth="254.0" text="Preserve ~ Make ~ Inspire" textFill="#5e0000">
+         <font>
+            <Font name="Colonna MT" size="20.0" />
+         </font></Label>
+      <Label fx:id="header1" alignment="CENTER" layoutX="339.0" layoutY="178.0" prefHeight="50.0" prefWidth="345.0" text="Computer History " textFill="#ffb700">
+         <font>
+            <Font name="Colonna MT" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="header11" alignment="CENTER" layoutX="339.0" layoutY="228.0" prefHeight="50.0" prefWidth="177.0" text="Museum" textFill="#ffb700">
+         <font>
+            <Font name="Colonna MT" size="40.0" />
+         </font>
+      </Label>
+      <Button fx:id="GetStartedButton" layoutX="326.0" layoutY="342.0" mnemonicParsing="false" onAction="#switchToLoginScene" prefHeight="38.0" prefWidth="202.0" text="Get Started!">
+         <font>
+            <Font name="Colonna MT" size="20.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="185.0" fitWidth="178.0" layoutX="147.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Assets/SmallLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
