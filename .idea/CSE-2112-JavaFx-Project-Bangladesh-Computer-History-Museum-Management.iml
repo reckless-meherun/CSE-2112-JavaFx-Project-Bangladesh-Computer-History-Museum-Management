@@ -22,15 +22,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management-master/Code/Museum/lib/mysql-connector-j-8.0.32.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/Code/Museum/lib/sqlite-jdbc-3.7.2.jar!/" />
         </CLASSES>
         <JAVADOC />
