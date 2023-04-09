@@ -25,7 +25,7 @@ public class HelloController
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginScene.fxml"));
         root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root,1004,680);
         stage.setScene(scene);
         stage.show();
     }
