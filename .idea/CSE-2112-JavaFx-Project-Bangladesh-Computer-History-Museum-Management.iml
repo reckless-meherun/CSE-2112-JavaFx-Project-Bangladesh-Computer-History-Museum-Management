@@ -5,5 +5,28 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.1" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.9.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.9.1" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-engine:1.9.1" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:20-ea+4" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:20-ea+4" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:20-ea+4" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:20-ea+4" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:20-ea+4" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:win:20-ea+4" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:20-ea+4" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:20-ea+4" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management-master/Code/Museum/lib/mysql-connector-j-8.0.32.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

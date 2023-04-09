@@ -6,42 +6,63 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="791.0" style="-fx-background-color: GRAY;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1004.0" style="-fx-background-color: LGHT BLUE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.HelloController">
    <children>
+      <ImageView fitHeight="738.0" fitWidth="1116.0" layoutX="-105.0" layoutY="-58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Assets/images.jpg" />
+         </image>
+      </ImageView>
       <ImageView fx:id="logo" fitHeight="176.0" fitWidth="452.0" layoutX="331.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../SmallLogo.png" />
          </image>
       </ImageView>
-      <Label fx:id="header" alignment="CENTER" layoutX="342.0" layoutY="128.0" prefHeight="50.0" prefWidth="222.0" text=" Bangladesh " textFill="#ffb700">
+      <Label fx:id="subheader" alignment="CENTER" layoutX="58.0" layoutY="370.0" prefHeight="38.0" prefWidth="358.0" text="Preserve ~ Make ~ Inspire" textFill="#5e0000">
          <font>
-            <Font name="Colonna MT" size="40.0" />
-         </font>
-      </Label>
-      <Label fx:id="subheader" alignment="CENTER" layoutX="342.0" layoutY="278.0" prefHeight="30.0" prefWidth="254.0" text="Preserve ~ Make ~ Inspire" textFill="#5e0000">
-         <font>
-            <Font name="Colonna MT" size="20.0" />
+            <Font name="Colonna MT" size="30.0" />
          </font></Label>
-      <Label fx:id="header1" alignment="CENTER" layoutX="339.0" layoutY="178.0" prefHeight="50.0" prefWidth="345.0" text="Computer History " textFill="#ffb700">
+      <Label fx:id="header1" alignment="CENTER" layoutX="110.0" layoutY="216.0" prefHeight="62.0" prefWidth="254.0" text="Bangladesh">
          <font>
-            <Font name="Colonna MT" size="40.0" />
+            <Font name="Colonna MT" size="50.0" />
          </font>
       </Label>
-      <Label fx:id="header11" alignment="CENTER" layoutX="339.0" layoutY="228.0" prefHeight="50.0" prefWidth="177.0" text="Museum" textFill="#ffb700">
+      <Label fx:id="header11" alignment="CENTER" layoutX="43.0" layoutY="266.0" prefHeight="60.0" prefWidth="377.0" text="Computer History">
          <font>
-            <Font name="Colonna MT" size="40.0" />
+            <Font name="Colonna MT" size="49.0" />
          </font>
       </Label>
-      <Button fx:id="GetStartedButton" layoutX="326.0" layoutY="342.0" mnemonicParsing="false" onAction="#switchToLoginScene" prefHeight="38.0" prefWidth="202.0" text="Get Started!">
+      <Button fx:id="GetStartedButton" layoutX="108.0" layoutY="441.0" mnemonicParsing="false" onAction="#switchToLoginScene" prefHeight="60.0" prefWidth="248.0" style="-fx-cursor: hand;" styleClass="WelcomeButton" stylesheets="@WelcomeScreen.css" text="Get Started!">
          <font>
             <Font name="Colonna MT" size="20.0" />
          </font>
       </Button>
-      <ImageView fitHeight="185.0" fitWidth="178.0" layoutX="147.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="50.0" fitWidth="58.0" layoutX="33.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Assets/SmallLogo.png" />
          </image>
       </ImageView>
+      <Text layoutX="91.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bangladesh Computer History Museum" wrappingWidth="282.95782470703125">
+         <font>
+            <Font name="Bodoni MT Condensed" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="92.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mangement System">
+         <font>
+            <Font name="Bodoni MT Condensed" size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="493.0" fitWidth="563.0" layoutX="427.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Assets/19f433132586635.Y3JvcCwxNDg2LDExNjIsMCwyMg-removebg-preview%20(1).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="header111" alignment="CENTER" layoutX="133.0" layoutY="310.0" prefHeight="60.0" prefWidth="181.0" text="Museum">
+         <font>
+            <Font name="Colonna MT" size="49.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
