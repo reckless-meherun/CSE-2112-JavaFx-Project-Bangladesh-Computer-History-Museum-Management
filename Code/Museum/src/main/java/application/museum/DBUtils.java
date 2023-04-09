@@ -43,7 +43,8 @@ public class DBUtils {
         PreparedStatement preparedStatement=null;
         ResultSet resultSet=null;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/userpassword", "root","OOPsprojectv1#");
+            Class.forName("org.sqlite.JDBC");
+            connection = DriverManager.getConnection("jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\userpassword.db");
             preparedStatement =connection.prepareStatement("SELECT password FROM users WHERE username = ?");
             preparedStatement.setString(1,username);
             resultSet = preparedStatement.executeQuery();
@@ -73,7 +74,7 @@ public class DBUtils {
                 }
             }
         }
-        catch (SQLException e){
+        catch (Exception e){
             e.printStackTrace();
         }
         finally {
