@@ -1,0 +1,78 @@
+.ClassroomScreen,.Scrollpane{
+    -fx-background-color: #F3F3FF;
+}
+.ClassroomScreen,.ClassroomScreenItemTitle,.ClassroomScreenEnrolledButton{
+    -fx-font-family:'Cambria';
+}
+.ClassroomScreenItem{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius:12px;
+}
+.ClassroomScreenItemTitle{
+    -fx-font-size:18px;
+    -fx-line-spacing:-5px;
+    -fx-font-weight:800;
+    -fx-fill:#FFFFFF;
+}
+.ClassroomScreenItemCourseCode,.ClassroomScreenItemCourseTeacher{
+     -fx-font-size:14px;
+     -fx-line-spacing:-5px;
+     -fx-font-weight:800;
+     -fx-fill:#9795B8;
+}
+.ClassroomScreenItemCourseCode{
+     -fx-fill:#050505;
+}
+.ClassroomButtonText{
+     -fx-font-family:'Cambria';
+     -fx-font-size:14px;
+      -fx-line-spacing:-5px;
+      -fx-font-weight:400;
+      -fx-fill:#FFFFFF;
+}
+.ClassroomScreenTeacherImageBackground{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius:0px 12px  0px 12px;
+}
+.ClassroomScreenEnrolledButton,.ClassroomScreenEnrolledButtonSecondary{
+    -fx-background-color:#05B958;
+    -fx-background-radius:76px;
+    -fx-cursor:hand;
+}
+.ClassroomScreenEnrolledButtonSecondary{
+    -fx-background-color:#E02A2A;
+}
+.scroll-pane > .corner {
+    -fx-background-color: #F3F3FF;
+}
+.scroll-pane {
+    -fx-background-color: #F3F3FF;
+    -fx-padding-right: 20px;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #50238A;
+     -fx-background-width: 5em;
+    -fx-background-radius: 5em;
+}
+.classroomCover{
+    -fx-background-color: #5D3B8A;
+    -fx-background-radius:12px 12px 0px 0px;
+}

@@ -1,0 +1,31 @@
+.courseChoice, .lectureChoice{
+  -fx-background-color: white!important;
+  -fx-color: white;
+  -fx-padding: 16px;
+  -fx-font-size: 16px;
+  -fx-border: none;
+  -fx-cursor: pointer;
+
+}
+
+.setAttendancebutton{
+    -fx-font-color: white;
+    -fx-background-color:#05B958;
+    -fx-background-radius:76px;
+         -fx-font-family:'Cambria';
+         -fx-font-size:14px;
+          -fx-line-spacing:-5px;
+          -fx-font-weight:400;
+
+}
+
+.setAbsentbutton{
+-fx-background-color:#E02A2A;
+-fx-background-radius:76px;
+
+}
+
+.CourseChoiceBoxContent{
+fx-color: white;
+fx-font-color: white;
+}

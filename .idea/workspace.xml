@@ -4,11 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="" />
+    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/AttendanceGraphScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/AttendanceScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/BookletScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/CGPACalculator.Css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/ClassroomScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/DashboardScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/LoginScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/OnboardingScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/SetAttendanceScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/SignupScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/WelcomeScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/LoginSceneController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/HelloScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/HelloScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/LoginScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/LoginScene.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OCmKgwVlEGMTkKqQPofBexNfI9" />
   <component name="ProjectViewState">
@@ -19,12 +47,17 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/meher/Downloads/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management-master/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management-master/Code/Museum/lib/sqlite-jdbc-3.7.2.jar",
+    "last_opened_file_path": "C:/University Stuff/2-1/OOP Project/Museum/Code/Museum/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.14369158",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\University Stuff\2-1\OOP Project\Museum\Code\Museum\src\main\resources" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

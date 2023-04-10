@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" stylesheets="@../CSS/CGPACalculator.Css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CGPACalculatorScreenController">
+   <left>
+      <AnchorPane prefHeight="645.0" prefWidth="163.0" styleClass="DashboardScreenMenu" stylesheets="@../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="11.0" layoutY="475.0" prefHeight="50.0" prefWidth="146.0" styleClass="DashboardScreenMenuItemActive" stylesheets="@../CSS/DashboardScreen.css" />
+            <ImageView fx:id="LogoutImage" fitHeight="27.0" fitWidth="23.0" layoutX="24.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/Logout.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cgpaCalculatorIcon" fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationSecondary/CGPAActive.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/Booklet.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/Attendance.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/Classroom.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="classroom" layoutX="65.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Classrooms" />
+            <Text fx:id="attendance" layoutX="65.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Attendance" />
+            <Text fx:id="booklet" layoutX="65.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Booklet" />
+            <Text fx:id="cgpa" layoutX="65.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemTextActive" text="CGPA" />
+            <Text fx:id="logout" layoutX="65.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Logout" />
+            <ImageView fitHeight="61.0" fitWidth="106.0" layoutX="26.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/CSEDUPORTALPRIMARY.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="DashboardScreenMenu">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/Home.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="home" layoutX="65.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Home" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="627.0" prefWidth="937.0" styleClass="cgpascreen" stylesheets="@../CSS/CGPACalculator.Css" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="333.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenHeader" text="CALCULATE CGPA" />
+            <Text fx:id="semesterCode" layoutX="205.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="YEAR II SEMESTER I" />
+            <AnchorPane layoutX="838.0" layoutY="20.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground" stylesheets="@../CSS/DashboardScreen.css">
+               <children>
+                  <Text fx:id="ProfileIcon" layoutX="19.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="S" />
+               </children>
+            </AnchorPane>
+            <Text fx:id="studentName" layoutX="822.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenStudentName" text="Shahriar Rumel" />
+            <AnchorPane layoutX="27.0" layoutY="177.0" prefHeight="398.0" prefWidth="534.0" styleClass="CGPACalculatorTable" stylesheets="@../CSS/CGPACalculator.Css">
+               <children>
+                  <AnchorPane layoutY="257.0" prefHeight="52.0" prefWidth="533.0" styleClass="CGPACalculatorItembg" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <TextField fx:id="Textfield5" alignment="CENTER" layoutX="356.0" layoutY="6.0" prefHeight="38.0" prefWidth="160.0" promptText="Enter Grade" styleClass="markInputField" stylesheets="@../CSS/CGPACalculator.Css" />
+                        <Text fx:id="coursecredit5" layoutX="239.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="1.5" />
+                        <Text fx:id="coursecode5" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="CSE - 2101" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="205.0" prefHeight="52.0" prefWidth="529.0" styleClass="CGPACalculatorItembgWhite" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="coursecredit4" layoutX="239.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="1.5" />
+                        <Text fx:id="coursecode4" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="CSE - 2101" />
+                        <TextField fx:id="Textfield4" alignment="CENTER" layoutX="356.0" layoutY="6.0" prefHeight="38.0" prefWidth="160.0" promptText="Enter Grade" styleClass="markInputField" stylesheets="@../CSS/CGPACalculator.Css" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="153.0" prefHeight="52.0" prefWidth="533.0" styleClass="CGPACalculatorItembg" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="coursecredit3" layoutX="239.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="1.5" />
+                        <Text fx:id="coursecode3" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="CSE - 2101" />
+                        <TextField fx:id="Textfield3" alignment="CENTER" layoutX="356.0" layoutY="6.0" prefHeight="38.0" prefWidth="160.0" promptText="Enter Grade" styleClass="markInputField" stylesheets="@../CSS/CGPACalculator.Css" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="2.0" layoutY="101.0" prefHeight="52.0" prefWidth="529.0" styleClass="CGPACalculatorItembgWhite" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="coursecredit2" layoutX="239.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="1.5" />
+                        <Text fx:id="coursecode2" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="CSE - 2101" />
+                        <TextField fx:id="Textfield2" alignment="CENTER" layoutX="356.0" layoutY="9.0" prefHeight="38.0" prefWidth="160.0" promptText="Enter Grade" styleClass="markInputField" stylesheets="@../CSS/CGPACalculator.Css" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="54.0" prefHeight="52.0" prefWidth="534.0" styleClass="CGPACalculatorItembg" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="coursecredit1" layoutX="239.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="1.5" />
+                        <Text fx:id="coursecode1" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="CSE - 2101" />
+                        <TextField fx:id="Textfield1" alignment="CENTER" layoutX="356.0" layoutY="6.0" prefHeight="38.0" prefWidth="160.0" promptText="Enter Grade" styleClass="markInputField" stylesheets="@../CSS/CGPACalculator.Css" />
+                     </children>
+                  </AnchorPane>
+                  <Text layoutX="204.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="Course Credit" />
+                  <Text layoutX="417.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="Grade" />
+                  <Text layoutX="37.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="Course Name" />
+                  <Button layoutX="111.0" layoutY="330.0" mnemonicParsing="false" onAction="#CalculateCgpa" prefHeight="41.0" prefWidth="312.0" style="-fx-font-weight: 700;" styleClass="CGPAScreenCalculatorTItleBox" stylesheets="@../CSS/CGPACalculator.Css" text="Calculate CGPA" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="575.0" layoutY="177.0" prefHeight="364.0" prefWidth="339.0" styleClass="CGPACalculatorTable" stylesheets="@../CSS/CGPACalculator.Css">
+               <children>
+                  <AnchorPane layoutY="26.0" prefHeight="52.0" prefWidth="339.0" styleClass="CGPACalculatorItembg" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="coursecode53" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="CGPA" />
+                        <Label fx:id="cgpacalculated" layoutX="284.0" layoutY="17.0" styleClass="CGPAScreenCalculatorCourseCode" stylesheets="@../CSS/CGPACalculator.Css" text="0.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Circle fill="DODGERBLUE" layoutX="170.0" layoutY="190.0" radius="90.0" stroke="BLACK" strokeType="INSIDE" styleClass="CGPACIRCLE" />
+                  <Button layoutX="14.0" layoutY="316.0" mnemonicParsing="false" onAction="#Reset" prefHeight="34.0" prefWidth="101.0" style="-fx-font-weight: 700;" styleClass="resetButton" text="Clear" textFill="WHITE" />
+                  <Text layoutX="119.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode2" text="On Scale of 4.00" />
+                  <Text fx:id="cgpacalculated2" layoutX="126.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAResult" text="0.00" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

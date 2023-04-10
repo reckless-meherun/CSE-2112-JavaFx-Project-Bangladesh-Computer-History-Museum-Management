@@ -1,0 +1,29 @@
+.OnboardingScreen{
+    -fx-background-color: #F3F3FF;
+}
+.OnboardingScreenHeader{
+     -fx-font-size:35px;
+     -fx-line-spacing:-5px;
+     -fx-font-family:'Cambria';
+     -fx-font-weight:900;
+     -fx-fill:#50238A;
+}
+.OnboardingScreenSubheader{
+     -fx-font-size:18px;
+     -fx-line-spacing:-5px;
+     -fx-font-family:'Cambria';
+     -fx-font-weight:500;
+     -fx-fill:#6A6A6A;
+}
+.OnboardingScreenButtonPrimary,.OnboardingScreenButtonSecondary{
+       -fx-font-size:16px;
+       -fx-font-family:'Cambria';
+       -fx-background-color:#50238A;
+       -fx-background-radius:30px;
+       -fx-text-fill:#ffffff;
+       -fx-font-weight:900;
+}
+.OnboardingScreenButtonSecondary{
+        -fx-background-color:#F3F3FF;
+        -fx-text-fill:#6A6A6A;
+}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AttendanceScreenController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../CSS/CGPACalculator.Css" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="332.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ATTENDANCE SUMMARY" />
+            <Text fx:id="studentName" layoutX="822.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" text="Shahriar Rumel" />
+            <AnchorPane layoutX="838.0" layoutY="20.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground" stylesheets="@../CSS/DashboardScreen.css">
+               <children>
+                  <Text fx:id="ProfileIcon" layoutX="19.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="S" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="29.0" layoutY="185.0" prefHeight="326.0" prefWidth="879.0" styleClass="CGPACalculatorTable" stylesheets="@../CSS/CGPACalculator.Css">
+               <children>
+                  <AnchorPane layoutY="257.0" prefHeight="52.0" prefWidth="872.0" styleClass="CGPACalculatorItembg" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="attendancepercentageforcourse5" layoutX="388.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="87%" />
+                        <Text fx:id="coursename5" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="CSE - 2101" />
+                        <Button fx:id="button5" layoutX="760.0" layoutY="9.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" style="-fx-font-weight: 700;" styleClass="CGPAScreenCalculatorTItleBox" stylesheets="@../CSS/CGPACalculator.Css" text="Details" textFill="WHITE" />
+                        <Text fx:id="status5" layoutX="568.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="Above Average" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="205.0" prefHeight="52.0" prefWidth="878.0" styleClass="CGPACalculatorItembgWhite" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="attendancepercentageforcourse4" layoutX="388.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="87%" />
+                        <Text fx:id="coursename4" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="CSE - 2101" />
+                        <Button fx:id="button4" layoutX="760.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" style="-fx-font-weight: 700;" styleClass="CGPAScreenCalculatorTItleBox" stylesheets="@../CSS/CGPACalculator.Css" text="Details" textFill="WHITE" />
+                        <Text fx:id="status4" layoutX="568.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="Above Average" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="153.0" prefHeight="52.0" prefWidth="879.0" styleClass="CGPACalculatorItembg" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="attendancepercentageforcourse3" layoutX="388.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="87%" />
+                        <Text fx:id="coursename3" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="CSE - 2101" />
+                        <Button fx:id="button3" layoutX="760.0" layoutY="9.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" style="-fx-font-weight: 700;" styleClass="CGPAScreenCalculatorTItleBox" stylesheets="@../CSS/CGPACalculator.Css" text="Details" textFill="WHITE" />
+                        <Text fx:id="status3" layoutX="568.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="Above Average" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="2.0" layoutY="101.0" prefHeight="52.0" prefWidth="877.0" styleClass="CGPACalculatorItembgWhite" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="attendancepercentageforcourse2" layoutX="388.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="87%" />
+                        <Text fx:id="coursename2" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="CSE - 2101" />
+                        <Button fx:id="button2" layoutX="760.0" layoutY="12.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" style="-fx-font-weight: 700;" styleClass="CGPAScreenCalculatorTItleBox" stylesheets="@../CSS/CGPACalculator.Css" text="Details" textFill="WHITE" />
+                        <Text fx:id="status2" layoutX="568.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="Above Average" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="54.0" prefHeight="52.0" prefWidth="878.0" styleClass="CGPACalculatorItembg" stylesheets="@../CSS/CGPACalculator.Css">
+                     <children>
+                        <Text fx:id="attendancepercentageforcourse1" layoutX="388.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="87%" />
+                        <Text fx:id="coursename1" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="Object Oriented Programming" />
+                        <Button fx:id="button1" layoutX="760.0" layoutY="9.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" style="-fx-font-weight: 700;" styleClass="CGPAScreenCalculatorTItleBox" stylesheets="@../CSS/CGPACalculator.Css" text="Details" textFill="WHITE" />
+                        <Text fx:id="status1" layoutX="568.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorCourseCode" text="Above Average" />
+                     </children>
+                  </AnchorPane>
+                  <Text layoutX="367.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="Attendance" />
+                  <Text layoutX="596.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="Status" />
+                  <Text layoutX="44.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="Course Name" />
+                  <Text layoutX="788.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="More" />
+               </children>
+            </AnchorPane>
+            <Text fx:id="semesterCode" layoutX="405.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAScreenCalculatorTitle" text="YEAR II SEMESTER I" />
+            <Button fx:id="setAttendancebutton" layoutX="372.0" layoutY="580.0" mnemonicParsing="false" styleClass="AttendanceStatusButtonSecondary" stylesheets="@../CSS/AttendanceScreen.css" text="Set Attendance" />
+         </children>
+      </AnchorPane>
+   </center>
+   <stylesheets>
+      <URL value="@../CSS/DashboardScreen.css" />
+      <URL value="@../CSS/AttendanceScreen.css" />
+   </stylesheets>
+   <left>
+      <AnchorPane prefHeight="660.0" prefWidth="163.0" styleClass="DashboardScreenMenu" stylesheets="@../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="11.0" layoutY="321.0" prefHeight="50.0" prefWidth="146.0" styleClass="DashboardScreenMenuItemActive" stylesheets="@../CSS/DashboardScreen.css" />
+            <ImageView fx:id="LogoutImage" fitHeight="27.0" fitWidth="23.0" layoutX="24.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/Logout.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cgpaCalculatorIcon" fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/CGPA.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/Booklet.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationSecondary/AttendanceActive.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/Classroom.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="classroom" layoutX="65.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Classrooms" />
+            <Text fx:id="attendance" layoutX="65.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemTextActive" text="Attendance" />
+            <Text fx:id="booklet" layoutX="65.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Booklet" />
+            <Text fx:id="cgpa" layoutX="65.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="CGPA" />
+            <Text fx:id="logout" layoutX="65.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Logout" />
+            <ImageView fitHeight="61.0" fitWidth="106.0" layoutX="26.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/CSEDUPORTALPRIMARY.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="DashboardScreenMenu">
+               <image>
+                  <Image url="@../assets/NavigationPrimary/Home.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="home" layoutX="65.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Home" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

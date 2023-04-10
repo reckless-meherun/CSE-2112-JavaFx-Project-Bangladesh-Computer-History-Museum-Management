@@ -1,0 +1,37 @@
+
+.AttendanceScreenItem,.AttendanceScreenItemAbove{
+    -fx-background-radius:20px;
+}
+.AttendanceScreenItemAbove{
+    -fx-background-color:#05B958;
+}
+.AttendanceScreenItem{
+    -fx-background-color:#B90505;
+}
+.AttendanceScreenPercentage{
+    -fx-font-size:76px;
+    -fx-font-weight:800;
+    -fx-fill:#ffffff;
+
+}
+.AttendanceScreenPercentage,.AttendanceStatusButton,.AttendanceStatusButtonSecondary,.AttendanceScreenSemester
+{
+     -fx-font-family:'Cambria';
+}
+.AttendanceStatusButton,.AttendanceStatusButtonSecondary{
+    -fx-background-color:#2AE052;
+    -fx-background-radius:76px;
+    -fx-font-size:14px;
+    -fx-text-fill:#ffffff;
+    -fx-font-weight:800;
+    -fx-cursor:hand;
+}
+.AttendanceScreenSemester{
+     -fx-font-size:14px;
+    -fx-text-fill:#060606;
+    -fx-font-weight:800;
+}
+.AttendanceStatusButtonSecondary{
+    -fx-background-color:#E02A2A;
+
+}

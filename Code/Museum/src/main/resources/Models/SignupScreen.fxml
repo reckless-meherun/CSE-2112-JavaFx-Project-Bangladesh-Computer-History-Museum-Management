@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" styleClass="signUpScreen" stylesheets="@../CSS/SignupScreen.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SignupScreenController">
+   <right>
+      <AnchorPane prefHeight="680.0" prefWidth="463.0" styleClass="signUpScreenRight" stylesheets="@../CSS/SignupScreen.css" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="73.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="signUpScreenRightText" text="SIGN UP &amp; TRACK ALL YOUR CLASSES" textAlignment="CENTER" wrappingWidth="368.68212890625" />
+            <ImageView fitHeight="333.0" fitWidth="354.0" layoutX="55.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" styleClass="signUpScreenImage">
+               <image>
+                  <Image url="@../assets/SignUpScreen.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="680.0" prefWidth="637.0" styleClass="signUpScreen" stylesheets="@../CSS/LoginScreen.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="140.0" layoutX="32.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/CSEDUPORTALPRIMARY.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="116.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="signUpScreenLeftSignUp" text="LET'S GET YOU STARTED !" textAlignment="CENTER" wrappingWidth="320.0859375" />
+            <TextField fx:id="studentName" layoutX="67.0" layoutY="255.0" prefHeight="41.0" prefWidth="473.0" promptText="Name" styleClass="signUpScreenLeftInput" stylesheets="@../CSS/SignupScreen.css">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="studentEmail" layoutX="69.0" layoutY="302.0" prefHeight="41.0" prefWidth="468.0" promptText="Email" styleClass="signUpScreenLeftInput" stylesheets="@../CSS/SignupScreen.css">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="studentRoll" layoutX="68.0" layoutY="445.0" prefHeight="41.0" prefWidth="208.0" promptText="Roll" styleClass="signUpScreenLeftInput" stylesheets="@../CSS/SignupScreen.css">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="studentPassword" layoutX="67.0" layoutY="350.0" prefHeight="41.0" prefWidth="471.0" promptText="Password" styleClass="signUpScreenLeftInput" stylesheets="@../CSS/SignupScreen.css">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="studentReg" layoutX="288.0" layoutY="445.0" prefHeight="41.0" prefWidth="248.0" promptText="Registration" styleClass="signUpScreenLeftInput" stylesheets="@../CSS/SignupScreen.css">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <ChoiceBox fx:id="signupSemesterChoicebox" layoutX="68.0" layoutY="397.0" prefHeight="41.0" prefWidth="205.0" styleClass="signUpScreenLeftInput" stylesheets="@../CSS/SignupScreen.css">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></ChoiceBox>
+            <ChoiceBox fx:id="signupYearChoicebox" layoutX="287.0" layoutY="397.0" prefHeight="41.0" prefWidth="250.0" styleClass="signUpScreenLeftInput" stylesheets="@../CSS/SignupScreen.css">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></ChoiceBox>
+            <Button fx:id="signupbutton" layoutX="66.0" layoutY="498.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="472.0" styleClass="signUpScreenLeftButton" text="SIGNUP" />
+            <Text layoutX="82.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DontHaveAccount" text="Already Have an Account ?" />
+            <Button fx:id="SignupScreenLogin" layoutX="273.0" layoutY="558.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="85.0" styleClass="LoginSignupButton" stylesheets="@../CSS/WelcomeScreen.css" text="Login" />
+            <ImageView fitHeight="98.0" fitWidth="164.0" layoutX="436.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Login/LoginPlanet.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,93 @@
+.cgpascreen{
+    -fx-background-color: #F3F3FF;
+}
+.CGPAScreenHeader,.CGPAScreenSubHeader,.CGPAScreenCalculatorTitle,.CGPAScreenCalculatorCourseCode,.CGPAResult,.CGPAScreenCalculatorCourseCode2{
+    -fx-font-size:24px;
+    -fx-line-spacing:-5px;
+    -fx-font-weight:800;
+    -fx-fill:#50238A;
+    -fx-font-family:'Cambria';
+}
+.CGPAScreenStudentName{
+    -fx-font-size:12px;
+ -fx-line-spacing:-5px;
+ -fx-font-family:'Cambria';
+ -fx-font-weight:500;
+ -fx-fill:#6A6A6A;
+}
+.CGPAScreenSubHeader{
+    -fx-font-size:18px;
+    -fx-fill:#2AE052;
+}
+.CGPAScreenCalculatorTItleBox{
+    -fx-background-color:#50238A;
+    -fx-background-radius:35px;
+    -fx-font-size:14px;
+    -fx-font-family:'Cambria';
+     -fx-background-color: linear-gradient(to top,hsba(266, 56%, 35%, 1),hsba(266, 58%, 60%, 1));
+}
+.CGPAScreenCalculatorTitle{
+    -fx-font-size:14px;
+    -fx-fill:#929292;
+}
+.CGPAScreenCalculatorCourse{
+    -fx-background-color:#ffffff;
+    -fx-border-color:#50238A;
+}
+.CGPAScreenCalculatorCourseCode,.CGPAScreenCalculatorCourseCode2{
+    -fx-font-size:14px;
+    -fx-fill:#6F6F6F;
+}
+.markInputField{
+    -fx-font-size:14px;
+    -fx-font-family:'Cambria';
+    -fx-text-align:center;
+    -fx-border-style: none;
+    -fx-border-width:0;
+    -fx-background-color:#ffffff;
+    -fx-background-radius:5px;
+    -fx-padding-left:20px;
+   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1),3, -1, 2,3);
+
+}
+.CgpaLabel{
+        -fx-font-size:18px;
+         -fx-fill:#50238A;
+         -fx-font-family:'Cambria';
+          -fx-font-weight:500;
+}
+.CgpaValuePrint{
+     -fx-font-size:18px;
+             -fx-fill:#50238A;
+             -fx-font-family:'Cambria';
+              -fx-font-weight:500;
+}
+.resetButton{
+     -fx-background-color:#50238A;
+     -fx-background-radius:35px;
+      -fx-background-color: linear-gradient(to top,hsba(266, 56%, 35%, 1),hsba(266, 58%, 60%, 1));
+      -fx-cursor:hand;
+}
+.CGPACalculatorItembg{
+    -fx-background-color:#F1E7FF;
+}
+.CGPACalculatorItembgWhite{
+    -fx-background-color:#ffffff;
+}
+.CGPACalculatorTable{
+    -fx-background-color:#ffffff;
+     -fx-background-radius:12px;
+}
+.CGPACIRCLE{
+    -fx-stroke-width:0px;
+     -fx-fill: linear-gradient(to top,hsba(266, 62%, 38%, 1),hsba(353, 55%, 93%, 1));
+}
+.CGPAResult{
+    -fx-fill:#ffffff;
+    -fx-font-family:'Cambria';
+    -fx-font-weight:700;
+     -fx-font-size:44px;
+}
+.CGPAScreenCalculatorCourseCode2{
+-fx-fill:#ffffff;
+}

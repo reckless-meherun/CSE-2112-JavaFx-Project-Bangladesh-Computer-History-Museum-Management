@@ -1,22 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="SceneTwo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.DashboardSceneController">
+<AnchorPane fx:id="SceneTwo" prefHeight="595.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.DashboardSceneController">
    <children>
-      <Button fx:id="LogoutButton" layoutX="309.0" layoutY="315.0" mnemonicParsing="false" onAction="#logout" prefHeight="48.0" prefWidth="181.0" text="LogOut">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Label fx:id="loggedIn" layoutX="262.0" layoutY="128.0" prefHeight="70.0" prefWidth="366.0" text="Hello : ">
-         <font>
-            <Font name="Colonna MT" size="36.0" />
-         </font>
-      </Label>
-      <Button fx:id="GoBackButton" layoutX="358.0" layoutY="250.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" text="GoBack" />
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" styleClass="DashboardScreen" stylesheets="@../CSS/DashboardScreen.css">
+         <right>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="349.0" layoutY="245.0" prefHeight="84.0" prefWidth="559.0" styleClass="DashboardScreenUpcomingClassesItem" stylesheets="@../../CSS/DashboardScreen.css">
+                     <children>
+                        <Text fx:id="upcomingclassname2" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice two" />
+                        <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Department:" />
+                        <Text fx:id="upcomingclassteachername2" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" text="Dr. Muhammad Ibrahim" />
+                        <Text fx:id="upcomingclasstime2" layoutX="428.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime" text="10:00 AM ">
+                           <font>
+                              <Font name="Symbol" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="upcomingclassdate2" layoutX="344.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="Wednesday,March 7" wrappingWidth="204.7734375" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="349.0" layoutY="340.0" prefHeight="84.0" prefWidth="506.0" styleClass="DashboardScreenUpcomingClassesItem">
+                     <children>
+                        <Text fx:id="upcomingclassname3" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice three" />
+                        <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Department:" />
+                        <Text fx:id="upcomingclassteachername3" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" text="Dr. Muhammad Ibrahim" />
+                        <Text fx:id="upcomingclasstime3" layoutX="428.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime" text="10:00 AM ">
+                           <font>
+                              <Font name="Symbol" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="upcomingclassdate3" layoutX="352.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="Wednesday,March 7" wrappingWidth="207.97344970703125" />
+                     </children>
+                     <stylesheets>
+                        <URL value="@../CSS/DashboardScreen.css" />
+                        <URL value="@../../CSS/DashboardScreen.css" />
+                     </stylesheets>
+                  </AnchorPane>
+                  <AnchorPane layoutX="348.0" layoutY="438.0" prefHeight="84.0" prefWidth="561.0" styleClass="DashboardScreenUpcomingClassesItem">
+                     <children>
+                        <Text fx:id="upcomingclassname4" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice four" />
+                        <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Department:" />
+                        <Text fx:id="upcomingclassteachername4" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" text="Dr. Muhammad Ibrahim" />
+                        <Text fx:id="upcomingclasstime4" layoutX="428.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime" text="10:00 AM ">
+                           <font>
+                              <Font name="Symbol" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="upcomingclassdate4" layoutX="357.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="Wednesday,March 7" wrappingWidth="202.3734130859375" />
+                     </children>
+                     <stylesheets>
+                        <URL value="@../CSS/DashboardScreen.css" />
+                        <URL value="@../../CSS/DashboardScreen.css" />
+                     </stylesheets>
+                  </AnchorPane>
+                  <AnchorPane layoutX="347.0" layoutY="532.0" minHeight="-Infinity" prefHeight="84.0" prefWidth="564.0" styleClass="DashboardScreenUpcomingClassesItem">
+                     <children>
+                        <Text fx:id="upcomingclassname5" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice five" />
+                        <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Department:" />
+                        <Text fx:id="upcomingclassteachername5" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" text="Dr. Muhammad Ibrahim" />
+                        <Text fx:id="upcomingclasstime5" layoutX="428.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime" text="10:00 AM ">
+                           <font>
+                              <Font name="Symbol" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="upcomingclassdate5" layoutX="362.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="Wednesday,March 7" wrappingWidth="191.17352294921875" />
+                     </children>
+                     <stylesheets>
+                        <URL value="@../CSS/DashboardScreen.css" />
+                        <URL value="@../../CSS/DashboardScreen.css" />
+                     </stylesheets>
+                  </AnchorPane>
+                  <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
+                  <AnchorPane layoutX="942.0" layoutY="329.0" minWidth="-Infinity" prefHeight="169.0" prefWidth="143.0" styleClass="DashboardScreenTotalClassesBelowAverage" stylesheets="@../../CSS/DashboardScreen.css">
+                     <children>
+                        <Text fx:id="upcomingclassname121" layoutX="34.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="Director General" wrappingWidth="99.4188232421875">
+                           <font>
+                              <Font name="Cambria" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="940.0" layoutY="506.0" minWidth="-Infinity" prefHeight="159.0" prefWidth="147.0" styleClass="DashboardScreenTotalClasses" stylesheets="@../../CSS/DashboardScreen.css">
+                     <children>
+                        <Text fx:id="upcomingclassname156" layoutX="14.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" />
+                        <Text fx:id="AboveAverageCount" layoutX="41.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <styleClass>
+                              <String fx:value="DashboardAttendanceNumber" />
+                              <String fx:value="DashboardAttendanceNumberAbove" />
+                           </styleClass>
+                        </Text>
+                        <Text fx:id="upcomingclassname1211" layoutX="8.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="The Secretary" wrappingWidth="130.618896484375">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
+                     <children>
+                        <AnchorPane layoutX="158.0" layoutY="49.0" prefHeight="40.0" prefWidth="124.0" styleClass="DashboardScreenMenuItemActive" stylesheets="@../../CSS/DashboardScreen.css">
+                           <children>
+                              <Text fx:id="home" layoutX="42.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemTextActive" text="Home">
+                                 <font>
+                                    <Font name="Cascadia Mono Regular" size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fx:id="LogoutImage" fitHeight="27.0" fitWidth="23.0" layoutX="24.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/NavigationPrimary/Logout.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="cgpaCalculatorIcon" fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/NavigationPrimary/CGPA.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/NavigationPrimary/Booklet.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/NavigationPrimary/Attendance.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/NavigationPrimary/Classroom.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="classroom" layoutX="332.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Departments" />
+                        <Text fx:id="attendance" layoutX="488.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Photo Gallery" />
+                        <Text fx:id="booklet" layoutX="636.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Articles" />
+                        <Text fx:id="cgpa" layoutX="751.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="About Us" />
+                        <Text fx:id="logout" layoutX="916.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Logout" />
+                        <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Assets/SmallLogo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="DashboardScreenMenu">
+                           <image>
+                              <Image url="@../assets/NavigationSecondary/HomeActive.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="LogoutButton" layoutX="990.0" layoutY="107.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="96.0" styleClass="DashboardScreenMenuItemTextActive" text="LogOut">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane layoutX="1033.0" layoutY="11.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground">
+                           <stylesheets>
+                              <URL value="@../CSS/DashboardScreen.css" />
+                              <URL value="@../../CSS/DashboardScreen.css" />
+                           </stylesheets>
+                           <children>
+                              <Text fx:id="ProfileIcon" layoutX="16.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="M" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="loggedIn" layoutX="888.0" layoutY="58.0" prefHeight="26.0" prefWidth="204.0" text="Hello ">
+                           <font>
+                              <Font name="Colonna MT" size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Text layoutX="519.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="NOTICE BOARD" wrappingWidth="234.743408203125">
+                     <font>
+                        <Font name="Colonna MT" size="36.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="941.0" layoutY="161.0" minWidth="-Infinity" prefHeight="162.0" prefWidth="139.0" styleClass="DashboardScreenTotalClasses" stylesheets="@../../CSS/DashboardScreen.css">
+                     <children>
+                        <Text fx:id="upcomingclassname12" layoutX="18.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="Honorable Minister" wrappingWidth="102.94305419921875">
+                           <font>
+                              <Font size="64.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="GoBackButton" layoutX="587.0" layoutY="624.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" text="GoBack" />
+                  <ImageView fitHeight="537.0" fitWidth="329.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assets/Dashboard/DashBoardCropped.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
    </children>
 </AnchorPane>

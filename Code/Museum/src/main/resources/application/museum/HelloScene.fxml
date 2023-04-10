@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1004.0" style="-fx-background-color: LGHT BLUE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.HelloController">
+<AnchorPane prefHeight="595.0" prefWidth="921.0" style="-fx-background-color: LGHT BLUE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.HelloController">
    <children>
-      <ImageView fitHeight="738.0" fitWidth="1116.0" layoutX="-105.0" layoutY="-58.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="686.0" fitWidth="1057.0" layoutX="-105.0" layoutY="-58.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Assets/images.jpg" />
          </image>
@@ -54,7 +54,7 @@
             <Font name="Bodoni MT Condensed" size="20.0" />
          </font>
       </Text>
-      <ImageView fitHeight="493.0" fitWidth="563.0" layoutX="427.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="347.0" fitWidth="368.0" layoutX="505.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Assets/19f433132586635.Y3JvcCwxNDg2LDExNjIsMCwyMg-removebg-preview%20(1).png" />
          </image>

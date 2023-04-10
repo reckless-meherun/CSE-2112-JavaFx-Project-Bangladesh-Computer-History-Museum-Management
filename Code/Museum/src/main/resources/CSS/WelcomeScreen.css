@@ -1,0 +1,39 @@
+.WelcomeScreen{
+ -fx-background-color: #50238A;
+  -fx-background-color: linear-gradient(to top,hsba(265, 58%, 61%, 1), hsba(265, 57%, 51%, 1));
+}
+
+.WelcomeHeader{
+    -fx-font-size:74px;
+    -fx-font-family:'Cambria';
+    -fx-font-weight:900;
+    -fx-fill:#ffffff;
+}
+
+.WelcomeSubHeader{
+    -fx-font-size:37px;
+   -fx-font-family:'Cambria';
+    -fx-font-weight:200;
+    -fx-fill:#D4D4D4;
+}
+.WelcomeButton,.WelcomeLoginButton{
+    -fx-font-size:18px;
+    -fx-font-family:'Cambria';
+    -fx-font-weight:300;
+    -fx-fill:#ffffff;
+    -fx-background-radius:80px;
+    -fx-border:0;
+    -fx-background-color: #D7171E;
+    -fx-text-fill:#ffffff;
+    -fx-cursor:hand;
+}
+.WelcomeLogin{
+     -fx-font-size:18px;
+        -fx-font-family:'Cambria';
+        -fx-font-weight:300;
+        -fx-fill:#D4D4D4;
+}
+.WelcomeLoginButton{
+    -fx-background-color: transparent;
+    -fx-font-weight:700;
+}

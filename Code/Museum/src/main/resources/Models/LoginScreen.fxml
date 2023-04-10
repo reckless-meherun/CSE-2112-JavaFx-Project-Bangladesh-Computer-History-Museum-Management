@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" stylesheets="@../CSS/LoginScreen.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginScreenController">
+   <right>
+      <AnchorPane prefHeight="683.0" prefWidth="436.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="684.0" fitWidth="590.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Login/LoginCover.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="680.0" prefWidth="534.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="167.0" layoutX="30.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/CSEDUPORTALPRIMARY.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="104.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginScreenHeader" text="HEY , WELCOME BACK !" />
+            <Button fx:id="loginButton" layoutX="60.0" layoutY="392.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="472.0" styleClass="signUpScreenLeftButton" stylesheets="@../CSS/SignupScreen.css" text="LOGIN" />
+            <TextField fx:id="userRegistration" layoutX="63.0" layoutY="292.0" prefHeight="41.0" prefWidth="468.0" promptText="Registration" styleClass="signUpScreenLeftInput" stylesheets="@../CSS/SignupScreen.css">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <ImageView fitHeight="98.0" fitWidth="164.0" layoutX="387.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Login/LoginPlanet.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="LoginScreenSignup" layoutX="233.0" layoutY="457.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" styleClass="LoginSignupButton" stylesheets="@../CSS/WelcomeScreen.css" text="Signup" />
+            <Text layoutX="76.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DontHaveAccount" text="Don't have an account ?" />
+            <PasswordField fx:id="userPassword" layoutX="63.0" layoutY="340.0" prefHeight="41.0" prefWidth="468.0" promptText="Password" styleClass="signUpScreenLeftInput" stylesheets="@../CSS/SignupScreen.css">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </PasswordField>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,51 @@
+.signUpScreen{
+    -fx-background-color: #F3F3FF;
+}
+.signUpScreenRight{
+    -fx-background-color: #50238A;
+    -fx-background-color: linear-gradient(to top,hsba(265, 58%, 61%, 1), hsba(265, 57%, 51%, 1));
+}
+.signUpScreenRightText{
+   -fx-font-size:35px;
+   -fx-line-spacing:-5px;
+   -fx-font-family:'Cambria';
+   -fx-font-weight:900;
+   -fx-fill:#ffffff;
+
+}
+.signUpScreenLeftSignUp,.signUpScreenLeftSubheader{
+     -fx-font-size:36px;
+     -fx-line-spacing:-5px;
+     -fx-font-family:'Cambria';
+     -fx-font-weight:900;
+     -fx-fill:#50238A;
+}
+.signUpScreenLeftSubheader{
+     -fx-font-size:16px;
+     -fx-font-weight:500;
+     -fx-fill:#6A6A6A;
+}
+.signUpScreenLeftInput,signUpScreenLeftButton{
+    -fx-font-size:16px;
+    -fx-font-family:'Cambria';
+    -fx-border-style: none;
+    -fx-border-width:0;
+    -fx-background-color:#E3E3E3;
+    -fx-background-radius:30px;
+    -fx-padding-left:20px;
+
+}
+.signUpScreenLeftInput .placeholder .label{
+    -fx-text-fill:linen;
+}
+
+.signUpScreenLeftButton{
+     -fx-font-size:16px;
+    -fx-font-family:'Cambria';
+   -fx-background-color:#50238A;
+   -fx-background-radius:30px;
+   -fx-text-fill:#ffffff;
+    -fx-font-weight:900;
+    -fx-cursor:hand;
+    -fx-background-color: linear-gradient(to top,hsba(266, 56%, 35%, 1),hsba(266, 58%, 60%, 1));
+}
