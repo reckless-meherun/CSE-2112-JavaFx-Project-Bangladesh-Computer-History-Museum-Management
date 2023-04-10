@@ -11,8 +11,13 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="680.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.LoginSceneController">
+<AnchorPane prefHeight="680.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.LoginSceneController">
    <children>
+      <ImageView fitHeight="705.0" fitWidth="501.0" layoutX="522.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Assets/amazing-shades-of-sunset-46241-1920x10801.jpg" />
+         </image>
+      </ImageView>
       <BorderPane prefHeight="678.0" prefWidth="501.0">
          <left>
             <AnchorPane prefHeight="678.0" prefWidth="522.0" style="-fx-background-color: #e0e0e0;" BorderPane.alignment="CENTER">
@@ -27,12 +32,12 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="loginButton" layoutX="211.0" layoutY="481.0" mnemonicParsing="false" styleClass="WelcomeButton" stylesheets="@WelcomeScreen.css" text="Login">
+                  <Button fx:id="loginButton" layoutX="227.0" layoutY="479.0" mnemonicParsing="false" styleClass="WelcomeButton" stylesheets="@WelcomeScreen.css" text="Login">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="145.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../Assets/png-transparent-computer-icons-user-icon-design-numerous-miscellaneous-logo-computer-wallpaper.png" />
                      </image>
@@ -52,7 +57,7 @@
                         <Image url="@../../Assets/1200px-Key_font_awesome.svg.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="157.0" layoutY="244.0" text="Admin Login">
+                  <Label layoutX="173.0" layoutY="244.0" text="Admin Login">
                      <font>
                         <Font size="31.0" />
                      </font>
@@ -62,12 +67,12 @@
             </AnchorPane>
          </left>
       </BorderPane>
-      <ImageView fitHeight="680.0" fitWidth="508.0" layoutX="522.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="680.0" fitWidth="531.0" layoutX="614.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Assets/amazing-shades-of-sunset-46241-1920x10801.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="363.0" fitWidth="434.0" layoutX="555.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="468.0" fitWidth="529.0" layoutX="551.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Assets/19f433132586635.Y3JvcCwxNDg2LDExNjIsMCwyMg-removebg-preview%20(1).png" />
          </image>

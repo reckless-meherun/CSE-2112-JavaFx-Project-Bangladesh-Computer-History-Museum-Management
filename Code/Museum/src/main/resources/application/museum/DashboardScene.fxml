@@ -147,7 +147,7 @@
                         <Text fx:id="attendance" layoutX="488.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Photo Gallery" />
                         <Text fx:id="booklet" layoutX="636.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Articles" />
                         <Text fx:id="cgpa" layoutX="751.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="About Us" />
-                        <Text fx:id="logout" layoutX="916.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Logout" />
+                        <Text fx:id="logout" layoutX="928.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Logout" />
                         <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../Assets/SmallLogo.png" />
@@ -158,9 +158,9 @@
                               <Image url="@../assets/NavigationSecondary/HomeActive.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="LogoutButton" layoutX="990.0" layoutY="107.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="96.0" styleClass="DashboardScreenMenuItemTextActive" text="LogOut">
+                        <Button fx:id="LogoutButton" layoutX="996.0" layoutY="102.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="96.0" style="-fx-cursor: hand;" styleClass="DashboardScreenTotalClasses" text="LogOut" textFill="WHITE">
                            <font>
-                              <Font size="20.0" />
+                              <Font size="17.0" />
                            </font>
                         </Button>
                         <AnchorPane layoutX="1033.0" layoutY="11.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground">
@@ -169,7 +169,7 @@
                               <URL value="@../../CSS/DashboardScreen.css" />
                            </stylesheets>
                            <children>
-                              <Text fx:id="ProfileIcon" layoutX="16.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="M" />
+                              <Text fx:id="ProfileIcon" layoutX="16.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="M" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="loggedIn" layoutX="888.0" layoutY="58.0" prefHeight="26.0" prefWidth="204.0" text="Hello ">
@@ -193,7 +193,10 @@
                         </Text>
                      </children>
                   </AnchorPane>
-                  <Button fx:id="GoBackButton" layoutX="587.0" layoutY="624.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" text="GoBack" />
+                  <Button fx:id="GoBackButton" layoutX="587.0" layoutY="624.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="DashboardScreenTotalClasses" stylesheets="@hello.css" text="GoBack" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
                   <ImageView fitHeight="537.0" fitWidth="329.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../Assets/Dashboard/DashBoardCropped.jpg" />

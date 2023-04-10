@@ -5,24 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/AttendanceGraphScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/AttendanceScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/BookletScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/CGPACalculator.Css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/ClassroomScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/DashboardScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/LoginScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/OnboardingScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/SetAttendanceScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/SignupScreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/WelcomeScreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/LoginSceneController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/LoginSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/LoginSceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/HelloScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/HelloScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/LoginScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/LoginScene.fxml" afterDir="false" />
@@ -32,6 +22,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -39,23 +37,27 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OCmKgwVlEGMTkKqQPofBexNfI9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/University Stuff/2-1/OOP Project/Museum/Code/Museum/src/main/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.14369158",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/meher/Downloads/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management-master/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management-master/Code/Museum/lib/sqlite-jdbc-3.7.2.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.14369158&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\University Stuff\2-1\OOP Project\Museum\Code\Museum\src\main\resources" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="application.museum" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

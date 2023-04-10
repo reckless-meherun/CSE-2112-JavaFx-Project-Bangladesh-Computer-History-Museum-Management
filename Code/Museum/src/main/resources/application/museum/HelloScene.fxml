@@ -8,16 +8,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="595.0" prefWidth="921.0" style="-fx-background-color: LGHT BLUE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.HelloController">
+<AnchorPane prefHeight="680.0" prefWidth="1101.0" style="-fx-background-color: LGHT BLUE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.HelloController">
    <children>
-      <ImageView fitHeight="686.0" fitWidth="1057.0" layoutX="-105.0" layoutY="-58.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="800.0" fitWidth="1180.0" layoutX="-62.0" layoutY="-99.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Assets/images.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="logo" fitHeight="176.0" fitWidth="452.0" layoutX="331.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../SmallLogo.png" />
          </image>
       </ImageView>
       <Label fx:id="subheader" alignment="CENTER" layoutX="58.0" layoutY="370.0" prefHeight="38.0" prefWidth="358.0" text="Preserve ~ Make ~ Inspire" textFill="#5e0000">
@@ -54,7 +49,7 @@
             <Font name="Bodoni MT Condensed" size="20.0" />
          </font>
       </Text>
-      <ImageView fitHeight="347.0" fitWidth="368.0" layoutX="505.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="491.0" fitWidth="606.0" layoutX="446.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Assets/19f433132586635.Y3JvcCwxNDg2LDExNjIsMCwyMg-removebg-preview%20(1).png" />
          </image>
