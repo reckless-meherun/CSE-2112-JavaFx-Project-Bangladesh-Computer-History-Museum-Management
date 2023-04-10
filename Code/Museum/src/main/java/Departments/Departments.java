@@ -1,7 +1,7 @@
 package Departments;
 
 public interface Departments {
-    public String setDeptName(String Name);
+    public void setDeptName(String Name);
     public String getDeptName();
     public void setDeptFloor(String floor_number);
     public String getDeptFloor();
