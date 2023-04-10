@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management.iml" afterDir="false" />
+    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="fixed screen size">
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/BOD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/Posts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/general_people.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/internals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/people.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/LoginSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/LoginSceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/HelloScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/HelloScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/LoginScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/LoginScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -69,6 +67,18 @@
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
     </task>
+    <task id="LOCAL-00001" summary="fixed screen size">
+      <created>1681134569704</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681134569704</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed screen size" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed screen size" />
   </component>
 </project>
