@@ -1,2 +1,5 @@
-package Departments;public interface Departments {
+package Departments;
+
+public interface Departments {
+    
 }
