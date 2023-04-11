@@ -1,24 +1,34 @@
 package Departments;
 
-import java.util.ArrayList;
-
-public class Curatorial_dept implements Departments{
+public class Non_Curatorial_Dept implements Departments{
     private String DeptName;
     private String DeptFloor;
-    private String CuratorName;
-    private String GuideName;
-    private ArrayList<String> Artifacts; // Here I did not understand things. - Himel
-    private ArrayList<String> Visitors; // Same goes for this
+    private String DeptRoom;
 
-    public Curatorial_dept()
+    public Non_Curatorial_Dept()
     {
-        System.out.println("Curatorial Department created\n");
+        this.DeptName = "New NC Department";
+        this.DeptFloor = "No floor attached";
+        this.DeptRoom = "No room attached";
+    }
+    public Non_Curatorial_Dept(String[] s)
+    {
+        this.DeptName = s[0];
+        this.DeptFloor = s[1];
+        this.DeptRoom = s[2];
+    }
+    public Non_Curatorial_Dept(String name, String floor, String room)
+    {
+        this.DeptName = name;
+        this.DeptFloor = floor;
+        this.DeptRoom = room;
     }
     public void setDeptName(String name)
     {
         this.DeptName = name;
     }
-    public String getDeptName() {
+    public String getDeptName()
+    {
         return this.DeptName;
     }
     public void setDeptFloor(String floor)
