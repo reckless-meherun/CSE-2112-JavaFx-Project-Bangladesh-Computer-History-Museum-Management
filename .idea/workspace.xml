@@ -7,16 +7,7 @@
 <<<<<<< HEAD
     <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="" />
 =======
-    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="fixed screen size">
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/BOD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/Posts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/general_people.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/internals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/people.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="added class under people interface." />
 >>>>>>> de1c9a78926b8cac5afc00d8ec8e7f7bc526cefc
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +69,19 @@
       <option name="project" value="LOCAL" />
       <updated>1681134569704</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added class under people interface.">
+      <created>1681160463732</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681160463732</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed screen size" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed screen size" />
+    <MESSAGE value="added class under people interface." />
+    <option name="LAST_COMMIT_MESSAGE" value="added class under people interface." />
   </component>
 </project>

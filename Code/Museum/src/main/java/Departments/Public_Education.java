@@ -1,12 +1,12 @@
 package Departments;
 
-import java.lang.reflect.Array;
+import People.Students;
+
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class Public_Education extends Non_Curatorial_Dept{
     private String EducatorName;
-    private ArrayList<Students> Students;
+    private ArrayList<People.Students> Students;
 
     public Public_Education()
     {
