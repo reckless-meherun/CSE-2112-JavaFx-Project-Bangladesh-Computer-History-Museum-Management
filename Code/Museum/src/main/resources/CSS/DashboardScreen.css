@@ -5,7 +5,7 @@
 .DashboardScreenStudentImageBackground
 {
     -fx-background-color: #D6D6D6;
-    -fx-background-radius: 50%;
+    -fx-background-radius: 25%;
     -fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));
 }
 .DashboardScreenStudentName,.DashboardScreenUpcomingClassesIcon{
@@ -39,7 +39,7 @@
 
 .DashboardScreenMenuItemActive{
     -fx-background-color: #50238A;
-    -fx-background-radius: 30px;
+    -fx-background-radius: 13px;
     -fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));
 }
 .DashboardScreenMenuItem{

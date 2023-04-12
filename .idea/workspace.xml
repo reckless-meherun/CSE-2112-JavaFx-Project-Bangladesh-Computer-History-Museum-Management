@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="" />
-=======
-    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="fixed screen size">
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/BOD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/Posts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/general_people.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/internals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/people.java" afterDir="false" />
+    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/DashboardScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/DashboardScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" afterDir="false" />
     </list>
->>>>>>> de1c9a78926b8cac5afc00d8ec8e7f7bc526cefc
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,9 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -46,17 +36,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/ASUS/OneDrive/Desktop/Repos/JAVA_Pro",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.14369158",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/meher/Downloads/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management-master/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management-master/Code/Museum/lib/sqlite-jdbc-3.7.2.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.14369158&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="application.museum" />
@@ -71,18 +61,6 @@
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
     </task>
-    <task id="LOCAL-00001" summary="fixed screen size">
-      <created>1681134569704</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1681134569704</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed screen size" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed screen size" />
   </component>
 </project>
