@@ -20,7 +20,7 @@ public class general_people implements people {
     }
 
     @Override
-    public String get_mobile_no() {
+    public String Get_mobile_no() {
         return this.mobile_no;
     }
 
