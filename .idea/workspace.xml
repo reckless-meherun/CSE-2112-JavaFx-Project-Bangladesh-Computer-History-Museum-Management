@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ce44d19-6175-4551-bdd6-1afd457ba5f3" name="Changes" comment="copleted educator class.">
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/curator.java" afterDir="false" />
+    <list default="true" id="2ce44d19-6175-4551-bdd6-1afd457ba5f3" name="Changes" comment="Added curator class">
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/People/developer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,12 +81,20 @@
       <option name="project" value="LOCAL" />
       <updated>1681374036054</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added curator class">
+      <created>1681374800507</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681374800507</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed general people class and internals.java extends People_class." />
     <MESSAGE value="copleted educator class." />
-    <option name="LAST_COMMIT_MESSAGE" value="copleted educator class." />
+    <MESSAGE value="Added curator class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added curator class" />
   </component>
 </project>

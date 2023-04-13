@@ -45,5 +45,8 @@ public class educator extends Employee{
         courses.add(cur_course);
         numOfcourses++;
     }
+    public Integer getNumOfcourses(){
+        return this.numOfcourses;
+    }
 
 }
