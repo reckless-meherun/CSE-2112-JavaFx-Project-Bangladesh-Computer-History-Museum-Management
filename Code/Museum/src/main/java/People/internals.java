@@ -2,7 +2,7 @@ package People;
 
 import java.util.Date;
 
-public class internals extends general_people{
+public class internals extends People_class{
     private String photo;
     private String email;
     private Date dob;
