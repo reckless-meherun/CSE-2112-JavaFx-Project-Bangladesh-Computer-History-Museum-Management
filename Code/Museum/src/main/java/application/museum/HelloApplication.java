@@ -32,7 +32,8 @@ public class HelloApplication extends Application
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
             e.printStackTrace();
         }

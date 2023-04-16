@@ -37,6 +37,14 @@
 -fx-background-color: #EBEBFF;
 }
 
+.TransparentButtons
+{
+    -fx-font-family:'Cambria';
+    -fx-fill:#4B4B4B;
+    -fx-background-color: transparent;
+    -fx-background-radius: 13px;
+}
+
 .DashboardScreenMenuItemActive{
     -fx-background-color: #50238A;
     -fx-background-radius: 13px;
@@ -95,7 +103,9 @@
      -fx-font-weight:800;
      -fx-fill:#FFFFFF;
 }
-.AboveAverageText{
+
+.AboveAverageText
+{
     -fx-fill:#7A7575;
     -fx-font-size:14px;
 }

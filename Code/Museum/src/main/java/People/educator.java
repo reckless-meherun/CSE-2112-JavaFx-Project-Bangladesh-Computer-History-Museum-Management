@@ -4,7 +4,8 @@ package People;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class educator extends Employee{
+public class educator extends Employee
+{
     private ArrayList<String> specializations;
     private ArrayList<course> courses;
     private course cur_course;

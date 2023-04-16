@@ -1,6 +1,7 @@
 package Departments;
 
-public class Software extends Curatorial_dept{
+public class Software extends Curatorial_dept
+{
     private String Documents;
 
     public Software()
