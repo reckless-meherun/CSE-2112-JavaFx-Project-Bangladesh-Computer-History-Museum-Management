@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="Welcome Scene and login scene updated">
+    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="Hover effect added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/LoginScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/LoginScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +23,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -89,14 +88,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681656224055</updated>
     </task>
-    <task id="LOCAL-00005" summary="Welcome Scene and login scene updated">
-      <created>1681663057554</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1681663057555</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -104,8 +96,7 @@
     <MESSAGE value="buttons of dashboard screen updated" />
     <MESSAGE value="navigation handler created" />
     <MESSAGE value="Hover effect added" />
-    <MESSAGE value="Welcome Scene and login scene updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Welcome Scene and login scene updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hover effect added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

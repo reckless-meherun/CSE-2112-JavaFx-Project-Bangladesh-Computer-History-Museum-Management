@@ -26,7 +26,7 @@
                         <Image url="@../../Assets/SmallLogo.png" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="username" layoutX="134.0" layoutY="366.0" prefHeight="54.0" prefWidth="323.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1)); -fx-border-width: 0px 0px 5px 0px;" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="656.0" AnchorPane.topAnchor="366.0">
+                  <TextField fx:id="username" layoutX="134.0" layoutY="366.0" prefHeight="54.0" prefWidth="323.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1)); -fx-border-width: 0px 0px 5px 0px; -fx-text-inner-color: #dfe2e3;" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="656.0" AnchorPane.topAnchor="366.0">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -46,7 +46,7 @@
                         <Image url="@../../Assets/Login/LoginLogo2.png" />
                      </image>
                   </ImageView>
-                  <PasswordField fx:id="password" layoutX="135.0" layoutY="436.0" prefHeight="43.0" prefWidth="319.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1)); -fx-border-width: 0px 0px 5px 0px;">
+                  <PasswordField fx:id="password" layoutX="135.0" layoutY="436.0" prefHeight="54.0" prefWidth="323.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1)); -fx-border-width: 0px 0px 5px 0px; -fx-text-inner-color: #dfe2e3;">
                      <font>
                         <Font size="18.0" />
                      </font>
