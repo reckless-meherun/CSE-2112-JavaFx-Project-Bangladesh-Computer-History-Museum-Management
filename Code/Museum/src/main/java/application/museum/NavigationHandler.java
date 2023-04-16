@@ -16,26 +16,26 @@ public class NavigationHandler
         button.setStyle("-fx-background-color: transparent; -fx-text-fill:#4B4B4B;");
     }
 
-    public static void HandleNavigation(Button home, Button departments , Button photoGallery, Button articles, Button aboutUs, Button tickets, Button logout, Button goBack)
+    public static void HandleNavigation(Button homeButton, Button departmentsButton , Button photoGalleryButton, Button articlesButton, Button aboutUsButton, Button ticketsButton, Button logoutButton, Button goBackButton)
     {
-        home.setOnMouseEntered(new EventHandler<MouseEvent>()
+        homeButton.setOnMouseEntered(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeEnteringButtonColor(home);
+                changeEnteringButtonColor(homeButton);
             }
         });
 
-        home.setOnMouseExited(new EventHandler<MouseEvent>()
+        homeButton.setOnMouseExited(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeExitingButtonColor(home);
+                changeExitingButtonColor(homeButton);
             }
         });
-        home.setOnMouseClicked(new EventHandler<MouseEvent>()
+        homeButton.setOnMouseClicked(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent mouseEvent)
@@ -43,24 +43,24 @@ public class NavigationHandler
                 DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
             }
         });
-        departments.setOnMouseEntered(new EventHandler<MouseEvent>()
+        departmentsButton.setOnMouseEntered(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeEnteringButtonColor(departments);
+                changeEnteringButtonColor(departmentsButton);
             }
         });
 
-        departments.setOnMouseExited(new EventHandler<MouseEvent>()
+        departmentsButton.setOnMouseExited(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeExitingButtonColor(departments);
+                changeExitingButtonColor(departmentsButton);
             }
         });
-        departments.setOnMouseClicked(new EventHandler<MouseEvent>()
+        departmentsButton.setOnMouseClicked(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent mouseEvent)
@@ -68,24 +68,24 @@ public class NavigationHandler
                 DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
             }
         });
-        photoGallery.setOnMouseEntered(new EventHandler<MouseEvent>()
+        photoGalleryButton.setOnMouseEntered(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeEnteringButtonColor(photoGallery);
+                changeEnteringButtonColor(photoGalleryButton);
             }
         });
 
-        photoGallery.setOnMouseExited(new EventHandler<MouseEvent>()
+        photoGalleryButton.setOnMouseExited(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeExitingButtonColor(photoGallery);
+                changeExitingButtonColor(photoGalleryButton);
             }
         });
-        photoGallery.setOnMouseClicked(new EventHandler<MouseEvent>()
+        photoGalleryButton.setOnMouseClicked(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent mouseEvent)
@@ -93,24 +93,24 @@ public class NavigationHandler
                 DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
             }
         });
-        articles.setOnMouseEntered(new EventHandler<MouseEvent>()
+        articlesButton.setOnMouseEntered(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeEnteringButtonColor(articles);
+                changeEnteringButtonColor(articlesButton);
             }
         });
 
-        articles.setOnMouseExited(new EventHandler<MouseEvent>()
+        articlesButton.setOnMouseExited(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeExitingButtonColor(articles);
+                changeExitingButtonColor(articlesButton);
             }
         });
-        articles.setOnMouseClicked(new EventHandler<MouseEvent>()
+        articlesButton.setOnMouseClicked(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent mouseEvent)
@@ -118,24 +118,24 @@ public class NavigationHandler
                 DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
             }
         });
-        aboutUs.setOnMouseEntered(new EventHandler<MouseEvent>()
+        aboutUsButton.setOnMouseEntered(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeEnteringButtonColor(aboutUs);
+                changeEnteringButtonColor(aboutUsButton);
             }
         });
 
-        aboutUs.setOnMouseExited(new EventHandler<MouseEvent>()
+        aboutUsButton.setOnMouseExited(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeExitingButtonColor(aboutUs);
+                changeExitingButtonColor(aboutUsButton);
             }
         });
-        aboutUs.setOnMouseClicked(new EventHandler<MouseEvent>()
+        aboutUsButton.setOnMouseClicked(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent mouseEvent)
@@ -143,24 +143,24 @@ public class NavigationHandler
                 DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
             }
         });
-        tickets.setOnMouseEntered(new EventHandler<MouseEvent>()
+        ticketsButton.setOnMouseEntered(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeEnteringButtonColor(tickets);
+                changeEnteringButtonColor(ticketsButton);
             }
         });
 
-        tickets.setOnMouseExited(new EventHandler<MouseEvent>()
+        ticketsButton.setOnMouseExited(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeExitingButtonColor(tickets);
+                changeExitingButtonColor(ticketsButton);
             }
         });
-        tickets.setOnMouseClicked(new EventHandler<MouseEvent>()
+        ticketsButton.setOnMouseClicked(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent mouseEvent)
@@ -168,24 +168,24 @@ public class NavigationHandler
                 DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
             }
         });
-        logout.setOnMouseEntered(new EventHandler<MouseEvent>()
+        logoutButton.setOnMouseEntered(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeEnteringButtonColor(logout);
+                changeEnteringButtonColor(logoutButton);
             }
         });
 
-        logout.setOnMouseExited(new EventHandler<MouseEvent>()
+        logoutButton.setOnMouseExited(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeExitingButtonColor(logout);
+                changeExitingButtonColor(logoutButton);
             }
         });
-        logout.setOnMouseClicked(new EventHandler<MouseEvent>()
+        logoutButton.setOnMouseClicked(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent mouseEvent)
@@ -193,24 +193,24 @@ public class NavigationHandler
                 DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
             }
         });
-        goBack.setOnMouseEntered(new EventHandler<MouseEvent>()
+        goBackButton.setOnMouseEntered(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeEnteringButtonColor(goBack);
+                changeEnteringButtonColor(goBackButton);
             }
         });
 
-        goBack.setOnMouseExited(new EventHandler<MouseEvent>()
+        goBackButton.setOnMouseExited(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent event)
             {
-                changeExitingButtonColor(goBack);
+                changeExitingButtonColor(goBackButton);
             }
         });
-        goBack.setOnMouseClicked(new EventHandler<MouseEvent>()
+        goBackButton.setOnMouseClicked(new EventHandler<MouseEvent>()
         {
             @Override
             public void handle(MouseEvent mouseEvent)
