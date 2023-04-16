@@ -29,7 +29,7 @@
             <Font name="Colonna MT" size="49.0" />
          </font>
       </Label>
-      <Button fx:id="GetStartedButton" layoutX="108.0" layoutY="441.0" mnemonicParsing="false" onAction="#switchToLoginScene" prefHeight="60.0" prefWidth="248.0" style="-fx-cursor: hand;" styleClass="WelcomeButton" stylesheets="@WelcomeScreen.css" text="Get Started!">
+      <Button fx:id="GetStartedButton" layoutX="108.0" layoutY="441.0" mnemonicParsing="false" onAction="#switchToLoginScene" prefHeight="60.0" prefWidth="248.0" style="-fx-cursor: hand;" styleClass="WelcomeButton" stylesheets="@../../CSS/WelcomeScreen.css" text="Get Started!">
          <font>
             <Font name="Colonna MT" size="20.0" />
          </font>
