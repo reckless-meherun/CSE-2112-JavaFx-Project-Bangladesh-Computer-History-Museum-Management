@@ -32,7 +32,18 @@
     -fx-background-color:#E3E3E3;
     -fx-background-radius:30px;
     -fx-padding-left:20px;
+}
 
+.textarea {
+    -fx-border-style: none;
+    -fx-border-width:0;
+    -fx-font-size: 16px;
+    -fx-font-family: "Cambria";
+    -fx-text-fill: #333;
+    -fx-background-color:#E3E3E3;
+    -fx-control-inner-background:#E3E3E3;
+    -fx-background-radius:20px;
+    -fx-padding : 5px;
 }
 
 .lightButton{
