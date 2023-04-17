@@ -113,5 +113,4 @@ public class Aboutus {
             DBUtils.changeScene(event, fxml, true);
         }
     }
-
 }

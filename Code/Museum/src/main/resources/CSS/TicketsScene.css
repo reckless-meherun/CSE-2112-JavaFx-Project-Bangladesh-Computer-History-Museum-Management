@@ -11,7 +11,6 @@
    -fx-font-family:'Cambria';
    -fx-font-weight:900;
    -fx-fill:#ffffff;
-
 }
 .signUpScreenLeftSignUp,.signUpScreenLeftSubheader{
      -fx-font-size:36px;
@@ -25,7 +24,7 @@
      -fx-font-weight:500;
      -fx-fill:#6A6A6A;
 }
-.signUpScreenLeftInput,signUpScreenLeftButton{
+.signUpScreenLeftInput{
     -fx-font-size:16px;
     -fx-font-family:'Cambria';
     -fx-border-style: none;
@@ -35,6 +34,17 @@
     -fx-padding-left:20px;
 
 }
+
+.lightButton{
+    -fx-font-size:16px;
+        -fx-font-family:'Cambria';
+        -fx-border-style: none;
+        -fx-border-width:0;
+        -fx-background-color:linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));
+        -fx-background-radius:13px;
+        -fx-padding-left:20px;
+}
+
 .signUpScreenLeftInput .placeholder .label{
     -fx-text-fill:linen;
 }
@@ -49,3 +59,4 @@
     -fx-cursor:hand;
     -fx-background-color: linear-gradient(to top,hsba(266, 56%, 35%, 1),hsba(266, 58%, 60%, 1));
 }
+
