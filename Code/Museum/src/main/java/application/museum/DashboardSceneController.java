@@ -84,6 +84,24 @@ public class DashboardSceneController implements Initializable
         stage.setScene(scene);
         stage.show();
     }
+    public void switchTOaboutUs(ActionEvent event)throws IOException{
+        DBUtils.prevfxml.push("DashboardScene.fxml");
+        DBUtils.changeScene(event, "aboutus.fxml", false);
+    }
+    public void goBack(ActionEvent event) throws IOException {
+        if(DBUtils.prevfxml.empty()){
+            return;
+        }
+        String fxml=DBUtils.prevfxml.pop();
+        //DBUtils.prevfxml.pop();
+        System.out.println(fxml);
+        if(fxml=="DashboardScene.fxml"){
+            DBUtils.changeScene(event,fxml,DBUtils.username);
+        }
+        else {
+            DBUtils.changeScene(event, fxml, true);
+        }
+    }
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle)

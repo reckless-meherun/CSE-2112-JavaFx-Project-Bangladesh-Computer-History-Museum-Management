@@ -11,20 +11,23 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.Stack;
 
 public class DBUtils
 {
-    public static void changeScene(ActionEvent event, String fxmlfile, String title, String username)
+    public static String username;
+    public static Stack<String> prevfxml=new Stack<>();
+    public static void changeScene(ActionEvent event, String fxmlfile, String username)
     {
         Parent root = null;
-        if (username != null)
+        if (DBUtils.username != null)
         {
             try
             {
                 FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlfile));
                 root = loader.load();
                 DashboardSceneController scene2Controller = loader.getController();
-                scene2Controller.displayName(username);
+                scene2Controller.displayName(DBUtils.username);
 
             } catch (IOException e)
             {
@@ -35,9 +38,18 @@ public class DBUtils
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, 1101, 680);
         stage.setScene(scene);
-        stage.setTitle(title);
+        //stage.setTitle(title);
         stage.show();
     }
+    public static void changeScene(ActionEvent event, String fxml,boolean goback) throws IOException
+    {
+        Parent root = FXMLLoader.load(DBUtils.class.getResource(fxml));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, 1101, 680);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
     public static void loginuser(ActionEvent event, String username, String password)
     {
@@ -68,7 +80,9 @@ public class DBUtils
                     if (reviewedpas.equals(password))
                     {
                         //return true;
-                        changeScene(event, "DashboardScene.fxml", "Welcome!", username);
+                        DBUtils.username=username;
+                        DBUtils.prevfxml.push("LoginScene.fxml");
+                        changeScene(event, "DashboardScene.fxml", username);
                     } else
                     {
                         System.out.println("password is incorrect!");
