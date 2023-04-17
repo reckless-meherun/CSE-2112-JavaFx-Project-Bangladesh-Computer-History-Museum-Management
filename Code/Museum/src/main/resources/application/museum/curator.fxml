@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.Employeecontroller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.Curatorcontroller">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -19,14 +19,14 @@
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                            <children>
                               <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
-                              <AnchorPane layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: #e0e0e0;">
+                              <AnchorPane layoutY="145.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: #e0e0e0;">
                                  <children>
-                                    <Button fx:id="BOD" layoutX="63.0" layoutY="61.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="22.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="BOD" textFill="#fffefe">
+                                    <Button fx:id="BOD" layoutX="63.0" layoutY="61.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="22.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="BOD" textFill="#fffefe">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="employee" layoutX="48.0" layoutY="121.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="109.0" style="-fx-cursor: hand; -fx-background-color: #654321;" styleClass="signUpScreenLeftButton" stylesheets="@SignupScreen.css" text="Employee" textFill="#fffefe">
+                                    <Button fx:id="employee" layoutX="63.0" layoutY="126.0" mnemonicParsing="false" onAction="#switchToemployee" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Employee" textFill="#fffefe">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -36,7 +36,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="curator" layoutX="63.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchTocurato" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Curator" textFill="#fffefe">
+                                    <Button fx:id="curator" layoutX="63.0" layoutY="253.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand; -fx-background-color: #654321;" styleClass="signUpScreenLeftButton" stylesheets="@SignupScreen.css" text="Curator" textFill="#fffefe">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -51,7 +51,7 @@
                                           <Font name="Cambria" size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="student" layoutX="59.0" layoutY="364.0" mnemonicParsing="false" onAction="#switchTostudents" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Student" textFill="#fffefe">
+                                    <Button fx:id="student" layoutX="59.0" layoutY="362.0" mnemonicParsing="false" onAction="#switchTostudents" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="Student" textFill="#fffefe">
                                        <font>
                                           <Font size="14.0" />
                                        </font>

@@ -79,6 +79,27 @@ public class Aboutus {
         DBUtils.prevfxml.push("aboutus.fxml");
         DBUtils.changeScene(event,"employee.fxml",false);
     }
+    @FXML
+    void switchTocurato(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("aboutus.fxml");
+        DBUtils.changeScene(event, "curator.fxml", false);
+    }
+    @FXML
+    void switchTostudents(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("aboutus.fxml");
+        DBUtils.changeScene(event,"students.fxml",false);
+    }
+    @FXML
+    void switchTodevloper(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("aboutus.fxml");
+        DBUtils.changeScene(event,"developer.fxml",false);
+    }
+    @FXML
+    void switchToeducator(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("aboutus.fxml");
+        DBUtils.changeScene(event,"educator.fxml",false);
+    }
+
     public void switchToSceneOne(ActionEvent event) throws IOException
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
