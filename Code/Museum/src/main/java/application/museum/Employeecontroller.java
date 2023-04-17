@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Aboutus {
+public class Employeecontroller {
 
     @FXML
     private Button BOD;
@@ -69,18 +69,34 @@ public class Aboutus {
     private Button tickets;
 
     @FXML
-    void switchToHome(ActionEvent event) {
-        DBUtils.prevfxml.push("aboutus.fxml");
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
+    void goBack(ActionEvent event) throws IOException {
+        if(DBUtils.prevfxml.empty()){
+            return;
+        }
+        String fxml=DBUtils.prevfxml.pop();
+        //DBUtils.prevfxml.pop();
+        System.out.println(fxml);
+        if(fxml=="DashboardScene.fxml"){
+            DBUtils.changeScene(event,fxml,DBUtils.username);
+        }
+        else {
+            DBUtils.changeScene(event, fxml, true);
+        }
+    }
 
+    @FXML
+    void switchToHome(ActionEvent event) {
+        DBUtils.prevfxml.push("employee.fxml");
+        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
     }
     @FXML
-    void switchToemployee(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("aboutus.fxml");
-        DBUtils.changeScene(event,"employee.fxml",false);
+    void switchTobod(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("employee.fxml");
+        DBUtils.changeScene(event,"aboutus.fxml",false);
     }
-    public void switchToSceneOne(ActionEvent event) throws IOException
-    {
+
+    @FXML
+    void switchToSceneOne(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("You are about to logout");
@@ -96,22 +112,7 @@ public class Aboutus {
             stage.show();
         }
 
+    }
 
-    }
-    @FXML
-    void goBack(ActionEvent event) throws IOException {
-        if(DBUtils.prevfxml.empty()){
-            return;
-        }
-        String fxml=DBUtils.prevfxml.pop();
-        //DBUtils.prevfxml.pop();
-        System.out.println(fxml);
-        if(fxml=="DashboardScene.fxml"){
-            DBUtils.changeScene(event,fxml,DBUtils.username);
-        }
-        else {
-            DBUtils.changeScene(event, fxml, true);
-        }
-    }
 
 }
