@@ -17,6 +17,12 @@
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                      <children>
                         <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
+                        <Button fx:id="GoBackButton" layoutX="587.0" layoutY="624.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="GoBack" textFill="#1e0202">
+                           <font>
+                              <Font name="Cambria" size="14.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane layoutY="145.0" prefHeight="534.0" prefWidth="223.0" style="-fx-background-color: #e0e0e0;" />
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
                            <children>
                               <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
@@ -29,7 +35,7 @@
                                     <Image url="@../assets/NavigationSecondary/HomeActive.png" />
                                  </image>
                               </ImageView>
-                              <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
+                              <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -69,19 +75,13 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
+                              <Text layoutX="474.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
+                                 <font>
+                                    <Font name="Colonna MT" size="36.0" />
+                                 </font>
+                              </Text>
                            </children>
                         </AnchorPane>
-                        <Text layoutX="519.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="NOTICE BOARD" wrappingWidth="234.743408203125">
-                           <font>
-                              <Font name="Colonna MT" size="36.0" />
-                           </font>
-                        </Text>
-                        <Button fx:id="GoBackButton" layoutX="587.0" layoutY="624.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="GoBack" textFill="#1e0202">
-                           <font>
-                              <Font name="Cambria" size="14.0" />
-                           </font>
-                        </Button>
-                        <AnchorPane layoutY="145.0" prefHeight="534.0" prefWidth="223.0" style="-fx-background-color: #e0e0e0;" />
                      </children>
                   </AnchorPane>
                </right>

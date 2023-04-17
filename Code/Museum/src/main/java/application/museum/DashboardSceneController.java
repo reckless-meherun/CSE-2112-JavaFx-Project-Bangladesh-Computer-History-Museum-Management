@@ -78,11 +78,22 @@ public class DashboardSceneController implements Initializable
 
     public void switchToSceneOne(ActionEvent event) throws IOException
     {
-        Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root, 1101, 680);
-        stage.setScene(scene);
-        stage.show();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setHeaderText("You are about to logout");
+        alert.setContentText("Do you want to save?");
+
+        if (alert.showAndWait().get() == ButtonType.OK)
+        {
+            DBUtils.prevfxml.clear();
+            Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root, 1101, 680);
+            stage.setScene(scene);
+            stage.show();
+        }
+
+
     }
     public void switchTOaboutUs(ActionEvent event)throws IOException{
         DBUtils.prevfxml.push("DashboardScene.fxml");
@@ -95,7 +106,11 @@ public class DashboardSceneController implements Initializable
         String fxml=DBUtils.prevfxml.pop();
         //DBUtils.prevfxml.pop();
         System.out.println(fxml);
-        if(fxml=="DashboardScene.fxml"){
+        if(fxml=="LoginScene.fxml"){
+            DBUtils.prevfxml.push(fxml);
+            this.switchToSceneOne(event);
+        }
+        else if(fxml=="DashboardScene.fxml"){
             DBUtils.changeScene(event,fxml,DBUtils.username);
         }
         else {

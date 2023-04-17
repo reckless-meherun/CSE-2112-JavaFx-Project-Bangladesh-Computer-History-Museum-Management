@@ -119,7 +119,7 @@
                               <Image url="@../assets/NavigationSecondary/HomeActive.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
+                        <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
                            <font>
                               <Font size="14.0" />
                            </font>
