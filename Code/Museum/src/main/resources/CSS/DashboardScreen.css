@@ -37,6 +37,18 @@
 -fx-background-color: #EBEBFF;
 }
 
+.TransparentButtons {
+  -fx-font-family: 'Cambria';
+  -fx-background-color: transparent;
+  -fx-text-fill: #4B4B4B;
+  -fx-background-radius: 13px;
+}
+
+.TransparentButtons:hover {
+  -fx-background-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
+  -fx-text-fill: white;
+}
+
 .DashboardScreenMenuItemActive{
     -fx-background-color: #50238A;
     -fx-background-radius: 13px;
@@ -95,7 +107,9 @@
      -fx-font-weight:800;
      -fx-fill:#FFFFFF;
 }
-.AboveAverageText{
+
+.AboveAverageText
+{
     -fx-fill:#7A7575;
     -fx-font-size:14px;
 }

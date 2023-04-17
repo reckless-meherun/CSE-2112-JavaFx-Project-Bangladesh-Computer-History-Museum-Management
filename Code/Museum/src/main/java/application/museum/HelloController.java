@@ -22,6 +22,7 @@ public class HelloController
     public void switchToLoginScene(ActionEvent event) throws IOException
     {
         //Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
+        DBUtils.prevfxml.push("HelloScene.fxml");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginScene.fxml"));
         root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

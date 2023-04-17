@@ -24,23 +24,20 @@ public class HelloApplication extends Application
     {
         try
         {
+
             Parent root = FXMLLoader.load(getClass().getResource("HelloScene.fxml"));
             Scene scene = new Scene(root,1101,680);
             String css = this.getClass().getResource("hello.css").toExternalForm();
             scene.getStylesheets().add(css);
+            stage.setTitle("Bangladesh Computer History Museum Management System");
             //stage.setFullScreen(true);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
             e.printStackTrace();
         }
     }
 }
-
-//    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-//    Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-//        stage.setTitle("Hello!");
-//                stage.setScene(scene);
-//                stage.show();

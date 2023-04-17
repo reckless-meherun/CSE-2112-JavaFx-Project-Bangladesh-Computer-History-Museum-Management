@@ -19,7 +19,7 @@
                <children>
                   <AnchorPane layoutX="349.0" layoutY="245.0" prefHeight="84.0" prefWidth="559.0" styleClass="DashboardScreenUpcomingClassesItem" stylesheets="@../../CSS/DashboardScreen.css">
                      <children>
-                        <Text fx:id="upcomingclassname2" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice one" />
+                        <Text fx:id="notice1" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice one" />
                         <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Department:" />
                         <Text fx:id="upcomingclassteachername2" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" />
                         <Text fx:id="upcomingclasstime2" layoutX="428.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime">
@@ -32,7 +32,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="349.0" layoutY="340.0" prefHeight="84.0" prefWidth="506.0" styleClass="DashboardScreenUpcomingClassesItem">
                      <children>
-                        <Text fx:id="upcomingclassname3" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice two" />
+                        <Text fx:id="notice2" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice two" />
                         <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Department:" />
                         <Text fx:id="upcomingclassteachername3" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" />
                         <Text fx:id="upcomingclasstime3" layoutX="428.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime">
@@ -49,7 +49,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="348.0" layoutY="438.0" prefHeight="84.0" prefWidth="561.0" styleClass="DashboardScreenUpcomingClassesItem">
                      <children>
-                        <Text fx:id="upcomingclassname4" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice three" />
+                        <Text fx:id="notice3" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice three" />
                         <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Department:" />
                         <Text fx:id="upcomingclassteachername4" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" />
                         <Text fx:id="upcomingclasstime4" layoutX="428.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime">
@@ -66,7 +66,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="347.0" layoutY="532.0" minHeight="-Infinity" prefHeight="84.0" prefWidth="564.0" styleClass="DashboardScreenUpcomingClassesItem">
                      <children>
-                        <Text fx:id="upcomingclassname5" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice four" />
+                        <Text fx:id="notice4" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice four" />
                         <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Department:" />
                         <Text fx:id="upcomingclassteachername5" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" />
                         <Text fx:id="upcomingclasstime5" layoutX="428.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime">
@@ -109,45 +109,6 @@
                   </AnchorPane>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
                      <children>
-                        <AnchorPane layoutX="158.0" layoutY="49.0" prefHeight="40.0" prefWidth="124.0" styleClass="DashboardScreenMenuItemActive" stylesheets="@../../CSS/DashboardScreen.css">
-                           <children>
-                              <Text fx:id="home" layoutX="42.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemTextActive" text="Home">
-                                 <font>
-                                    <Font name="Cascadia Mono Regular" size="12.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </AnchorPane>
-                        <ImageView fx:id="LogoutImage" fitHeight="27.0" fitWidth="23.0" layoutX="24.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/NavigationPrimary/Logout.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fx:id="cgpaCalculatorIcon" fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/NavigationPrimary/CGPA.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/NavigationPrimary/Booklet.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/NavigationPrimary/Attendance.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../assets/NavigationPrimary/Classroom.png" />
-                           </image>
-                        </ImageView>
-                        <Text fx:id="classroom" layoutX="320.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Departments" />
-                        <Text fx:id="attendance" layoutX="451.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Photo Gallery" />
-                        <Text fx:id="booklet" layoutX="587.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Articles" />
-                        <Text fx:id="cgpa" layoutX="689.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="About Us" />
-                        <Text fx:id="logout" layoutX="1021.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Logout" />
                         <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../Assets/SmallLogo.png" />
@@ -158,7 +119,7 @@
                               <Image url="@../assets/NavigationSecondary/HomeActive.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="LogoutButton" layoutX="997.0" layoutY="101.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="96.0" style="-fx-cursor: hand;" styleClass="DashboardScreenTotalClasses" text="Logout" textFill="WHITE">
+                        <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -168,12 +129,41 @@
                               <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
                            </children>
                         </AnchorPane>
-                        <Label fx:id="loggedIn" layoutX="967.0" layoutY="66.0" prefHeight="26.0" prefWidth="131.0" text="Hello " textFill="#535151">
+                        <Label fx:id="loggedIn" layoutX="442.0" layoutY="15.0" prefHeight="40.0" prefWidth="390.0" text="Hello " textFill="#535151">
                            <font>
-                              <Font name="Cambria" size="19.0" />
+                              <Font name="Cambria" size="32.0" />
                            </font>
                         </Label>
-                        <Text fx:id="cgpa1" layoutX="795.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenMenuItemText" text="Tickets" />
+                        <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="departments" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="photogallery" layoutX="423.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Articles">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="aboutus" layoutX="693.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTOaboutUs" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
                      </children>
                   </AnchorPane>
                   <Text layoutX="519.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="NOTICE BOARD" wrappingWidth="234.743408203125">
@@ -190,7 +180,7 @@
                         </Text>
                      </children>
                   </AnchorPane>
-                  <Button fx:id="GoBackButton" layoutX="587.0" layoutY="624.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="DashboardScreenTotalClasses" stylesheets="@hello.css" text="GoBack" textFill="WHITE">
+                  <Button fx:id="GoBackButton" layoutX="587.0" layoutY="624.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="GoBack" textFill="#1e0202">
                      <font>
                         <Font name="Cambria" size="14.0" />
                      </font></Button>

@@ -16,14 +16,15 @@
     -fx-font-weight:200;
     -fx-fill:#D4D4D4;
 }
+
 .WelcomeButton,.WelcomeLoginButton{
     -fx-font-size:18px;
     -fx-font-family:'Cambria';
     -fx-font-weight:300;
     -fx-fill:#ffffff;
-    -fx-background-radius:80px;
+    -fx-background-radius:13px;
     -fx-border:0;
-    -fx-background-color: #D7171E;
+    -fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));
     -fx-text-fill:#ffffff;
     -fx-cursor:hand;
 }

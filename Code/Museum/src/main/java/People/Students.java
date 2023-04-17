@@ -67,8 +67,4 @@ public class Students extends internals{
         return this.allcourses;
     }
 
-
-
-
-
 }
