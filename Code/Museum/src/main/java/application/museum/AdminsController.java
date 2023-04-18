@@ -1,8 +1,10 @@
 package application.museum;
 
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,10 +14,13 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class AdminsController {
+public class AdminsController implements Initializable {
 
     @FXML
     private Button BOD;
@@ -46,6 +51,15 @@ public class AdminsController {
 
     @FXML
     private Button departments;
+
+    @FXML
+    private Button bar1;
+
+    @FXML
+    private Button bar2;
+
+    @FXML
+    private AnchorPane paneside;
 
     @FXML
     private Button developer;
@@ -140,6 +154,44 @@ public class AdminsController {
     void switchTostudents(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("admins.fxml");
         DBUtils.changeScene(event,"students.fxml",false);
+    }
+    @FXML
+    void run1(ActionEvent event) {
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.4));
+        slide.setNode(paneside);
+        slide.setToX(0);
+        slide.play();
+
+        paneside.setTranslateX(-155);
+
+        slide.setOnFinished((ActionEvent e)->{
+            bar1.setVisible(false);
+            bar2.setVisible(true);
+        });
+
+    }
+    @FXML
+    void run2(ActionEvent event) {
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.4));
+        slide.setNode(paneside);
+        slide.setToX(-155);
+        slide.play();
+
+        paneside.setTranslateX(0);
+
+        slide.setOnFinished((ActionEvent e)->{
+            bar1.setVisible(true);
+            bar2.setVisible(false);
+        });
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        paneside.setTranslateX(0);
+        bar2.setVisible(true);
+        bar1.setVisible(false);
     }
 
 }

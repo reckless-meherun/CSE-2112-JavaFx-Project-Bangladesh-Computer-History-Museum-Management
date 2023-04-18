@@ -12,116 +12,134 @@
    <children>
       <AnchorPane fx:id="SceneTwo" prefHeight="595.0" prefWidth="921.0">
          <children>
-            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" styleClass="DashboardScreen" stylesheets="@../CSS/DashboardScreen.css">
-               <right>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
-                     <children>
-                        <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
-                        <AnchorPane layoutY="145.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: #e0e0e0;">
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" styleClass="DashboardScreen" stylesheets="@../CSS/DashboardScreen.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane fx:id="SceneTwo1" prefHeight="595.0" prefWidth="921.0">
+               <children>
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" styleClass="DashboardScreen" stylesheets="@../CSS/DashboardScreen.css">
+                     <right>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                            <children>
-                              <Button fx:id="BOD" layoutX="63.0" layoutY="61.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="22.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="BOD" textFill="#fffefe">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></Button>
-                              <Button fx:id="employee" layoutX="63.0" layoutY="126.0" mnemonicParsing="false" onAction="#switchToemployee" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Employee" textFill="#fffefe">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="educator" layoutX="63.0" layoutY="186.0" mnemonicParsing="false" onAction="#switchToeducator" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Educator" textFill="#fffefe">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="curator" layoutX="63.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchTocurato" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Curator" textFill="#fffefe">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="developer" layoutX="59.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchTodevloper" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Developer" textFill="#fffefe">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="GoBackButton" layoutX="61.0" layoutY="478.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="GoBack" textFill="#1e0202">
-                                 <font>
-                                    <Font name="Cambria" size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="student" layoutX="59.0" layoutY="362.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Student" textFill="#fffefe">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="admins" layoutX="70.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToadmins" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Admins">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                           </children></AnchorPane>
-                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
-                           <children>
-                              <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../Assets/SmallLogo.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="DashboardScreenMenu">
-                                 <image>
-                                    <Image url="@../assets/NavigationSecondary/HomeActive.png" />
-                                 </image>
-                              </ImageView>
-                              <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <AnchorPane layoutX="1033.0" layoutY="11.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground" stylesheets="@../../CSS/DashboardScreen.css">
+                              <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
                                  <children>
-                                    <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
+                                    <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Assets/SmallLogo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="DashboardScreenMenu">
+                                       <image>
+                                          <Image url="@../assets/NavigationSecondary/HomeActive.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <AnchorPane layoutX="1033.0" layoutY="11.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground" stylesheets="@../../CSS/DashboardScreen.css">
+                                       <children>
+                                          <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="departments" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="photogallery" layoutX="423.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="aboutus" layoutX="693.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="About Us">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Text layoutX="474.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
+                                       <font>
+                                          <Font name="Colonna MT" size="36.0" />
+                                       </font>
+                                    </Text>
                                  </children>
                               </AnchorPane>
-                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="departments" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="photogallery" layoutX="423.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="aboutus" layoutX="693.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="About Us">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Text layoutX="474.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
-                                 <font>
-                                    <Font name="Colonna MT" size="36.0" />
-                                 </font>
-                              </Text>
+                              <AnchorPane fx:id="paneside" layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: #e0e0e0;">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="170.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Assets/menu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="BOD" layoutX="63.0" layoutY="55.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="30.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="BOD" textFill="#fffefe">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="employee" layoutX="63.0" layoutY="126.0" mnemonicParsing="false" onAction="#switchToemployee" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Employee" textFill="#fffefe">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="educator" layoutX="63.0" layoutY="186.0" mnemonicParsing="false" onAction="#switchToeducator" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Educator" textFill="#fffefe">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="curator" layoutX="63.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchTocurato" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Curator" textFill="#fffefe">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="developer" layoutX="59.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchTodevloper" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Developer" textFill="#fffefe">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="GoBackButton" layoutX="61.0" layoutY="478.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="GoBack" textFill="#1e0202">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="student" layoutX="59.0" layoutY="364.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Student" textFill="#fffefe">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="admins" layoutX="70.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToadmins" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Admins">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="bar2" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run2" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
+                                    <Button fx:id="bar1" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run1" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
+                                 </children>
+                              </AnchorPane>
                            </children>
                         </AnchorPane>
-                     </children>
-                  </AnchorPane>
-               </right>
-            </BorderPane>
+                     </right>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
