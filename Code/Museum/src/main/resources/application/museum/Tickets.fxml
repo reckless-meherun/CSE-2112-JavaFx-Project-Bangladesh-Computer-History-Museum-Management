@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="680.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="680.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.TicketController">
    <children>
       <AnchorPane fx:id="SceneTwo" prefHeight="595.0" prefWidth="921.0">
          <children>
@@ -46,22 +46,22 @@
                                     <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
                                  </children>
                               </AnchorPane>
-                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
+                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="departments" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
+                              <Button fx:id="departments" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="photogallery" layoutX="423.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
+                              <Button fx:id="photogallery" layoutX="423.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
+                              <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -71,7 +71,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Tickets">
+                              <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Tickets">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -138,7 +138,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </ChoiceBox>
-                              <Button fx:id="home1" layoutX="193.0" layoutY="480.0" mnemonicParsing="false" onAction="#logout" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="BOOK">
+                              <Button fx:id="home1" layoutX="193.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="BOOK">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

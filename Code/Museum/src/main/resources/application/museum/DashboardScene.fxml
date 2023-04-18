@@ -134,7 +134,7 @@
                               <Font name="Cambria" size="32.0" />
                            </font>
                         </Label>
-                        <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
+                        <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Home">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -159,7 +159,7 @@
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
+                        <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTotickets" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
                            <font>
                               <Font size="14.0" />
                            </font>

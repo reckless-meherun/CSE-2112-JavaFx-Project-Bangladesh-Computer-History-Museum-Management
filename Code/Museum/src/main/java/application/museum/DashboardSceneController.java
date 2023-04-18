@@ -61,6 +61,10 @@ public class DashboardSceneController implements Initializable
         loggedIn.setText("Hello " + username + " !");
     }
 
+    public static void pushtostack(){
+        DBUtils.prevfxml.push("DashboardScene.fxml.fxml");
+    }
+    @FXML
     public void logout(ActionEvent event)
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -75,7 +79,7 @@ public class DashboardSceneController implements Initializable
             stage.close();
         }
     }
-
+    @FXML
     public void switchToSceneOne(ActionEvent event) throws IOException
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -95,13 +99,20 @@ public class DashboardSceneController implements Initializable
 
 
     }
-
+    @FXML
     public void switchTOaboutUs(ActionEvent event) throws IOException
     {
         DBUtils.prevfxml.push("DashboardScene.fxml");
         DBUtils.changeScene(event, "aboutus.fxml", false);
     }
+    @FXML
+    public void switchTotickets(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("DashboardScene.fxml");
+        DBUtils.changeScene(event, "Tickets.fxml", false);
+    }
 
+    @FXML
     public void goBack(ActionEvent event) throws IOException
     {
         if (DBUtils.prevfxml.empty())

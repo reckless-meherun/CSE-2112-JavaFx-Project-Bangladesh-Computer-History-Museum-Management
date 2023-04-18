@@ -155,6 +155,15 @@ public class Educatorcontroller implements Initializable {
         DBUtils.prevfxml.push("educator.fxml");
         DBUtils.changeScene(event,"admins.fxml",false);
     }
+    static void pushtostack(){
+        DBUtils.prevfxml.push("educator.fxml");
+    }
+    @FXML
+    public void switchTotickets(ActionEvent event) throws IOException
+    {
+        Educatorcontroller.pushtostack();
+        DBUtils.changeScene(event, "Tickets.fxml", false);
+    }
     @FXML
     void run1(ActionEvent event) {
         TranslateTransition slide = new TranslateTransition();

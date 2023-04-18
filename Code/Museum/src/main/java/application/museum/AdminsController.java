@@ -150,6 +150,15 @@ public class AdminsController implements Initializable {
         DBUtils.prevfxml.push("admins.fxml");
         DBUtils.changeScene(event,"educator.fxml",false);
     }
+    static void pushtostack(){
+        DBUtils.prevfxml.push("admins.fxml");
+    }
+    @FXML
+    public void switchTotickets(ActionEvent event) throws IOException
+    {
+        AdminsController.pushtostack();
+        DBUtils.changeScene(event, "Tickets.fxml", false);
+    }
     @FXML
     void switchTostudents(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("admins.fxml");

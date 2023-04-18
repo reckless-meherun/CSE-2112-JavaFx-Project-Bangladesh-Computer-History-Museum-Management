@@ -157,6 +157,14 @@ public class Aboutus implements Initializable {
             DBUtils.changeScene(event, fxml, true);
         }
     }
+    public static void pushtostack(){
+        DBUtils.prevfxml.push("aboutus.fxml");
+    }
+    public void switchTotickets(ActionEvent event) throws IOException
+    {
+        Aboutus.pushtostack();
+        DBUtils.changeScene(event, "Tickets.fxml", false);
+    }
     @FXML
     void run1(ActionEvent event) {
         TranslateTransition slide = new TranslateTransition();

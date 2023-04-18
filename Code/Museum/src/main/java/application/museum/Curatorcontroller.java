@@ -86,6 +86,10 @@ public class Curatorcontroller implements Initializable {
     @FXML
     private Button tickets;
 
+    public static void pushtostack(){
+        DBUtils.prevfxml.push("curator.fxml");
+    }
+
     @FXML
     void goBack(ActionEvent event) throws IOException {
         if(DBUtils.prevfxml.empty()){
@@ -187,6 +191,12 @@ public class Curatorcontroller implements Initializable {
             bar1.setVisible(true);
             bar2.setVisible(false);
         });
+    }
+    @FXML
+    public void switchTotickets(ActionEvent event) throws IOException
+    {
+        Curatorcontroller.pushtostack();
+        DBUtils.changeScene(event, "Tickets.fxml", false);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

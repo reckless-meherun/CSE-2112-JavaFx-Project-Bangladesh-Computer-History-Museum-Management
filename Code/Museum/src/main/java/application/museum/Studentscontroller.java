@@ -146,6 +146,16 @@ public class Studentscontroller implements Initializable{
         DBUtils.prevfxml.push("students.fxml");
         DBUtils.changeScene(event,"developer.fxml",false);
     }
+
+    static void pushtostack(){
+        DBUtils.prevfxml.push("students.fxml");
+    }
+    @FXML
+    public void switchTotickets(ActionEvent event) throws IOException
+    {
+        Studentscontroller.pushtostack();
+        DBUtils.changeScene(event, "Tickets.fxml", false);
+    }
     @FXML
     void switchToeducator(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("students.fxml");

@@ -135,6 +135,16 @@ public class Developercontroller implements Initializable {
         DBUtils.prevfxml.push("developer.fxml");
         DBUtils.changeScene(event,"aboutus.fxml",false);
     }
+
+    static void pushtostack(){
+        DBUtils.prevfxml.push("developer.fxml");
+    }
+    @FXML
+    public void switchTotickets(ActionEvent event) throws IOException
+    {
+        Developercontroller.pushtostack();
+        DBUtils.changeScene(event, "Tickets.fxml", false);
+    }
     @FXML
     void switchTocurato(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("developer.fxml");
