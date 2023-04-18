@@ -159,6 +159,11 @@ public class Educatorcontroller implements Initializable {
         DBUtils.prevfxml.push("educator.fxml");
     }
     @FXML
+    void switchToInventory(ActionEvent event) throws IOException {
+        Educatorcontroller.pushtostack();
+        DBUtils.changeScene(event,"Inventory.fxml",false);
+    }
+    @FXML
     public void switchTotickets(ActionEvent event) throws IOException
     {
         Educatorcontroller.pushtostack();

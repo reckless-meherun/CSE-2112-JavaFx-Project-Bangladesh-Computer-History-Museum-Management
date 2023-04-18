@@ -140,6 +140,11 @@ public class Developercontroller implements Initializable {
         DBUtils.prevfxml.push("developer.fxml");
     }
     @FXML
+    void switchToInventory(ActionEvent event) throws IOException {
+        Developercontroller.pushtostack();
+        DBUtils.changeScene(event,"Inventory.fxml",false);
+    }
+    @FXML
     public void switchTotickets(ActionEvent event) throws IOException
     {
         Developercontroller.pushtostack();

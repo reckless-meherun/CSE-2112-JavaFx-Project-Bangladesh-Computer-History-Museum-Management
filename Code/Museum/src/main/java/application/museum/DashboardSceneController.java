@@ -134,6 +134,11 @@ public class DashboardSceneController implements Initializable
             DBUtils.changeScene(event, fxml, true);
         }
     }
+    @FXML
+    void switchToInventory(ActionEvent event) throws IOException {
+        DashboardSceneController.pushtostack();
+        DBUtils.changeScene(event,"Inventory.fxml",false);
+    }
 
     public void selectDept()
     {

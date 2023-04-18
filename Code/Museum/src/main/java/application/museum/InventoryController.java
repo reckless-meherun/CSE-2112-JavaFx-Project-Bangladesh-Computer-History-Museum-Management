@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TicketController {
+public class InventoryController {
 
     @FXML
     private Button GoBackButton;
@@ -50,8 +50,18 @@ public class TicketController {
     @FXML
     private Text studentName;
 
+
     @FXML
     private Button tickets;
+
+    static void pushTostack(){
+        DBUtils.prevfxml.push("Inventory.fxml");
+    }
+    @FXML
+    void SwitchToHome(ActionEvent event) {
+        InventoryController.pushTostack();
+        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
+    }
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
@@ -76,7 +86,7 @@ public class TicketController {
 
     @FXML
     void switchTOaboutUs(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("Tickets.fxml");
+        InventoryController.pushTostack();
         DBUtils.changeScene(event,"aboutus.fxml",false);
     }
 
@@ -97,20 +107,14 @@ public class TicketController {
             stage.show();
         }
     }
-    @FXML
-    void switchToHome(ActionEvent event){
-        TicketController.pushtostack();
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
-    }
-    @FXML
-    void switchToInventory(ActionEvent event) throws IOException {
-        TicketController.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
-    }
-    static void pushtostack(){
-        DBUtils.prevfxml.push("Tickets.fxml");
-    }
 
+
+    @FXML
+    void switchTotickets(ActionEvent event) throws IOException {
+        InventoryController.pushTostack();
+        DBUtils.changeScene(event,"Tickets.fxml",false);
+
+    }
 
 }
 

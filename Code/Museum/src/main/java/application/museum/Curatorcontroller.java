@@ -193,6 +193,12 @@ public class Curatorcontroller implements Initializable {
         });
     }
     @FXML
+    void switchToInventory(ActionEvent event) throws IOException {
+        Curatorcontroller.pushtostack();
+        DBUtils.changeScene(event,"Inventory.fxml",false);
+    }
+
+    @FXML
     public void switchTotickets(ActionEvent event) throws IOException
     {
         Curatorcontroller.pushtostack();

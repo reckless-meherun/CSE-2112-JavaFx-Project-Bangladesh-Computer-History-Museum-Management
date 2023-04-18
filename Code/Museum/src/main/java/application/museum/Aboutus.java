@@ -160,6 +160,11 @@ public class Aboutus implements Initializable {
     public static void pushtostack(){
         DBUtils.prevfxml.push("aboutus.fxml");
     }
+    @FXML
+    void switchToInventory(ActionEvent event) throws IOException {
+        Aboutus.pushtostack();
+        DBUtils.changeScene(event,"Inventory.fxml",false);
+    }
     public void switchTotickets(ActionEvent event) throws IOException
     {
         Aboutus.pushtostack();

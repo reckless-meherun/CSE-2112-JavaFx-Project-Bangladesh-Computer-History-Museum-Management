@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="added sliding menu bar.">
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java" afterDir="false" />
+    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="connected tickets now you can nevigate to tickets">
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/InventoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Aboutus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Aboutus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/AdminsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/AdminsController.java" afterDir="false" />
@@ -15,7 +15,9 @@
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Educatorcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Educatorcontroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Studentscontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Studentscontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" afterDir="false" />
@@ -152,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681845395413</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="connected tickets now you can nevigate to tickets">
+      <created>1681850935649</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681850935649</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -165,7 +174,8 @@
     <MESSAGE value="updated logout" />
     <MESSAGE value="added admins option" />
     <MESSAGE value="added sliding menu bar." />
-    <option name="LAST_COMMIT_MESSAGE" value="added sliding menu bar." />
+    <MESSAGE value="connected tickets now you can nevigate to tickets" />
+    <option name="LAST_COMMIT_MESSAGE" value="connected tickets now you can nevigate to tickets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
