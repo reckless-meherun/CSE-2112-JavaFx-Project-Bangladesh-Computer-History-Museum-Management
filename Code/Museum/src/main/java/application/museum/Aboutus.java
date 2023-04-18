@@ -24,6 +24,9 @@ public class Aboutus {
     private Button GoBackButton;
 
     @FXML
+    private Button admins;
+
+    @FXML
     private Button LogoutButton;
 
     @FXML
@@ -93,6 +96,11 @@ public class Aboutus {
     void switchTodevloper(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("aboutus.fxml");
         DBUtils.changeScene(event,"developer.fxml",false);
+    }
+    @FXML
+    void switchToadmins(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("aboutus.fxml");
+        DBUtils.changeScene(event,"admins.fxml",false);
     }
     @FXML
     void switchToeducator(ActionEvent event) throws IOException {

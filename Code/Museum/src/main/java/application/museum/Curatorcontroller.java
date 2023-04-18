@@ -21,6 +21,9 @@ public class Curatorcontroller {
     private Button BOD;
 
     @FXML
+    private Button admins;
+
+    @FXML
     private Button GoBackButton;
 
     @FXML
@@ -128,6 +131,11 @@ public class Curatorcontroller {
     void switchTodevloper(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("curator.fxml");
         DBUtils.changeScene(event,"developer.fxml",false);
+    }
+    @FXML
+    void switchToadmins(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("curator.fxml");
+        DBUtils.changeScene(event,"admins.fxml",false);
     }
     @FXML
     void switchToeducator(ActionEvent event) throws IOException {

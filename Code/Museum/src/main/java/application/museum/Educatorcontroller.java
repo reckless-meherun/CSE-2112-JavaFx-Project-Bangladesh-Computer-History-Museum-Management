@@ -21,6 +21,9 @@ public class Educatorcontroller {
     private Button BOD;
 
     @FXML
+    private Button admins;
+
+    @FXML
     private Button GoBackButton;
 
     @FXML
@@ -132,6 +135,11 @@ public class Educatorcontroller {
     void switchTostudents(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("educator.fxml");
         DBUtils.changeScene(event,"students.fxml",false);
+    }
+    @FXML
+    void switchToadmins(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("educator.fxml");
+        DBUtils.changeScene(event,"admins.fxml",false);
     }
 
 }

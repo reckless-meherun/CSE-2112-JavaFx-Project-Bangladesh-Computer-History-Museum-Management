@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Developercontroller {
+public class AdminsController {
 
     @FXML
     private Button BOD;
@@ -89,7 +89,7 @@ public class Developercontroller {
 
     @FXML
     void switchToHome(ActionEvent event) {
-        DBUtils.prevfxml.push("developer.fxml.fxml");
+        DBUtils.prevfxml.push("admins.fxml");
         DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
     }
 
@@ -113,33 +113,33 @@ public class Developercontroller {
 
     @FXML
     void switchToemployee(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("developer.fxml");
+        DBUtils.prevfxml.push("admins.fxml");
         DBUtils.changeScene(event,"employee.fxml",false);
     }
     @FXML
     void switchTobod(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("developer.fxml");
+        DBUtils.prevfxml.push("admins.fxml");
         DBUtils.changeScene(event,"aboutus.fxml",false);
     }
     @FXML
     void switchTocurato(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("developer.fxml");
+        DBUtils.prevfxml.push("admins.fxml");
         DBUtils.changeScene(event, "curator.fxml", false);
     }
     @FXML
-    void switchTostudent(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("developer.fxml");
-        DBUtils.changeScene(event,"students.fxml",false);
+    void switchTodevloper(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("admins.fxml");
+        DBUtils.changeScene(event,"developer.fxml",false);
     }
     @FXML
     void switchToeducator(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("developer.fxml");
+        DBUtils.prevfxml.push("admins.fxml");
         DBUtils.changeScene(event,"educator.fxml",false);
     }
     @FXML
-    void switchToadmins(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("developer.fxml");
-        DBUtils.changeScene(event,"admins.fxml",false);
+    void switchTostudents(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("admins.fxml");
+        DBUtils.changeScene(event,"students.fxml",false);
     }
 
 }

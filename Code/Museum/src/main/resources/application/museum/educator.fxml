@@ -31,7 +31,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="educator" layoutX="59.0" layoutY="186.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="88.0" style="-fx-cursor: hand; -fx-background-color: #654321;" styleClass="signUpScreenLeftButton" stylesheets="@SignupScreen.css" text="Educator" textFill="#fffefe">
+                                    <Button fx:id="educator" layoutX="59.0" layoutY="186.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="88.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Educator" textFill="#fffefe">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -52,6 +52,11 @@
                                        </font>
                                     </Button>
                                     <Button fx:id="student" layoutX="59.0" layoutY="362.0" mnemonicParsing="false" onAction="#switchTostudents" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="Student" textFill="#fffefe">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="admins" layoutX="70.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToadmins" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Admins">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -95,12 +100,12 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Articles">
+                                    <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="aboutus" layoutX="693.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
+                                    <Button fx:id="aboutus" layoutX="693.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="About Us">
                                        <font>
                                           <Font size="14.0" />
                                        </font>

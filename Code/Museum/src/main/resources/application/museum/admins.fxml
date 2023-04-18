@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.Curatorcontroller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.AdminsController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -36,7 +36,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="curator" layoutX="63.0" layoutY="253.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Curator" textFill="#fffefe">
+                                    <Button fx:id="curator" layoutX="63.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchTocurato" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Curator" textFill="#fffefe">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -51,12 +51,12 @@
                                           <Font name="Cambria" size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="student" layoutX="59.0" layoutY="362.0" mnemonicParsing="false" onAction="#switchTostudents" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="Student" textFill="#fffefe">
+                                    <Button fx:id="student" layoutX="59.0" layoutY="362.0" mnemonicParsing="false" onAction="#switchTostudents" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Student" textFill="#fffefe">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="admins" layoutX="70.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToadmins" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Admins">
+                                    <Button fx:id="admins" layoutX="70.0" layoutY="411.0" mnemonicParsing="false" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Admins">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
