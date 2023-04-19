@@ -83,7 +83,7 @@
                                     </Text>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane fx:id="paneside" layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: #e0e0e0;">
+                              <AnchorPane fx:id="paneside" layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: linear-gradient(to top, #F2ECB6, #A96F44);">
                                  <children>
                                     <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="170.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
