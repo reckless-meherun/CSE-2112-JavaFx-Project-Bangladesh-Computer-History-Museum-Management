@@ -15,7 +15,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TicketController {
+public class TicketController
+{
 
     @FXML
     private Button GoBackButton;
