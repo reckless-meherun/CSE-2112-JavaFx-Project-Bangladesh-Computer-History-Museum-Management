@@ -196,13 +196,13 @@
                               </Button>
                               <TableView layoutX="2.0" layoutY="69.0" prefHeight="260.0" prefWidth="683.0" stylesheets="@../../CSS/TicketCalculator.Css">
                                 <columns>
-                                  <TableColumn prefWidth="100.80007934570312" text="Last visit date" />
+                                  <TableColumn prefWidth="100.80007934570312" text="Last Visit Date" />
                                   <TableColumn prefWidth="76.79998779296875" text="Name" />
                                     <TableColumn prefWidth="67.199951171875" text="Age" />
                                     <TableColumn prefWidth="63.20001220703125" text="Gender" />
                                     <TableColumn prefWidth="103.199951171875" text="Email" />
                                     <TableColumn prefWidth="82.4000244140625" text="Phone" />
-                                    <TableColumn prefWidth="86.39990234375" text="Visit Count" />
+                                    <TableColumn prefWidth="86.39990234375" text="Total Visit" />
                                     <TableColumn prefWidth="100.79998779296875" text="Language" />
                                     <TableColumn prefWidth="126.4000244140625" text="Occupation" />
                                 </columns>

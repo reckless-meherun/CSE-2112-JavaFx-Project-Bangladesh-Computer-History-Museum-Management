@@ -91,7 +91,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField layoutX="42.0" layoutY="153.0" prefHeight="32.0" prefWidth="159.0" promptText="doc number" styleClass="signUpScreenLeftInput">
+                              <TextField layoutX="43.0" layoutY="150.0" prefHeight="32.0" prefWidth="159.0" promptText="doc number" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
@@ -129,7 +129,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <ChoiceBox layoutX="210.0" layoutY="153.0" prefHeight="32.0" prefWidth="164.0" styleClass="signUpScreenLeftInput">
+                              <ChoiceBox layoutX="211.0" layoutY="150.0" prefHeight="32.0" prefWidth="164.0" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
