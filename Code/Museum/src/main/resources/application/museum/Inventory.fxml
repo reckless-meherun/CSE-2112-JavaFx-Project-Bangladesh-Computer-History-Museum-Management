@@ -141,7 +141,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextArea layoutX="44.0" layoutY="195.0" prefHeight="89.0" prefWidth="332.0" promptText="artifact description" styleClass="textarea" />
+                              <TextArea layoutX="44.0" layoutY="195.0" prefHeight="89.0" prefWidth="332.0" promptText="artifact title and description" styleClass="textarea" />
                               <Button layoutX="43.0" layoutY="391.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="336.0" styleClass="lightButton" stylesheets="@../../CSS/TicketsScene.css" text="Browse images" />
                            </children>
                         </AnchorPane>
@@ -158,7 +158,7 @@
                                   <TableColumn prefWidth="75.0" text="doc no." />
                                   <TableColumn prefWidth="79.20004272460938" text="Last Update" />
                                     <TableColumn prefWidth="87.20001220703125" text="Catagory" />
-                                    <TableColumn prefWidth="126.39996337890625" text="Description" />
+                                    <TableColumn prefWidth="126.39996337890625" text="Title and Description" />
                                     <TableColumn prefWidth="89.60003662109375" text="Department" />
                                     <TableColumn prefWidth="66.39990234375" text="Row" />
                                     <TableColumn prefWidth="79.99993896484375" text="Room" />
