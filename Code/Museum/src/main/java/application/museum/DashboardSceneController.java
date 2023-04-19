@@ -8,10 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -51,16 +48,23 @@ public class DashboardSceneController implements Initializable
     private Text notice4;
     @FXML
     private Text ProfileIcon;
+    @FXML
+    private TreeView treeView;
 
 
     @FXML
     private AnchorPane SceneTwo;
+    private boolean rootClicked = false;
 
     public void displayName(String username)
     {
         loggedIn.setText("Hello " + username + " !");
     }
 
+    public static void pushtostack(){
+        DBUtils.prevfxml.push("DashboardScene.fxml.fxml");
+    }
+    @FXML
     public void logout(ActionEvent event)
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -75,7 +79,7 @@ public class DashboardSceneController implements Initializable
             stage.close();
         }
     }
-
+    @FXML
     public void switchToSceneOne(ActionEvent event) throws IOException
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -95,32 +99,112 @@ public class DashboardSceneController implements Initializable
 
 
     }
-    public void switchTOaboutUs(ActionEvent event)throws IOException{
+    @FXML
+    public void switchTOaboutUs(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("DashboardScene.fxml");
         DBUtils.changeScene(event, "aboutus.fxml", false);
     }
-    public void goBack(ActionEvent event) throws IOException {
-        if(DBUtils.prevfxml.empty()){
+    @FXML
+    public void switchTotickets(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("DashboardScene.fxml");
+        DBUtils.changeScene(event, "Tickets.fxml", false);
+    }
+
+    @FXML
+    public void goBack(ActionEvent event) throws IOException
+    {
+        if (DBUtils.prevfxml.empty())
+        {
             return;
         }
-        String fxml=DBUtils.prevfxml.pop();
+        String fxml = DBUtils.prevfxml.pop();
         //DBUtils.prevfxml.pop();
         System.out.println(fxml);
-        if(fxml=="LoginScene.fxml"){
+        if (fxml == "LoginScene.fxml")
+        {
             DBUtils.prevfxml.push(fxml);
             this.switchToSceneOne(event);
-        }
-        else if(fxml=="DashboardScene.fxml"){
-            DBUtils.changeScene(event,fxml,DBUtils.username);
-        }
-        else {
+        } else if (fxml == "DashboardScene.fxml")
+        {
+            DBUtils.changeScene(event, fxml, DBUtils.username);
+        } else
+        {
             DBUtils.changeScene(event, fxml, true);
         }
+    }
+    @FXML
+    void switchToInventory(ActionEvent event) throws IOException {
+        DashboardSceneController.pushtostack();
+        DBUtils.changeScene(event,"Inventory.fxml",false);
+    }
+    @FXML
+    void switchToGallery(ActionEvent event) throws IOException {
+        DashboardSceneController.pushtostack();
+        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+    }
+
+    public void selectDept()
+    {
+
     }
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         NavigationHandler.HandleNavigation(home, departments, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+//        TreeItem<String> rootDept = new TreeItem<>("Departments");
+//
+//        TreeItem<String> branchDept1 = new TreeItem<>("Curatorial\nDepartments");
+//        TreeItem<String> branchDept2 = new TreeItem<>("Non-curatorial\nDepartments");
+//
+//        TreeItem<String> leafDept1 = new TreeItem<>("Software");
+//        TreeItem<String> leafDept2 = new TreeItem<>("Hardware");
+//        TreeItem<String> leafDept3 = new TreeItem<>("Language");
+//        TreeItem<String> leafDept4 = new TreeItem<>("Auditorium");
+//        TreeItem<String> leafDept5 = new TreeItem<>("Security");
+//        TreeItem<String> leafDept6 = new TreeItem<>("Public\nEducation");
+//
+//        branchDept1.getChildren().addAll(leafDept1, leafDept2, leafDept3);
+//        branchDept2.getChildren().addAll(leafDept4, leafDept5, leafDept6);
+//
+//        rootDept.getChildren().addAll(branchDept1, branchDept2);
+//        departmentsTreeButton.setRoot(rootDept);
+//
+        selectDept();
+//        TreeItem<String> rootItem = new TreeItem<>("Departments");
+//        rootItem.setExpanded(true);
+//
+//        TreeItem<String> curatorialItem = new TreeItem<>("Curatorial");
+//        TreeItem<String> nonCuratorialItem = new TreeItem<>("Non-curatorial");
+//
+//        rootItem.getChildren().addAll(curatorialItem, nonCuratorialItem);
+//        treeView.setRoot(rootItem);
+//
+//        // Add listener to root node to set flag when clicked
+//        rootItem.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+//            rootClicked = true;
+//        });
+//
+//        // Add style to child nodes when root node is clicked and cursor is over them
+//        treeView.setOnMouseMoved(event -> {
+//            if (rootClicked && event.getTarget() instanceof Cell && event.getPickResult().getIntersectedNode() instanceof Text) {
+//                Cell cell = (Cell) event.getTarget();
+//                if (!cell.getStyleClass().contains("tree-root")) {
+//                    cell.setStyle("-fx-background-color: #e6e6e6;");
+//                }
+//            }
+//        });
+//
+//        // Remove style from child nodes when cursor moves away
+//        treeView.setOnMouseExited(event -> {
+//            if (rootClicked) {
+//                treeView.getRoot().getChildren().forEach(child -> {
+//                    Cell cell = (Cell) treeView.lookup(".tree-cell[index=" + treeView.getRow(child) + "]");
+//                    cell.setStyle("");
+//                });
+//            }
+//        });
     }
 }

@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.Aboutus">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.Curatorcontroller">
    <children>
       <AnchorPane fx:id="SceneTwo" prefHeight="595.0" prefWidth="921.0">
          <children>
@@ -87,7 +87,7 @@
                                     <Image url="@../../Assets/menu.png" />
                                  </image>
                               </ImageView>
-                              <Button fx:id="BOD" layoutX="63.0" layoutY="55.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" stylesheets="@SignupScreen.css" text="BOD" textFill="#fffefe">
+                              <Button fx:id="BOD" layoutX="63.0" layoutY="55.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="30.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="BOD" textFill="#fffefe">
                                  <font>
                                     <Font size="14.0" />
                                  </font></Button>
@@ -101,7 +101,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="curator" layoutX="63.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchTocurato" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Curator" textFill="#fffefe">
+                              <Button fx:id="curator" layoutX="63.0" layoutY="253.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Curator" textFill="#fffefe">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -129,32 +129,27 @@
                               <Button fx:id="bar2" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run2" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                               <Button fx:id="bar1" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run1" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                            </children></AnchorPane>
-                        <Text fx:id="heading" layoutX="382.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Board Of Directors" textAlignment="CENTER" wrappingWidth="337.9434814453125">
-                           <font>
-                              <Font name="Colonna MT" size="36.0" />
-                           </font>
-                        </Text>
-                        <AnchorPane fx:id="scene2" layoutX="687.0" layoutY="145.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
+                        <AnchorPane fx:id="scene2" layoutX="687.0" layoutY="146.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                            <children>
-                              <TextField fx:id="name" layoutX="40.0" layoutY="72.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="name" layoutX="40.0" layoutY="57.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField fx:id="email" layoutX="40.0" layoutY="168.0" prefHeight="35.0" prefWidth="336.0" promptText="email" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="email" layoutX="41.0" layoutY="176.0" prefHeight="35.0" prefWidth="336.0" promptText="email" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField fx:id="phonenumber" layoutX="40.0" layoutY="216.0" prefHeight="35.0" prefWidth="336.0" promptText="phone number" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="phonenumber" layoutX="41.0" layoutY="215.0" prefHeight="35.0" prefWidth="336.0" promptText="phone number" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <DatePicker fx:id="dob" layoutX="41.0" layoutY="311.0" prefHeight="40.0" prefWidth="337.0" promptText="Date Of Birth" styleClass="textarea">
+                              <DatePicker fx:id="dob" layoutX="41.0" layoutY="293.0" prefHeight="35.0" prefWidth="165.0" promptText="Date Of Birth" styleClass="textarea">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
@@ -169,25 +164,19 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <TextField fx:id="adress" layoutX="40.0" layoutY="264.0" prefHeight="35.0" prefWidth="336.0" promptText="Adress" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="adress" layoutX="41.0" layoutY="254.0" prefHeight="35.0" prefWidth="336.0" promptText="Adress" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <ComboBox fx:id="gender" layoutX="42.0" layoutY="120.0" prefHeight="35.0" prefWidth="166.0" promptText="Gender" styleClass="signUpScreenLeftInput">
+                              <ComboBox fx:id="gender" layoutX="41.0" layoutY="97.0" prefHeight="35.0" prefWidth="166.0" promptText="Gender" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </ComboBox>
-                              <ComboBox fx:id="post" layoutX="210.0" layoutY="120.0" prefHeight="35.0" prefWidth="166.0" promptText="Post" styleClass="signUpScreenLeftInput">
-                                 <stylesheets>
-                                    <URL value="@../../CSS/TicketsScene.css" />
-                                    <URL value="@../../CSS/TicketsScene2.css" />
-                                 </stylesheets>
-                              </ComboBox>
-                              <Button fx:id="image" layoutX="41.0" layoutY="366.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="337.0" styleClass="signUpScreenLeftInput" text="Add Image">
+                              <Button fx:id="image" layoutX="41.0" layoutY="384.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="337.0" styleClass="signUpScreenLeftInput" text="Add Image">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                     <URL value="@../../CSS/TicketsScene.css" />
@@ -218,8 +207,49 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
+                              <TextField fx:id="Id" layoutX="216.0" layoutY="97.0" prefHeight="35.0" prefWidth="160.0" promptText="ID" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </TextField>
+                              <TextField fx:id="designation" layoutX="41.0" layoutY="137.0" prefHeight="35.0" prefWidth="160.0" promptText="Designation" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </TextField>
+                              <TextField fx:id="Department" layoutX="208.0" layoutY="137.0" prefHeight="35.0" prefWidth="168.0" promptText="Department" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </TextField>
+                              <DatePicker fx:id="joingdate" layoutX="41.0" layoutY="338.0" prefHeight="35.0" prefWidth="165.0" promptText="Joining Date" styleClass="textarea">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </DatePicker>
+                              <DatePicker fx:id="joingdate1" layoutX="213.0" layoutY="338.0" prefHeight="35.0" prefWidth="165.0" promptText="Resigning Date" styleClass="textarea">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </DatePicker>
+                              <TextField fx:id="Field" layoutX="213.0" layoutY="295.0" prefHeight="35.0" prefWidth="165.0" promptText="Field" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </TextField>
                            </children>
                         </AnchorPane>
+                        <Text layoutX="480.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Curator" textAlignment="CENTER" wrappingWidth="145.1434326171875">
+                           <font>
+                              <Font name="Colonna MT" size="36.0" />
+                           </font>
+                        </Text>
                      </children>
                   </AnchorPane>
                </right>

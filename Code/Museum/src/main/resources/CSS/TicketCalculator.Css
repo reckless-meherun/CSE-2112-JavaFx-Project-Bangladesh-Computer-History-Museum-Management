@@ -44,10 +44,10 @@
     -fx-text-align:center;
     -fx-border-style: none;
     -fx-border-width:0;
-    -fx-background-color:#ffffff;
-    -fx-background-radius:5px;
+    -fx-background-color:#918e78;
+    -fx-background-radius:2px;
     -fx-padding-left:20px;
-   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1),3, -1, 2,3);
+   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1),2, -2, 3,5);
 
 }
 .CgpaLabel{
@@ -64,8 +64,8 @@
 }
 .resetButton{
      -fx-background-color:#50238A;
-     -fx-background-radius:35px;
-      -fx-background-color: linear-gradient(to top,hsba(266, 56%, 35%, 1),hsba(266, 58%, 60%, 1));
+     -fx-background-radius:13px;
+      -fx-background-color:linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
       -fx-cursor:hand;
 }
 .CGPACalculatorItembg{
@@ -74,20 +74,46 @@
 .CGPACalculatorItembgWhite{
     -fx-background-color:#ffffff;
 }
-.CGPACalculatorTable{
+.CGPACalculatorTable
+{
     -fx-background-color:#ffffff;
      -fx-background-radius:12px;
 }
 .CGPACIRCLE{
     -fx-stroke-width:0px;
-     -fx-fill: linear-gradient(to top,hsba(266, 62%, 38%, 1),hsba(353, 55%, 93%, 1));
+     -fx-fill: linear-gradient(to bottom, hsba(46, 71%, 100%, 1), hsba(53, 10%, 52%, 3));
 }
 .CGPAResult{
     -fx-fill:#ffffff;
     -fx-font-family:'Cambria';
     -fx-font-weight:700;
-     -fx-font-size:44px;
+     -fx-font-size:30px;
 }
+
 .CGPAScreenCalculatorCourseCode2{
 -fx-fill:#ffffff;
 }
+
+.table-view
+{
+    -fx-font-family:'Cambria';
+    -fx-font-size: 10pt;
+    -fx-background-color: linear-gradient(to bottom, hsba(46, 71%, 100%, 1), hsba(36, 57%, 52%, 10));
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffd23c;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-background-color: linear-gradient(to left, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
+}
+
+.table-cell {
+    -fx-background-color: #918e78;
+}
+
+
+
+

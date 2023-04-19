@@ -9,7 +9,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -19,13 +18,19 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Aboutus implements Initializable {
+public class Employeecontroller implements Initializable {
 
     @FXML
     private Button BOD;
 
     @FXML
+    private TextField Department;
+
+    @FXML
     private Button GoBackButton;
+
+    @FXML
+    private TextField Id;
 
     @FXML
     private Button LogoutButton;
@@ -35,6 +40,9 @@ public class Aboutus implements Initializable {
 
     @FXML
     private AnchorPane SceneTwo;
+
+    @FXML
+    private AnchorPane SceneTwo1;
 
     @FXML
     private Button aboutus;
@@ -73,6 +81,9 @@ public class Aboutus implements Initializable {
     private Button departments;
 
     @FXML
+    private TextField designation;
+
+    @FXML
     private Button developer;
 
     @FXML
@@ -91,13 +102,16 @@ public class Aboutus implements Initializable {
     private ComboBox<?> gender;
 
     @FXML
-    private Text heading;
-
-    @FXML
     private Button home;
 
     @FXML
     private Button image;
+
+    @FXML
+    private DatePicker joingdate;
+
+    @FXML
+    private DatePicker joingdate1;
 
     @FXML
     private TextField name;
@@ -110,9 +124,6 @@ public class Aboutus implements Initializable {
 
     @FXML
     private Button photogallery;
-
-    @FXML
-    private ComboBox<?> post;
 
     @FXML
     private AnchorPane scene2;
@@ -128,63 +139,6 @@ public class Aboutus implements Initializable {
 
     @FXML
     private Button update;
-
-    @FXML
-    void switchToHome(ActionEvent event) {
-        DBUtils.prevfxml.push("aboutus.fxml");
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
-
-    }
-    @FXML
-    void switchToemployee(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("aboutus.fxml");
-        DBUtils.changeScene(event,"employee.fxml",false);
-    }
-    @FXML
-    void switchTocurato(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("aboutus.fxml");
-        DBUtils.changeScene(event, "curator.fxml", false);
-    }
-    @FXML
-    void switchTostudents(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("aboutus.fxml");
-        DBUtils.changeScene(event,"students.fxml",false);
-    }
-    @FXML
-    void switchTodevloper(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("aboutus.fxml");
-        DBUtils.changeScene(event,"developer.fxml",false);
-    }
-    @FXML
-    void switchToadmins(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("aboutus.fxml");
-        DBUtils.changeScene(event,"admins.fxml",false);
-    }
-    @FXML
-    void switchToeducator(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("aboutus.fxml");
-        DBUtils.changeScene(event,"educator.fxml",false);
-    }
-
-    public void switchToSceneOne(ActionEvent event) throws IOException
-    {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setHeaderText("You are about to logout");
-        alert.setContentText("Do you want to save?");
-
-        if (alert.showAndWait().get() == ButtonType.OK)
-        {
-            DBUtils.prevfxml.clear();
-            Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root, 1101, 680);
-            stage.setScene(scene);
-            stage.show();
-        }
-
-
-    }
     @FXML
     void goBack(ActionEvent event) throws IOException {
         if(DBUtils.prevfxml.empty()){
@@ -200,25 +154,81 @@ public class Aboutus implements Initializable {
             DBUtils.changeScene(event, fxml, true);
         }
     }
-    public static void pushtostack(){
-        DBUtils.prevfxml.push("aboutus.fxml");
+
+    @FXML
+    void switchToHome(ActionEvent event) {
+        DBUtils.prevfxml.push("employee.fxml");
+        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
     }
     @FXML
-    void switchToInventory(ActionEvent event) throws IOException {
-        Aboutus.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
+    void switchTobod(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("employee.fxml");
+        DBUtils.changeScene(event,"aboutus.fxml",false);
     }
 
     @FXML
     void switchToGallery(ActionEvent event) throws IOException {
-        Aboutus.pushtostack();
+        Employeecontroller.pushtostack();
         DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
     }
+    @FXML
+    void switchTostudents(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("employee.fxml");
+        DBUtils.changeScene(event,"students.fxml",false);
+    }
+    @FXML
+    void switchTocurato(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("employee.fxml");
+        DBUtils.changeScene(event, "curator.fxml", false);
+    }
 
+    @FXML
+    void switchToSceneOne(ActionEvent event) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setHeaderText("You are about to logout");
+        alert.setContentText("Do you want to save?");
+
+        if (alert.showAndWait().get() == ButtonType.OK)
+        {
+            DBUtils.prevfxml.clear();
+            Parent root = FXMLLoader.load(getClass().getResource("LoginScene.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root, 1101, 680);
+            stage.setScene(scene);
+            stage.show();
+        }
+
+    }
+    @FXML
+    void switchTodevloper(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("employee.fxml");
+        DBUtils.changeScene(event,"developer.fxml",false);
+    }
+    @FXML
+    void switchToInventory(ActionEvent event) throws IOException {
+        Employeecontroller.pushtostack();
+        DBUtils.changeScene(event,"Inventory.fxml",false);
+    }
+
+    static void pushtostack(){
+        DBUtils.prevfxml.push("employee.fxml");
+    }
+    @FXML
     public void switchTotickets(ActionEvent event) throws IOException
     {
-        Aboutus.pushtostack();
+        Employeecontroller.pushtostack();
         DBUtils.changeScene(event, "Tickets.fxml", false);
+    }
+    @FXML
+    void switchToeducator(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("employee.fxml");
+        DBUtils.changeScene(event,"educator.fxml",false);
+    }
+    @FXML
+    void switchToadmins(ActionEvent event) throws IOException {
+        DBUtils.prevfxml.push("employee.fxml");
+        DBUtils.changeScene(event,"admins.fxml",false);
     }
     @FXML
     void run1(ActionEvent event) {
@@ -262,10 +272,7 @@ public class Aboutus implements Initializable {
         bar3.setVisible(true);
         bar4.setVisible(false);
         scene2.setTranslateX(378);
-
     }
-
-
     @FXML
     void run3(ActionEvent event) {
         TranslateTransition slide = new TranslateTransition();
@@ -297,13 +304,6 @@ public class Aboutus implements Initializable {
             bar3.setVisible(true);
         });
     }
-
-
-
-
-
-
-
 
 
 }
