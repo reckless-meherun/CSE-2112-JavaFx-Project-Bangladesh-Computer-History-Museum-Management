@@ -8,9 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -26,20 +24,13 @@ public class Studentscontroller implements Initializable{
     private Button BOD;
 
     @FXML
-    private Button bar1;
-
-    @FXML
-    private Button bar2;
-
-    @FXML
-    private AnchorPane paneside;
-
-
-    @FXML
-    private Button admins;
-
-    @FXML
     private Button GoBackButton;
+
+    @FXML
+    private TextField Id;
+
+    @FXML
+    private TextField Institutename;
 
     @FXML
     private Button LogoutButton;
@@ -51,13 +42,46 @@ public class Studentscontroller implements Initializable{
     private AnchorPane SceneTwo;
 
     @FXML
+    private AnchorPane SceneTwo1;
+
+    @FXML
     private Button aboutus;
+
+    @FXML
+    private Button add;
+
+    @FXML
+    private Button admins;
+
+    @FXML
+    private TextField adress;
 
     @FXML
     private Button articles;
 
     @FXML
+    private Button bar1;
+
+    @FXML
+    private Button bar2;
+
+    @FXML
+    private Button bar3;
+
+    @FXML
+    private Button bar4;
+
+    @FXML
+    private TextField course;
+
+    @FXML
+    private TextField courseteacher;
+
+    @FXML
     private Button curator;
+
+    @FXML
+    private Button delete;
 
     @FXML
     private Button departments;
@@ -66,16 +90,46 @@ public class Studentscontroller implements Initializable{
     private Button developer;
 
     @FXML
+    private DatePicker dob;
+
+    @FXML
     private Button educator;
+
+    @FXML
+    private TextField email;
 
     @FXML
     private Button employee;
 
     @FXML
+    private DatePicker finishingdate;
+
+    @FXML
+    private ComboBox<?> gender;
+
+    @FXML
     private Button home;
 
     @FXML
+    private Button image;
+
+    @FXML
+    private TextField name;
+
+    @FXML
+    private AnchorPane paneside;
+
+    @FXML
+    private TextField phonenumber;
+
+    @FXML
     private Button photogallery;
+
+    @FXML
+    private AnchorPane scene2;
+
+    @FXML
+    private DatePicker staringdate;
 
     @FXML
     private Button student;
@@ -86,6 +140,8 @@ public class Studentscontroller implements Initializable{
     @FXML
     private Button tickets;
 
+    @FXML
+    private Button update;
     @FXML
     void goBack(ActionEvent event) throws IOException {
         if(DBUtils.prevfxml.empty()){
@@ -185,7 +241,7 @@ public class Studentscontroller implements Initializable{
         slide.setToX(0);
         slide.play();
 
-        paneside.setTranslateX(-155);
+        paneside.setTranslateX(-160);
 
         slide.setOnFinished((ActionEvent e)->{
             bar1.setVisible(false);
@@ -200,7 +256,7 @@ public class Studentscontroller implements Initializable{
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
-        slide.setToX(-155);
+        slide.setToX(-160);
         slide.play();
 
         paneside.setTranslateX(0);
@@ -216,6 +272,40 @@ public class Studentscontroller implements Initializable{
         paneside.setTranslateX(0);
         bar2.setVisible(true);
         bar1.setVisible(false);
+        bar3.setVisible(true);
+        bar4.setVisible(false);
+        scene2.setTranslateX(378);
+    }
+    @FXML
+    void run3(ActionEvent event) {
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.6));
+        slide.setNode(scene2);
+        slide.setToX(0);
+        slide.play();
+
+        scene2.setTranslateX(378);
+
+        slide.setOnFinished((ActionEvent e)->{
+            bar3.setVisible(false);
+            bar4.setVisible(true);
+        });
+    }
+
+    @FXML
+    void run4(ActionEvent event) {
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.6));
+        slide.setNode(scene2);
+        slide.setToX(378);
+        slide.play();
+
+        scene2.setTranslateX(0);
+
+        slide.setOnFinished((ActionEvent e)->{
+            bar4.setVisible(false);
+            bar3.setVisible(true);
+        });
     }
 
 }
