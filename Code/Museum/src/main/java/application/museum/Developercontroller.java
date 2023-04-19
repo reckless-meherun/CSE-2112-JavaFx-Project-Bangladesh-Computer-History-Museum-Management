@@ -15,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.w3c.dom.views.DocumentView;
 
 import java.io.IOException;
 import java.net.URL;
@@ -143,6 +144,11 @@ public class Developercontroller implements Initializable {
     void switchToInventory(ActionEvent event) throws IOException {
         Developercontroller.pushtostack();
         DBUtils.changeScene(event,"Inventory.fxml",false);
+    }
+    @FXML
+    void switchToGallery(ActionEvent event) throws IOException {
+        Developercontroller.pushtostack();
+        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
     }
     @FXML
     public void switchTotickets(ActionEvent event) throws IOException

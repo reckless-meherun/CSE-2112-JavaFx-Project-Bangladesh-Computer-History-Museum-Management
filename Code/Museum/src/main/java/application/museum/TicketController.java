@@ -108,6 +108,11 @@ public class TicketController
         TicketController.pushtostack();
         DBUtils.changeScene(event,"Inventory.fxml",false);
     }
+    @FXML
+    void switchToGallery(ActionEvent event) throws IOException {
+        TicketController.pushtostack();
+        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+    }
     static void pushtostack(){
         DBUtils.prevfxml.push("Tickets.fxml");
     }

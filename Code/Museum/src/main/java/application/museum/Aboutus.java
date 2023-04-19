@@ -165,6 +165,13 @@ public class Aboutus implements Initializable {
         Aboutus.pushtostack();
         DBUtils.changeScene(event,"Inventory.fxml",false);
     }
+
+    @FXML
+    void switchToGallery(ActionEvent event) throws IOException {
+        Aboutus.pushtostack();
+        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+    }
+
     public void switchTotickets(ActionEvent event) throws IOException
     {
         Aboutus.pushtostack();
@@ -206,8 +213,8 @@ public class Aboutus implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        paneside.setTranslateX(-155);
-        bar1.setVisible(true);
-        bar2.setVisible(false);
+        paneside.setTranslateX(0);
+        bar2.setVisible(true);
+        bar1.setVisible(false);
     }
 }

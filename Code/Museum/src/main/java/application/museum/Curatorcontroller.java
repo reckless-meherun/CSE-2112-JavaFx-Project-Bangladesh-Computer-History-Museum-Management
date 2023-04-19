@@ -199,6 +199,12 @@ public class Curatorcontroller implements Initializable {
     }
 
     @FXML
+    void switchToGallery(ActionEvent event) throws IOException {
+        Curatorcontroller.pushtostack();
+        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+    }
+
+    @FXML
     public void switchTotickets(ActionEvent event) throws IOException
     {
         Curatorcontroller.pushtostack();

@@ -146,6 +146,12 @@ public class Studentscontroller implements Initializable{
         DBUtils.prevfxml.push("students.fxml");
         DBUtils.changeScene(event,"developer.fxml",false);
     }
+
+    @FXML
+    void switchToGallery(ActionEvent event) throws IOException {
+        Studentscontroller.pushtostack();
+        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+    }
     @FXML
     void switchToInventory(ActionEvent event) throws IOException {
         Studentscontroller.pushtostack();

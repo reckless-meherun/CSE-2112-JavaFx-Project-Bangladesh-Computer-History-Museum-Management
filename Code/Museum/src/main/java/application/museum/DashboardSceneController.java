@@ -139,6 +139,11 @@ public class DashboardSceneController implements Initializable
         DashboardSceneController.pushtostack();
         DBUtils.changeScene(event,"Inventory.fxml",false);
     }
+    @FXML
+    void switchToGallery(ActionEvent event) throws IOException {
+        DashboardSceneController.pushtostack();
+        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+    }
 
     public void selectDept()
     {

@@ -163,6 +163,12 @@ public class Educatorcontroller implements Initializable {
         Educatorcontroller.pushtostack();
         DBUtils.changeScene(event,"Inventory.fxml",false);
     }
+
+    @FXML
+    void switchToGallery(ActionEvent event) throws IOException {
+        Educatorcontroller.pushtostack();
+        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+    }
     @FXML
     public void switchTotickets(ActionEvent event) throws IOException
     {

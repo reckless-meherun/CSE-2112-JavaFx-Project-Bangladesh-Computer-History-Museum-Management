@@ -112,6 +112,12 @@ public class Employeecontroller implements Initializable {
         DBUtils.prevfxml.push("employee.fxml");
         DBUtils.changeScene(event,"aboutus.fxml",false);
     }
+
+    @FXML
+    void switchToGallery(ActionEvent event) throws IOException {
+        Employeecontroller.pushtostack();
+        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+    }
     @FXML
     void switchTostudents(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("employee.fxml");
