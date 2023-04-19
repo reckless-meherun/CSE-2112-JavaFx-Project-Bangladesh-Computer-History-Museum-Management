@@ -120,7 +120,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="admins" layoutX="70.0" layoutY="411.0" mnemonicParsing="false" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Admins">
+                              <Button fx:id="admins" layoutX="68.0" layoutY="411.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="70.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Users">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -180,7 +180,7 @@
                               <PasswordField fx:id="confirmpass" layoutX="41.0" layoutY="194.0" prefHeight="35.0" prefWidth="338.0" promptText="Confirm Password" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css" />
                            </children>
                         </AnchorPane>
-                        <Text layoutX="496.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Admins" textAlignment="CENTER" wrappingWidth="109.1434326171875">
+                        <Text layoutX="496.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Users" textAlignment="CENTER" wrappingWidth="109.1434326171875">
                            <font>
                               <Font name="Colonna MT" size="36.0" />
                            </font>
