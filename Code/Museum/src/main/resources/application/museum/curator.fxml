@@ -121,7 +121,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="admins" layoutX="70.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToadmins" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Admins">
+                              <Button fx:id="admins" layoutX="76.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToadmins" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Users">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
