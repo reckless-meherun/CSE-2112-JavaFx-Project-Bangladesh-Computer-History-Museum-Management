@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -137,6 +138,9 @@ public class Developercontroller implements Initializable {
 
     @FXML
     private AnchorPane scene2;
+
+    @FXML
+    private ImageView show;
 
     @FXML
     private Button student;

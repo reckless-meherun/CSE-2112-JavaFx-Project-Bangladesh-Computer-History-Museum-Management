@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="about us input form ready">
+    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="Admins is now users.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Aboutus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Aboutus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Developercontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Developercontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Educatorcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Educatorcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Studentscontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Studentscontroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/curator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/curator.fxml" afterDir="false" />
@@ -176,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681922947178</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Admins is now users.">
+      <created>1681927658193</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681927658193</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -192,7 +205,8 @@
     <MESSAGE value="connected tickets now you can nevigate to tickets" />
     <MESSAGE value="connected gallery" />
     <MESSAGE value="about us input form ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="about us input form ready" />
+    <MESSAGE value="Admins is now users." />
+    <option name="LAST_COMMIT_MESSAGE" value="Admins is now users." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
