@@ -1,4 +1,4 @@
-package Departments;
+package application.museum.Departments;
 
 public class Hardware extends Curatorial_dept{
     private String[] Monument;

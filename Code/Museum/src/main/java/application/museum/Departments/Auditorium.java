@@ -1,4 +1,4 @@
-package Departments;
+package application.museum.Departments;
 
 public class Auditorium extends Non_Curatorial_Dept{
     private String GalleryName;

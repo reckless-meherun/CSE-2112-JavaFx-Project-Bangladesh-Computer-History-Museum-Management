@@ -1,4 +1,4 @@
-package Departments;
+package application.museum.Departments;
 
 public class Language extends Curatorial_dept{
     private String Statue;

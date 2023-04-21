@@ -1,4 +1,4 @@
-package Departments;
+package application.museum.Departments;
 
 public class Non_Curatorial_Dept implements Departments{
     private String DeptName;

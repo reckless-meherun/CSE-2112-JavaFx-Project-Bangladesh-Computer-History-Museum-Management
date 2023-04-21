@@ -1,6 +1,6 @@
 package Tickets;
 
-import People.Visitor;
+import application.museum.People.Visitor;
 
 import java.sql.Date;
 
@@ -8,7 +8,7 @@ public class Ticket_class implements Ticket{
     private Date issue_date;
     private int price;
     private int discount;
-    private People.Visitor visitor;
+    private application.museum.People.Visitor visitor;
     public Ticket_class()
     {
         this.issue_date = null;
@@ -34,7 +34,7 @@ public class Ticket_class implements Ticket{
         this.visitor = visitor;
     }
     @Override
-    public People.Visitor getVisitor()
+    public application.museum.People.Visitor getVisitor()
     {
         return this.visitor;
     }

@@ -1,4 +1,4 @@
-package Departments;
+package application.museum.Departments;
 
 public interface Departments {
     public void setDeptName(String Name);

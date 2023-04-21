@@ -1,4 +1,4 @@
-package People;
+package application.museum.People;
 
 public class People_class implements people{
     private String name;

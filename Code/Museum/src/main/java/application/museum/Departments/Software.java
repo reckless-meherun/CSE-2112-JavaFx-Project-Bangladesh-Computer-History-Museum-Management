@@ -1,4 +1,4 @@
-package Departments;
+package application.museum.Departments;
 
 public class Software extends Curatorial_dept
 {

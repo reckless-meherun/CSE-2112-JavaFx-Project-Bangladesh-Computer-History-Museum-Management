@@ -1,4 +1,4 @@
-package Departments;
+package application.museum.Departments;
 
 public class Security extends Non_Curatorial_Dept{
     private String[] camera;

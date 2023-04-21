@@ -1,4 +1,4 @@
-package People;
+package application.museum.People;
 
 public interface people {
     public String Get_name();

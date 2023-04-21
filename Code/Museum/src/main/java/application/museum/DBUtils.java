@@ -49,6 +49,23 @@ public class DBUtils
         stage.setScene(scene);
         stage.show();
     }
+    public static Connection connectDB(String url) {
+        try
+        {
+
+            Class.forName("org.sqlite.JDBC");
+            Connection connect= DriverManager.getConnection(url);
+            if(connect==null)
+            {
+                System.out.println("database load error");
+            }
+            return connect;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("database load error");
+        }
+        return null;
+    }
 
 
     public static void loginuser(ActionEvent event, String username, String password)

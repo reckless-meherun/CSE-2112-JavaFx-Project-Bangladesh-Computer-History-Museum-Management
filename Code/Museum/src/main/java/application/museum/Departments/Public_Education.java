@@ -1,12 +1,12 @@
-package Departments;
+package application.museum.Departments;
 
-import People.Students;
+import application.museum.People.Students;
 
 import java.util.ArrayList;
 
 public class Public_Education extends Non_Curatorial_Dept{
     private String EducatorName;
-    private ArrayList<People.Students> Students;
+    private ArrayList<application.museum.People.Students> Students;
 
     public Public_Education()
     {

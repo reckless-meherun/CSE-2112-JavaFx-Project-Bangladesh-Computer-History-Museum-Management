@@ -1,4 +1,4 @@
-package Departments;
+package application.museum.Departments;
 
 import java.util.ArrayList;
 

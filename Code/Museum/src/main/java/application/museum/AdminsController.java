@@ -1,6 +1,9 @@
 package application.museum;
 
+import application.museum.People.Admins;
 import javafx.animation.TranslateTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +12,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -16,6 +22,8 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class AdminsController implements Initializable {
@@ -108,16 +116,34 @@ public class AdminsController implements Initializable {
     private Button tickets;
 
     @FXML
+    private TableView<Admins> table_view;
+
+    @FXML
     private Button update;
 
     @FXML
     private TextField username;
+    @FXML
+    private TableColumn<Admins, String> username_table;
+
+    @FXML
+    private TableColumn<Admins, String> password_table;
+
+    @FXML
+    private TableColumn<Admins, Integer> id_table;
+
+    private String url="jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\userpassword.db";
+
+    private Connection connect;
+    private PreparedStatement prepare;
+    private Statement statement;
+    private ResultSet result;
 
 
 
 
     @FXML
-    void run3(ActionEvent event) {
+    void run3() {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -273,6 +299,7 @@ public class AdminsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        showData();
         paneside.setTranslateX(0);
         bar2.setVisible(true);
         bar1.setVisible(false);
@@ -280,5 +307,248 @@ public class AdminsController implements Initializable {
         bar4.setVisible(false);
         scene2.setTranslateX(378);
     }
+    void clear(){
+        id.setText("");
+        username.setText("");
+        password.setText("");
+        confirmpass.setText("");
+    }
+    public ObservableList<Admins> datalist()
+    {
+        ObservableList<Admins> datalist = FXCollections.observableArrayList();
+
+        String sql;
+        sql ="SELECT * FROM users";
+
+        try {
+            connect= DBUtils.connectDB(url);
+            prepare = connect.prepareStatement(sql);
+            result=prepare.executeQuery();
+
+
+            while(result.next())
+            {
+                Admins user= new Admins (result.getInt("id"),result.getString("username"),"*********");
+
+                datalist.add(user);
+            }
+
+        }catch (Exception e) {
+            System.out.println("username database error");
+        }
+        finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                if(statement!=null) {
+                    statement.close();
+                }
+
+            }catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+        return datalist;
+    }
+    public void showData()
+    {
+        ObservableList<Admins> showlist = datalist();
+        id_table.setCellValueFactory(new PropertyValueFactory<>("id"));
+        username_table.setCellValueFactory(new PropertyValueFactory<>("username"));
+        password_table.setCellValueFactory(new PropertyValueFactory<>("password"));
+        table_view.setItems(showlist);
+
+    }
+    @FXML
+    void insert(ActionEvent event) {
+        String sql="INSERT INTO users VALUES (?,?,?)";
+        PreparedStatement PsIsUserExist=null;
+
+        try {
+            connect= DBUtils.connectDB(url);
+            PsIsUserExist=connect.prepareStatement("SELECT * FROM users WHERE username=?");
+            PsIsUserExist.setString(1,username.getText());
+            result = PsIsUserExist.executeQuery();
+            if(id.getText().isEmpty() | username.getText().isEmpty() | password.getText().isEmpty() |
+                    confirmpass.getText().isEmpty())
+            {
+                Alert alert=new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("                                     Error!!!!!");
+                alert.setHeaderText("            Some fields are empty.  ");
+                alert.setContentText("                             Please enter all blank fields. ");
+                alert.showAndWait();
+            }
+
+            else if(password.getText().compareTo(confirmpass.getText())!=0){
+                System.out.println(password.getText());
+                System.out.println(confirmpass.getText());
+                System.out.println(password.getText().compareTo(confirmpass.getText()));
+                Alert alert=new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("                                     Error!!!!!");
+                alert.setHeaderText("            password doesn't match.  ");
+                alert.setContentText("                             please check the password again.");
+                alert.showAndWait();
+            }
+            else if(result.isBeforeFirst()){
+                Alert alert=new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("                                     Error!!!!!");
+                alert.setHeaderText("            Username Not Available  ");
+                alert.setContentText("                             Please choose a new username");
+                alert.showAndWait();
+            }
+            else
+            {
+
+                prepare=connect.prepareStatement(sql);
+                prepare.setInt(1, Integer.parseInt(id.getText()));
+                prepare.setString(2,username.getText());
+                prepare.setString(3, password.getText());
+                prepare.execute();
+                System.out.println("ok12");
+                showData();
+                clear();
+            }
+
+
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+        finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                if(statement!=null) {
+                    statement.close();
+                }
+
+            }catch (Exception e)
+            {
+
+            }
+        }
+
+    }
+    @FXML
+    void selectData(MouseEvent event) {
+        Admins user = table_view.getSelectionModel().getSelectedItem();
+        int no=table_view.getSelectionModel().getSelectedIndex();
+        if((no-1)<-1)
+        {
+            return;
+        }
+        id.setText(String.valueOf(user.getId()));
+        username.setText(String.valueOf(user.getUsername()));
+        run3();
+
+    }
+    @FXML
+    void update_Crud(ActionEvent event) {
+
+        String sql="UPDATE users SET `username`= '"+username.getText()+ "', `password` = '"+password.getText()+"' WHERE id = '"+id.getText()+"'";
+        try {
+            connect= DBUtils.connectDB(url);
+            if(id.getText().isEmpty() | username.getText().isEmpty() | password.getText().isEmpty() |
+                    confirmpass.getText().isEmpty())
+            {
+                Alert alert=new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("                                     Error!!!!!");
+                alert.setHeaderText("            Some fields are empty.  ");
+                alert.setContentText("                             Please enter all blank fields. ");
+                alert.showAndWait();
+            }
+
+            else if(password.getText().compareTo(confirmpass.getText())!=0){
+                System.out.println(password.getText());
+                System.out.println(confirmpass.getText());
+                System.out.println(password.getText().compareTo(confirmpass.getText()));
+                Alert alert=new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("                                     Error!!!!!");
+                alert.setHeaderText("            password doesn't match.  ");
+                alert.setContentText("                             please check the password again.");
+                alert.showAndWait();
+            }
+            else
+            {
+                statement=connect.createStatement();
+                statement.executeUpdate(sql);
+                Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("                                      Update Successfull!!!");
+                alert.setHeaderText("       ");
+                alert.setContentText("                             Successfully updated the data. ");
+                alert.showAndWait();
+                showData();
+                clear();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                statement.close();
+
+            }catch (Exception e)
+            {
+
+            }
+        }
+
+    }
+    @FXML
+    void delete(ActionEvent event) {
+        String sql="DELETE from users WHERE `id` ='"+id.getText()+"'";
+
+        try
+        {
+            connect=DBUtils.connectDB(url);
+            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("                                     Confirmation Message");
+            alert.setHeaderText(null);
+            alert.setContentText("                     Are you sure you want to delete? ");
+
+            Optional<ButtonType> buttontype= alert.showAndWait();
+            if(buttontype.get()==ButtonType.OK)
+            {
+                statement=connect.createStatement();
+                statement.executeUpdate(sql);
+            }
+            showData();
+            clear();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                statement.close();
+
+            }catch (Exception e)
+            {
+
+            }
+        }
+
+    }
+
+
+
+
 
 }

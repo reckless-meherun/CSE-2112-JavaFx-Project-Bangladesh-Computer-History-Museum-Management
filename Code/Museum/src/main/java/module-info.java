@@ -6,4 +6,6 @@ module application.museum {
 
     opens application.museum to javafx.fxml;
     exports application.museum;
+    exports application.museum.People;
+    opens application.museum.People to javafx.fxml;
 }

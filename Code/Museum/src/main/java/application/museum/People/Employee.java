@@ -1,4 +1,4 @@
-package People;
+package application.museum.People;
 
 import java.util.Date;
 
