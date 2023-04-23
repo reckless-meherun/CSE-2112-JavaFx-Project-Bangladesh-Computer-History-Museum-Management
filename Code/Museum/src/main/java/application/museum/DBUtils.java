@@ -11,12 +11,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class DBUtils
 {
     public static String username;
     public static Stack<String> prevfxml=new Stack<>();
+    public static String[] dept={"Hardware","Software","Language","Public_Education","Photo_Gallery","Security","Auditorium"};
     public static void changeScene(ActionEvent event, String fxmlfile, String username)
     {
         Parent root = null;

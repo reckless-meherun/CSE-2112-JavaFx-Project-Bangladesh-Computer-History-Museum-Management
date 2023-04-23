@@ -14,25 +14,25 @@ public class internals extends People_class{
         this.dob = dob;
         this.Adress = adress;
     }
-    public String get_photo(){
+    public String getPhoto(){
         return this.photo;
     }
-    public void set_photo(String photo){
+    public void setPhoto(String photo){
         this.photo=photo;
     }
-    public String get_email(){
+    public String getEmail(){
         return this.email;
     }
-    public void set_email(String email){
+    public void setEmail(String email){
         this.email=email;
     }
-    public Date getDateOfBirth(){
+    public Date getDob(){
         return this.dob;
     }
-    public String get_Adress(){
+    public String getAdress(){
         return this.Adress;
     }
-    public void set_Adress(String Adress){
+    public void setAdress(String Adress){
         this.Adress=Adress;
     }
 

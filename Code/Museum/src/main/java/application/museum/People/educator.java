@@ -10,7 +10,7 @@ public class educator extends Employee
     private ArrayList<course> courses;
     private course cur_course;
     private Integer numOfcourses;
-    public educator(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, String employeeId, String department, String designation, String workTime, Date joiningDate, Date resigningDate, ArrayList<String> specializations, ArrayList<course> courses, course curCourse) {
+    public educator(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, Integer employeeId, String department, String designation, String workTime, Date joiningDate, Date resigningDate, ArrayList<String> specializations, ArrayList<course> courses, course curCourse) {
         super(name, gender, mobile_no, photo, email, dob, adress, employeeId, department, designation, workTime, joiningDate, resigningDate);
         this.specializations = specializations;
         this.courses = courses;
@@ -18,7 +18,7 @@ public class educator extends Employee
         this.numOfcourses=courses.size();
     }
 
-    public educator(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, String employeeId, String department, String designation, String workTime, Date joiningDate, ArrayList<String> specializations, ArrayList<course> courses, course curCourse) {
+    public educator(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, Integer employeeId, String department, String designation, String workTime, Date joiningDate, ArrayList<String> specializations, ArrayList<course> courses, course curCourse) {
         super(name, gender, mobile_no, photo, email, dob, adress, employeeId, department, designation, workTime, joiningDate);
         this.specializations = specializations;
         this.courses = courses;

@@ -24,7 +24,7 @@ public class HelloApplication extends Application
     {
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("HelloScene.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("employee.fxml"));
             Scene scene = new Scene(root,1101,680);
             String css = this.getClass().getResource("hello.css").toExternalForm();
             scene.getStylesheets().add(css);

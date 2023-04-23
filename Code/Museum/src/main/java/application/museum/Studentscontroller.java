@@ -342,15 +342,23 @@ public class Studentscontroller implements Initializable{
         }
         System.out.println(resourcesPath);
 
-        String fileName = "image_" + System.currentTimeMillis() + ".png";
-        //StringBuilder destination= new StringBuilder("StudentsPhotos\\\\" + fileName);
+        String name = imageFile.getName();
+        String extension = "";
+
+        int dotIndex = name.lastIndexOf(".");
+        if (dotIndex > 0 && dotIndex < name.length() - 1) {
+            extension = name.substring(dotIndex + 1);
+        }
+
+        String fileName = "image_" + System.currentTimeMillis() + extension;
+        StringBuilder destination= new StringBuilder("\\src\\main\\resources\\application\\museum\\StudentsPhotos\\"+fileName);
 
         // Copy the image file to the resources folder with the unique file name
         Path sourcePath = imageFile.toPath();
         Path destinationPath = Paths.get(  resourcesPath +"\\src\\main\\resources\\application\\museum\\StudentsPhotos\\"+fileName);
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
 //        direction=destinationPath.toString();
-        return new StringBuilder(destinationPath.toString());
+        return destination;
     }
     @FXML
     public void clear()

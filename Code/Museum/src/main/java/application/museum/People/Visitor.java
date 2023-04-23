@@ -59,8 +59,8 @@ public class Visitor extends People_class {
         super.set_mobile_no(mob);
     }
     @Override
-    public String Get_mobile_no() {
-        return super.Get_mobile_no();
+    public String getMobile_no() {
+        return super.getMobile_no();
     }
 
     public void setTotalVisitCount(int totalVisitCount) {
@@ -71,11 +71,11 @@ public class Visitor extends People_class {
     }
 
     @Override
-    public Gender Get_gender() {
-        return super.Get_gender();
+    public Gender getGender() {
+        return super.getGender();
     }
     @Override
-    public String Get_name() {
-        return super.Get_name();
+    public String getName() {
+        return super.getName();
     }
 }

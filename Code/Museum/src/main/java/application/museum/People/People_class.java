@@ -23,15 +23,17 @@ public class People_class implements people{
         this.gender = gen;
         this.mobile_no = s[1];
     }
-    public String Get_name()
+    public String getName()
     {
         return this.name;
     }
-    public Gender Get_gender()
+
+
+    public Gender getGender()
     {
         return this.gender;
     }
-    public String Get_mobile_no()
+    public String getMobile_no()
     {
         return this.mobile_no;
     }
