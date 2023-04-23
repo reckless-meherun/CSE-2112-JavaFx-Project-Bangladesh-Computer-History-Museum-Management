@@ -484,7 +484,7 @@ public class Employeecontroller implements Initializable {
             extension = name.substring(dotIndex + 1);
         }
 
-        String fileName = "image_" + System.currentTimeMillis() + extension;
+        String fileName = "image_" + System.currentTimeMillis() + "."+extension;
         StringBuilder destination= new StringBuilder("\\src\\main\\resources\\application\\museum\\StudentsPhotos\\"+fileName);
 
         // Copy the image file to the resources folder with the unique file name
@@ -668,6 +668,7 @@ public class Employeecontroller implements Initializable {
     }
     @FXML
     void selectData(MouseEvent event) {
+        clear();
         Employee employee = table_view.getSelectionModel().getSelectedItem();
         int no=table_view.getSelectionModel().getSelectedIndex();
         if((no-1)<-1)
