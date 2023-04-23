@@ -218,6 +218,8 @@ public class Employeecontroller implements Initializable {
     private Statement statement;
     private ResultSet result;
 
+    private boolean isimageChanged=false;
+
     @FXML
     private TextField worktime;
 
@@ -396,6 +398,7 @@ public class Employeecontroller implements Initializable {
         FileChooser open= new FileChooser();
         Stage stage=(Stage) scene2.getScene().getWindow();
         File file=open.showOpenDialog(stage);
+        isimageChanged=true;
         if(file!=null){
             StringBuilder im=new StringBuilder( file.toPath().toString());
             photo=file;
@@ -450,6 +453,7 @@ public class Employeecontroller implements Initializable {
         dob.setValue(null);
         photo=null;
         worktime.setText("");
+        isimageChanged=false;
 
     }
     public StringBuilder copyImageToResources(File imageFile) throws IOException {
@@ -515,7 +519,7 @@ public class Employeecontroller implements Initializable {
                         im.setCharAt(i,'/');
                     }
                 }
-                String file_path= im.toString();
+                String files_path= im.toString();
 
 
                 prepare=connect.prepareStatement(sql);
@@ -535,7 +539,7 @@ public class Employeecontroller implements Initializable {
                     prepare.setDate(11, (Date.valueOf(joingdate1.getValue())));
                 }
                 //prepare.setString(13, (String) gender.getSelectionModel().getSelectedItem());
-                prepare.setString(12,file_path);
+                prepare.setString(12,files_path);
                 prepare.setString(13,worktime.getText());
 
                 prepare.execute();
@@ -689,6 +693,7 @@ public class Employeecontroller implements Initializable {
             joingdate1.setValue(LocalDate.parse(valueOf(employee.getResigningDate())));
         }
         else joingdate1.setValue(null);
+        //file_path=employee.getPhoto();
 
 
         run3();
@@ -737,15 +742,40 @@ public class Employeecontroller implements Initializable {
     }
     @FXML
     void update_Crud(ActionEvent event) throws IOException {
-        StringBuilder im= copyImageToResources(photo);
-        for(int i=0;i<im.length();i++){
-            if(im.charAt(i)=='\\'){
-                im.setCharAt(i,'/');
+        String sql;
+        if(isimageChanged) {
+            StringBuilder im = copyImageToResources(photo);
+            for (int i = 0; i < im.length(); i++) {
+                if (im.charAt(i) == '\\') {
+                    im.setCharAt(i, '/');
+                }
+            }
+            String file_path = im.toString();
+
+
+            if (joingdate1.getValue() == null && email.getText().isEmpty()) {
+                sql = "UPDATE Employee SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
+            } else if (joingdate1.getValue() == null) {
+                sql = "UPDATE Employee SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
+            } else if (email.getText().isEmpty()) {
+                sql = "UPDATE Employee SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + Date.valueOf(joingdate1.getValue()) + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
+            } else {
+                sql = "UPDATE Employee SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + Date.valueOf(joingdate1.getValue()) + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
             }
         }
-        String file_path= im.toString();
+        else {
+            if (joingdate1.getValue() == null && email.getText().isEmpty()) {
+                sql = "UPDATE Employee SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "' WHERE Id = '" + Id.getText() + "'";
+            } else if (joingdate1.getValue() == null) {
+                sql = "UPDATE Employee SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "' WHERE Id = '" + Id.getText() + "'";
+            } else if (email.getText().isEmpty()) {
+                sql = "UPDATE Employee SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + Date.valueOf(joingdate1.getValue()) + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "' WHERE Id = '" + Id.getText() + "'";
+            } else {
+                sql = "UPDATE Employee SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + Date.valueOf(joingdate1.getValue()) + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText()  + "' WHERE Id = '" + Id.getText() + "'";
+            }
+        }
 
-        String sql="UPDATE Employee SET `phoneNo` = '"+phonenumber.getText()+ "', `adress` = '"+adress.getText()+"', `resign` = '"+Date.valueOf(joingdate1.getValue())+ "', `Email` = '"+email.getText()+ "', `designation` = '"+designation.getText()+ "', `Department` = '"+Department.getSelectionModel().getSelectedItem()+ "', `worktime` = '"+worktime.getText()+ "', `img` = '"+file_path+"' WHERE Id = '"+Id.getText()+"'";
+
         try {
             connect= DBUtils.connectDB(url);
             if(Id.getText().isEmpty() | name.getText().isEmpty()  | show.getImage()==null | phonenumber.getText().isEmpty() |
