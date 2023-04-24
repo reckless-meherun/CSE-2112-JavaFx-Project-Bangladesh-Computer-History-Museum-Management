@@ -327,7 +327,7 @@ public class Curatorcontroller implements Initializable {
 
     }
     @FXML
-    void run2(ActionEvent event) {
+    void run2() {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -610,6 +610,7 @@ public class Curatorcontroller implements Initializable {
             {
                 StringBuilder resourcesPath=getrespath();
                 resourcesPath.append(result.getString("img"));
+                System.out.println(result.getString("img"));
                 Gender gm;
                 if(result.getString("Gender").equals("MALE")){
                     gm= Gender.MALE;
@@ -680,6 +681,7 @@ public class Curatorcontroller implements Initializable {
     }
     @FXML
     void selectData(MouseEvent event) {
+        run2();
         clear();
         curator employee = table_view.getSelectionModel().getSelectedItem();
         int no=table_view.getSelectionModel().getSelectedIndex();
@@ -696,7 +698,7 @@ public class Curatorcontroller implements Initializable {
         if(employee.getEmail()!=null){
             email.setText(valueOf(employee.getEmail()));
         }
-        show.setImage(new Image(employee.getPhoto()));
+        //show.setImage(new Image(employee.getPhoto()));
         temp.setVisible(false);
         worktime.setText(valueOf(employee.getWorkTime()));
         phonenumber.setText(valueOf(employee.getMobile_no()));
@@ -709,6 +711,15 @@ public class Curatorcontroller implements Initializable {
         Field.setText(valueOf(employee.getField()));
         System.out.println(employee.getPhoto());
         //file_path=employee.getPhoto();
+
+
+        run3();
+        try {
+            show.setImage(new Image(employee.getPhoto()));
+        }
+        catch (Exception e){
+            System.out.println("Image Path error");
+        }
 
 
         run3();

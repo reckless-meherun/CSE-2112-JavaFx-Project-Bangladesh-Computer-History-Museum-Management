@@ -286,7 +286,7 @@ public class AdminsController implements Initializable {
 
     }
     @FXML
-    void run2(ActionEvent event) {
+    void run2() {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -450,6 +450,7 @@ public class AdminsController implements Initializable {
         id.setText(String.valueOf(user.getId()));
         username.setText(String.valueOf(user.getUsername()));
         run3();
+        run2();
 
     }
     @FXML

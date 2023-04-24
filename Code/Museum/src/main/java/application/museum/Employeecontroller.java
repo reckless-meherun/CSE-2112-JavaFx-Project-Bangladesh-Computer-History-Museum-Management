@@ -344,7 +344,7 @@ public class Employeecontroller implements Initializable {
 
 
     @FXML
-    void run2(ActionEvent event) {
+    void run2() {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -692,7 +692,7 @@ public class Employeecontroller implements Initializable {
         if(employee.getEmail()!=null){
             email.setText(valueOf(employee.getEmail()));
         }
-        show.setImage(new Image(employee.getPhoto()));
+
         temp.setVisible(false);
         worktime.setText(valueOf(employee.getWorkTime()));
         phonenumber.setText(valueOf(employee.getMobile_no()));
@@ -707,6 +707,14 @@ public class Employeecontroller implements Initializable {
 
 
         run3();
+        run2();
+        try {
+            show.setImage(new Image(employee.getPhoto()));
+        }
+        catch (Exception e){
+            System.out.println("Image Path error");
+        }
+
 
     }
     @FXML
