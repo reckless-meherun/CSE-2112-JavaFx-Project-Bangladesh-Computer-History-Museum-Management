@@ -21,6 +21,8 @@ import java.util.ResourceBundle;
 public class DashboardSceneController implements Initializable
 {
     @FXML
+    AnchorPane deptPane;
+    @FXML
     Label loggedIn;
     @FXML
     private Button home;
@@ -49,8 +51,7 @@ public class DashboardSceneController implements Initializable
     @FXML
     private Text ProfileIcon;
     @FXML
-    private TreeView treeView;
-
+    public TreeView<String> treeView;
 
     @FXML
     private AnchorPane SceneTwo;
@@ -96,8 +97,18 @@ public class DashboardSceneController implements Initializable
             stage.setScene(scene);
             stage.show();
         }
-
-
+    }
+    @FXML
+    public void switchToDashboard(ActionEvent event) throws IOException
+    {
+        //DBUtils.prevfxml.push("DashboardScene.fxml");
+        DBUtils.changeScene(event, "DashboardScene.fxml", false);
+    }
+    @FXML
+    public void switchTODepartments(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("DashboardScene.fxml");
+        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
     }
     @FXML
     public void switchTOaboutUs(ActionEvent event) throws IOException
@@ -150,61 +161,58 @@ public class DashboardSceneController implements Initializable
 
     }
 
+    private void collapseTreeItems(TreeItem<String> item) {
+        item.setExpanded(false);
+
+        for (TreeItem<String> child : item.getChildren()) {
+            collapseTreeItems(child);
+        }
+    }
+
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         NavigationHandler.HandleNavigation(home, departments, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
-//        TreeItem<String> rootDept = new TreeItem<>("Departments");
-//
-//        TreeItem<String> branchDept1 = new TreeItem<>("Curatorial\nDepartments");
-//        TreeItem<String> branchDept2 = new TreeItem<>("Non-curatorial\nDepartments");
-//
-//        TreeItem<String> leafDept1 = new TreeItem<>("Software");
-//        TreeItem<String> leafDept2 = new TreeItem<>("Hardware");
-//        TreeItem<String> leafDept3 = new TreeItem<>("Language");
-//        TreeItem<String> leafDept4 = new TreeItem<>("Auditorium");
-//        TreeItem<String> leafDept5 = new TreeItem<>("Security");
-//        TreeItem<String> leafDept6 = new TreeItem<>("Public\nEducation");
-//
-//        branchDept1.getChildren().addAll(leafDept1, leafDept2, leafDept3);
-//        branchDept2.getChildren().addAll(leafDept4, leafDept5, leafDept6);
-//
-//        rootDept.getChildren().addAll(branchDept1, branchDept2);
-//        departmentsTreeButton.setRoot(rootDept);
-//
+
+        //TreeView<String> tree = new TreeView<>();
+        TreeView<String> tree = new TreeView<>();
+        tree = this.treeView;
+
+        TreeItem<String> rootDept = new TreeItem<>("Departments");
+
+        TreeItem<String> branchDept1 = new TreeItem<>("Curatorial\nDepartments");
+        TreeItem<String> branchDept2 = new TreeItem<>("Non-curatorial\nDepartments");
+        TreeItem<String> leafDept1 = new TreeItem<>("Software");
+        TreeItem<String> leafDept2 = new TreeItem<>("Hardware");
+        TreeItem<String> leafDept3 = new TreeItem<>("Language");
+        TreeItem<String> leafDept4 = new TreeItem<>("Auditorium");
+        TreeItem<String> leafDept5 = new TreeItem<>("Security");
+        TreeItem<String> leafDept6 = new TreeItem<>("Public\nEducation");
+
+        branchDept1.getChildren().addAll(leafDept1, leafDept2, leafDept3);
+        branchDept2.getChildren().addAll(leafDept4, leafDept5, leafDept6);
+        rootDept.getChildren().addAll(branchDept1, branchDept2);
+
+        if(tree == null)
+            System.out.println("NULL");
+
+        try
+        {
+            tree.setRoot(rootDept);
+            treeView.setOnMouseExited(event ->
+            {
+                // Get the root item of the tree
+                TreeItem<String> root = treeView.getRoot();
+
+                // Collapse all items under the root
+                collapseTreeItems(root);
+            });
+        }
+        catch (NullPointerException e)
+        {
+            e.printStackTrace();
+        }
+
         selectDept();
-//        TreeItem<String> rootItem = new TreeItem<>("Departments");
-//        rootItem.setExpanded(true);
-//
-//        TreeItem<String> curatorialItem = new TreeItem<>("Curatorial");
-//        TreeItem<String> nonCuratorialItem = new TreeItem<>("Non-curatorial");
-//
-//        rootItem.getChildren().addAll(curatorialItem, nonCuratorialItem);
-//        treeView.setRoot(rootItem);
-//
-//        // Add listener to root node to set flag when clicked
-//        rootItem.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
-//            rootClicked = true;
-//        });
-//
-//        // Add style to child nodes when root node is clicked and cursor is over them
-//        treeView.setOnMouseMoved(eve  nt -> {
-//            if (rootClicked && event.getTarget() instanceof Cell && event.getPickResult().getIntersectedNode() instanceof Text) {
-//                Cell cell = (Cell) event.getTarget();
-//                if (!cell.getStyleClass().contains("tree-root")) {
-//                    cell.setStyle("-fx-background-color: #e6e6e6;");
-//                }
-//            }
-//        });
-//
-//        // Remove style from child nodes when cursor moves away
-//        treeView.setOnMouseExited(event -> {
-//            if (rootClicked) {
-//                treeView.getRoot().getChildren().forEach(child -> {
-//                    Cell cell = (Cell) treeView.lookup(".tree-cell[index=" + treeView.getRow(child) + "]");
-//                    cell.setStyle("");
-//                });
-//            }
-//        });
     }
 }

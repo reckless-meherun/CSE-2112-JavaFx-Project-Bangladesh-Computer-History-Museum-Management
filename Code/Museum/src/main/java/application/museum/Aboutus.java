@@ -134,10 +134,16 @@ public class Aboutus implements Initializable {
     private Button update;
 
     @FXML
+    public void switchTODepartments(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("aboutus.fxml");
+        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+    }
+
+    @FXML
     void switchToHome(ActionEvent event) {
         DBUtils.prevfxml.push("aboutus.fxml");
         DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
-
     }
     @FXML
     void switchToemployee(ActionEvent event) throws IOException {

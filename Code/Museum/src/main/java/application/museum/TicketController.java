@@ -80,6 +80,12 @@ public class TicketController
         DBUtils.prevfxml.push("Tickets.fxml");
         DBUtils.changeScene(event,"aboutus.fxml",false);
     }
+    @FXML
+    public void switchTODepartments(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("Tickets.fxml");
+        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+    }
 
     @FXML
     void switchToSceneOne(ActionEvent event) throws IOException {

@@ -90,6 +90,12 @@ public class Gallerycontroller {
         Gallerycontroller.pushtostack();
         DBUtils.changeScene(event,"aboutus.fxml",false);
     }
+    @FXML
+    public void switchTODepartments(ActionEvent event) throws IOException
+    {
+        Gallerycontroller.pushtostack();
+        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+    }
 
     @FXML
     void switchToSceneOne(ActionEvent event) throws IOException {

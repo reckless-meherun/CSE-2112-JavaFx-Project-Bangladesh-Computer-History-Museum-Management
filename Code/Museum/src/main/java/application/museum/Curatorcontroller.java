@@ -255,6 +255,13 @@ public class Curatorcontroller implements Initializable {
     }
 
     @FXML
+    public void switchTODepartments(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("curator.fxml");
+        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+    }
+
+    @FXML
     void switchToSceneOne(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");

@@ -15,10 +15,10 @@
 <AnchorPane fx:id="SceneTwo" prefHeight="595.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.DashboardSceneController">
    <children>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" styleClass="DashboardScreen" stylesheets="@../CSS/DashboardScreen.css">
-         <right>
+         <center>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane layoutX="349.0" layoutY="245.0" prefHeight="84.0" prefWidth="559.0" styleClass="DashboardScreenUpcomingClassesItem" stylesheets="@../../CSS/DashboardScreen.css">
+                  <AnchorPane layoutX="349.0" layoutY="249.0" prefHeight="84.0" prefWidth="558.0" styleClass="DashboardScreenUpcomingClassesItem" stylesheets="@../../CSS/DashboardScreen.css">
                      <children>
                         <Text fx:id="notice1" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice one" />
                         <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Department:" />
@@ -120,12 +120,12 @@
                               <Image url="@../assets/NavigationSecondary/HomeActive.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
+                        <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="102.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <AnchorPane layoutX="1033.0" layoutY="11.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground" stylesheets="@../../CSS/DashboardScreen.css">
+                        <AnchorPane fx:id="deptPane" layoutX="1033.0" layoutY="11.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground" stylesheets="@../../CSS/DashboardScreen.css">
                            <children>
                               <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
                            </children>
@@ -135,36 +135,42 @@
                               <Font name="Cambria" size="32.0" />
                            </font>
                         </Label>
-                        <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Home">
+                        <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Home">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="departments" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToDepartments" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
+                        <Button fx:id="departments" layoutX="153.0" layoutY="19.0" mnemonicParsing="false" onAction="#switchTODepartments" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="photogallery" layoutX="423.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToGallery" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
+                        <Button fx:id="photogallery" layoutX="525.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToGallery" prefHeight="40.0" prefWidth="102.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToInventory" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
+                        <Button fx:id="articles" layoutX="637.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToInventory" prefHeight="40.0" prefWidth="102.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="aboutus" layoutX="693.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTOaboutUs" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
+                        <Button fx:id="aboutus" layoutX="750.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTOaboutUs" prefHeight="40.0" prefWidth="102.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTotickets" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
+                        <Button fx:id="tickets" layoutX="863.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTotickets" prefHeight="40.0" prefWidth="102.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
+                        <TreeView fx:id="treeView" layoutX="293.0" layoutY="73.0" prefHeight="161.0" prefWidth="208.0">
+                           <styleClass>
+                              <String fx:value="TransparentButtons" />
+                              <String fx:value="tree-view" />
+                           </styleClass>
+                        </TreeView>
                      </children>
                   </AnchorPane>
                   <Text layoutX="519.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="NOTICE BOARD" wrappingWidth="234.743408203125">
@@ -190,10 +196,9 @@
                         <Image url="@../../Assets/Dashboard/DashBoardCropped.jpg" />
                      </image>
                   </ImageView>
-                  <TreeView fx:id="treeView" layoutX="288.0" layoutY="72.0" onContextMenuRequested="#selectDept" onMouseClicked="#selectDept" prefHeight="294.0" prefWidth="150.0" />
                </children>
             </AnchorPane>
-         </right>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>

@@ -192,8 +192,14 @@ public class Studentscontroller implements Initializable{
 
     @FXML
     void switchToHome(ActionEvent event) {
-        DBUtils.prevfxml.push("studnets.fxml");
+        DBUtils.prevfxml.push("students.fxml");
         DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
+    }
+    @FXML
+    public void switchTODepartments(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("students.fxml");
+        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
     }
 
     @FXML
