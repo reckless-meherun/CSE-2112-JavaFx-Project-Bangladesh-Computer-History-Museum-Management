@@ -55,7 +55,7 @@ public class NavigationHandler
             @Override
             public void handle(MouseEvent mouseEvent)
             {
-                DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
+                DBUtils.changeScenceforMouseEvent(mouseEvent, "DepartmentsScene.fxml", "Departments", null);
             }
         });
 //        photoGalleryButton.setOnMouseEntered(new EventHandler<MouseEvent>()

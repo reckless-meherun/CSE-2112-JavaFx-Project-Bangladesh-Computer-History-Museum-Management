@@ -154,7 +154,7 @@ public class DashboardSceneController implements Initializable
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         NavigationHandler.HandleNavigation(home, departments, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
-//        TreeItem<String> rootDept = new TreeItem<>("application.museum.Departments");
+//        TreeItem<String> rootDept = new TreeItem<>("Departments");
 //
 //        TreeItem<String> branchDept1 = new TreeItem<>("Curatorial\nDepartments");
 //        TreeItem<String> branchDept2 = new TreeItem<>("Non-curatorial\nDepartments");
@@ -173,7 +173,7 @@ public class DashboardSceneController implements Initializable
 //        departmentsTreeButton.setRoot(rootDept);
 //
         selectDept();
-//        TreeItem<String> rootItem = new TreeItem<>("application.museum.Departments");
+//        TreeItem<String> rootItem = new TreeItem<>("Departments");
 //        rootItem.setExpanded(true);
 //
 //        TreeItem<String> curatorialItem = new TreeItem<>("Curatorial");
@@ -188,7 +188,7 @@ public class DashboardSceneController implements Initializable
 //        });
 //
 //        // Add style to child nodes when root node is clicked and cursor is over them
-//        treeView.setOnMouseMoved(event -> {
+//        treeView.setOnMouseMoved(eve  nt -> {
 //            if (rootClicked && event.getTarget() instanceof Cell && event.getPickResult().getIntersectedNode() instanceof Text) {
 //                Cell cell = (Cell) event.getTarget();
 //                if (!cell.getStyleClass().contains("tree-root")) {

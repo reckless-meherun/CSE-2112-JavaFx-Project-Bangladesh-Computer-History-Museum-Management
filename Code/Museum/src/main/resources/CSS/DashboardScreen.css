@@ -76,6 +76,7 @@
     -fx-background-color: #D4D4D4;
     -fx-background-radius: 50%;
 }
+
 .DashboardScreenUpcomingClasses,.DashboardScreenUpcomingClassesItemHeader,.DashboardScreenUpcomingClassesItemTeacher,.DashboardScreenUpcomingClassesItemTime,.DashboardScreenUpcomingClassesItemDate,
 .DashboardScreenUpcomingClassesItemScheduledBy,.DashboardScreenUpcomingClassesItemTime,.DashboardScreenMenuItemTextActive,.DashboardScreenMenuItemText,.AboveAverageText,.DashboardAttendanceNumber{
     -fx-font-family:'Cambria';

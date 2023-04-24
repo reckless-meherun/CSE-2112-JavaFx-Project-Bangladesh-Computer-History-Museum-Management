@@ -186,8 +186,6 @@ public class Aboutus implements Initializable {
             stage.setScene(scene);
             stage.show();
         }
-
-
     }
     @FXML
     void goBack(ActionEvent event) throws IOException {
