@@ -11,12 +11,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class DBUtils
 {
     public static String username;
     public static Stack<String> prevfxml=new Stack<>();
+    public static String[] dept={"Hardware","Software","Language","Public_Education","Photo_Gallery","Security","Auditorium"};
     public static void changeScene(ActionEvent event, String fxmlfile, String username)
     {
         Parent root = null;
@@ -48,6 +50,23 @@ public class DBUtils
         Scene scene = new Scene(root, 1101, 680);
         stage.setScene(scene);
         stage.show();
+    }
+    public static Connection connectDB(String url) {
+        try
+        {
+
+            Class.forName("org.sqlite.JDBC");
+            Connection connect= DriverManager.getConnection(url);
+            if(connect==null)
+            {
+                System.out.println("database load error");
+            }
+            return connect;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("database load error");
+        }
+        return null;
     }
 
 

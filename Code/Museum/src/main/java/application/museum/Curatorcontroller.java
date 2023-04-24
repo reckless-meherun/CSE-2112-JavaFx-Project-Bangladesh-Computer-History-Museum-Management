@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -57,6 +58,10 @@ public class Curatorcontroller implements Initializable {
 
     @FXML
     private Button articles;
+
+
+    @FXML
+    private ImageView show;
 
     @FXML
     private Button bar1;

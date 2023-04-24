@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -116,6 +117,9 @@ public class Aboutus implements Initializable {
 
     @FXML
     private AnchorPane scene2;
+
+    @FXML
+    private ImageView showimage;
 
     @FXML
     private Button student;
