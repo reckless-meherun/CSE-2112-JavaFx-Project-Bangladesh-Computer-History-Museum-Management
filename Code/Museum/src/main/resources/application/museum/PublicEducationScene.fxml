@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.museum.InventoryController">
+   <children>
+      <AnchorPane fx:id="SceneTwo" prefHeight="595.0" prefWidth="921.0">
+         <children>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" styleClass="DashboardScreen" stylesheets="@../CSS/DashboardScreen.css">
+               <right>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
+                           <children>
+                              <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/SmallLogo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="23.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="DashboardScreenMenu">
+                                 <image>
+                                    <Image url="@../assets/NavigationSecondary/HomeActive.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <AnchorPane layoutX="1033.0" layoutY="11.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground" stylesheets="@../../CSS/DashboardScreen.css">
+                                 <children>
+                                    <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" onAction="#SwitchToHome" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="departments" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTODepartments" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="photogallery" layoutX="423.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToGallery" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="aboutus" layoutX="693.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTOaboutUs" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTotickets" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Text layoutX="412.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="PUBLIC EDUCATION" wrappingWidth="281.1433410644531">
+                                 <font>
+                                    <Font name="Colonna MT" size="36.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
+                           <children>
+                              <TextField layoutX="39.0" layoutY="210.0" prefHeight="32.0" prefWidth="336.0" promptText="course name" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </TextField>
+                              <Text fill="#ffd23c" layoutX="38.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add/Update Courses" wrappingWidth="345.9433288574219">
+                                 <font>
+                                    <Font name="Cambria Bold" size="36.0" />
+                                 </font>
+                              </Text>
+                              <DatePicker layoutX="40.0" layoutY="342.0" prefHeight="40.0" prefWidth="158.0" promptText="starting date" styleClass="textarea">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </DatePicker>
+                              <Button fx:id="home1" layoutX="107.0" layoutY="424.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
+                              <Button fx:id="home11" layoutX="223.0" layoutY="424.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
+                              <TextField layoutX="39.0" layoutY="254.0" prefHeight="32.0" prefWidth="336.0" promptText="set educator" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </TextField>
+                              <TextField layoutX="39.0" layoutY="298.0" prefHeight="32.0" prefWidth="143.0" promptText="total students" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </TextField>
+                              <Button fx:id="home12" layoutX="20.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="42.0" prefWidth="180.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add/Update Students">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
+                              <Button fx:id="home121" layoutX="219.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="42.0" prefWidth="180.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add/Update Educators">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
+                              <ComboBox layoutX="192.0" layoutY="298.0" prefHeight="32.0" prefWidth="182.0" promptText="course status" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css" />
+                              <DatePicker layoutX="211.0" layoutY="342.0" prefHeight="40.0" prefWidth="161.0" promptText="ending date" styleClass="textarea">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </DatePicker>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="420.0" layoutY="145.0" prefHeight="535.0" prefWidth="670.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                           <children>
+                              <TextField layoutX="50.0" layoutY="14.0" prefHeight="38.0" prefWidth="623.0" promptText="search" styleClass="markInputField">
+                                 <font>
+                                    <Font name="Cambria" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TableView layoutY="70.0" prefHeight="394.0" prefWidth="686.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                                <columns>
+                                  <TableColumn prefWidth="96.80001831054688" text="Starting Date" />
+                                    <TableColumn prefWidth="102.4000244140625" text="Ending Date" />
+                                    <TableColumn prefWidth="104.7999267578125" text="Course Name" />
+                                    <TableColumn prefWidth="105.60003662109375" text="Educator" />
+                                    <TableColumn prefWidth="136.79998779296875" text="Total Students" />
+                                    <TableColumn prefWidth="136.79998779296875" text="Course Status" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="GoBackButton" layoutX="52.0" layoutY="479.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="Go Back" textFill="#1e0202">
+                                 <font>
+                                    <Font name="Cambria" size="14.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="8.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/search2.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </right>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

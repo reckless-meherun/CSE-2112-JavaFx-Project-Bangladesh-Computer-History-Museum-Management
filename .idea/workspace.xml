@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Curatorial Department added" />
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Curatorial Department added">
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PublicEducationScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/SecurityScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +58,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\IdeaProjects\new project\Code\Museum\src\main\resources\Database" />
       <recent name="C:\Users\DELL\IdeaProjects\new project\Code\Museum\src\main\resources\application\museum" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\University Stuff\2-1\OOP Project\Museum 2\Code\Museum\src\main\resources\application\museum" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="application.museum" />
@@ -245,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682368130578</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Curatorial Department added">
+      <created>1682368203959</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1682368203959</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

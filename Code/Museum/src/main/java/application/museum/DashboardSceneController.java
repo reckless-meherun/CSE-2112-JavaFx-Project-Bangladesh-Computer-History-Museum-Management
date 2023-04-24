@@ -178,20 +178,25 @@ public class DashboardSceneController implements Initializable
                 DashboardSceneController.pushtostack();
                 DBUtils.changeSceneDept(event, "CuratorialDeptScene.fxml", false);
             }
-            if(item.getValue() == "Hardware")
+            if(item.getValue() == "Auditorium")
             {
                 DashboardSceneController.pushtostack();
                 DBUtils.changeSceneDept(event, "Tickets.fxml", false);
             }
+            if(item.getValue() == "Photo\nGallery")
+            {
+                DashboardSceneController.pushtostack();
+                DBUtils.changeSceneDept(event, "PhotoGalleryScene.fxml", false);
+            }
             if(item.getValue() == "Public\nEducation")
             {
                 DashboardSceneController.pushtostack();
-                DBUtils.changeSceneDept(event, "aboutus.fxml", false);
+                DBUtils.changeSceneDept(event, "PublicEducationScene.fxml", false);
             }
             if(item.getValue() == "Security")
             {
                 DashboardSceneController.pushtostack();
-                DBUtils.changeSceneDept(event, "PhotoGalleryScene.fxml", false);
+                DBUtils.changeSceneDept(event, "SecurityScene.fxml", false);
             }
         }
     }
@@ -225,9 +230,10 @@ public class DashboardSceneController implements Initializable
         TreeItem<String> leafDept4 = new TreeItem<>("Auditorium");
         TreeItem<String> leafDept5 = new TreeItem<>("Security");
         TreeItem<String> leafDept6 = new TreeItem<>("Public\nEducation");
+        TreeItem<String> leafDept7 = new TreeItem<>("Photo\nGallery");
 
         //branchDept1.getChildren().addAll(leafDept1, leafDept2, leafDept3);
-        branchDept2.getChildren().addAll(leafDept4, leafDept5, leafDept6);
+        branchDept2.getChildren().addAll(leafDept4, leafDept5, leafDept6, leafDept7);
         rootDept.getChildren().addAll(branchDept1, branchDept2);
 
         if (tree == null)
