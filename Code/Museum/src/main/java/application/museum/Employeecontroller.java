@@ -195,6 +195,8 @@ public class Employeecontroller implements Initializable {
     @FXML
     private Button student;
 
+
+
     @FXML
     private Text studentName;
 
@@ -694,6 +696,7 @@ public class Employeecontroller implements Initializable {
             joingdate1.setValue(LocalDate.parse(valueOf(employee.getResigningDate())));
         }
         else joingdate1.setValue(null);
+        System.out.println(employee.getPhoto());
         //file_path=employee.getPhoto();
 
 
