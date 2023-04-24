@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -16,10 +17,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLOutput;
 import java.util.ResourceBundle;
 
 public class DashboardSceneController implements Initializable
 {
+    @FXML
+    public TreeView<String> treeView;
     @FXML
     AnchorPane deptPane;
     @FXML
@@ -51,20 +55,19 @@ public class DashboardSceneController implements Initializable
     @FXML
     private Text ProfileIcon;
     @FXML
-    public TreeView<String> treeView;
-
-    @FXML
     private AnchorPane SceneTwo;
     private boolean rootClicked = false;
+
+    public static void pushtostack()
+    {
+        DBUtils.prevfxml.push("DashboardScene.fxml.fxml");
+    }
 
     public void displayName(String username)
     {
         loggedIn.setText("Hello " + username + " !");
     }
 
-    public static void pushtostack(){
-        DBUtils.prevfxml.push("DashboardScene.fxml.fxml");
-    }
     @FXML
     public void logout(ActionEvent event)
     {
@@ -80,6 +83,7 @@ public class DashboardSceneController implements Initializable
             stage.close();
         }
     }
+
     @FXML
     public void switchToSceneOne(ActionEvent event) throws IOException
     {
@@ -98,24 +102,28 @@ public class DashboardSceneController implements Initializable
             stage.show();
         }
     }
+
     @FXML
     public void switchToDashboard(ActionEvent event) throws IOException
     {
         //DBUtils.prevfxml.push("DashboardScene.fxml");
         DBUtils.changeScene(event, "DashboardScene.fxml", false);
     }
+
     @FXML
     public void switchTODepartments(ActionEvent event) throws IOException
     {
         DBUtils.prevfxml.push("DashboardScene.fxml");
         DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
     }
+
     @FXML
     public void switchTOaboutUs(ActionEvent event) throws IOException
     {
         DBUtils.prevfxml.push("DashboardScene.fxml");
         DBUtils.changeScene(event, "aboutus.fxml", false);
     }
+
     @FXML
     public void switchTotickets(ActionEvent event) throws IOException
     {
@@ -145,26 +153,55 @@ public class DashboardSceneController implements Initializable
             DBUtils.changeScene(event, fxml, true);
         }
     }
-    @FXML
-    void switchToInventory(ActionEvent event) throws IOException {
-        DashboardSceneController.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
-    }
-    @FXML
-    void switchToGallery(ActionEvent event) throws IOException {
-        DashboardSceneController.pushtostack();
-        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
-    }
 
-    public void selectDept()
+    @FXML
+    void switchToInventory(ActionEvent event) throws IOException
     {
-
+        DashboardSceneController.pushtostack();
+        DBUtils.changeScene(event, "Inventory.fxml", false);
     }
 
-    private void collapseTreeItems(TreeItem<String> item) {
+    @FXML
+    void switchToGallery(ActionEvent event) throws IOException
+    {
+        DashboardSceneController.pushtostack();
+        DBUtils.changeScene(event, "PhotoGalleryScene.fxml", false);
+    }
+
+    public void selectDept(MouseEvent event) throws IOException
+    {
+        TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
+        if (item != null)
+        {
+            if(item.getValue() == "Software")
+            {
+                DashboardSceneController.pushtostack();
+                DBUtils.changeSceneDept(event, "Inventory.fxml", false);
+            }
+            if(item.getValue() == "Hardware")
+            {
+                DashboardSceneController.pushtostack();
+                DBUtils.changeSceneDept(event, "Tickets.fxml", false);
+            }
+            if(item.getValue() == "Public\nEducation")
+            {
+                DashboardSceneController.pushtostack();
+                DBUtils.changeSceneDept(event, "aboutus.fxml", false);
+            }
+            if(item.getValue() == "Security")
+            {
+                DashboardSceneController.pushtostack();
+                DBUtils.changeSceneDept(event, "PhotoGalleryScene.fxml", false);
+            }
+        }
+    }
+
+    private void collapseTreeItems(TreeItem<String> item)
+    {
         item.setExpanded(false);
 
-        for (TreeItem<String> child : item.getChildren()) {
+        for (TreeItem<String> child : item.getChildren())
+        {
             collapseTreeItems(child);
         }
     }
@@ -193,7 +230,7 @@ public class DashboardSceneController implements Initializable
         branchDept2.getChildren().addAll(leafDept4, leafDept5, leafDept6);
         rootDept.getChildren().addAll(branchDept1, branchDept2);
 
-        if(tree == null)
+        if (tree == null)
             System.out.println("NULL");
 
         try
@@ -207,12 +244,11 @@ public class DashboardSceneController implements Initializable
                 // Collapse all items under the root
                 collapseTreeItems(root);
             });
-        }
-        catch (NullPointerException e)
+        } catch (NullPointerException e)
         {
             e.printStackTrace();
         }
 
-        selectDept();
+        //selectDept();
     }
 }

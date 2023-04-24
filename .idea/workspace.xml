@@ -4,34 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="some issue found and solved.">
-      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DepartmentsScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management.iml" afterDir="false" />
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="some issue found and solved.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Aboutus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Aboutus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/AdminsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/AdminsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Developercontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Developercontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Educatorcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Educatorcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Gallerycontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Gallerycontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Studentscontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Studentscontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/DashboardScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/DashboardScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/userpassword.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/userpassword.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/curator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/curator.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/developer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/developer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/educator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/educator.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/employee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/employee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/students.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/students.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +70,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="25b1c9e4-b921-4271-980d-cc206ac7eb42" name="Changes" comment="" />
+      <changelist id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="" />
       <created>1681072875681</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -292,6 +270,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="3" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="4" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

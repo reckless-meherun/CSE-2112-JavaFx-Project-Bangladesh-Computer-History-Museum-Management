@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -51,6 +52,15 @@ public class DBUtils
         stage.setScene(scene);
         stage.show();
     }
+    public static void changeSceneDept(MouseEvent event, String fxml, boolean goback) throws IOException
+    {
+        Parent root = FXMLLoader.load(DBUtils.class.getResource(fxml));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, 1101, 680);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public static Connection connectDB(String url) {
         try
         {
