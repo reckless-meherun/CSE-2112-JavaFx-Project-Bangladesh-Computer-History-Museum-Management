@@ -102,7 +102,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Text layoutX="474.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
+                                    <Text layoutX="486.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
                                        <font>
                                           <Font name="Colonna MT" size="36.0" />
                                        </font>

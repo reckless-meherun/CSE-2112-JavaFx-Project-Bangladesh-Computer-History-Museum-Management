@@ -173,10 +173,10 @@ public class DashboardSceneController implements Initializable
         TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
         if (item != null)
         {
-            if(item.getValue() == "Software")
+            if(item.getValue() == "Curatorial\nDepartments")
             {
                 DashboardSceneController.pushtostack();
-                DBUtils.changeSceneDept(event, "Inventory.fxml", false);
+                DBUtils.changeSceneDept(event, "CuratorialDeptScene.fxml", false);
             }
             if(item.getValue() == "Hardware")
             {
@@ -219,14 +219,14 @@ public class DashboardSceneController implements Initializable
 
         TreeItem<String> branchDept1 = new TreeItem<>("Curatorial\nDepartments");
         TreeItem<String> branchDept2 = new TreeItem<>("Non-curatorial\nDepartments");
-        TreeItem<String> leafDept1 = new TreeItem<>("Software");
-        TreeItem<String> leafDept2 = new TreeItem<>("Hardware");
-        TreeItem<String> leafDept3 = new TreeItem<>("Language");
+//        TreeItem<String> leafDept1 = new TreeItem<>("Software");
+//        TreeItem<String> leafDept2 = new TreeItem<>("Hardware");
+//        TreeItem<String> leafDept3 = new TreeItem<>("Language");
         TreeItem<String> leafDept4 = new TreeItem<>("Auditorium");
         TreeItem<String> leafDept5 = new TreeItem<>("Security");
         TreeItem<String> leafDept6 = new TreeItem<>("Public\nEducation");
 
-        branchDept1.getChildren().addAll(leafDept1, leafDept2, leafDept3);
+        //branchDept1.getChildren().addAll(leafDept1, leafDept2, leafDept3);
         branchDept2.getChildren().addAll(leafDept4, leafDept5, leafDept6);
         rootDept.getChildren().addAll(branchDept1, branchDept2);
 

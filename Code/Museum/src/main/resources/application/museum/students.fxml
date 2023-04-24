@@ -30,7 +30,7 @@
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                            <children>
                               <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
+                              <AnchorPane layoutX="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
                                  <children>
                                     <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -82,7 +82,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Text layoutX="474.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
+                                    <Text layoutX="474.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
                                        <font>
                                           <Font name="Colonna MT" size="36.0" />
                                        </font>

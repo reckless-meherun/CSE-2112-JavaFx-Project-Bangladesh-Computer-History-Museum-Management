@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="some issue found and solved.">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="changing screens with Departments treeview">
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/CuratorialDeptScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682278151962</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="changing screens with Departments treeview">
+      <created>1682358630585</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1682358630585</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -256,7 +266,8 @@
     <MESSAGE value="userpage complete... Eid Mubarak" />
     <MESSAGE value="employee page is now completed." />
     <MESSAGE value="some issue found and solved." />
-    <option name="LAST_COMMIT_MESSAGE" value="some issue found and solved." />
+    <MESSAGE value="changing screens with Departments treeview" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing screens with Departments treeview" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
