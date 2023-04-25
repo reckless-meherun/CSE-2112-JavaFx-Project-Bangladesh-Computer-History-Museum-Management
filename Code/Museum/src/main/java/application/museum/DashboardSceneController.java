@@ -181,7 +181,7 @@ public class DashboardSceneController implements Initializable
             if(item.getValue() == "Auditorium")
             {
                 DashboardSceneController.pushtostack();
-                DBUtils.changeSceneDept(event, "Tickets.fxml", false);
+                DBUtils.changeSceneDept(event, "AuditoriumScene.fxml", false);
             }
             if(item.getValue() == "Photo\nGallery")
             {
