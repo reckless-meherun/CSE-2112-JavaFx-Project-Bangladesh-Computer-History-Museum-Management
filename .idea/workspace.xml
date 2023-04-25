@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Navigation edited for Dashboard, PhotoGallery and Ticket scene controller">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Navigation edited for aboutUs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Aboutus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Aboutus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/AdminsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/AdminsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Educatorcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Educatorcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/educator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/educator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/employee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/employee.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +35,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../JavaSDK/lib/src.zip!/java.base/java/lang/NullPointerException.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -296,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682443762726</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Navigation edited for aboutUs">
+      <created>1682450247059</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1682450247059</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -324,7 +341,8 @@
     <MESSAGE value="auditorium scene updated" />
     <MESSAGE value="Delete button added where it is necessary" />
     <MESSAGE value="Navigation edited for Dashboard, PhotoGallery and Ticket scene controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navigation edited for Dashboard, PhotoGallery and Ticket scene controller" />
+    <MESSAGE value="Navigation edited for aboutUs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navigation edited for aboutUs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

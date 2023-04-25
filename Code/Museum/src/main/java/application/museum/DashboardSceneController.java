@@ -47,7 +47,6 @@ public class DashboardSceneController extends NavigationHandler implements Initi
     private Text ProfileIcon;
     @FXML
     private AnchorPane SceneTwo;
-    private boolean rootClicked = false;
 
     public static void pushtostack()
     {
@@ -94,12 +93,12 @@ public class DashboardSceneController extends NavigationHandler implements Initi
         }
     }
 
-    @FXML
-    public void switchTODepartments(ActionEvent event) throws IOException
-    {
-        DBUtils.prevfxml.push("DashboardScene.fxml");
-        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
-    }
+//    @FXML
+//    public void switchTODepartments(ActionEvent event) throws IOException
+//    {
+//        DBUtils.prevfxml.push("DashboardScene.fxml");
+//        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+//    }
 
     @FXML
     public void goBack(ActionEvent event) throws IOException

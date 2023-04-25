@@ -263,7 +263,7 @@ public class Aboutus implements Initializable
     {
         try
         {
-            NavigationHandler.HandleNavigation("Tickets.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+            NavigationHandler.HandleNavigation("aboutus.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
         } catch (IOException e)
         {
             throw new RuntimeException(e);

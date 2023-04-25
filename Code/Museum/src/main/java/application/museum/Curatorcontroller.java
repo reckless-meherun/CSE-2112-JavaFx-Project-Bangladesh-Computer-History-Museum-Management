@@ -40,7 +40,8 @@ import java.util.ResourceBundle;
 
 import static java.lang.String.valueOf;
 
-public class Curatorcontroller implements Initializable {
+public class Curatorcontroller implements Initializable
+{
     @FXML
     private TableColumn<curator, String> Adress_t;
     @FXML
@@ -221,37 +222,42 @@ public class Curatorcontroller implements Initializable {
     private Statement statement;
     private ResultSet result;
 
-    private boolean isimageChanged=false;
+    private boolean isimageChanged = false;
 
-    private String url="jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\curator.db";
+    private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\curator.db";
 
     private File photo;
 
 
-    public static void pushtostack(){
+    public static void pushtostack()
+    {
         DBUtils.prevfxml.push("curator.fxml");
     }
 
     @FXML
-    void goBack(ActionEvent event) throws IOException {
-        if(DBUtils.prevfxml.empty()){
+    void goBack(ActionEvent event) throws IOException
+    {
+        if (DBUtils.prevfxml.empty())
+        {
             return;
         }
-        String fxml=DBUtils.prevfxml.pop();
+        String fxml = DBUtils.prevfxml.pop();
         //DBUtils.prevfxml.pop();
         System.out.println(fxml);
-        if(fxml=="DashboardScene.fxml"){
-            DBUtils.changeScene(event,fxml,DBUtils.username);
-        }
-        else {
+        if (fxml == "DashboardScene.fxml")
+        {
+            DBUtils.changeScene(event, fxml, DBUtils.username);
+        } else
+        {
             DBUtils.changeScene(event, fxml, true);
         }
     }
 
     @FXML
-    void switchToHome(ActionEvent event) {
+    void switchToHome(ActionEvent event)
+    {
         DBUtils.prevfxml.push("curator.fxml");
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
+        DBUtils.changeScene(event, "DashboardScene.fxml", DBUtils.username);
     }
 
     @FXML
@@ -262,7 +268,8 @@ public class Curatorcontroller implements Initializable {
     }
 
     @FXML
-    void switchToSceneOne(ActionEvent event) throws IOException {
+    void switchToSceneOne(ActionEvent event) throws IOException
+    {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("You are about to logout");
@@ -280,38 +287,50 @@ public class Curatorcontroller implements Initializable {
     }
 
     @FXML
-    void switchTobod(ActionEvent event) throws IOException {
+    void switchTobod(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("curator.fxml");
-        DBUtils.changeScene(event,"aboutus.fxml",false);
+        DBUtils.changeScene(event, "aboutus.fxml", false);
     }
 
     @FXML
-    void switchToemployee(ActionEvent event) throws IOException {
+    void switchToemployee(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("curator.fxml");
-        DBUtils.changeScene(event,"employee.fxml",false);
+        DBUtils.changeScene(event, "employee.fxml", false);
     }
+
     @FXML
-    void switchTostudents(ActionEvent event) throws IOException {
+    void switchTostudents(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("curator.fxml");
-        DBUtils.changeScene(event,"students.fxml",false);
+        DBUtils.changeScene(event, "students.fxml", false);
     }
+
     @FXML
-    void switchTodevloper(ActionEvent event) throws IOException {
+    void switchTodevloper(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("curator.fxml");
-        DBUtils.changeScene(event,"developer.fxml",false);
+        DBUtils.changeScene(event, "developer.fxml", false);
     }
+
     @FXML
-    void switchToadmins(ActionEvent event) throws IOException {
+    void switchToadmins(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("curator.fxml");
-        DBUtils.changeScene(event,"admins.fxml",false);
+        DBUtils.changeScene(event, "admins.fxml", false);
     }
+
     @FXML
-    void switchToeducator(ActionEvent event) throws IOException {
+    void switchToeducator(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("curator.fxml");
-        DBUtils.changeScene(event,"educator.fxml",false);
+        DBUtils.changeScene(event, "educator.fxml", false);
     }
+
     @FXML
-    void run1(ActionEvent event) {
+    void run1(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -320,14 +339,17 @@ public class Curatorcontroller implements Initializable {
 
         paneside.setTranslateX(-160);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar1.setVisible(false);
             bar2.setVisible(true);
         });
 
     }
+
     @FXML
-    void run2() {
+    void run2()
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -336,21 +358,25 @@ public class Curatorcontroller implements Initializable {
 
         paneside.setTranslateX(0);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar1.setVisible(true);
             bar2.setVisible(false);
         });
     }
+
     @FXML
-    void switchToInventory(ActionEvent event) throws IOException {
+    void switchToInventory(ActionEvent event) throws IOException
+    {
         Curatorcontroller.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
+        DBUtils.changeScene(event, "Inventory.fxml", false);
     }
 
     @FXML
-    void switchToGallery(ActionEvent event) throws IOException {
+    void switchToGallery(ActionEvent event) throws IOException
+    {
         Curatorcontroller.pushtostack();
-        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+        DBUtils.changeScene(event, "PhotoGalleryScene.fxml", false);
     }
 
     @FXML
@@ -359,8 +385,10 @@ public class Curatorcontroller implements Initializable {
         Curatorcontroller.pushtostack();
         DBUtils.changeScene(event, "Tickets.fxml", false);
     }
+
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
         Combo_box();
         showData();
         paneside.setTranslateX(0);
@@ -370,8 +398,10 @@ public class Curatorcontroller implements Initializable {
         bar4.setVisible(false);
         scene2.setTranslateX(378);
     }
+
     @FXML
-    void run3() {
+    void run3()
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -380,14 +410,16 @@ public class Curatorcontroller implements Initializable {
 
         scene2.setTranslateX(378);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar3.setVisible(false);
             bar4.setVisible(true);
         });
     }
 
     @FXML
-    void run4() {
+    void run4()
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -396,53 +428,61 @@ public class Curatorcontroller implements Initializable {
 
         scene2.setTranslateX(0);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar4.setVisible(false);
             bar3.setVisible(true);
         });
     }
+
     @FXML
-    void insertImage(ActionEvent event) throws IOException {
-        FileChooser open= new FileChooser();
-        Stage stage=(Stage) scene2.getScene().getWindow();
-        File file=open.showOpenDialog(stage);
-        isimageChanged=true;
-        if(file!=null){
-            StringBuilder im=new StringBuilder( file.toPath().toString());
-            photo=file;
-            for(int i=0;i<im.length();i++){
-                if(im.charAt(i)=='\\'){
-                    im.setCharAt(i,'/');
+    void insertImage(ActionEvent event) throws IOException
+    {
+        FileChooser open = new FileChooser();
+        Stage stage = (Stage) scene2.getScene().getWindow();
+        File file = open.showOpenDialog(stage);
+        isimageChanged = true;
+        if (file != null)
+        {
+            StringBuilder im = new StringBuilder(file.toPath().toString());
+            photo = file;
+            for (int i = 0; i < im.length(); i++)
+            {
+                if (im.charAt(i) == '\\')
+                {
+                    im.setCharAt(i, '/');
                 }
             }
-            String destination= im.toString();
+            String destination = im.toString();
             System.out.println(destination);
             Image img = new Image(destination);
             show.setImage(img);
             temp.setVisible(false);
-        }
-        else{
+        } else
+        {
             System.out.println("Student pic is missing");
         }
     }
+
     public void Combo_box()
     {
-        List<String> list=new ArrayList<>();
-        for(Gender data:Gender.values())
+        List<String> list = new ArrayList<>();
+        for (Gender data : Gender.values())
         {
             list.add(data.toString());
         }
-        ObservableList data_list= FXCollections.observableArrayList(list);
+        ObservableList data_list = FXCollections.observableArrayList(list);
         gender.setItems(data_list);
 
-        List<String> class_list=new ArrayList<>();
-        for(String data:DBUtils.dept)
+        List<String> class_list = new ArrayList<>();
+        for (String data : DBUtils.dept)
         {
             class_list.add(data);
         }
-        ObservableList data_list_class= FXCollections.observableArrayList(class_list);
+        ObservableList data_list_class = FXCollections.observableArrayList(class_list);
         Department.setItems(data_list_class);
     }
+
     @FXML
     public void clear()
     {
@@ -459,28 +499,34 @@ public class Curatorcontroller implements Initializable {
         joingdate.setValue(null);
         joingdate1.setValue(null);
         dob.setValue(null);
-        photo=null;
+        photo = null;
         worktime.setText("");
-        isimageChanged=false;
+        isimageChanged = false;
         Field.setText("");
 
 
     }
-    public StringBuilder copyImageToResources(File imageFile) throws IOException {
+
+    public StringBuilder copyImageToResources(File imageFile) throws IOException
+    {
         // Determine the path to the resources folder
         StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
         //int n=resourcesPath.length();
         resourcesPath.deleteCharAt(0);
-        for(int i=0;i<resourcesPath.length();i++){
-            if(resourcesPath.charAt(i)=='/'){
+        for (int i = 0; i < resourcesPath.length(); i++)
+        {
+            if (resourcesPath.charAt(i) == '/')
+            {
 
-                resourcesPath.replace(i,i+1,"\\\\");
+                resourcesPath.replace(i, i + 1, "\\\\");
             }
-            if(resourcesPath.charAt(i)=='%'){
-                resourcesPath.replace(i,i+3," ");
+            if (resourcesPath.charAt(i) == '%')
+            {
+                resourcesPath.replace(i, i + 3, " ");
             }
-            if(resourcesPath.charAt(i)=='m'){
-                resourcesPath.delete(i+1,resourcesPath.length());
+            if (resourcesPath.charAt(i) == 'm')
+            {
+                resourcesPath.delete(i + 1, resourcesPath.length());
                 break;
             }
         }
@@ -490,68 +536,75 @@ public class Curatorcontroller implements Initializable {
         String extension = "";
 
         int dotIndex = name.lastIndexOf(".");
-        if (dotIndex > 0 && dotIndex < name.length() - 1) {
+        if (dotIndex > 0 && dotIndex < name.length() - 1)
+        {
             extension = name.substring(dotIndex + 1);
         }
 
-        String fileName = "image_" + System.currentTimeMillis() + "."+extension;
-        StringBuilder destination= new StringBuilder("\\src\\main\\resources\\application\\museum\\StudentsPhotos\\"+fileName);
+        String fileName = "image_" + System.currentTimeMillis() + "." + extension;
+        StringBuilder destination = new StringBuilder("\\src\\main\\resources\\application\\museum\\StudentsPhotos\\" + fileName);
 
         // Copy the image file to the resources folder with the unique file name
         Path sourcePath = imageFile.toPath();
-        Path destinationPath = Paths.get(  resourcesPath +"\\src\\main\\resources\\application\\museum\\StudentsPhotos\\"+fileName);
+        Path destinationPath = Paths.get(resourcesPath + "\\src\\main\\resources\\application\\museum\\StudentsPhotos\\" + fileName);
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
 //        direction=destinationPath.toString();
         return destination;
     }
+
     @FXML
-    void insert(ActionEvent event)  {
-        String sql="INSERT INTO curator VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    void insert(ActionEvent event)
+    {
+        String sql = "INSERT INTO curator VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 
-        try {
-            connect= DBUtils.connectDB(url);
-            if(Id.getText().isEmpty() | name.getText().isEmpty()  | show.getImage()==null | phonenumber.getText().isEmpty() |
-                    gender.getSelectionModel().isEmpty()|Department.getSelectionModel().isEmpty()|adress.getText().isEmpty() |
-                    dob.getValue()==null | joingdate.getValue()==null|designation.getText().isEmpty()|worktime.getText().isEmpty()|Field.getText().isEmpty() )
+        try
+        {
+            connect = DBUtils.connectDB(url);
+            if (Id.getText().isEmpty() | name.getText().isEmpty() | show.getImage() == null | phonenumber.getText().isEmpty() |
+                    gender.getSelectionModel().isEmpty() | Department.getSelectionModel().isEmpty() | adress.getText().isEmpty() |
+                    dob.getValue() == null | joingdate.getValue() == null | designation.getText().isEmpty() | worktime.getText().isEmpty() | Field.getText().isEmpty())
             {
-                Alert alert=new Alert(Alert.AlertType.ERROR);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
                 alert.setHeaderText("            Some fields are empty.  ");
                 alert.setContentText("                             Please enter all blank fields. ");
                 alert.showAndWait();
-            }
-            else
+            } else
             {
-                StringBuilder im= copyImageToResources(photo);
-                for(int i=0;i<im.length();i++){
-                    if(im.charAt(i)=='\\'){
-                        im.setCharAt(i,'/');
+                StringBuilder im = copyImageToResources(photo);
+                for (int i = 0; i < im.length(); i++)
+                {
+                    if (im.charAt(i) == '\\')
+                    {
+                        im.setCharAt(i, '/');
                     }
                 }
-                String files_path= im.toString();
+                String files_path = im.toString();
 
 
-                prepare=connect.prepareStatement(sql);
-                prepare.setInt(1,Integer.parseInt(Id.getText()));
-                prepare.setString(2,name.getText());
-                prepare.setString(3,(String) gender.getSelectionModel().getSelectedItem());
-                prepare.setString(4,designation.getText());
-                prepare.setString(5,(String) Department.getSelectionModel().getSelectedItem());
-                if(!email.getText().isEmpty()){
-                    prepare.setString(6,email.getText());
+                prepare = connect.prepareStatement(sql);
+                prepare.setInt(1, Integer.parseInt(Id.getText()));
+                prepare.setString(2, name.getText());
+                prepare.setString(3, (String) gender.getSelectionModel().getSelectedItem());
+                prepare.setString(4, designation.getText());
+                prepare.setString(5, (String) Department.getSelectionModel().getSelectedItem());
+                if (!email.getText().isEmpty())
+                {
+                    prepare.setString(6, email.getText());
                 }
-                prepare.setString(7,phonenumber.getText());
-                prepare.setString(8,adress.getText());
-                prepare.setDate(9,(Date.valueOf(dob.getValue())));
-                prepare.setDate(10,(Date.valueOf(joingdate.getValue())));
-                if(joingdate1.getValue()!=null) {
+                prepare.setString(7, phonenumber.getText());
+                prepare.setString(8, adress.getText());
+                prepare.setDate(9, (Date.valueOf(dob.getValue())));
+                prepare.setDate(10, (Date.valueOf(joingdate.getValue())));
+                if (joingdate1.getValue() != null)
+                {
                     prepare.setDate(11, (Date.valueOf(joingdate1.getValue())));
                 }
                 //prepare.setString(13, (String) gender.getSelectionModel().getSelectedItem());
-                prepare.setString(12,files_path);
-                prepare.setString(13,worktime.getText());
-                prepare.setString(14,Field.getText());
+                prepare.setString(12, files_path);
+                prepare.setString(13, worktime.getText());
+                prepare.setString(14, Field.getText());
 
                 prepare.execute();
                 showData();
@@ -559,10 +612,10 @@ public class Curatorcontroller implements Initializable {
                 clear();
             }
 
-        }catch (Exception e) {
+        } catch (Exception e)
+        {
             System.out.println(e);
-        }
-        finally
+        } finally
         {
             try
             {
@@ -571,92 +624,103 @@ public class Curatorcontroller implements Initializable {
                 prepare.close();
                 statement.close();
 
-            }catch (Exception e)
+            } catch (Exception e)
             {
 
             }
         }
 
     }
-    StringBuilder getrespath(){
+
+    StringBuilder getrespath()
+    {
         StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
         //int n=resourcesPath.length();
         resourcesPath.deleteCharAt(0);
-        for(int i=0;i<resourcesPath.length();i++){
-            if(resourcesPath.charAt(i)=='%'){
-                resourcesPath.replace(i,i+3," ");
+        for (int i = 0; i < resourcesPath.length(); i++)
+        {
+            if (resourcesPath.charAt(i) == '%')
+            {
+                resourcesPath.replace(i, i + 3, " ");
             }
-            if(resourcesPath.charAt(i)=='m'){
-                resourcesPath.delete(i+1,resourcesPath.length());
+            if (resourcesPath.charAt(i) == 'm')
+            {
+                resourcesPath.delete(i + 1, resourcesPath.length());
                 break;
             }
         }
         return resourcesPath;
     }
+
     public ObservableList<curator> datalist()
     {
         ObservableList<curator> datalist = FXCollections.observableArrayList();
 
         String sql;
-        sql ="SELECT * FROM curator";
+        sql = "SELECT * FROM curator";
 
-        try {
-            connect= DBUtils.connectDB(url);
+        try
+        {
+            connect = DBUtils.connectDB(url);
             prepare = connect.prepareStatement(sql);
-            result=prepare.executeQuery();
+            result = prepare.executeQuery();
 
 
-            while(result.next())
+            while (result.next())
             {
-                StringBuilder resourcesPath=getrespath();
+                StringBuilder resourcesPath = getrespath();
                 resourcesPath.append(result.getString("img"));
                 System.out.println(result.getString("img"));
                 Gender gm;
-                if(result.getString("Gender").equals("MALE")){
-                    gm= Gender.MALE;
-                } else if (result.getString("Gender").equals("FEMALE")) {
-                    gm=Gender.FEMALE;
-                }
-                else gm= Gender.OTHER;
+                if (result.getString("Gender").equals("MALE"))
+                {
+                    gm = Gender.MALE;
+                } else if (result.getString("Gender").equals("FEMALE"))
+                {
+                    gm = Gender.FEMALE;
+                } else gm = Gender.OTHER;
                 curator cur;
 
-                if(result.getDate("resign")!=null) {
+                if (result.getDate("resign") != null)
+                {
 
-                    cur = new curator(result.getString("Name"), gm,result.getString("phoneNo"),resourcesPath.toString(),
-                            result.getString("email"),result.getDate("dob"),result.getString("adress"),
-                            result.getInt("ID"),result.getString("Department"),result.getString("designation"),
-                            result.getString("worktime"),result.getDate("jdate"),result.getDate("resign"),result.getString("field"));
-                }
-                else{
-                    cur = new curator(result.getString("Name"), gm,result.getString("phoneNo"),resourcesPath.toString(),
-                            result.getString("email"),result.getDate("dob"),result.getString("adress"),
-                            result.getInt("ID"),result.getString("Department"),result.getString("designation"),
-                            result.getString("worktime"),result.getDate("jdate"),result.getString("field"));
+                    cur = new curator(result.getString("Name"), gm, result.getString("phoneNo"), resourcesPath.toString(),
+                            result.getString("email"), result.getDate("dob"), result.getString("adress"),
+                            result.getInt("ID"), result.getString("Department"), result.getString("designation"),
+                            result.getString("worktime"), result.getDate("jdate"), result.getDate("resign"), result.getString("field"));
+                } else
+                {
+                    cur = new curator(result.getString("Name"), gm, result.getString("phoneNo"), resourcesPath.toString(),
+                            result.getString("email"), result.getDate("dob"), result.getString("adress"),
+                            result.getInt("ID"), result.getString("Department"), result.getString("designation"),
+                            result.getString("worktime"), result.getDate("jdate"), result.getString("field"));
                 }
                 datalist.add(cur);
             }
 
-        }catch (Exception e) {
+        } catch (Exception e)
+        {
             System.out.println("curator database error");
-        }
-        finally
+        } finally
         {
             try
             {
                 connect.close();
                 result.close();
                 prepare.close();
-                if(statement!=null) {
+                if (statement != null)
+                {
                     statement.close();
                 }
 
-            }catch (Exception e)
+            } catch (Exception e)
             {
                 e.printStackTrace();
             }
         }
         return datalist;
     }
+
     public void showData()
     {
         ObservableList<curator> showlist = datalist();
@@ -675,17 +739,18 @@ public class Curatorcontroller implements Initializable {
         field_t.setCellValueFactory(new PropertyValueFactory<>("Field"));
 
 
-
         table_view.setItems(showlist);
 
     }
+
     @FXML
-    void selectData(MouseEvent event) {
+    void selectData(MouseEvent event)
+    {
         run2();
         clear();
         curator employee = table_view.getSelectionModel().getSelectedItem();
-        int no=table_view.getSelectionModel().getSelectedIndex();
-        if((no-1)<-1)
+        int no = table_view.getSelectionModel().getSelectedIndex();
+        if ((no - 1) < -1)
         {
             return;
         }
@@ -695,7 +760,8 @@ public class Curatorcontroller implements Initializable {
         Department.setValue(valueOf(employee.getDepartment()));
         designation.setText(valueOf(employee.getDesignation()));
         adress.setText(valueOf(employee.getAdress()));
-        if(employee.getEmail()!=null){
+        if (employee.getEmail() != null)
+        {
             email.setText(valueOf(employee.getEmail()));
         }
         //show.setImage(new Image(employee.getPhoto()));
@@ -704,19 +770,20 @@ public class Curatorcontroller implements Initializable {
         phonenumber.setText(valueOf(employee.getMobile_no()));
         dob.setValue(LocalDate.parse(valueOf(employee.getDob())));
         joingdate.setValue(LocalDate.parse(valueOf(employee.getJoiningDate())));
-        if(employee.getResigningDate()!=null){
+        if (employee.getResigningDate() != null)
+        {
             joingdate1.setValue(LocalDate.parse(valueOf(employee.getResigningDate())));
-        }
-        else joingdate1.setValue(null);
+        } else joingdate1.setValue(null);
         Field.setText(valueOf(employee.getField()));
         System.out.println(employee.getPhoto());
         //file_path=employee.getPhoto();
 
 
-        try {
+        try
+        {
             show.setImage(new Image(employee.getPhoto()));
-        }
-        catch (Exception e){
+        } catch (Exception e)
+        {
             System.out.println(employee.getPhoto());
         }
 
@@ -724,32 +791,34 @@ public class Curatorcontroller implements Initializable {
         run3();
 
     }
+
     @FXML
-    void delete(ActionEvent event) {
-        String sql="DELETE from curator WHERE `ID` ='"+Id.getText()+"'";
+    void delete(ActionEvent event)
+    {
+        String sql = "DELETE from curator WHERE `ID` ='" + Id.getText() + "'";
 
         try
         {
-            connect=DBUtils.connectDB(url);
-            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            connect = DBUtils.connectDB(url);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("                                     Confirmation Message");
             alert.setHeaderText(null);
             alert.setContentText("                     Are you sure you want to delete? ");
 
-            Optional<ButtonType> buttontype= alert.showAndWait();
-            if(buttontype.get()==ButtonType.OK)
+            Optional<ButtonType> buttontype = alert.showAndWait();
+            if (buttontype.get() == ButtonType.OK)
             {
-                statement=connect.createStatement();
+                statement = connect.createStatement();
                 statement.executeUpdate(sql);
                 run4();
             }
             showData();
             clear();
 
-        } catch (SQLException e) {
+        } catch (SQLException e)
+        {
             e.printStackTrace();
-        }
-        finally
+        } finally
         {
             try
             {
@@ -758,67 +827,79 @@ public class Curatorcontroller implements Initializable {
                 prepare.close();
                 statement.close();
 
-            }catch (Exception e)
+            } catch (Exception e)
             {
 
             }
         }
 
     }
+
     @FXML
-    void update_Crud(ActionEvent event) throws IOException {
+    void update_Crud(ActionEvent event) throws IOException
+    {
         String sql;
-        if(isimageChanged) {
+        if (isimageChanged)
+        {
             StringBuilder im = copyImageToResources(photo);
-            for (int i = 0; i < im.length(); i++) {
-                if (im.charAt(i) == '\\') {
+            for (int i = 0; i < im.length(); i++)
+            {
+                if (im.charAt(i) == '\\')
+                {
                     im.setCharAt(i, '/');
                 }
             }
             String file_path = im.toString();
 
 
-            if (joingdate1.getValue() == null && email.getText().isEmpty()) {
+            if (joingdate1.getValue() == null && email.getText().isEmpty())
+            {
                 sql = "UPDATE curator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
-            } else if (joingdate1.getValue() == null) {
+            } else if (joingdate1.getValue() == null)
+            {
                 sql = "UPDATE curator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
-            } else if (email.getText().isEmpty()) {
+            } else if (email.getText().isEmpty())
+            {
                 sql = "UPDATE curator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + Date.valueOf(joingdate1.getValue()) + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
-            } else {
+            } else
+            {
                 sql = "UPDATE curator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + Date.valueOf(joingdate1.getValue()) + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
             }
-        }
-        else {
-            if (joingdate1.getValue() == null && email.getText().isEmpty()) {
+        } else
+        {
+            if (joingdate1.getValue() == null && email.getText().isEmpty())
+            {
                 sql = "UPDATE curator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "' WHERE Id = '" + Id.getText() + "'";
-            } else if (joingdate1.getValue() == null) {
+            } else if (joingdate1.getValue() == null)
+            {
                 sql = "UPDATE curator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "' WHERE Id = '" + Id.getText() + "'";
-            } else if (email.getText().isEmpty()) {
+            } else if (email.getText().isEmpty())
+            {
                 sql = "UPDATE curator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + Date.valueOf(joingdate1.getValue()) + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "' WHERE Id = '" + Id.getText() + "'";
-            } else {
-                sql = "UPDATE curator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + Date.valueOf(joingdate1.getValue()) + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText()  + "' WHERE Id = '" + Id.getText() + "'";
+            } else
+            {
+                sql = "UPDATE curator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + Date.valueOf(joingdate1.getValue()) + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + worktime.getText() + "' WHERE Id = '" + Id.getText() + "'";
             }
         }
 
 
-        try {
-            connect= DBUtils.connectDB(url);
-            if(Id.getText().isEmpty() | name.getText().isEmpty()  | show.getImage()==null | phonenumber.getText().isEmpty() |
-                    gender.getSelectionModel().isEmpty()|Department.getSelectionModel().isEmpty()|adress.getText().isEmpty() |
-                    dob.getValue()==null | joingdate.getValue()==null|designation.getText().isEmpty()|worktime.getText().isEmpty()|Field.getText().isEmpty() )
+        try
+        {
+            connect = DBUtils.connectDB(url);
+            if (Id.getText().isEmpty() | name.getText().isEmpty() | show.getImage() == null | phonenumber.getText().isEmpty() |
+                    gender.getSelectionModel().isEmpty() | Department.getSelectionModel().isEmpty() | adress.getText().isEmpty() |
+                    dob.getValue() == null | joingdate.getValue() == null | designation.getText().isEmpty() | worktime.getText().isEmpty() | Field.getText().isEmpty())
             {
-                Alert alert=new Alert(Alert.AlertType.ERROR);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
                 alert.setHeaderText("            Some fields are empty.  ");
                 alert.setContentText("                             Please enter all blank fields. ");
                 alert.showAndWait();
-            }
-
-            else
+            } else
             {
-                statement=connect.createStatement();
+                statement = connect.createStatement();
                 statement.executeUpdate(sql);
-                Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("                                      Update Successfull!!!");
                 alert.setHeaderText("       ");
                 alert.setContentText("                             Successfully updated the data. ");
@@ -827,10 +908,10 @@ public class Curatorcontroller implements Initializable {
                 clear();
             }
 
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
-        }
-        finally
+        } finally
         {
             try
             {
@@ -839,7 +920,7 @@ public class Curatorcontroller implements Initializable {
                 prepare.close();
                 statement.close();
 
-            }catch (Exception e)
+            } catch (Exception e)
             {
 
             }
