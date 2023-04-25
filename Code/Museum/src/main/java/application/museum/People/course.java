@@ -23,6 +23,14 @@ public class course {
         this.instructor = instructor;
         this.isCoursecompleted = false;
     }
+    public course(String courseName, Date startingDate) {
+        CourseName = courseName;
+        StartingDate = startingDate;
+        this.finishingDate = null;
+        this.instructor = null;
+        this.isCoursecompleted = false;
+    }
+
     public String getCourseName(){
         return this.CourseName;
     }

@@ -712,7 +712,7 @@ public class Employeecontroller implements Initializable {
             show.setImage(new Image(employee.getPhoto()));
         }
         catch (Exception e){
-            System.out.println("Image Path error");
+            System.out.println(employee.getPhoto());
         }
 
 

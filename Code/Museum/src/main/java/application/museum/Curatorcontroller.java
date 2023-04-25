@@ -713,12 +713,11 @@ public class Curatorcontroller implements Initializable {
         //file_path=employee.getPhoto();
 
 
-        run3();
         try {
             show.setImage(new Image(employee.getPhoto()));
         }
         catch (Exception e){
-            System.out.println("Image Path error");
+            System.out.println(employee.getPhoto());
         }
 
 
