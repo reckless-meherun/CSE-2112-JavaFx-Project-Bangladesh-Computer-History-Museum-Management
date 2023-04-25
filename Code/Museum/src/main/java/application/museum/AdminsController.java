@@ -26,8 +26,10 @@ import java.sql.*;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class AdminsController implements Initializable {
-
+public class AdminsController implements Initializable
+{
+    @FXML
+    TreeView<String> treeView;
     @FXML
     private Button BOD;
 
@@ -132,18 +134,21 @@ public class AdminsController implements Initializable {
     @FXML
     private TableColumn<Admins, Integer> id_table;
 
-    private String url="jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\userpassword.db";
+    private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\userpassword.db";
 
     private Connection connect;
     private PreparedStatement prepare;
     private Statement statement;
     private ResultSet result;
 
-
-
+    static void pushtostack()
+    {
+        DBUtils.prevfxml.push("admins.fxml");
+    }
 
     @FXML
-    void run3() {
+    void run3()
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -152,14 +157,16 @@ public class AdminsController implements Initializable {
 
         scene2.setTranslateX(378);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar3.setVisible(false);
             bar4.setVisible(true);
         });
     }
 
     @FXML
-    void run4(ActionEvent event) {
+    void run4(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -168,42 +175,49 @@ public class AdminsController implements Initializable {
 
         scene2.setTranslateX(0);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar4.setVisible(false);
             bar3.setVisible(true);
         });
     }
 
     @FXML
-    void goBack(ActionEvent event) throws IOException {
-        if(DBUtils.prevfxml.empty()){
+    void goBack(ActionEvent event) throws IOException
+    {
+        if (DBUtils.prevfxml.empty())
+        {
             return;
         }
-        String fxml=DBUtils.prevfxml.pop();
+        String fxml = DBUtils.prevfxml.pop();
         //DBUtils.prevfxml.pop();
         System.out.println(fxml);
-        if(fxml=="DashboardScene.fxml"){
-            DBUtils.changeScene(event,fxml,DBUtils.username);
-        }
-        else {
+        if (fxml == "DashboardScene.fxml")
+        {
+            DBUtils.changeScene(event, fxml, DBUtils.username);
+        } else
+        {
             DBUtils.changeScene(event, fxml, true);
         }
     }
 
-    @FXML
-    void switchToHome(ActionEvent event) {
-        DBUtils.prevfxml.push("admins.fxml");
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
-    }
-    @FXML
-    public void switchTODepartments(ActionEvent event) throws IOException
-    {
-        DBUtils.prevfxml.push("admins.fxml");
-        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
-    }
+//    @FXML
+//    void switchToHome(ActionEvent event)
+//    {
+//        DBUtils.prevfxml.push("admins.fxml");
+//        DBUtils.changeScene(event, "DashboardScene.fxml", DBUtils.username);
+//    }
+//
+//    @FXML
+//    public void switchTODepartments(ActionEvent event) throws IOException
+//    {
+//        DBUtils.prevfxml.push("admins.fxml");
+//        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+//    }
 
     @FXML
-    void switchToSceneOne(ActionEvent event) throws IOException {
+    void switchToSceneOne(ActionEvent event) throws IOException
+    {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("You are about to logout");
@@ -221,56 +235,71 @@ public class AdminsController implements Initializable {
     }
 
     @FXML
-    void switchToemployee(ActionEvent event) throws IOException {
+    void switchToemployee(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("admins.fxml");
-        DBUtils.changeScene(event,"employee.fxml",false);
+        DBUtils.changeScene(event, "employee.fxml", false);
     }
+
     @FXML
-    void switchTobod(ActionEvent event) throws IOException {
+    void switchTobod(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("admins.fxml");
-        DBUtils.changeScene(event,"aboutus.fxml",false);
+        DBUtils.changeScene(event, "aboutus.fxml", false);
     }
+
     @FXML
-    void switchTocurato(ActionEvent event) throws IOException {
+    void switchTocurato(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("admins.fxml");
         DBUtils.changeScene(event, "curator.fxml", false);
     }
+
     @FXML
-    void switchTodevloper(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("admins.fxml");
-        DBUtils.changeScene(event,"developer.fxml",false);
-    }
-    @FXML
-    void switchToeducator(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("admins.fxml");
-        DBUtils.changeScene(event,"educator.fxml",false);
-    }
-    static void pushtostack(){
-        DBUtils.prevfxml.push("admins.fxml");
-    }
-    @FXML
-    public void switchTotickets(ActionEvent event) throws IOException
+    void switchTodevloper(ActionEvent event) throws IOException
     {
-        AdminsController.pushtostack();
-        DBUtils.changeScene(event, "Tickets.fxml", false);
-    }
-    @FXML
-    void switchToInventory(ActionEvent event) throws IOException {
-        AdminsController.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
-    }
-    @FXML
-    void switchToGallery(ActionEvent event) throws IOException {
-        AdminsController.pushtostack();
-        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
-    }
-    @FXML
-    void switchTostudents(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("admins.fxml");
-        DBUtils.changeScene(event,"students.fxml",false);
+        DBUtils.changeScene(event, "developer.fxml", false);
     }
+
     @FXML
-    void run1(ActionEvent event) {
+    void switchToeducator(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("admins.fxml");
+        DBUtils.changeScene(event, "educator.fxml", false);
+    }
+
+//    @FXML
+//    public void switchTotickets(ActionEvent event) throws IOException
+//    {
+//        AdminsController.pushtostack();
+//        DBUtils.changeScene(event, "Tickets.fxml", false);
+//    }
+//
+//    @FXML
+//    void switchToInventory(ActionEvent event) throws IOException
+//    {
+//        AdminsController.pushtostack();
+//        DBUtils.changeScene(event, "Inventory.fxml", false);
+//    }
+//
+//    @FXML
+//    void switchToGallery(ActionEvent event) throws IOException
+//    {
+//        AdminsController.pushtostack();
+//        DBUtils.changeScene(event, "PhotoGalleryScene.fxml", false);
+//    }
+
+    @FXML
+    void switchTostudents(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("admins.fxml");
+        DBUtils.changeScene(event, "students.fxml", false);
+    }
+
+    @FXML
+    void run1(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -279,14 +308,17 @@ public class AdminsController implements Initializable {
 
         paneside.setTranslateX(-160);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar1.setVisible(false);
             bar2.setVisible(true);
         });
 
     }
+
     @FXML
-    void run2() {
+    void run2()
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -295,14 +327,23 @@ public class AdminsController implements Initializable {
 
         paneside.setTranslateX(0);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar1.setVisible(true);
             bar2.setVisible(false);
         });
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        try
+        {
+            NavigationHandler.HandleNavigation("admins.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
         showData();
         paneside.setTranslateX(0);
         bar2.setVisible(true);
@@ -311,53 +352,59 @@ public class AdminsController implements Initializable {
         bar4.setVisible(false);
         scene2.setTranslateX(378);
     }
-    void clear(){
+
+    void clear()
+    {
         id.setText("");
         username.setText("");
         password.setText("");
         confirmpass.setText("");
     }
+
     public ObservableList<Admins> datalist()
     {
         ObservableList<Admins> datalist = FXCollections.observableArrayList();
 
         String sql;
-        sql ="SELECT * FROM users";
+        sql = "SELECT * FROM users";
 
-        try {
-            connect= DBUtils.connectDB(url);
+        try
+        {
+            connect = DBUtils.connectDB(url);
             prepare = connect.prepareStatement(sql);
-            result=prepare.executeQuery();
+            result = prepare.executeQuery();
 
 
-            while(result.next())
+            while (result.next())
             {
-                Admins user= new Admins (result.getInt("id"),result.getString("username"),"*********");
+                Admins user = new Admins(result.getInt("id"), result.getString("username"), "*********");
 
                 datalist.add(user);
             }
 
-        }catch (Exception e) {
+        } catch (Exception e)
+        {
             System.out.println("username database error");
-        }
-        finally
+        } finally
         {
             try
             {
                 connect.close();
                 result.close();
                 prepare.close();
-                if(statement!=null) {
+                if (statement != null)
+                {
                     statement.close();
                 }
 
-            }catch (Exception e)
+            } catch (Exception e)
             {
                 e.printStackTrace();
             }
         }
         return datalist;
     }
+
     public void showData()
     {
         ObservableList<Admins> showlist = datalist();
@@ -367,49 +414,50 @@ public class AdminsController implements Initializable {
         table_view.setItems(showlist);
 
     }
-    @FXML
-    void insert(ActionEvent event) {
-        String sql="INSERT INTO users VALUES (?,?,?)";
-        PreparedStatement PsIsUserExist=null;
 
-        try {
-            connect= DBUtils.connectDB(url);
-            PsIsUserExist=connect.prepareStatement("SELECT * FROM users WHERE username=?");
-            PsIsUserExist.setString(1,username.getText());
+    @FXML
+    void insert(ActionEvent event)
+    {
+        String sql = "INSERT INTO users VALUES (?,?,?)";
+        PreparedStatement PsIsUserExist = null;
+
+        try
+        {
+            connect = DBUtils.connectDB(url);
+            PsIsUserExist = connect.prepareStatement("SELECT * FROM users WHERE username=?");
+            PsIsUserExist.setString(1, username.getText());
             result = PsIsUserExist.executeQuery();
-            if(id.getText().isEmpty() | username.getText().isEmpty() | password.getText().isEmpty() |
+            if (id.getText().isEmpty() | username.getText().isEmpty() | password.getText().isEmpty() |
                     confirmpass.getText().isEmpty())
             {
-                Alert alert=new Alert(Alert.AlertType.ERROR);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
                 alert.setHeaderText("            Some fields are empty.  ");
                 alert.setContentText("                             Please enter all blank fields. ");
                 alert.showAndWait();
-            }
-
-            else if(password.getText().compareTo(confirmpass.getText())!=0){
+            } else if (password.getText().compareTo(confirmpass.getText()) != 0)
+            {
                 System.out.println(password.getText());
                 System.out.println(confirmpass.getText());
                 System.out.println(password.getText().compareTo(confirmpass.getText()));
-                Alert alert=new Alert(Alert.AlertType.ERROR);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
                 alert.setHeaderText("            password doesn't match.  ");
                 alert.setContentText("                             please check the password again.");
                 alert.showAndWait();
-            }
-            else if(result.isBeforeFirst()){
-                Alert alert=new Alert(Alert.AlertType.ERROR);
+            } else if (result.isBeforeFirst())
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
                 alert.setHeaderText("            Username Not Available  ");
                 alert.setContentText("                             Please choose a new username");
                 alert.showAndWait();
-            }
-            else
+            } else
             {
 
-                prepare=connect.prepareStatement(sql);
+                prepare = connect.prepareStatement(sql);
                 prepare.setInt(1, Integer.parseInt(id.getText()));
-                prepare.setString(2,username.getText());
+                prepare.setString(2, username.getText());
                 prepare.setString(3, password.getText());
                 prepare.execute();
                 System.out.println("ok12");
@@ -418,32 +466,35 @@ public class AdminsController implements Initializable {
             }
 
 
-        }catch (Exception e) {
+        } catch (Exception e)
+        {
             System.out.println(e);
-        }
-        finally
+        } finally
         {
             try
             {
                 connect.close();
                 result.close();
                 prepare.close();
-                if(statement!=null) {
+                if (statement != null)
+                {
                     statement.close();
                 }
 
-            }catch (Exception e)
+            } catch (Exception e)
             {
 
             }
         }
 
     }
+
     @FXML
-    void selectData(MouseEvent event) {
+    void selectData(MouseEvent event)
+    {
         Admins user = table_view.getSelectionModel().getSelectedItem();
-        int no=table_view.getSelectionModel().getSelectedIndex();
-        if((no-1)<-1)
+        int no = table_view.getSelectionModel().getSelectedIndex();
+        if ((no - 1) < -1)
         {
             return;
         }
@@ -453,37 +504,38 @@ public class AdminsController implements Initializable {
         run2();
 
     }
-    @FXML
-    void update_Crud(ActionEvent event) {
 
-        String sql="UPDATE users SET `username`= '"+username.getText()+ "', `password` = '"+password.getText()+"' WHERE id = '"+id.getText()+"'";
-        try {
-            connect= DBUtils.connectDB(url);
-            if(id.getText().isEmpty() | username.getText().isEmpty() | password.getText().isEmpty() |
+    @FXML
+    void update_Crud(ActionEvent event)
+    {
+
+        String sql = "UPDATE users SET `username`= '" + username.getText() + "', `password` = '" + password.getText() + "' WHERE id = '" + id.getText() + "'";
+        try
+        {
+            connect = DBUtils.connectDB(url);
+            if (id.getText().isEmpty() | username.getText().isEmpty() | password.getText().isEmpty() |
                     confirmpass.getText().isEmpty())
             {
-                Alert alert=new Alert(Alert.AlertType.ERROR);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
                 alert.setHeaderText("            Some fields are empty.  ");
                 alert.setContentText("                             Please enter all blank fields. ");
                 alert.showAndWait();
-            }
-
-            else if(password.getText().compareTo(confirmpass.getText())!=0){
+            } else if (password.getText().compareTo(confirmpass.getText()) != 0)
+            {
                 System.out.println(password.getText());
                 System.out.println(confirmpass.getText());
                 System.out.println(password.getText().compareTo(confirmpass.getText()));
-                Alert alert=new Alert(Alert.AlertType.ERROR);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
                 alert.setHeaderText("            password doesn't match.  ");
                 alert.setContentText("                             please check the password again.");
                 alert.showAndWait();
-            }
-            else
+            } else
             {
-                statement=connect.createStatement();
+                statement = connect.createStatement();
                 statement.executeUpdate(sql);
-                Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("                                      Update Successfull!!!");
                 alert.setHeaderText("       ");
                 alert.setContentText("                             Successfully updated the data. ");
@@ -492,10 +544,10 @@ public class AdminsController implements Initializable {
                 clear();
             }
 
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             e.printStackTrace();
-        }
-        finally
+        } finally
         {
             try
             {
@@ -504,38 +556,40 @@ public class AdminsController implements Initializable {
                 prepare.close();
                 statement.close();
 
-            }catch (Exception e)
+            } catch (Exception e)
             {
 
             }
         }
 
     }
+
     @FXML
-    void delete(ActionEvent event) {
-        String sql="DELETE from users WHERE `id` ='"+id.getText()+"'";
+    void delete(ActionEvent event)
+    {
+        String sql = "DELETE from users WHERE `id` ='" + id.getText() + "'";
 
         try
         {
-            connect=DBUtils.connectDB(url);
-            Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+            connect = DBUtils.connectDB(url);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("                                     Confirmation Message");
             alert.setHeaderText(null);
             alert.setContentText("                     Are you sure you want to delete? ");
 
-            Optional<ButtonType> buttontype= alert.showAndWait();
-            if(buttontype.get()==ButtonType.OK)
+            Optional<ButtonType> buttontype = alert.showAndWait();
+            if (buttontype.get() == ButtonType.OK)
             {
-                statement=connect.createStatement();
+                statement = connect.createStatement();
                 statement.executeUpdate(sql);
             }
             showData();
             clear();
 
-        } catch (SQLException e) {
+        } catch (SQLException e)
+        {
             e.printStackTrace();
-        }
-        finally
+        } finally
         {
             try
             {
@@ -544,7 +598,7 @@ public class AdminsController implements Initializable {
                 prepare.close();
                 statement.close();
 
-            }catch (Exception e)
+            } catch (Exception e)
             {
 
             }

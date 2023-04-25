@@ -43,6 +43,8 @@ import static java.lang.String.valueOf;
 public class Curatorcontroller implements Initializable
 {
     @FXML
+    TreeView<String> treeView;
+    @FXML
     private TableColumn<curator, String> Adress_t;
     @FXML
     private Button BOD;
@@ -253,19 +255,19 @@ public class Curatorcontroller implements Initializable
         }
     }
 
-    @FXML
-    void switchToHome(ActionEvent event)
-    {
-        DBUtils.prevfxml.push("curator.fxml");
-        DBUtils.changeScene(event, "DashboardScene.fxml", DBUtils.username);
-    }
-
-    @FXML
-    public void switchTODepartments(ActionEvent event) throws IOException
-    {
-        DBUtils.prevfxml.push("curator.fxml");
-        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
-    }
+//    @FXML
+//    void switchToHome(ActionEvent event)
+//    {
+//        DBUtils.prevfxml.push("curator.fxml");
+//        DBUtils.changeScene(event, "DashboardScene.fxml", DBUtils.username);
+//    }
+//
+//    @FXML
+//    public void switchTODepartments(ActionEvent event) throws IOException
+//    {
+//        DBUtils.prevfxml.push("curator.fxml");
+//        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+//    }
 
     @FXML
     void switchToSceneOne(ActionEvent event) throws IOException
@@ -365,30 +367,37 @@ public class Curatorcontroller implements Initializable
         });
     }
 
-    @FXML
-    void switchToInventory(ActionEvent event) throws IOException
-    {
-        Curatorcontroller.pushtostack();
-        DBUtils.changeScene(event, "Inventory.fxml", false);
-    }
-
-    @FXML
-    void switchToGallery(ActionEvent event) throws IOException
-    {
-        Curatorcontroller.pushtostack();
-        DBUtils.changeScene(event, "PhotoGalleryScene.fxml", false);
-    }
-
-    @FXML
-    public void switchTotickets(ActionEvent event) throws IOException
-    {
-        Curatorcontroller.pushtostack();
-        DBUtils.changeScene(event, "Tickets.fxml", false);
-    }
+//    @FXML
+//    void switchToInventory(ActionEvent event) throws IOException
+//    {
+//        Curatorcontroller.pushtostack();
+//        DBUtils.changeScene(event, "Inventory.fxml", false);
+//    }
+//
+//    @FXML
+//    void switchToGallery(ActionEvent event) throws IOException
+//    {
+//        Curatorcontroller.pushtostack();
+//        DBUtils.changeScene(event, "PhotoGalleryScene.fxml", false);
+//    }
+//
+//    @FXML
+//    public void switchTotickets(ActionEvent event) throws IOException
+//    {
+//        Curatorcontroller.pushtostack();
+//        DBUtils.changeScene(event, "Tickets.fxml", false);
+//    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        try
+        {
+            NavigationHandler.HandleNavigation("curator.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
         Combo_box();
         showData();
         paneside.setTranslateX(0);

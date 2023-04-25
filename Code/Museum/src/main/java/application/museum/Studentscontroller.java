@@ -32,178 +32,134 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class Studentscontroller implements Initializable{
+public class Studentscontroller implements Initializable
+{
+    @FXML
+    TreeView<String> treeView;
 
+    private static File photo = null;
     @FXML
     private Button BOD;
-
     @FXML
     private Button GoBackButton;
-
     @FXML
     private TextField Id;
-
     @FXML
     private TextField Institutename;
-
     @FXML
     private Button LogoutButton;
-
     @FXML
     private Text ProfileIcon;
-
     @FXML
     private Button Clear;
-
     @FXML
     private AnchorPane SceneTwo;
-
     @FXML
     private AnchorPane SceneTwo1;
-
     @FXML
     private Button aboutus;
-
     @FXML
     private Button add;
-
     @FXML
     private Button admins;
-
     @FXML
     private TextField adress;
-
     @FXML
     private ImageView temp;
-
     @FXML
     private Button articles;
-
     @FXML
     private Button bar1;
-
     @FXML
     private Button bar2;
-
     @FXML
     private Button bar3;
-
     @FXML
     private Button bar4;
-
     @FXML
     private TextField course;
-
     @FXML
     private ComboBox<?> courseteacher;
-
     @FXML
     private Button curator;
-
     @FXML
     private Button delete;
-
     @FXML
     private Button departments;
-
     @FXML
     private Button developer;
-
     @FXML
     private DatePicker dob;
-
     @FXML
     private Button educator;
-
     @FXML
     private TextField email;
-
     @FXML
     private Button employee;
-
     @FXML
     private DatePicker finishingdate;
-
     @FXML
     private ComboBox<?> gender;
-
     @FXML
     private Button home;
-
     @FXML
     private Button image;
-
     @FXML
     private TextField name;
-
     @FXML
     private AnchorPane paneside;
-
     @FXML
     private TextField phonenumber;
-
     @FXML
     private Button photogallery;
-
     @FXML
     private AnchorPane scene2;
-
     @FXML
     private ImageView show;
-
     @FXML
     private DatePicker staringdate;
-
     @FXML
     private Button student;
-
     @FXML
     private Text studentName;
-
     @FXML
     private Button tickets;
-
     @FXML
     private Button update;
-
-    private static File photo=null;
-
-    private String url="jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Aboutus.db";
+    private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Aboutus.db";
 
     private Connection connect;
     private PreparedStatement prepare;
     private Statement statement;
     private ResultSet result;
+
+    static void pushtostack()
+    {
+        DBUtils.prevfxml.push("students.fxml");
+    }
+
     @FXML
-    void goBack(ActionEvent event) throws IOException {
-        if(DBUtils.prevfxml.empty()){
+    void goBack(ActionEvent event) throws IOException
+    {
+        if (DBUtils.prevfxml.empty())
+        {
             return;
         }
-        String fxml=DBUtils.prevfxml.pop();
+        String fxml = DBUtils.prevfxml.pop();
         //DBUtils.prevfxml.pop();
         System.out.println(fxml);
-        if(fxml=="DashboardScene.fxml"){
-            DBUtils.changeScene(event,fxml,DBUtils.username);
-        }
-        else {
+        if (fxml == "DashboardScene.fxml")
+        {
+            DBUtils.changeScene(event, fxml, DBUtils.username);
+        } else
+        {
             DBUtils.changeScene(event, fxml, true);
         }
     }
 
     @FXML
-    void switchToHome(ActionEvent event) {
-        DBUtils.prevfxml.push("students.fxml");
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
-    }
-    @FXML
-    public void switchTODepartments(ActionEvent event) throws IOException
+    void switchToSceneOne(ActionEvent event) throws IOException
     {
-        DBUtils.prevfxml.push("students.fxml");
-        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
-    }
-
-    @FXML
-    void switchToSceneOne(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("You are about to logout");
@@ -221,58 +177,50 @@ public class Studentscontroller implements Initializable{
     }
 
     @FXML
-    void switchToemployee(ActionEvent event) throws IOException {
+    void switchToemployee(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("students.fxml");
-        DBUtils.changeScene(event,"employee.fxml",false);
+        DBUtils.changeScene(event, "employee.fxml", false);
     }
+
     @FXML
-    void switchTobod(ActionEvent event) throws IOException {
+    void switchTobod(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("students.fxml");
-        DBUtils.changeScene(event,"aboutus.fxml",false);
+        DBUtils.changeScene(event, "aboutus.fxml", false);
     }
+
     @FXML
-    void switchTocurato(ActionEvent event) throws IOException {
+    void switchTocurator(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("students.fxml");
         DBUtils.changeScene(event, "curator.fxml", false);
     }
-    @FXML
-    void switchTodevloper(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("students.fxml");
-        DBUtils.changeScene(event,"developer.fxml",false);
-    }
 
     @FXML
-    void switchToGallery(ActionEvent event) throws IOException {
-        Studentscontroller.pushtostack();
-        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
-    }
-    @FXML
-    void switchToInventory(ActionEvent event) throws IOException {
-        Studentscontroller.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
-    }
-
-    static void pushtostack(){
-        DBUtils.prevfxml.push("students.fxml");
-    }
-    @FXML
-    public void switchTotickets(ActionEvent event) throws IOException
+    void switchTodevloper(ActionEvent event) throws IOException
     {
-        Studentscontroller.pushtostack();
-        DBUtils.changeScene(event, "Tickets.fxml", false);
-    }
-    @FXML
-    void switchToeducator(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("students.fxml");
-        DBUtils.changeScene(event,"educator.fxml",false);
+        DBUtils.changeScene(event, "developer.fxml", false);
     }
+
     @FXML
-    void switchToadmins(ActionEvent event) throws IOException {
+    void switchToeducator(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("students.fxml");
-        DBUtils.changeScene(event,"admins.fxml",false);
+        DBUtils.changeScene(event, "educator.fxml", false);
     }
+
     @FXML
-    void run1(ActionEvent event) {
+    void switchToadmins(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("students.fxml");
+        DBUtils.changeScene(event, "admins.fxml", false);
+    }
+
+    @FXML
+    void run1(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -281,43 +229,50 @@ public class Studentscontroller implements Initializable{
 
         paneside.setTranslateX(-160);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar1.setVisible(false);
             bar2.setVisible(true);
         });
 
     }
+
     @FXML
-    void insertImage(ActionEvent event) throws IOException {
-        FileChooser open= new FileChooser();
-        Stage stage=(Stage) scene2.getScene().getWindow();
-        File file=open.showOpenDialog(stage);
-        if(file!=null){
-            StringBuilder im=new StringBuilder( file.toPath().toString());
-            photo=file;
-            for(int i=0;i<im.length();i++){
-                if(im.charAt(i)=='\\'){
-                    im.setCharAt(i,'/');
+    void insertImage(ActionEvent event) throws IOException
+    {
+        FileChooser open = new FileChooser();
+        Stage stage = (Stage) scene2.getScene().getWindow();
+        File file = open.showOpenDialog(stage);
+        if (file != null)
+        {
+            StringBuilder im = new StringBuilder(file.toPath().toString());
+            photo = file;
+            for (int i = 0; i < im.length(); i++)
+            {
+                if (im.charAt(i) == '\\')
+                {
+                    im.setCharAt(i, '/');
                 }
             }
-            String destination= im.toString();
+            String destination = im.toString();
             System.out.println(destination);
             Image img = new Image(destination);
             show.setImage(img);
             temp.setVisible(false);
-        }
-        else{
+        } else
+        {
             System.out.println("Student pic is missing");
         }
     }
+
     public void Combo_box()
     {
-        List<Gender> list=new ArrayList<>();
-        for(Gender data:Gender.values())
+        List<Gender> list = new ArrayList<>();
+        for (Gender data : Gender.values())
         {
             list.add(data);
         }
-        ObservableList data_list= FXCollections.observableArrayList(list);
+        ObservableList data_list = FXCollections.observableArrayList(list);
         gender.setItems(data_list);
 
 //        List<String> class_list=new ArrayList<>();
@@ -328,21 +283,27 @@ public class Studentscontroller implements Initializable{
 //        ObservableList data_list_class= FXCollections.observableArrayList(class_list);
 //        crud_subject.setItems(data_list_class);
     }
-    public StringBuilder copyImageToResources(File imageFile) throws IOException {
+
+    public StringBuilder copyImageToResources(File imageFile) throws IOException
+    {
         // Determine the path to the resources folder
         StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
         //int n=resourcesPath.length();
         resourcesPath.deleteCharAt(0);
-        for(int i=0;i<resourcesPath.length();i++){
-            if(resourcesPath.charAt(i)=='/'){
+        for (int i = 0; i < resourcesPath.length(); i++)
+        {
+            if (resourcesPath.charAt(i) == '/')
+            {
 
-                resourcesPath.replace(i,i+1,"\\\\");
+                resourcesPath.replace(i, i + 1, "\\\\");
             }
-            if(resourcesPath.charAt(i)=='%'){
-                resourcesPath.replace(i,i+3," ");
+            if (resourcesPath.charAt(i) == '%')
+            {
+                resourcesPath.replace(i, i + 3, " ");
             }
-            if(resourcesPath.charAt(i)=='m'){
-                resourcesPath.delete(i+1,resourcesPath.length());
+            if (resourcesPath.charAt(i) == 'm')
+            {
+                resourcesPath.delete(i + 1, resourcesPath.length());
                 break;
             }
         }
@@ -352,20 +313,22 @@ public class Studentscontroller implements Initializable{
         String extension = "";
 
         int dotIndex = name.lastIndexOf(".");
-        if (dotIndex > 0 && dotIndex < name.length() - 1) {
+        if (dotIndex > 0 && dotIndex < name.length() - 1)
+        {
             extension = name.substring(dotIndex + 1);
         }
 
         String fileName = "image_" + System.currentTimeMillis() + extension;
-        StringBuilder destination= new StringBuilder("\\src\\main\\resources\\application\\museum\\StudentsPhotos\\"+fileName);
+        StringBuilder destination = new StringBuilder("\\src\\main\\resources\\application\\museum\\StudentsPhotos\\" + fileName);
 
         // Copy the image file to the resources folder with the unique file name
         Path sourcePath = imageFile.toPath();
-        Path destinationPath = Paths.get(  resourcesPath +"\\src\\main\\resources\\application\\museum\\StudentsPhotos\\"+fileName);
+        Path destinationPath = Paths.get(resourcesPath + "\\src\\main\\resources\\application\\museum\\StudentsPhotos\\" + fileName);
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
 //        direction=destinationPath.toString();
         return destination;
     }
+
     @FXML
     public void clear()
     {
@@ -383,50 +346,54 @@ public class Studentscontroller implements Initializable{
         staringdate.setValue(null);
         finishingdate.setValue(null);
         dob.setValue(null);
-        photo=null;
+        photo = null;
 
     }
+
     @FXML
-    void insert(ActionEvent event) {
-        String sql="INSERT INTO Students VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    void insert(ActionEvent event)
+    {
+        String sql = "INSERT INTO Students VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 
-        try {
-            connect= DBUtils.connectDB(url);
-            if(Id.getText().isEmpty() | name.getText().isEmpty()  | show.getImage()==null | course.getText().isEmpty() |
-                    Institutename.getText().isEmpty() | dob.getValue()==null | staringdate.getValue()==null )
+        try
+        {
+            connect = DBUtils.connectDB(url);
+            if (Id.getText().isEmpty() | name.getText().isEmpty() | show.getImage() == null | course.getText().isEmpty() |
+                    Institutename.getText().isEmpty() | dob.getValue() == null | staringdate.getValue() == null)
             {
-                Alert alert=new Alert(Alert.AlertType.ERROR);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
                 alert.setHeaderText("            Some fields are empty.  ");
                 alert.setContentText("                             Please enter all blank fields. ");
                 alert.showAndWait();
-            }
-            else
+            } else
             {
-                StringBuilder im= copyImageToResources(photo);
-                for(int i=0;i<im.length();i++){
-                    if(im.charAt(i)=='\\'){
-                        im.setCharAt(i,'/');
+                StringBuilder im = copyImageToResources(photo);
+                for (int i = 0; i < im.length(); i++)
+                {
+                    if (im.charAt(i) == '\\')
+                    {
+                        im.setCharAt(i, '/');
                     }
                 }
-                String file_path= im.toString();
+                String file_path = im.toString();
 
 
-                prepare=connect.prepareStatement(sql);
-                prepare.setString(1,Id.getText());
-                prepare.setString(2,name.getText());
-                prepare.setString(3,Institutename.getText());
-                prepare.setString(4,email.getText());
-                prepare.setString(5,phonenumber.getText());
-                prepare.setString(6,adress.getText());
-                prepare.setString(7,course.getText());
+                prepare = connect.prepareStatement(sql);
+                prepare.setString(1, Id.getText());
+                prepare.setString(2, name.getText());
+                prepare.setString(3, Institutename.getText());
+                prepare.setString(4, email.getText());
+                prepare.setString(5, phonenumber.getText());
+                prepare.setString(6, adress.getText());
+                prepare.setString(7, course.getText());
                 prepare.setString(8, (String) courseteacher.getSelectionModel().getSelectedItem());
-                prepare.setDate(9,(Date.valueOf(staringdate.getValue())));
-                prepare.setDate(10,(Date.valueOf(finishingdate.getValue())));
-                prepare.setDate(11,(Date.valueOf(dob.getValue())) );
+                prepare.setDate(9, (Date.valueOf(staringdate.getValue())));
+                prepare.setDate(10, (Date.valueOf(finishingdate.getValue())));
+                prepare.setDate(11, (Date.valueOf(dob.getValue())));
                 prepare.setString(13, (String) gender.getSelectionModel().getSelectedItem());
-                prepare.setString(12,file_path);
+                prepare.setString(12, file_path);
 
                 prepare.execute();
                 System.out.println("ok12");
@@ -434,10 +401,10 @@ public class Studentscontroller implements Initializable{
             }
 
 
-        }catch (Exception e) {
+        } catch (Exception e)
+        {
             System.out.println(e);
-        }
-        finally
+        } finally
         {
             try
             {
@@ -446,7 +413,7 @@ public class Studentscontroller implements Initializable{
                 prepare.close();
                 statement.close();
 
-            }catch (Exception e)
+            } catch (Exception e)
             {
 
             }
@@ -455,9 +422,9 @@ public class Studentscontroller implements Initializable{
     }
 
 
-
     @FXML
-    void run2(ActionEvent event) {
+    void run2(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -466,14 +433,23 @@ public class Studentscontroller implements Initializable{
 
         paneside.setTranslateX(0);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar1.setVisible(true);
             bar2.setVisible(false);
         });
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        try
+        {
+            NavigationHandler.HandleNavigation("students.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
         Combo_box();
         paneside.setTranslateX(0);
         bar2.setVisible(true);
@@ -482,8 +458,10 @@ public class Studentscontroller implements Initializable{
         bar4.setVisible(false);
         scene2.setTranslateX(378);
     }
+
     @FXML
-    void run3(ActionEvent event) {
+    void run3(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -492,14 +470,16 @@ public class Studentscontroller implements Initializable{
 
         scene2.setTranslateX(378);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar3.setVisible(false);
             bar4.setVisible(true);
         });
     }
 
     @FXML
-    void run4(ActionEvent event) {
+    void run4(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -508,10 +488,10 @@ public class Studentscontroller implements Initializable{
 
         scene2.setTranslateX(0);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar4.setVisible(false);
             bar3.setVisible(true);
         });
     }
-
 }
