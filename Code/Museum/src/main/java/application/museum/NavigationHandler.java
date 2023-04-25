@@ -1,212 +1,221 @@
 package application.museum;
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 public class NavigationHandler
 {
-    public static void HandleNavigation(Button homeButton, Button departmentsButton , Button photoGalleryButton, Button articlesButton, Button aboutUsButton, Button ticketsButton, Button logoutButton, Button goBackButton)
+    public static void pushtostack(String prevFXML)
     {
-//        homeButton.setOnMouseEntered(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//                //changeEnteringButtonColor(homeButton);
-//            }
-//        });
+        DBUtils.prevfxml.push(prevFXML);
+    }
 
-//        homeButton.setOnMouseExited(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//                //changeExitingButtonColor(homeButton);
-//            }
-//        });
-        homeButton.setOnMouseClicked(new EventHandler<MouseEvent>()
+    @FXML
+    public static void switchToHome(MouseEvent event, String prevFXML) throws IOException
+    {
+        DBUtils.prevfxml.push(prevFXML);
+        DBUtils.changeScene(event, "DashboardScene.fxml", DBUtils.username);
+    }
+
+    @FXML
+    public static void switchToPhotoGallery(MouseEvent event, String prevFXML) throws IOException
+    {
+        DBUtils.prevfxml.push(prevFXML);
+        DBUtils.changeScene(event, "PhotoGalleryScene.fxml", false);
+    }
+
+    @FXML
+    public static void switchToInventory(MouseEvent event, String prevFXML) throws IOException
+    {
+        DBUtils.prevfxml.push(prevFXML);
+        DBUtils.changeScene(event, "Inventory.fxml", false);
+    }
+
+    @FXML
+    public static void switchToAboutUs(MouseEvent event, String prevFXML) throws IOException
+    {
+        DBUtils.prevfxml.push(prevFXML);
+        DBUtils.changeScene(event, "aboutus.fxml", false);
+    }
+
+    @FXML
+    public static void switchTotickets(MouseEvent event, String prevFXML) throws IOException
+    {
+        DBUtils.prevfxml.push(prevFXML);
+        DBUtils.changeScene(event, "Tickets.fxml", false);
+    }
+
+    private static void collapseTreeItems(TreeItem<String> item)
+    {
+        item.setExpanded(false);
+
+        for (TreeItem<String> child : item.getChildren())
         {
-            @Override
-            public void handle(MouseEvent mouseEvent)
+            collapseTreeItems(child);
+        }
+    }
+
+    public static void HandleNavigation(String prevFXML, Button homeButton, TreeView<String> treeView, Button photoGalleryButton, Button inventoryButton, Button aboutUsButton, Button ticketsButton, Button logoutButton, Button goBackButton) throws IOException
+    {
+        TreeView<String> tree = new TreeView<>();
+        tree = treeView;
+
+        TreeItem<String> rootDept = new TreeItem<>("Departments");
+
+        TreeItem<String> branchDept1 = new TreeItem<>("Curatorial\nDepartments");
+        TreeItem<String> branchDept2 = new TreeItem<>("Non-curatorial\nDepartments");
+        TreeItem<String> leafDept4 = new TreeItem<>("Auditorium");
+        TreeItem<String> leafDept5 = new TreeItem<>("Security");
+        TreeItem<String> leafDept6 = new TreeItem<>("Public\nEducation");
+        TreeItem<String> leafDept7 = new TreeItem<>("Photo\nGallery");
+
+        branchDept2.getChildren().addAll(leafDept4, leafDept5, leafDept6, leafDept7);
+        rootDept.getChildren().addAll(branchDept1, branchDept2);
+
+        if (tree == null)
+            System.out.println("NULL");
+
+        try
+        {
+            tree.setRoot(rootDept);
+            treeView.setOnMouseExited(event ->
             {
-                DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
+                TreeItem<String> root = treeView.getRoot();
+                collapseTreeItems(root);
+            });
+        } catch (NullPointerException e)
+        {
+            e.printStackTrace();
+        }
+
+        treeView.setOnMouseClicked(event -> {
+                    TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
+                    if (item != null)
+                    {
+                        if (item.getValue() == "Curatorial\nDepartments")
+                        {
+                            DashboardSceneController.pushtostack();
+                            try
+                            {
+                                DBUtils.changeScene(event, "CuratorialDeptScene.fxml", false);
+                            } catch (IOException e)
+                            {
+                                throw new RuntimeException(e);
+                            }
+                        }
+                        if (item.getValue() == "Auditorium")
+                        {
+                            DBUtils.prevfxml.push(prevFXML);
+                            try
+                            {
+                                DBUtils.changeScene(event, "AuditoriumScene.fxml", false);
+                            } catch (IOException e)
+                            {
+                                throw new RuntimeException(e);
+                            }
+                        }
+                        if (item.getValue() == "Photo\nGallery")
+                        {
+                            DBUtils.prevfxml.push(prevFXML);
+                            try
+                            {
+                                DBUtils.changeScene(event, "PhotoGalleryScene.fxml", false);
+                            } catch (IOException e)
+                            {
+                                throw new RuntimeException(e);
+                            }
+                        }
+                        if (item.getValue() == "Public\nEducation")
+                        {
+                            DBUtils.prevfxml.push(prevFXML);
+                            try
+                            {
+                                DBUtils.changeScene(event, "PublicEducationScene.fxml", false);
+                            } catch (IOException e)
+                            {
+                                throw new RuntimeException(e);
+                            }
+                        }
+                        if (item.getValue() == "Security")
+                        {
+                            DBUtils.prevfxml.push(prevFXML);
+                            try
+                            {
+                                DBUtils.changeScene(event, "SecurityScene.fxml", false);
+                            } catch (IOException e)
+                            {
+                                throw new RuntimeException(e);
+                            }
+                        }
+                    }
+                }
+        );
+
+        homeButton.setOnMouseClicked(event ->
+        {
+            try
+            {
+                switchToHome(event, prevFXML);
+            } catch (IOException e)
+            {
+                throw new RuntimeException(e);
             }
         });
-//        departmentsButton.setOnMouseEntered(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//                //changeEnteringButtonColor(departmentsButton);
-//            }
-//        });
-//
-//        departmentsButton.setOnMouseExited(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//                //changeExitingButtonColor(departmentsButton);
-//            }
-//        });
-        departmentsButton.setOnMouseClicked(new EventHandler<MouseEvent>()
+
+        photoGalleryButton.setOnMouseClicked(event ->
         {
-            @Override
-            public void handle(MouseEvent mouseEvent)
+            try
             {
-                DBUtils.changeScenceforMouseEvent(mouseEvent, "DepartmentsScene.fxml", "Departments", null);
+                switchToPhotoGallery(event, prevFXML);
+            } catch (IOException e)
+            {
+                throw new RuntimeException(e);
             }
         });
-//        photoGalleryButton.setOnMouseEntered(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//                //changeEnteringButtonColor(photoGalleryButton);
-//            }
-//        });
-//
-//        photoGalleryButton.setOnMouseExited(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//               // changeExitingButtonColor(photoGalleryButton);
-//            }
-//        });
-        photoGalleryButton.setOnMouseClicked(new EventHandler<MouseEvent>()
+
+        inventoryButton.setOnMouseClicked(event ->
         {
-            @Override
-            public void handle(MouseEvent mouseEvent)
+            try
             {
-                DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
+                switchToInventory(event, prevFXML);
+            } catch (IOException e)
+            {
+                throw new RuntimeException(e);
             }
         });
-//        articlesButton.setOnMouseEntered(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//              //  changeEnteringButtonColor(articlesButton);
-//            }
-//        });
-//
-//        articlesButton.setOnMouseExited(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//              //  changeExitingButtonColor(articlesButton);
-//            }
-//        });
-        articlesButton.setOnMouseClicked(new EventHandler<MouseEvent>()
+
+        aboutUsButton.setOnMouseClicked(event ->
         {
-            @Override
-            public void handle(MouseEvent mouseEvent)
+            try
             {
-                DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
+                switchToAboutUs(event, prevFXML);
+            } catch (IOException e)
+            {
+                throw new RuntimeException(e);
             }
         });
-//        aboutUsButton.setOnMouseEntered(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//                //changeEnteringButtonColor(aboutUsButton);
-//            }
-//        });
-//
-//        aboutUsButton.setOnMouseExited(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//               // changeExitingButtonColor(aboutUsButton);
-//            }
-//        });
-        aboutUsButton.setOnMouseClicked(new EventHandler<MouseEvent>()
+
+        ticketsButton.setOnMouseClicked(event ->
         {
-            @Override
-            public void handle(MouseEvent mouseEvent)
+            try
             {
-                DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
-            }
-        });
-//        ticketsButton.setOnMouseEntered(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//              //  changeEnteringButtonColor(ticketsButton);
-//            }
-//        });
-//
-//        ticketsButton.setOnMouseExited(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//               // changeExitingButtonColor(ticketsButton);
-//            }
-//        });
-        ticketsButton.setOnMouseClicked(new EventHandler<MouseEvent>()
-        {
-            @Override
-            public void handle(MouseEvent mouseEvent)
+                switchTotickets(event, prevFXML);
+            } catch (IOException e)
             {
-                DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
-            }
-        });
-//        logoutButton.setOnMouseEntered(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//                //changeEnteringButtonColor(logoutButton);
-//            }
-//        });
-//
-//        logoutButton.setOnMouseExited(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//              //  changeExitingButtonColor(logoutButton);
-//            }
-//        });
-        logoutButton.setOnMouseClicked(new EventHandler<MouseEvent>()
-        {
-            @Override
-            public void handle(MouseEvent mouseEvent)
-            {
-                DBUtils.changeScenceforMouseEvent(mouseEvent, "DashboardScreen.fxml", "HOME", null);
-            }
-        });
-//        goBackButton.setOnMouseEntered(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//              //  changeEnteringButtonColor(goBackButton);
-//            }
-//        });
-//
-//        goBackButton.setOnMouseExited(new EventHandler<MouseEvent>()
-//        {
-//            @Override
-//            public void handle(MouseEvent event)
-//            {
-//               // changeExitingButtonColor(goBackButton);
-//            }
-//        });
-        goBackButton.setOnMouseClicked(new EventHandler<MouseEvent>()
-        {
-            @Override
-            public void handle(MouseEvent mouseEvent)
-            {
-                DBUtils.changeScenceforMouseEvent(mouseEvent, "LoginScene.fxml", "Login", null);
+                throw new RuntimeException(e);
             }
         });
     }
 }
+

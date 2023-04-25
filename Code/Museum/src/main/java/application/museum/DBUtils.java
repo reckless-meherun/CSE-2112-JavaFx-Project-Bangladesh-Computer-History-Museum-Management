@@ -6,13 +6,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Stack;
 
 public class DBUtils
@@ -20,6 +18,30 @@ public class DBUtils
     public static String username;
     public static Stack<String> prevfxml=new Stack<>();
     public static String[] dept={"Hardware","Software","Language","Public_Education","Photo_Gallery","Security","Auditorium"};
+    public static void changeScene(MouseEvent event, String fxmlfile, String username)
+    {
+        Parent root = null;
+        if (DBUtils.username != null)
+        {
+            try
+            {
+                FXMLLoader loader = new FXMLLoader(DBUtils.class.getResource(fxmlfile));
+                root = loader.load();
+                DashboardSceneController scene2Controller = loader.getController();
+                scene2Controller.displayName(DBUtils.username);
+
+            } catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, 1101, 680);
+        stage.setScene(scene);
+        //stage.setTitle(title);
+        stage.show();
+    }
     public static void changeScene(ActionEvent event, String fxmlfile, String username)
     {
         Parent root = null;
@@ -52,7 +74,7 @@ public class DBUtils
         stage.setScene(scene);
         stage.show();
     }
-    public static void changeSceneDept(MouseEvent event, String fxml, boolean goback) throws IOException
+    public static void changeScene(MouseEvent event, String fxml, boolean goback) throws IOException
     {
         Parent root = FXMLLoader.load(DBUtils.class.getResource(fxml));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

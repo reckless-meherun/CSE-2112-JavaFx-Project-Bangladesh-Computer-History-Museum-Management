@@ -1,7 +1,6 @@
 package application.museum;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -9,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -17,11 +15,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.util.ResourceBundle;
 
-public class DashboardSceneController implements Initializable
+public class DashboardSceneController extends NavigationHandler implements Initializable
 {
+    @FXML
+    public static ActionEvent eventVar;
     @FXML
     public TreeView<String> treeView;
     @FXML
@@ -44,14 +43,6 @@ public class DashboardSceneController implements Initializable
     private Button LogoutButton;
     @FXML
     private Button GoBackButton;
-    @FXML
-    private Text notice1;
-    @FXML
-    private Text notice2;
-    @FXML
-    private Text notice3;
-    @FXML
-    private Text notice4;
     @FXML
     private Text ProfileIcon;
     @FXML
@@ -104,31 +95,10 @@ public class DashboardSceneController implements Initializable
     }
 
     @FXML
-    public void switchToDashboard(ActionEvent event) throws IOException
-    {
-        //DBUtils.prevfxml.push("DashboardScene.fxml");
-        DBUtils.changeScene(event, "DashboardScene.fxml", false);
-    }
-
-    @FXML
     public void switchTODepartments(ActionEvent event) throws IOException
     {
         DBUtils.prevfxml.push("DashboardScene.fxml");
         DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
-    }
-
-    @FXML
-    public void switchTOaboutUs(ActionEvent event) throws IOException
-    {
-        DBUtils.prevfxml.push("DashboardScene.fxml");
-        DBUtils.changeScene(event, "aboutus.fxml", false);
-    }
-
-    @FXML
-    public void switchTotickets(ActionEvent event) throws IOException
-    {
-        DBUtils.prevfxml.push("DashboardScene.fxml");
-        DBUtils.changeScene(event, "Tickets.fxml", false);
     }
 
     @FXML
@@ -155,106 +125,14 @@ public class DashboardSceneController implements Initializable
     }
 
     @FXML
-    void switchToInventory(ActionEvent event) throws IOException
-    {
-        DashboardSceneController.pushtostack();
-        DBUtils.changeScene(event, "Inventory.fxml", false);
-    }
-
-    @FXML
-    void switchToGallery(ActionEvent event) throws IOException
-    {
-        DashboardSceneController.pushtostack();
-        DBUtils.changeScene(event, "PhotoGalleryScene.fxml", false);
-    }
-
-    public void selectDept(MouseEvent event) throws IOException
-    {
-        TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
-        if (item != null)
-        {
-            if(item.getValue() == "Curatorial\nDepartments")
-            {
-                DashboardSceneController.pushtostack();
-                DBUtils.changeSceneDept(event, "CuratorialDeptScene.fxml", false);
-            }
-            if(item.getValue() == "Auditorium")
-            {
-                DashboardSceneController.pushtostack();
-                DBUtils.changeSceneDept(event, "AuditoriumScene.fxml", false);
-            }
-            if(item.getValue() == "Photo\nGallery")
-            {
-                DashboardSceneController.pushtostack();
-                DBUtils.changeSceneDept(event, "PhotoGalleryScene.fxml", false);
-            }
-            if(item.getValue() == "Public\nEducation")
-            {
-                DashboardSceneController.pushtostack();
-                DBUtils.changeSceneDept(event, "PublicEducationScene.fxml", false);
-            }
-            if(item.getValue() == "Security")
-            {
-                DashboardSceneController.pushtostack();
-                DBUtils.changeSceneDept(event, "SecurityScene.fxml", false);
-            }
-        }
-    }
-
-    private void collapseTreeItems(TreeItem<String> item)
-    {
-        item.setExpanded(false);
-
-        for (TreeItem<String> child : item.getChildren())
-        {
-            collapseTreeItems(child);
-        }
-    }
-
-    @FXML
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        NavigationHandler.HandleNavigation(home, departments, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
-
-        //TreeView<String> tree = new TreeView<>();
-        TreeView<String> tree = new TreeView<>();
-        tree = this.treeView;
-
-        TreeItem<String> rootDept = new TreeItem<>("Departments");
-
-        TreeItem<String> branchDept1 = new TreeItem<>("Curatorial\nDepartments");
-        TreeItem<String> branchDept2 = new TreeItem<>("Non-curatorial\nDepartments");
-//        TreeItem<String> leafDept1 = new TreeItem<>("Software");
-//        TreeItem<String> leafDept2 = new TreeItem<>("Hardware");
-//        TreeItem<String> leafDept3 = new TreeItem<>("Language");
-        TreeItem<String> leafDept4 = new TreeItem<>("Auditorium");
-        TreeItem<String> leafDept5 = new TreeItem<>("Security");
-        TreeItem<String> leafDept6 = new TreeItem<>("Public\nEducation");
-        TreeItem<String> leafDept7 = new TreeItem<>("Photo\nGallery");
-
-        //branchDept1.getChildren().addAll(leafDept1, leafDept2, leafDept3);
-        branchDept2.getChildren().addAll(leafDept4, leafDept5, leafDept6, leafDept7);
-        rootDept.getChildren().addAll(branchDept1, branchDept2);
-
-        if (tree == null)
-            System.out.println("NULL");
-
         try
         {
-            tree.setRoot(rootDept);
-            treeView.setOnMouseExited(event ->
-            {
-                // Get the root item of the tree
-                TreeItem<String> root = treeView.getRoot();
-
-                // Collapse all items under the root
-                collapseTreeItems(root);
-            });
-        } catch (NullPointerException e)
+            NavigationHandler.HandleNavigation("DashboardScene.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+        } catch (IOException e)
         {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-
-        //selectDept();
     }
 }

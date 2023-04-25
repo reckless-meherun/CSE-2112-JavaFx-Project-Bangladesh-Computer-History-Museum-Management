@@ -145,22 +145,22 @@
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="photogallery" layoutX="513.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToGallery" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
+                        <Button fx:id="photogallery" layoutX="513.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="articles" layoutX="627.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToInventory" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
+                        <Button fx:id="articles" layoutX="627.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="aboutus" layoutX="739.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTOaboutUs" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
+                        <Button fx:id="aboutus" layoutX="739.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="tickets" layoutX="858.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTotickets" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
+                        <Button fx:id="tickets" layoutX="858.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -190,7 +190,7 @@
                         <Image url="@../../Assets/Dashboard/DashBoardCropped.jpg" />
                      </image>
                   </ImageView>
-                  <TreeView fx:id="treeView" layoutX="264.0" layoutY="72.0" onMouseClicked="#selectDept" prefHeight="288.0" prefWidth="239.0">
+                  <TreeView fx:id="treeView" layoutX="264.0" layoutY="72.0" prefHeight="288.0" prefWidth="239.0">
                      <styleClass>
                         <String fx:value="TransparentButtons" />
                         <String fx:value="tree-view" />
