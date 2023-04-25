@@ -172,16 +172,16 @@
                               </TextField>
                               <TextField alignment="CENTER" layoutX="447.0" layoutY="115.0" prefHeight="38.0" prefWidth="72.0" styleClass="markInputField" text="Image" />
                               <TableView layoutX="2.0" layoutY="165.0" prefHeight="302.0" prefWidth="686.0" stylesheets="@../../CSS/TicketCalculator.Css">
-                                <columns>
-                                  <TableColumn prefWidth="75.0" text="doc no." />
-                                  <TableColumn prefWidth="79.20004272460938" text="Last Update" />
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="doc no." />
+                                    <TableColumn prefWidth="79.20004272460938" text="Last Update" />
                                     <TableColumn prefWidth="87.20001220703125" text="Catagory" />
                                     <TableColumn prefWidth="126.39996337890625" text="Title and Description" />
                                     <TableColumn prefWidth="89.60003662109375" text="Department" />
                                     <TableColumn prefWidth="66.39990234375" text="Row" />
                                     <TableColumn prefWidth="79.99993896484375" text="Room" />
                                     <TableColumn prefWidth="80.800048828125" text="Level" />
-                                </columns>
+                                 </columns>
                               </TableView>
                               <Button fx:id="GoBackButton" layoutX="52.0" layoutY="479.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="Go Back" textFill="#1e0202">
                                  <font>
