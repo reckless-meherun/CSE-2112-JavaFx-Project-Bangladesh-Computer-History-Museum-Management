@@ -106,7 +106,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
-                              <Button fx:id="home1" layoutX="111.0" layoutY="436.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                              <Button fx:id="home1" layoutX="39.0" layoutY="436.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -121,7 +121,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <Button fx:id="home11" layoutX="227.0" layoutY="436.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                              <Button fx:id="home11" layoutX="291.0" layoutY="436.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -148,6 +148,15 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
+                              <Button fx:id="home12" layoutX="165.0" layoutY="436.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="420.0" layoutY="145.0" prefHeight="535.0" prefWidth="670.0" stylesheets="@../../CSS/TicketCalculator.Css">

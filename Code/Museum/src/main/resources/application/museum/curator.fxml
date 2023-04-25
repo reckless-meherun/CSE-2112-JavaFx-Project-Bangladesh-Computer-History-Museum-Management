@@ -274,7 +274,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </ComboBox>
-                              <ImageView fx:id="temp" fitHeight="88.0" fitWidth="124.0" layoutX="251.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="temp" fitHeight="88.0" fitWidth="124.0" layoutX="258.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@149071.png" />
                                  </image>

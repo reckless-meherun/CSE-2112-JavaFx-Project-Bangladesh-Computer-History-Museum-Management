@@ -217,7 +217,7 @@
                                        </stylesheets>
                                     </DatePicker>
                                     <ImageView fx:id="show" fitHeight="92.0" fitWidth="115.0" layoutX="261.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="temp" fitHeight="92.0" fitWidth="115.0" layoutX="261.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="temp" fitHeight="79.0" fitWidth="79.0" layoutX="257.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@149071.png" />
                                        </image>

@@ -120,7 +120,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
-                              <Button fx:id="home1" layoutX="160.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                              <Button fx:id="home1" layoutX="44.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -143,6 +143,24 @@
                               </TextField>
                               <TextArea layoutX="44.0" layoutY="195.0" prefHeight="89.0" prefWidth="332.0" promptText="artifact title and description" styleClass="textarea" />
                               <Button layoutX="43.0" layoutY="391.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="336.0" styleClass="lightButton" stylesheets="@../../CSS/TicketsScene.css" text="Browse images" />
+                              <Button fx:id="home11" layoutX="169.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
+                              <Button fx:id="home111" layoutX="293.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">

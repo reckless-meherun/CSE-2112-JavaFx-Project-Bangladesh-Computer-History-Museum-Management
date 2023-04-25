@@ -229,7 +229,7 @@
                                           <Image url="@../../Assets/149071.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fx:id="show" fitHeight="120.0" fitWidth="146.0" layoutX="228.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="show" fitHeight="102.0" fitWidth="120.0" layoutX="254.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true" />
                                     <ComboBox fx:id="courseteacher" layoutX="210.0" layoutY="263.0" prefHeight="30.0" prefWidth="166.0" promptText="Course Teacher" styleClass="signUpScreenLeftInput">
                                        <stylesheets>
                                           <URL value="@../../CSS/TicketsScene.css" />

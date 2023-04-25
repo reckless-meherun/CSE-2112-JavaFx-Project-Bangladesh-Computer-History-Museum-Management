@@ -101,7 +101,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
-                              <Button fx:id="home1" layoutX="107.0" layoutY="424.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                              <Button fx:id="home1" layoutX="40.0" layoutY="424.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -110,7 +110,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <Button fx:id="home11" layoutX="223.0" layoutY="424.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                              <Button fx:id="home11" layoutX="283.0" layoutY="424.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -125,7 +125,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField layoutX="39.0" layoutY="298.0" prefHeight="32.0" prefWidth="143.0" promptText="total students" styleClass="signUpScreenLeftInput">
+                              <TextField layoutX="39.0" layoutY="298.0" prefHeight="32.0" prefWidth="158.0" promptText="total students" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
@@ -149,13 +149,22 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <ComboBox layoutX="192.0" layoutY="298.0" prefHeight="32.0" prefWidth="182.0" promptText="course status" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css" />
+                              <ComboBox layoutX="212.0" layoutY="298.0" prefHeight="32.0" prefWidth="162.0" promptText="course status" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css" />
                               <DatePicker layoutX="211.0" layoutY="342.0" prefHeight="40.0" prefWidth="161.0" promptText="ending date" styleClass="textarea">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
+                              <Button fx:id="home13" layoutX="167.0" layoutY="424.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="420.0" layoutY="145.0" prefHeight="535.0" prefWidth="670.0" stylesheets="@../../CSS/TicketCalculator.Css">

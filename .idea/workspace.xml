@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="auditorium scene added">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="auditorium scene updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DashboardSceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/AuditoriumScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/AuditoriumScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/CuratorialDeptScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/CuratorialDeptScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PublicEducationScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PublicEducationScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/SecurityScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/SecurityScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/employee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/employee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/students.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/students.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682374430066</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="auditorium scene updated">
+      <created>1682405216898</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1682405216898</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -299,7 +310,8 @@
     <MESSAGE value="Curatorial Department added" />
     <MESSAGE value="Security Scene added" />
     <MESSAGE value="auditorium scene added" />
-    <option name="LAST_COMMIT_MESSAGE" value="auditorium scene added" />
+    <MESSAGE value="auditorium scene updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="auditorium scene updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
