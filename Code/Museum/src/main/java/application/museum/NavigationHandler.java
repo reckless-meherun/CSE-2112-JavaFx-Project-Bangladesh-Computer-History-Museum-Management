@@ -103,7 +103,7 @@ public class NavigationHandler
                     TreeItem<String> item = treeView.getSelectionModel().getSelectedItem();
                     if (item != null)
                     {
-                        if (item.getValue() == "Curatorial\nDepartments")
+                        if (item.getValue().equals("Curatorial\nDepartments"))
                         {
                             DashboardSceneController.pushtostack();
                             try
@@ -114,7 +114,7 @@ public class NavigationHandler
                                 throw new RuntimeException(e);
                             }
                         }
-                        if (item.getValue() == "Auditorium")
+                        if (item.getValue().equals("Auditorium"))
                         {
                             DBUtils.prevfxml.push(prevFXML);
                             try
@@ -136,7 +136,7 @@ public class NavigationHandler
                                 throw new RuntimeException(e);
                             }
                         }
-                        if (item.getValue() == "Public\nEducation")
+                        if (item.getValue().equals("Public\nEducation"))
                         {
                             DBUtils.prevfxml.push(prevFXML);
                             try

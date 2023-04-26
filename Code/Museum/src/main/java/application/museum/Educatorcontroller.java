@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 public class Educatorcontroller implements Initializable
 {
     @FXML
-    TreeView<String> treeView;
+    public TreeView<String> treeView;
     @FXML
     private Button BOD;
 
