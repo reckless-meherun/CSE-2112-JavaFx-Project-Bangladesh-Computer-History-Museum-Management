@@ -157,7 +157,7 @@
                                  </stylesheets>
                               </Button>
                               <ComboBox fx:id="ceducator" layoutX="39.0" layoutY="252.0" prefHeight="32.0" prefWidth="336.0" promptText="Educator" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css" />
-                              <Button fx:id="update" layoutX="212.0" layoutY="424.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                              <Button fx:id="update" layoutX="212.0" layoutY="424.0" mnemonicParsing="false" onAction="#update_Crud" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

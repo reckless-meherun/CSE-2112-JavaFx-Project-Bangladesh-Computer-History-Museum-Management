@@ -1,6 +1,7 @@
 package application.museum;
 
 import application.museum.People.Gender;
+import application.museum.People.course;
 import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -126,7 +127,7 @@ public class Studentscontroller implements Initializable
     private Button tickets;
     @FXML
     private Button update;
-    private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Aboutus.db";
+    private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\database.db";
 
     private Connection connect;
     private PreparedStatement prepare;
@@ -450,13 +451,74 @@ public class Studentscontroller implements Initializable
         {
             throw new RuntimeException(e);
         }
+
         Combo_box();
+        DBUtils.courseArrayList.clear();
+        DBUtils.courseArrayList=detalist();
         paneside.setTranslateX(0);
         bar2.setVisible(true);
         bar1.setVisible(false);
         bar3.setVisible(true);
         bar4.setVisible(false);
         scene2.setTranslateX(378);
+    }
+    public ArrayList<application.museum.People.course> detalist()
+    {
+        ArrayList<course> datalist = new ArrayList<>();
+
+        String sql;
+        sql ="SELECT * FROM course";
+
+        try {
+            connect= DBUtils.connectDB(url);
+            prepare = connect.prepareStatement(sql);
+            result=prepare.executeQuery();
+
+
+            while(result.next())
+            {
+
+
+                course emp;
+                boolean fin;
+                if(result.getString("courses")=="YES"){
+                    fin=true;
+                }
+                else {
+                    fin=false;
+                }
+
+                if(result.getDate("resign")!=null && result.getString("teacher")==null) {
+
+
+                    emp = new course(result.getString("Name"),result.getDate("jdate"),fin,Integer.valueOf(result.getString("total")));
+                }
+                else{
+                    emp = new course(result.getString("Name"),result.getDate("jdate"),fin,Integer.valueOf(result.getString("total")));
+                }
+                datalist.add(emp);
+            }
+
+        }catch (Exception e) {
+            System.out.println("course database error");
+        }
+        finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                if(statement!=null) {
+                    statement.close();
+                }
+
+            }catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+        return datalist;
     }
 
     @FXML

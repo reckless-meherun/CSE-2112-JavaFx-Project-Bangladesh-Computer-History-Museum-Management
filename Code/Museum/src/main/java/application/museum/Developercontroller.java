@@ -837,7 +837,7 @@ public class Developercontroller implements Initializable {
             } else if (email.getText().isEmpty()) {
                 sql = "UPDATE developer SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(joingdate1.getValue()) + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `curcourse` = '" + curproject.getText()+ "', `courses` = '" + projects.getText()+ "', `spec` = '" + Development.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
             } else {
-                sql = "UPDATE developer SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(joingdate1.getValue()) + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + curproject.getText()+ "', `spec` = '" + Development.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE developer SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(joingdate1.getValue()) + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `curcourse` = '" + curproject.getText()+ "', `spec` = '" + Development.getText() + "', `img` = '" + file_path + "' WHERE Id = '" + Id.getText() + "'";
             }
         }
         else {
@@ -848,7 +848,7 @@ public class Developercontroller implements Initializable {
             } else if (email.getText().isEmpty()) {
                 sql = "UPDATE developer SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(joingdate1.getValue()) + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `curcourse` = '" + curproject.getText()+ "', `courses` = '" + projects.getText()+ "', `spec` = '" + Development.getText() + "' WHERE Id = '" + Id.getText() + "'";
             } else {
-                sql = "UPDATE developer SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(joingdate1.getValue()) + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `worktime` = '" + curproject.getText()+ "', `courses` = '" + projects.getText()+ "', `spec` = '" + Development.getText()  + "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE developer SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(joingdate1.getValue()) + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `curcourse` = '" + curproject.getText()+ "', `courses` = '" + projects.getText()+ "', `spec` = '" + Development.getText()  + "' WHERE Id = '" + Id.getText() + "'";
             }
         }
 

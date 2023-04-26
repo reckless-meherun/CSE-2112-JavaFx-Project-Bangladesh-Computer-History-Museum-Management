@@ -50,4 +50,7 @@ public class educator extends Employee
         return this.numOfcourses;
     }
 
+    public void setCur_course(course c){
+        this.cur_course=c;
+    }
 }
