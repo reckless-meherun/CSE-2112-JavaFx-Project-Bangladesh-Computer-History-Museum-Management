@@ -38,7 +38,7 @@
                                     <Image url="@../assets/NavigationSecondary/HomeActive.png" />
                                  </image>
                               </ImageView>
-                              <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
+                              <Button fx:id="LogoutButton" layoutX="973.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -48,37 +48,32 @@
                                     <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
                                  </children>
                               </AnchorPane>
-                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="82.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
+                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@../../CSS/DashboardScreen.css" text="Home">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="departments" layoutX="153.0" layoutY="19.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
+                              <Button fx:id="photogallery" layoutX="469.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Photo Gallery">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="photogallery" layoutX="423.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Photo Gallery">
+                              <Button fx:id="articles" layoutX="595.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
+                              <Button fx:id="aboutus" layoutX="721.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="aboutus" layoutX="693.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
+                              <Button fx:id="tickets" layoutX="847.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Tickets">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Text layoutX="438.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="PHOTO GALLERY" wrappingWidth="242.74337768554688">
+                              <Text layoutX="469.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="PHOTO GALLERY" wrappingWidth="242.74337768554688">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
@@ -163,12 +158,6 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <TreeView fx:id="treeView" layoutX="257.0" layoutY="-71.0" prefHeight="170.0" prefWidth="150.0" stylesheets="@../../CSS/DashboardScreen.css">
-                                 <styleClass>
-                                    <String fx:value="TransparentButtons" />
-                                    <String fx:value="tree-view" />
-                                 </styleClass>
-                              </TreeView>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">
@@ -208,6 +197,12 @@
                               </ImageView>
                            </children>
                         </AnchorPane>
+                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
+                           <styleClass>
+                              <String fx:value="TransparentButtons" />
+                              <String fx:value="tree-view" />
+                           </styleClass>
+                        </TreeView>
                      </children>
                   </AnchorPane>
                </right>

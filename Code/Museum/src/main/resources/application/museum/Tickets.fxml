@@ -37,7 +37,7 @@
                                     <Image url="@../assets/NavigationSecondary/HomeActive.png" />
                                  </image>
                               </ImageView>
-                              <Button fx:id="LogoutButton" layoutX="971.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
+                              <Button fx:id="LogoutButton" layoutX="973.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Logout">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -47,44 +47,39 @@
                                     <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
                                  </children>
                               </AnchorPane>
-                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
+                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="departments" layoutX="153.0" layoutY="15.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
+                              <Button fx:id="photogallery" layoutX="469.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="photogallery" layoutX="423.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
+                              <Button fx:id="articles" layoutX="595.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="articles" layoutX="559.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Inventory">
+                              <Button fx:id="aboutus" layoutX="721.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="aboutus" layoutX="693.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="About Us">
+                              <Button fx:id="tickets" layoutX="847.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Tickets">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="tickets" layoutX="832.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Tickets">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
-                              <Text layoutX="496.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="TICKETS" wrappingWidth="126.74337768554688">
+                              <Text layoutX="490.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="TICKETS" wrappingWidth="126.74337768554688">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="385.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
+                        <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="438.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                            <children>
                               <TextField layoutX="40.0" layoutY="72.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
@@ -195,7 +190,7 @@
                                     <Font name="Cambria" size="17.0" />
                                  </font>
                               </Button>
-                              <TableView layoutX="3.0" layoutY="69.0" prefHeight="260.0" prefWidth="684.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView layoutX="3.0" layoutY="69.0" prefHeight="260.0" prefWidth="664.0" stylesheets="@../../CSS/TicketCalculator.Css">
                                 <columns>
                                   <TableColumn prefWidth="100.80007934570312" text="Last Visit Date" />
                                   <TableColumn prefWidth="76.79998779296875" text="Name" />
@@ -220,7 +215,7 @@
                               </ImageView>
                            </children>
                         </AnchorPane>
-                        <TreeView fx:id="treeView" layoutX="284.0" layoutY="78.0" prefHeight="174.0" prefWidth="142.0" styleClass="TransparentButtons" stylesheets="@../../CSS/DashboardScreen.css" />
+                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" styleClass="TransparentButtons" stylesheets="@../../CSS/DashboardScreen.css" />
                      </children>
                   </AnchorPane>
                </right>

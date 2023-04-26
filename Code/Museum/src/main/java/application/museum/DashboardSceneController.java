@@ -20,8 +20,6 @@ import java.util.ResourceBundle;
 public class DashboardSceneController extends NavigationHandler implements Initializable
 {
     @FXML
-    public static ActionEvent eventVar;
-    @FXML
     public TreeView<String> treeView;
     @FXML
     AnchorPane deptPane;
@@ -50,7 +48,7 @@ public class DashboardSceneController extends NavigationHandler implements Initi
 
     public static void pushtostack()
     {
-        DBUtils.prevfxml.push("DashboardScene.fxml.fxml");
+        DBUtils.prevfxml.push("DashboardScene.fxml");
     }
 
     public void displayName(String username)
@@ -92,13 +90,6 @@ public class DashboardSceneController extends NavigationHandler implements Initi
             stage.show();
         }
     }
-
-//    @FXML
-//    public void switchTODepartments(ActionEvent event) throws IOException
-//    {
-//        DBUtils.prevfxml.push("DashboardScene.fxml");
-//        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
-//    }
 
     @FXML
     public void goBack(ActionEvent event) throws IOException

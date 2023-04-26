@@ -201,19 +201,6 @@ public class AdminsController implements Initializable
         }
     }
 
-//    @FXML
-//    void switchToHome(ActionEvent event)
-//    {
-//        DBUtils.prevfxml.push("admins.fxml");
-//        DBUtils.changeScene(event, "DashboardScene.fxml", DBUtils.username);
-//    }
-//
-//    @FXML
-//    public void switchTODepartments(ActionEvent event) throws IOException
-//    {
-//        DBUtils.prevfxml.push("admins.fxml");
-//        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
-//    }
 
     @FXML
     void switchToSceneOne(ActionEvent event) throws IOException
