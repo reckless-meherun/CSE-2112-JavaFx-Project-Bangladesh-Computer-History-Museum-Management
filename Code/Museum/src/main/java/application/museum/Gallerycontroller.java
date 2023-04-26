@@ -3,20 +3,26 @@ package application.museum;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TreeView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Gallerycontroller {
-
+public class Gallerycontroller implements Initializable
+{
+    @FXML
+    public TreeView<String> treeView;
     @FXML
     private Button GoBackButton;
 
@@ -53,46 +59,36 @@ public class Gallerycontroller {
     @FXML
     private Button tickets;
 
-    static void pushtostack(){
+    static void pushtostack()
+    {
         DBUtils.prevfxml.push("PhotoGalleryScene.fxml");
 
     }
-    @FXML
-    void SwitchToHome(ActionEvent event) {
-        Gallerycontroller.pushtostack();
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
-    }
+
 
     @FXML
-    void SwitchToInventory(ActionEvent event) throws IOException {
-        Gallerycontroller.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
-    }
-
-    @FXML
-    void goBack(ActionEvent event) throws IOException {
-        if(DBUtils.prevfxml.empty()){
+    void goBack(ActionEvent event) throws IOException
+    {
+        if (DBUtils.prevfxml.empty())
+        {
             return;
         }
-        String fxml=DBUtils.prevfxml.pop();
+        String fxml = DBUtils.prevfxml.pop();
         //DBUtils.prevfxml.pop();
         System.out.println(fxml);
-        if(fxml=="DashboardScene.fxml"){
-            DBUtils.changeScene(event,fxml,DBUtils.username);
-        }
-        else {
+        if (fxml == "DashboardScene.fxml")
+        {
+            DBUtils.changeScene(event, fxml, DBUtils.username);
+        } else
+        {
             DBUtils.changeScene(event, fxml, true);
         }
     }
 
-    @FXML
-    void switchTOaboutUs(ActionEvent event) throws IOException {
-        Gallerycontroller.pushtostack();
-        DBUtils.changeScene(event,"aboutus.fxml",false);
-    }
 
     @FXML
-    void switchToSceneOne(ActionEvent event) throws IOException {
+    void switchToSceneOne(ActionEvent event) throws IOException
+    {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("You are about to logout");
@@ -110,9 +106,14 @@ public class Gallerycontroller {
     }
 
     @FXML
-    void switchTotickets(ActionEvent event) throws IOException {
-        Gallerycontroller.pushtostack();
-        DBUtils.changeScene(event, "Tickets.fxml", false);
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        try
+        {
+            NavigationHandler.HandleNavigation("PhotoGalleryScene.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
     }
-
 }

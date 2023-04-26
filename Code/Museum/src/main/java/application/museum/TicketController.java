@@ -3,21 +3,24 @@ package application.museum;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class TicketController
+public class TicketController implements Initializable
 {
-
+    @FXML
+    public TreeView<String> treeView;
     @FXML
     private Button GoBackButton;
 
@@ -71,14 +74,16 @@ public class TicketController
     }
 
     @FXML
-    void logout(ActionEvent event) {
+    void logout(ActionEvent event)
+    {
 
     }
 
     @FXML
-    void switchTOaboutUs(ActionEvent event) throws IOException {
+    public void switchTODepartments(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("Tickets.fxml");
-        DBUtils.changeScene(event,"aboutus.fxml",false);
+        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
     }
 
     @FXML
@@ -98,25 +103,17 @@ public class TicketController
             stage.show();
         }
     }
-    @FXML
-    void switchToHome(ActionEvent event){
-        TicketController.pushtostack();
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
-    }
-    @FXML
-    void switchToInventory(ActionEvent event) throws IOException {
-        TicketController.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
-    }
-    @FXML
-    void switchToGallery(ActionEvent event) throws IOException {
-        TicketController.pushtostack();
-        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
-    }
-    static void pushtostack(){
-        DBUtils.prevfxml.push("Tickets.fxml");
-    }
 
-
+    @FXML
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        try
+        {
+            NavigationHandler.HandleNavigation("Tickets.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
 }
 

@@ -19,8 +19,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Educatorcontroller implements Initializable {
-
+public class Educatorcontroller implements Initializable
+{
+    @FXML
+    TreeView<String> treeView;
     @FXML
     private Button BOD;
 
@@ -154,31 +156,47 @@ public class Educatorcontroller implements Initializable {
     @FXML
     private Button update;
 
+    static void pushtostack()
+    {
+        DBUtils.prevfxml.push("educator.fxml");
+    }
 
     @FXML
-    void goBack(ActionEvent event) throws IOException {
-        if(DBUtils.prevfxml.empty()){
+    void goBack(ActionEvent event) throws IOException
+    {
+        if (DBUtils.prevfxml.empty())
+        {
             return;
         }
-        String fxml=DBUtils.prevfxml.pop();
+        String fxml = DBUtils.prevfxml.pop();
         //DBUtils.prevfxml.pop();
         System.out.println(fxml);
-        if(fxml=="DashboardScene.fxml"){
-            DBUtils.changeScene(event,fxml,DBUtils.username);
-        }
-        else {
+        if (fxml == "DashboardScene.fxml")
+        {
+            DBUtils.changeScene(event, fxml, DBUtils.username);
+        } else
+        {
             DBUtils.changeScene(event, fxml, true);
         }
     }
 
-    @FXML
-    void switchToHome(ActionEvent event) {
-        DBUtils.prevfxml.push("educator.fxml");
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
-    }
+//    @FXML
+//    void switchToHome(ActionEvent event)
+//    {
+//        DBUtils.prevfxml.push("educator.fxml");
+//        DBUtils.changeScene(event, "DashboardScene.fxml", DBUtils.username);
+//    }
+//
+//    @FXML
+//    public void switchTODepartments(ActionEvent event) throws IOException
+//    {
+//        DBUtils.prevfxml.push("educator.fxml");
+//        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+//    }
 
     @FXML
-    void switchToSceneOne(ActionEvent event) throws IOException {
+    void switchToSceneOne(ActionEvent event) throws IOException
+    {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("You are about to logout");
@@ -196,57 +214,71 @@ public class Educatorcontroller implements Initializable {
     }
 
     @FXML
-    void switchToemployee(ActionEvent event) throws IOException {
+    void switchToemployee(ActionEvent event) throws IOException
+    {
         DBUtils.prevfxml.push("educator.fxml");
-        DBUtils.changeScene(event,"employee.fxml",false);
-    }
-    @FXML
-    void switchTobod(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("educator.fxml");
-        DBUtils.changeScene(event,"aboutus.fxml",false);
-    }
-    @FXML
-    void switchTocurato(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("educator.fxml");
-        DBUtils.changeScene(event, "curator.fxml", false);
-    }
-    @FXML
-    void switchTodevloper(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("educator.fxml");
-        DBUtils.changeScene(event,"developer.fxml",false);
-    }
-    @FXML
-    void switchTostudents(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("educator.fxml");
-        DBUtils.changeScene(event,"students.fxml",false);
-    }
-    @FXML
-    void switchToadmins(ActionEvent event) throws IOException {
-        DBUtils.prevfxml.push("educator.fxml");
-        DBUtils.changeScene(event,"admins.fxml",false);
-    }
-    static void pushtostack(){
-        DBUtils.prevfxml.push("educator.fxml");
-    }
-    @FXML
-    void switchToInventory(ActionEvent event) throws IOException {
-        Educatorcontroller.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
+        DBUtils.changeScene(event, "employee.fxml", false);
     }
 
     @FXML
-    void switchToGallery(ActionEvent event) throws IOException {
-        Educatorcontroller.pushtostack();
-        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
-    }
-    @FXML
-    public void switchTotickets(ActionEvent event) throws IOException
+    void switchTobod(ActionEvent event) throws IOException
     {
-        Educatorcontroller.pushtostack();
-        DBUtils.changeScene(event, "Tickets.fxml", false);
+        DBUtils.prevfxml.push("educator.fxml");
+        DBUtils.changeScene(event, "aboutus.fxml", false);
     }
+
     @FXML
-    void run1(ActionEvent event) {
+    void switchTocurator(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("educator.fxml");
+        DBUtils.changeScene(event, "curator.fxml", false);
+    }
+
+    @FXML
+    void switchTodevloper(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("educator.fxml");
+        DBUtils.changeScene(event, "developer.fxml", false);
+    }
+
+    @FXML
+    void switchTostudents(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("educator.fxml");
+        DBUtils.changeScene(event, "students.fxml", false);
+    }
+
+    @FXML
+    void switchToadmins(ActionEvent event) throws IOException
+    {
+        DBUtils.prevfxml.push("educator.fxml");
+        DBUtils.changeScene(event, "admins.fxml", false);
+    }
+
+//    @FXML
+//    void switchToInventory(ActionEvent event) throws IOException
+//    {
+//        Educatorcontroller.pushtostack();
+//        DBUtils.changeScene(event, "Inventory.fxml", false);
+//    }
+//
+//    @FXML
+//    void switchToGallery(ActionEvent event) throws IOException
+//    {
+//        Educatorcontroller.pushtostack();
+//        DBUtils.changeScene(event, "PhotoGalleryScene.fxml", false);
+//    }
+//
+//    @FXML
+//    public void switchTotickets(ActionEvent event) throws IOException
+//    {
+//        Educatorcontroller.pushtostack();
+//        DBUtils.changeScene(event, "Tickets.fxml", false);
+//    }
+
+    @FXML
+    void run1(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -255,7 +287,8 @@ public class Educatorcontroller implements Initializable {
 
         paneside.setTranslateX(-155);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar1.setVisible(false);
             bar2.setVisible(true);
         });
@@ -264,7 +297,8 @@ public class Educatorcontroller implements Initializable {
 
 
     @FXML
-    void run2(ActionEvent event) {
+    void run2(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.4));
         slide.setNode(paneside);
@@ -273,14 +307,23 @@ public class Educatorcontroller implements Initializable {
 
         paneside.setTranslateX(0);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar1.setVisible(true);
             bar2.setVisible(false);
         });
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        try
+        {
+            NavigationHandler.HandleNavigation("educator.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
         paneside.setTranslateX(0);
         bar2.setVisible(true);
         bar1.setVisible(false);
@@ -288,8 +331,10 @@ public class Educatorcontroller implements Initializable {
         bar4.setVisible(false);
         scene2.setTranslateX(378);
     }
+
     @FXML
-    void run3(ActionEvent event) {
+    void run3(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -298,14 +343,16 @@ public class Educatorcontroller implements Initializable {
 
         scene2.setTranslateX(378);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar3.setVisible(false);
             bar4.setVisible(true);
         });
     }
 
     @FXML
-    void run4(ActionEvent event) {
+    void run4(ActionEvent event)
+    {
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -314,7 +361,8 @@ public class Educatorcontroller implements Initializable {
 
         scene2.setTranslateX(0);
 
-        slide.setOnFinished((ActionEvent e)->{
+        slide.setOnFinished((ActionEvent e) ->
+        {
             bar4.setVisible(false);
             bar3.setVisible(true);
         });

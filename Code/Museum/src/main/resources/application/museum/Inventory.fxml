@@ -51,7 +51,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="departments" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
+                              <Button fx:id="departments" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" onAction="#switchTODepartments" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -76,7 +76,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Text layoutX="476.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Inventory" wrappingWidth="141.94338989257812">
+                              <Text layoutX="475.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="INVENTORY" wrappingWidth="167.54336547851562">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
@@ -120,7 +120,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
-                              <Button fx:id="home1" layoutX="160.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                              <Button fx:id="home1" layoutX="44.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -143,34 +143,52 @@
                               </TextField>
                               <TextArea layoutX="44.0" layoutY="195.0" prefHeight="89.0" prefWidth="332.0" promptText="artifact title and description" styleClass="textarea" />
                               <Button layoutX="43.0" layoutY="391.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="336.0" styleClass="lightButton" stylesheets="@../../CSS/TicketsScene.css" text="Browse images" />
+                              <Button fx:id="home11" layoutX="169.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
+                              <Button fx:id="home111" layoutX="293.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">
                            <children>
-                              <TextField layoutX="17.0" layoutY="14.0" prefHeight="38.0" prefWidth="501.0" promptText="          search" styleClass="markInputField">
+                              <TextField layoutX="54.0" layoutY="14.0" prefHeight="38.0" prefWidth="465.0" promptText="search" styleClass="markInputField">
                                  <font>
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </TextField>
                               <TextField alignment="CENTER" layoutX="447.0" layoutY="115.0" prefHeight="38.0" prefWidth="72.0" styleClass="markInputField" text="Image" />
                               <TableView layoutX="2.0" layoutY="165.0" prefHeight="302.0" prefWidth="686.0" stylesheets="@../../CSS/TicketCalculator.Css">
-                                <columns>
-                                  <TableColumn prefWidth="75.0" text="doc no." />
-                                  <TableColumn prefWidth="79.20004272460938" text="Last Update" />
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="doc no." />
+                                    <TableColumn prefWidth="79.20004272460938" text="Last Update" />
                                     <TableColumn prefWidth="87.20001220703125" text="Catagory" />
                                     <TableColumn prefWidth="126.39996337890625" text="Title and Description" />
                                     <TableColumn prefWidth="89.60003662109375" text="Department" />
                                     <TableColumn prefWidth="66.39990234375" text="Row" />
                                     <TableColumn prefWidth="79.99993896484375" text="Room" />
                                     <TableColumn prefWidth="80.800048828125" text="Level" />
-                                </columns>
+                                 </columns>
                               </TableView>
                               <Button fx:id="GoBackButton" layoutX="52.0" layoutY="479.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="Go Back" textFill="#1e0202">
                                  <font>
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </Button>
-                              <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="17.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="13.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Assets/search2.jpg" />
                                  </image>

@@ -7,7 +7,7 @@ public class developer extends Employee{
     private ArrayList<String> deveopment_sectors;
     private ArrayList<String> projects;
     private String cur_project;
-    public developer(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, Integer employeeId, String department, String designation, String workTime, Date joiningDate, Date resigningDate, ArrayList<String> projects, String cuProject, ArrayList<String> deveopmentSectors, String curProject) {
+    public developer(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, Integer employeeId, String department, String designation, String workTime, Date joiningDate, Date resigningDate, ArrayList<String> projects, ArrayList<String> deveopmentSectors, String curProject) {
         super(name, gender, mobile_no, photo, email, dob, adress, employeeId, department, designation, workTime, joiningDate, resigningDate);
         this.projects = projects;
         deveopment_sectors = deveopmentSectors;
@@ -15,7 +15,7 @@ public class developer extends Employee{
 
     }
 
-    developer(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, Integer employeeId, String department, String designation, String workTime, Date joiningDate, ArrayList<String> projects, String cuProject, ArrayList<String> deveopmentSectors, String curProject) {
+    public developer(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, Integer employeeId, String department, String designation, String workTime, Date joiningDate, ArrayList<String> projects, ArrayList<String> deveopmentSectors, String curProject) {
         super(name, gender, mobile_no, photo, email, dob, adress, employeeId, department, designation, workTime, joiningDate);
         this.projects = projects;
         deveopment_sectors = deveopmentSectors;

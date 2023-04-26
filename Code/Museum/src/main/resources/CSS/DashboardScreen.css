@@ -56,7 +56,7 @@
   -fx-background-radius: 13px;
 }
 
-.tree-cell
+/** .tree-cell
 {
     -fx-background-color: transparent;
     -fx-padding: 5px;
@@ -65,7 +65,7 @@
 .tree-cell:root:hover {
     -fx-background-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
     -fx-text-fill: white;
-}
+} */
 
 .DashboardScreenMenuItemActive{
     -fx-background-color: #50238A;
@@ -76,6 +76,7 @@
     -fx-background-color: #D4D4D4;
     -fx-background-radius: 50%;
 }
+
 .DashboardScreenUpcomingClasses,.DashboardScreenUpcomingClassesItemHeader,.DashboardScreenUpcomingClassesItemTeacher,.DashboardScreenUpcomingClassesItemTime,.DashboardScreenUpcomingClassesItemDate,
 .DashboardScreenUpcomingClassesItemScheduledBy,.DashboardScreenUpcomingClassesItemTime,.DashboardScreenMenuItemTextActive,.DashboardScreenMenuItemText,.AboveAverageText,.DashboardAttendanceNumber{
     -fx-font-family:'Cambria';
@@ -150,3 +151,93 @@
 .DashboardButton{
     -fx-background-color: #50238A;
 }
+
+/* Apply some basic styling to the TreeView */
+.tree-view {
+  -fx-padding: 10px;
+  -fx-background-color: transparent;
+  -fx-font-size: 16px;
+  -fx-font-family: Cambria;
+  -fx-fill: white;
+}
+
+.tree-cell .tree-disclosure-node {
+  -fx-shape: " ";
+}
+
+/* Hide the disclosure node of the root TreeItem */
+.tree-cell:root > .tree-disclosure-node {
+  -fx-background-color: transparent;
+  -fx-padding: 0;
+  -fx-pref-width: 0;
+  -fx-min-width: 0;
+  -fx-max-width: 0;
+  -fx-pref-height: 0;
+  -fx-min-height: 0;
+  -fx-max-height: 0;
+  -fx-border-width: 0;
+}
+
+/* Style the tree items */
+.tree-cell {
+  -fx-background-color: transparent;
+}
+
+/* Style the tree item labels */
+.tree-cell .tree-disclosure-node {
+  -fx-shape: " ";
+}
+
+/* Style the root node */
+.tree-cell:root {
+  -fx-font-weight: bold;
+}
+
+/* Style the branch nodes */
+.tree-cell:expanded > .tree-disclosure-node,
+.tree-cell:collapsed > .tree-disclosure-node {
+  -fx-background-color: transparent;
+}
+
+/* Style the leaf nodes */
+.tree-cell:leaf {
+  -fx-padding: 5px 0 5px 30px;
+}
+
+/* Style the selected tree items */
+.tree-cell:selected {
+  -fx-background-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
+}
+
+/* Style the tree items when they are being hovered over */
+.tree-cell:hover {
+  -fx-background-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
+  -fx-text-fill: white;
+}
+
+.tree-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-opacity: 1;
+    -fx-padding: 0;
+}
+.tree-view:focused > .scroll-bar:vertical .track {
+    -fx-background-color: #ECECEC;
+}
+
+/* Scroll bar thumb */
+.tree-view:focused > .scroll-bar:vertical .thumb {
+    -fx-background-color: #C5C5C5;
+    -fx-background-insets: 0;
+}
+
+/* Scroll bar thumb hover */
+.tree-view:focused > .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
+}
+
+/* Scroll bar thumb pressed */
+.tree-view:focused > .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #919191;
+}
+

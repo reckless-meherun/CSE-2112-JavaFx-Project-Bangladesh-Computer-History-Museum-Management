@@ -94,6 +94,12 @@ public class InventoryController {
         InventoryController.pushTostack();
         DBUtils.changeScene(event,"aboutus.fxml",false);
     }
+    @FXML
+    public void switchTODepartments(ActionEvent event) throws IOException
+    {
+        InventoryController.pushTostack();
+        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+    }
 
     @FXML
     void switchToSceneOne(ActionEvent event) throws IOException {
@@ -122,4 +128,3 @@ public class InventoryController {
     }
 
 }
-

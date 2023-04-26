@@ -9,7 +9,7 @@ public class curator extends Employee{
         Field = field;
     }
 
-    curator(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, Integer employeeId, String department, String designation, String workTime, Date joiningDate, String field) {
+    public curator(String name, Gender gender, String mobile_no, String photo, String email, Date dob, String adress, Integer employeeId, String department, String designation, String workTime, Date joiningDate, String field) {
         super(name, gender, mobile_no, photo, email, dob, adress, employeeId, department, designation, workTime, joiningDate);
         Field = field;
     }
