@@ -51,11 +51,6 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="departments" layoutX="153.0" layoutY="15.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Button>
                               <Button fx:id="photogallery" layoutX="469.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Photo Gallery">
                                  <font>
                                     <Font size="14.0" />
@@ -76,7 +71,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Text layoutX="458.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="AUDITORIUM" wrappingWidth="189.94332885742188">
+                              <Text layoutX="484.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="AUDITORIUM" wrappingWidth="189.94332885742188">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>

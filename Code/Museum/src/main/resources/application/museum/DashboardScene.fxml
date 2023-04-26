@@ -130,17 +130,12 @@
                               <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
                            </children>
                         </AnchorPane>
-                        <Label fx:id="loggedIn" layoutX="440.0" layoutY="29.0" prefHeight="40.0" prefWidth="390.0" text="Hello " textFill="#535151">
+                        <Label fx:id="loggedIn" layoutX="458.0" layoutY="29.0" prefHeight="40.0" prefWidth="303.0" styleClass="DashboardScreenUpcomingClasses" stylesheets="@../../CSS/DashboardScreen.css" text="Hello " textFill="#664329">
                            <font>
                               <Font name="Cambria" size="32.0" />
                            </font>
                         </Label>
                         <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Home">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="departments" layoutX="153.0" layoutY="15.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Departments">
                            <font>
                               <Font size="14.0" />
                            </font>
