@@ -1017,7 +1017,7 @@ public class Educatorcontroller implements Initializable
         }
         else {
             if (joingdate1.getValue() == null && email.getText().isEmpty()) {
-                sql = "UPDATE educator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `courses` = '" + courses.getText()+ "', `curcourses` = '" + curcourse.getSelectionModel().getSelectedItem()+ "', `spec` = '" + specializations.getText() + "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE educator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `courses` = '" + courses.getText()+ "', `curcourse` = '" + curcourse.getSelectionModel().getSelectedItem()+ "', `spec` = '" + specializations.getText() + "' WHERE Id = '" + Id.getText() + "'";
             } else if (joingdate1.getValue() == null) {
                 sql = "UPDATE educator SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `Email` = '" + email.getText() + "', `designation` = '" + designation.getText() + "', `Department` = '" + Department.getSelectionModel().getSelectedItem() + "', `curcourse` = '" + curcourse.getSelectionModel().getSelectedItem()+ "', `courses` = '" + courses.getText()+ "', `spec` = '" + specializations.getText() + "' WHERE Id = '" + Id.getText() + "'";
             } else if (email.getText().isEmpty()) {
