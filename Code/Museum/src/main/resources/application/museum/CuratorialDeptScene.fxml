@@ -46,7 +46,7 @@
                                     <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
                                  </children>
                               </AnchorPane>
-                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Home">
+                              <Button fx:id="home" layoutX="153.0" layoutY="72.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@../../CSS/DashboardScreen.css" text="Home">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
