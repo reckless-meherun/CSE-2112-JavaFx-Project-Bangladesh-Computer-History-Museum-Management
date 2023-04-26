@@ -42,7 +42,7 @@ public class educator extends Employee
         cur_course.setFinishingDate(date);
     }
     public void add_course(educator e, Date date,String couse_name){
-        cur_course= new course(couse_name,date,e);
+        cur_course= new course(couse_name,date,false,0);
         courses.add(cur_course);
         numOfcourses++;
     }

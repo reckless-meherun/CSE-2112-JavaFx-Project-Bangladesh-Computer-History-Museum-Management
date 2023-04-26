@@ -27,7 +27,7 @@ public class Educatorcontroller implements Initializable
     private Button BOD;
 
     @FXML
-    private TextField Department;
+    private ComboBox<String> Department;
 
     @FXML
     private Button GoBackButton;
@@ -81,7 +81,7 @@ public class Educatorcontroller implements Initializable
     private Button curator;
 
     @FXML
-    private TextField curcourse;
+    private ComboBox<?> curcourse;
 
     @FXML
     private Button delete;

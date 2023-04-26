@@ -42,6 +42,9 @@ import static java.lang.String.valueOf;
 public class Developercontroller implements Initializable {
 
     @FXML
+    TreeView<String> treeView;
+
+    @FXML
     private Button BOD;
 
     @FXML
@@ -250,18 +253,18 @@ public class Developercontroller implements Initializable {
         }
     }
 
-    @FXML
-    void switchToHome(ActionEvent event) {
-        DBUtils.prevfxml.push("developer.fxml.fxml");
-        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
-    }
+//    @FXML
+//    void switchToHome(ActionEvent event) {
+//        DBUtils.prevfxml.push("developer.fxml.fxml");
+//        DBUtils.changeScene(event,"DashboardScene.fxml",DBUtils.username);
+//    }
 
-    @FXML
-    public void switchTODepartments(ActionEvent event) throws IOException
-    {
-        DBUtils.prevfxml.push("developer.fxml.fxml");
-        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
-    }
+//    @FXML
+//    public void switchTODepartments(ActionEvent event) throws IOException
+//    {
+//        DBUtils.prevfxml.push("developer.fxml.fxml");
+//        DBUtils.changeScene(event, "DepartmentsScene.fxml", false);
+//    }
 
     @FXML
     void switchToSceneOne(ActionEvent event) throws IOException {
@@ -295,22 +298,22 @@ public class Developercontroller implements Initializable {
     static void pushtostack(){
         DBUtils.prevfxml.push("developer.fxml");
     }
-    @FXML
-    void switchToInventory(ActionEvent event) throws IOException {
-        Developercontroller.pushtostack();
-        DBUtils.changeScene(event,"Inventory.fxml",false);
-    }
-    @FXML
-    void switchToGallery(ActionEvent event) throws IOException {
-        Developercontroller.pushtostack();
-        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
-    }
-    @FXML
-    public void switchTotickets(ActionEvent event) throws IOException
-    {
-        Developercontroller.pushtostack();
-        DBUtils.changeScene(event, "Tickets.fxml", false);
-    }
+//    @FXML
+//    void switchToInventory(ActionEvent event) throws IOException {
+//        Developercontroller.pushtostack();
+//        DBUtils.changeScene(event,"Inventory.fxml",false);
+//    }
+//    @FXML
+//    void switchToGallery(ActionEvent event) throws IOException {
+//        Developercontroller.pushtostack();
+//        DBUtils.changeScene(event,"PhotoGalleryScene.fxml",false);
+//    }
+//    @FXML
+//    public void switchTotickets(ActionEvent event) throws IOException
+//    {
+//        Developercontroller.pushtostack();
+//        DBUtils.changeScene(event, "Tickets.fxml", false);
+//    }
     @FXML
     void switchTocurato(ActionEvent event) throws IOException {
         DBUtils.prevfxml.push("developer.fxml");
@@ -367,6 +370,13 @@ public class Developercontroller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        try
+        {
+            NavigationHandler.HandleNavigation("developer.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
         Combo_box();
         showData();
         paneside.setTranslateX(0);
@@ -659,6 +669,7 @@ public class Developercontroller implements Initializable {
 
         }catch (Exception e) {
             System.out.println("username database error");
+            e.printStackTrace();
         }
         finally
         {

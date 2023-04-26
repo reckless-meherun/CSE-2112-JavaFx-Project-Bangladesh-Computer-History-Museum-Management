@@ -7,28 +7,33 @@ public class course {
     private Date StartingDate;
     private Date finishingDate;
     private educator instructor;
-    private boolean isCoursecompleted;
+    private Boolean courseCompleted;
 
-    public course(String courseName, Date startingDate, Date finishingDate, educator instructor, boolean isCoursecompleted) {
+    private Integer studencnt;
+
+    public course(String courseName, Date startingDate, Date finishingDate, educator instructor, boolean isCoursecompleted,Integer studencnt) {
         CourseName = courseName;
         StartingDate = startingDate;
         this.finishingDate = finishingDate;
         this.instructor = instructor;
-        this.isCoursecompleted = isCoursecompleted;
+        this.courseCompleted = isCoursecompleted;
+        this.studencnt=studencnt;
     }
-    public course(String courseName, Date startingDate, educator instructor) {
+    public course(String courseName, Date startingDate, educator instructor,boolean isCoursecompleted,Integer studencnt) {
         CourseName = courseName;
         StartingDate = startingDate;
         this.finishingDate = null;
         this.instructor = instructor;
-        this.isCoursecompleted = false;
+        this.courseCompleted = isCoursecompleted;
+        this.studencnt=studencnt;
     }
-    public course(String courseName, Date startingDate) {
+    public course(String courseName, Date startingDate,boolean isCoursecompleted,Integer studencnt) {
         CourseName = courseName;
         StartingDate = startingDate;
         this.finishingDate = null;
         this.instructor = null;
-        this.isCoursecompleted = false;
+        this.courseCompleted = isCoursecompleted;
+        this.studencnt=studencnt;
     }
 
     public String getCourseName(){
@@ -46,16 +51,27 @@ public class course {
     public Date getFinishingDate(){
         return this.finishingDate;
     }
-    public boolean Iscompleted(){
-        return this.isCoursecompleted;
-    }
+//    public Boolean isCoursecompleted(){
+//        return this.courseCompleted;
+//    }
     public void setIscourseCompleted(boolean data){
-        this.isCoursecompleted=data;
+        this.courseCompleted=data;
     }
     public educator getInstructor(){
         return this.instructor;
     }
     public void updateInstuctor(educator Instructor){
         this.instructor=Instructor;
+    }
+
+    public Integer getStudencnt() {
+        return studencnt;
+    }
+    public void setStudencnt(Integer x){
+        this.studencnt=x;
+    }
+
+    public Boolean getCourseCompleted() {
+        return courseCompleted;
     }
 }
