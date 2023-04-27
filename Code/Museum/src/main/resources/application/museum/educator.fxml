@@ -35,6 +35,24 @@
                      <right>
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                            <children>
+                              <TableView fx:id="table_view" layoutX="45.0" layoutY="181.0" onMouseClicked="#selectData" prefHeight="500.0" prefWidth="1021.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                                 <columns>
+                                    <TableColumn fx:id="id_t" prefWidth="39.999996185302734" text="ID" />
+                                    <TableColumn fx:id="name_t" prefWidth="127.20000457763672" text="Name" />
+                                    <TableColumn fx:id="gender_t" prefWidth="57.60005187988281" text="Gender" />
+                                    <TableColumn fx:id="designation_t" prefWidth="87.20001220703125" text="Designatiosn" />
+                                    <TableColumn fx:id="department_t" prefWidth="79.2000732421875" text="Department" />
+                                    <TableColumn fx:id="email_t" prefWidth="76.80007934570312" text="Email" />
+                                    <TableColumn fx:id="phoneno_t" prefWidth="83.20001220703125" text="Phone No." />
+                                    <TableColumn fx:id="adress_t" prefWidth="86.4000244140625" text="Adress" />
+                                    <TableColumn fx:id="specialization_t" prefWidth="94.39996337890625" text="Specializations" />
+                                    <TableColumn fx:id="dob_t" prefWidth="88.0" text="Date of Birth" />
+                                    <TableColumn fx:id="jdate_t" prefWidth="71.199951171875" text="Joing Date" />
+                                    <TableColumn fx:id="resign_t" prefWidth="104.0" text="Resigning Date" />
+                                    <TableColumn fx:id="curcourse_t" prefWidth="104.0" text="Curr Course" />
+                                    <TableColumn fx:id="course_t" prefWidth="104.0" text="Courses" />
+                                 </columns>
+                              </TableView>
                               <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
                               <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
                                  <children>
@@ -95,24 +113,6 @@
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
-                              <TableView layoutX="45.0" layoutY="181.0" prefHeight="500.0" prefWidth="1021.0" stylesheets="@../../CSS/TicketCalculator.Css">
-                                 <columns>
-                                    <TableColumn prefWidth="39.999996185302734" text="ID" />
-                                    <TableColumn prefWidth="127.20000457763672" text="Name" />
-                                    <TableColumn prefWidth="57.60005187988281" text="Gender" />
-                                    <TableColumn prefWidth="87.20001220703125" text="Designatiosn" />
-                                    <TableColumn prefWidth="79.2000732421875" text="Department" />
-                                    <TableColumn prefWidth="76.80007934570312" text="Email" />
-                                    <TableColumn prefWidth="83.20001220703125" text="Phone No." />
-                                    <TableColumn prefWidth="86.4000244140625" text="Adress" />
-                                    <TableColumn prefWidth="94.39996337890625" text="Specializations" />
-                                    <TableColumn prefWidth="88.0" text="Date of Birth" />
-                                    <TableColumn prefWidth="71.199951171875" text="Joing Date" />
-                                    <TableColumn prefWidth="104.0" text="Resigning Date" />
-                                    <TableColumn prefWidth="104.0" text="Curr Course" />
-                                    <TableColumn prefWidth="104.0" text="Courses" />
-                                 </columns>
-                              </TableView>
                               <AnchorPane fx:id="scene2" layoutX="687.0" layoutY="146.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                                  <children>
                                     <TextField fx:id="name" layoutX="39.0" layoutY="28.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
@@ -139,7 +139,7 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </DatePicker>
-                                    <Button fx:id="add" layoutX="42.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                                    <Button fx:id="add" layoutX="42.0" layoutY="480.0" mnemonicParsing="false" onAction="#insert" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -160,7 +160,7 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </ComboBox>
-                                    <Button fx:id="image" layoutX="41.0" layoutY="399.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="119.0" styleClass="signUpScreenLeftInput" text="Add Image">
+                                    <Button fx:id="image" layoutX="41.0" layoutY="399.0" mnemonicParsing="false" onAction="#insertImage" prefHeight="38.0" prefWidth="119.0" style="-fx-cursor: hand;" styleClass="signUpScreenLeftInput" text="Add Image">
                                        <stylesheets>
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                           <URL value="@../../CSS/TicketsScene.css" />
@@ -173,7 +173,7 @@
                                     </ImageView>
                                     <Button fx:id="bar3" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" onAction="#run3" prefHeight="34.0" prefWidth="31.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
                                     <Button fx:id="bar4" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" onAction="#run4" prefHeight="34.0" prefWidth="31.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
-                                    <Button fx:id="delete" layoutX="168.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                                    <Button fx:id="delete" layoutX="127.0" layoutY="480.0" mnemonicParsing="false" onAction="#delete" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -182,7 +182,7 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </Button>
-                                    <Button fx:id="update" layoutX="284.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                                    <Button fx:id="update" layoutX="212.0" layoutY="480.0" mnemonicParsing="false" onAction="#update_Crud" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -245,6 +245,15 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </ComboBox>
+                                    <Button fx:id="clear" layoutX="298.0" layoutY="480.0" mnemonicParsing="false" onAction="#clear" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Clear">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <stylesheets>
+                                          <URL value="@../../CSS/TicketsScene.css" />
+                                          <URL value="@../../CSS/TicketsScene2.css" />
+                                       </stylesheets>
+                                    </Button>
                                  </children>
                               </AnchorPane>
                               <AnchorPane fx:id="paneside" layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: linear-gradient(to top, #F2ECB6, #A96F44);">

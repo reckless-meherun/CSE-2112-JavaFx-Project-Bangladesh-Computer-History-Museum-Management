@@ -1,5 +1,7 @@
 package application.museum;
 
+import application.museum.People.course;
+import application.museum.People.educator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,12 +13,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class DBUtils
 {
     public static String username;
     public static Stack<String> prevfxml=new Stack<>();
+    public static ArrayList<course> courseArrayList=new ArrayList<>();
+    public static ArrayList<educator> educators=new ArrayList<>();
     public static String[] dept={"Hardware","Software","Language","Public_Education","Photo_Gallery","Security","Auditorium"};
     public static void changeScene(MouseEvent event, String fxmlfile, String username)
     {

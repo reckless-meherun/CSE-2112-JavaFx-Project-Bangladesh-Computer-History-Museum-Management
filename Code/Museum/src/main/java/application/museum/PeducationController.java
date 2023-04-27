@@ -1,9 +1,10 @@
 package application.museum;
 
-import application.museum.People.Employee;
 import application.museum.People.Gender;
 import application.museum.People.course;
 import application.museum.People.educator;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,11 +16,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
@@ -56,7 +57,7 @@ public class PeducationController implements Initializable {
     private Button articles;
 
     @FXML
-    private ComboBox<educator> ceducator;
+    private ComboBox<String> ceducator;
 
     @FXML
     private Button clear;
@@ -86,7 +87,7 @@ public class PeducationController implements Initializable {
     private TableColumn<course, Date> edate_t;
 
     @FXML
-    private TableColumn<course, educator> educator_t;
+    private TableColumn<course, String> educator_t;
 
     @FXML
     private Button educators;
@@ -229,8 +230,72 @@ public class PeducationController implements Initializable {
             e.printStackTrace();
             //throw new RuntimeException(e);
         }
+        getData();
         Combo_box();
         showData();
+
+    }
+    public ArrayList<course> detalist1()
+    {
+        ArrayList<course> datalist = new ArrayList<>();
+
+        String sql;
+        sql ="SELECT * FROM course";
+        Connection con=null;
+        PreparedStatement prep=null;
+        Statement stat=null;
+        ResultSet res=null;
+
+        try {
+            con= DBUtils.connectDB(url);
+            prep = con.prepareStatement(sql);
+            res=prep.executeQuery();
+
+
+            while(res.next())
+            {
+
+
+                course emp;
+                boolean fin;
+                if(res.getString("courses")=="YES"){
+                    fin=true;
+                }
+                else {
+                    fin=false;
+                }
+
+                if(res.getDate("resign")==null && res.getString("teacher")==null) {
+
+
+                    emp = new course(res.getString("Name"),res.getDate("jdate"),fin,Integer.valueOf(res.getString("total")));
+                }
+                else{
+                    emp = new course(res.getString("Name"),res.getDate("jdate"),fin,Integer.valueOf(res.getString("total")));
+                }
+                datalist.add(emp);
+            }
+
+        }catch (Exception e) {
+            System.out.println("course database error");
+        }
+        finally
+        {
+            try
+            {
+                con.close();
+                res.close();
+                prep.close();
+                if(stat!=null) {
+                    stat.close();
+                }
+
+            }catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+        return datalist;
     }
     public void Combo_box()
     {
@@ -240,13 +305,13 @@ public class PeducationController implements Initializable {
         ObservableList data_list= FXCollections.observableArrayList(list);
         coursestat.setItems(data_list);
 
-//        List<String> class_list=new ArrayList<>();
-//        for(String data:DBUtils.dept)
-//        {
-//            class_list.add(data);
-//        }
-//        ObservableList data_list_class= FXCollections.observableArrayList(class_list);
-//        Department.setItems(data_list_class);
+        List<String> class_list=new ArrayList<>();
+        for(educator data:DBUtils.educators)
+        {
+            class_list.add(data.getName());
+        }
+        ObservableList data_list_class= FXCollections.observableArrayList(class_list);
+        ceducator.setItems(data_list_class);
     }
     @FXML
     public void clear()
@@ -297,7 +362,15 @@ public class PeducationController implements Initializable {
                     prepare.setString(5,"");
                 }
                 else{
-                    prepare.setString(5, ceducator.getSelectionModel().getSelectedItem().getEmployee_id().toString());
+                    educator k=null;
+                    for(educator c: DBUtils.educators){
+                        if(ceducator.getSelectionModel().getSelectedItem().equals(c.getName())){
+                            k=c;
+                            break;
+                        }
+                    }
+                    prepare.setString(5, k.getEmployee_id().toString());
+                    upeducator(k,cname.getText());
                 }
                 prepare.setString(6,(String) coursestat.getSelectionModel().getSelectedItem());
 
@@ -326,6 +399,162 @@ public class PeducationController implements Initializable {
         }
 
     }
+    void getData(){
+        DBUtils.educators.clear();
+        DBUtils.educators=detalist();
+        DBUtils.courseArrayList.clear();
+        DBUtils.courseArrayList=detalist1();
+
+    }
+    StringBuilder getrespath(){
+        StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
+        //int n=resourcesPath.length();
+        resourcesPath.deleteCharAt(0);
+        for(int i=0;i<resourcesPath.length();i++){
+            if(resourcesPath.charAt(i)=='%'){
+                resourcesPath.replace(i,i+3," ");
+            }
+            if(resourcesPath.charAt(i)=='m'){
+                resourcesPath.delete(i+1,resourcesPath.length());
+                break;
+            }
+        }
+        return resourcesPath;
+    }
+    void upeducator(educator c, String name){
+        String sql = "UPDATE educator SET `curcourse`= '" + name  + "' WHERE ID = '" + c.getEmployee_id() + "'";
+        Connection con=null;
+        PreparedStatement prep=null;
+        Statement stat=null;
+        ResultSet res=null;
+        try
+        {
+
+            con = DBUtils.connectDB(url);
+            stat = con.createStatement();
+            stat.executeUpdate(sql);
+
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+            System.out.println("couse e vul");
+        } finally
+        {
+            try
+            {
+                if(con!=null)
+                    con.close();
+                if(res!=null)
+                    res.close();
+                prep.close();
+                if(stat!=null)
+                    stat.close();
+
+            } catch (Exception e)
+
+            {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public ArrayList<educator> detalist()
+    {
+        ArrayList<educator> datalist = new ArrayList<>();
+
+        String sql;
+        sql ="SELECT * FROM educator";
+
+        try {
+            connect= DBUtils.connectDB(url);
+            prepare = connect.prepareStatement(sql);
+            result=prepare.executeQuery();
+
+
+            while(result.next())
+            {
+                StringBuilder resourcesPath=getrespath();
+                resourcesPath.append(result.getString("img"));
+                Gender gm;
+                if(result.getString("Gender").equals("MALE")){
+                    gm= Gender.MALE;
+                } else if (result.getString("Gender").equals("FEMALE")) {
+                    gm=Gender.FEMALE;
+                }
+                else gm= Gender.OTHER;
+                educator emp;
+
+                String projects=result.getString("spec");
+                ArrayList<String> pro=new ArrayList<>();
+                String s1[]=projects.split("\\s+");
+                for(String s: s1){
+                    pro.add(s);
+                }
+                String devs=result.getString("courses");
+                ArrayList<course> cour=new ArrayList<>();
+                if(devs!=null) {
+                    String s2[] = devs.split("\\s+");
+                    for (String s : s2) {
+                        for (course c : DBUtils.courseArrayList) {
+                            if (s.equals(c.getCourseName())) {
+                                cour.add(c);
+                            }
+                        }
+                    }
+                }
+                course k=null;
+                if(result.getString("curcourse")!=null) {
+                    for (course c : DBUtils.courseArrayList) {
+                        if (result.getString("curcourse").equals(c.getCourseName())) {
+                            k = c;
+                            cour.add(c);
+                        }
+                    }
+                    //System.out.println(k.getCourseName()+ "1");
+
+                }
+
+
+
+                if(result.getDate("resign")!=null) {
+
+                    emp = new educator(result.getString("Name"), gm,result.getString("phoneNo"),resourcesPath.toString(),
+                            result.getString("email"),result.getDate("dob"),result.getString("adress"),
+                            result.getInt("ID"),result.getString("Department"),result.getString("designation"),
+                            result.getString("worktime"),result.getDate("jdate"),result.getDate("resign"),pro,cour,k);
+                }
+                else{
+                    emp = new educator(result.getString("Name"), gm,result.getString("phoneNo"),resourcesPath.toString(),
+                            result.getString("email"),result.getDate("dob"),result.getString("adress"),
+                            result.getInt("ID"),result.getString("Department"),result.getString("designation"),
+                            result.getString("worktime"),result.getDate("jdate"),pro,cour,k);
+                }
+                //System.out.println(emp.getCur_course().getCourseName());
+                datalist.add(emp);
+            }
+
+        }catch (Exception e) {
+            System.out.println("username database error");
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                if(statement!=null) {
+                    statement.close();
+                }
+
+            }catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+        return datalist;
+    }
     public ObservableList<course> datalist()
     {
         ObservableList<course> datalist = FXCollections.observableArrayList();
@@ -352,19 +581,33 @@ public class PeducationController implements Initializable {
                     fin=false;
                 }
 
-                if(result.getDate("resign")!=null && result.getString("teacher")==null) {
+                if(result.getDate("resign")==null && result.getString("teacher")==null) {
 
 
                     emp = new course(result.getString("Name"),result.getDate("jdate"),fin,Integer.valueOf(result.getString("total")));
-                }
-                else{
-                    emp = new course(result.getString("Name"),result.getDate("jdate"),fin,Integer.valueOf(result.getString("total")));
+                } else if (result.getDate("resign")==null) {
+                    educator k=null;
+                    for(educator e:DBUtils.educators){
+                        if(e.getEmployee_id().equals(Integer.valueOf(result.getString("teacher")))){
+                            k=e;
+                        }
+                    }
+                    emp = new course(result.getString("Name"),result.getDate("jdate"),k,fin,Integer.valueOf(result.getString("total")));
+                } else{
+                    educator k=null;
+                    for(educator e:DBUtils.educators){
+                        if(e.getEmployee_id().equals(Integer.valueOf(result.getString("teacher")))){
+                            k=e;
+                        }
+                    }
+                    emp = new course(result.getString("Name"),result.getDate("jdate"),result.getDate("resign"),k,fin,Integer.valueOf(result.getString("total")));
                 }
                 datalist.add(emp);
             }
 
         }catch (Exception e) {
             System.out.println("course database error");
+            e.printStackTrace();
         }
         finally
         {
@@ -392,18 +635,24 @@ public class PeducationController implements Initializable {
         stdate_t.setCellValueFactory(new PropertyValueFactory<>("StartingDate"));
         edate_t.setCellValueFactory(new PropertyValueFactory<>("finishingDate"));
         //educator_t.setCellValueFactory(new PropertyValueFactory<>("instructor"));
-        educator_t.setCellFactory(column -> {
-            return new TableCell<course, educator>() {
-                @Override
-                protected void updateItem(educator educator, boolean empty) {
-                    super.updateItem(educator, empty);
-                    if (educator == null || empty) {
-                        setText(null);
-                    } else {
-                        setText(educator.getName());
-                    }
-                }
-            };
+//        educator_t.setCellFactory(column -> {
+//            return new TableCell<course, educator>() {
+//                @Override
+//                protected void updateItem(educator educator, boolean empty) {
+//                    super.updateItem(educator, empty);
+//                    if (educator == null || empty) {
+//                        setText(null);
+//                    } else {
+//                        setText(educator.getName());
+//                    }
+//                }
+//            };
+//        });
+        educator_t.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<course, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<course, String> param) {
+                return new SimpleStringProperty(param.getValue().getInstructor().getName());
+            }
         });
         students_t.setCellValueFactory(new PropertyValueFactory<>("studencnt"));
         cstats_t.setCellValueFactory(new PropertyValueFactory<course,Boolean>("courseCompleted"));
@@ -412,6 +661,7 @@ public class PeducationController implements Initializable {
         table_view.setItems(showlist);
 
     }
+
     @FXML
     void selectData(MouseEvent event) {
         clear();
@@ -432,6 +682,9 @@ public class PeducationController implements Initializable {
         }
         if(cour.getFinishingDate()!=null){
             edate.setValue(LocalDate.parse(valueOf(cour.getFinishingDate())));
+        }
+        if(cour.getInstructor()!=null){
+            ceducator.setValue(cour.getInstructor().getName());
         }
 
 
@@ -473,6 +726,79 @@ public class PeducationController implements Initializable {
                 statement.close();
 
             }catch (Exception e)
+            {
+
+            }
+        }
+
+    }
+    @FXML
+    void update_Crud(ActionEvent event)
+    {
+
+        String sql;
+        if(ceducator.getSelectionModel().isEmpty()){
+            if(edate.getValue()!=null) {
+                sql = "UPDATE course SET  `total` = '" + tstd.getText() + "', `courses` = '" + coursestat.getSelectionModel().getSelectedItem() + "', `resign` = '" + java.sql.Date.valueOf(edate.getValue()) + "' WHERE Name = '" + cname.getText() + "'";
+            }
+            else{
+                sql = "UPDATE course SET  `total` = '" + tstd.getText() + "', `courses` = '" + coursestat.getSelectionModel().getSelectedItem()  + "' WHERE Name = '" + cname.getText() + "'";
+            }
+        }
+        else{
+            educator k=null;
+            for(educator e:DBUtils.educators){
+                if(e.getName().equals(ceducator.getSelectionModel().getSelectedItem())){
+                    k=e;
+                    break;
+                }
+            }
+            upeducator(k,cname.getText());
+            if(edate.getValue()!=null) {
+                sql = "UPDATE course SET  `total` = '" + tstd.getText() + "', `courses` = '" + coursestat.getSelectionModel().getSelectedItem() + "', `resign` = '" + java.sql.Date.valueOf(edate.getValue()) + "', `teacher` = '" + k.getEmployee_id() + "' WHERE Name = '" + cname.getText() + "'";
+            }
+            else {
+                sql = "UPDATE course SET  `total` = '" + tstd.getText() + "', `courses` = '" + coursestat.getSelectionModel().getSelectedItem() +  "', `teacher` = '" + k.getEmployee_id() + "' WHERE Name = '" + cname.getText() + "'";
+            }
+        }
+
+        try
+        {
+            connect = DBUtils.connectDB(url);
+            if (cname.getText().isEmpty() | ceducator.getSelectionModel().isEmpty() | sdate.getValue()==null|
+                    tstd.getText().isEmpty())
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("                                     Error!!!!!");
+                alert.setHeaderText("            Some fields are empty.  ");
+                alert.setContentText("                             Please enter all blank fields. ");
+                alert.showAndWait();
+            }  else
+            {
+                statement = connect.createStatement();
+                statement.executeUpdate(sql);
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("                                      Update Successfull!!!");
+                alert.setHeaderText("       ");
+                alert.setContentText("                             Successfully updated the data. ");
+                alert.showAndWait();
+                showData();
+                clear();
+            }
+
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        } finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                statement.close();
+
+            } catch (Exception e)
             {
 
             }
