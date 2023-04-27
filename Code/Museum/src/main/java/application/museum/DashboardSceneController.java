@@ -99,7 +99,7 @@ public class DashboardSceneController extends NavigationHandler implements Initi
             return;
         }
         String fxml = DBUtils.prevfxml.pop();
-        //DBUtils.prevfxml.pop();
+//        DBUtils.prevfxml.pop();
         System.out.println(fxml);
         if (fxml == "LoginScene.fxml")
         {
