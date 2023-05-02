@@ -672,7 +672,6 @@ public class Employeecontroller implements Initializable
             prepare = connect.prepareStatement(sql);
             result = prepare.executeQuery();
 
-
             while (result.next())
             {
                 StringBuilder resourcesPath = getrespath();

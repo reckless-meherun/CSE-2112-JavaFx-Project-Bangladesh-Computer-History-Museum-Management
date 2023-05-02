@@ -1,5 +1,6 @@
 package application.museum;
 
+import application.museum.People.Visitor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,10 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TreeView;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -28,6 +27,55 @@ public class Gallerycontroller implements Initializable
 
     @FXML
     private Button LogoutButton;
+    @FXML
+    private Button addButton;
+    @FXML
+    private Button deleteButton;
+    @FXML
+    private Button updateButton;
+    @FXML
+    private Button clearButton;
+    @FXML
+    private Button browseImageButton;
+
+    @FXML
+    private ImageView imageView;
+    @FXML
+    private TextField searchBar;
+    @FXML
+    private TextField titleField;
+    @FXML
+    private TextField catalogNoField;
+    @FXML
+    private TextField docNoField;
+    @FXML
+    private TextArea descriptionField;
+    @FXML
+    private TextField rowField;
+    @FXML
+    private TextField roomField;
+    @FXML
+    private ComboBox<String> departmentField;
+    @FXML
+    private DatePicker dateField;
+    @FXML
+    private TableView<Visitor> photoGalleryTable;
+    @FXML
+    private TableColumn<Visitor, Integer> docNoCol;
+    @FXML
+    private TableColumn<Visitor, String> dateCol;
+    @FXML
+    private TableColumn<Visitor, String> catalogNoCol;
+    @FXML
+    private TableColumn<Visitor, String> titleCol;
+    @FXML
+    private TableColumn<Visitor, String> descriptionCol;
+    @FXML
+    private TableColumn<Visitor, String> departmentCol;
+    @FXML
+    private TableColumn<Visitor, Integer> positionCol;
+    @FXML
+    private TableColumn<Visitor, Integer> roomCol;
 
     @FXML
     private Text ProfileIcon;
