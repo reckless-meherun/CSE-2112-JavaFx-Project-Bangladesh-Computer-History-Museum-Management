@@ -768,7 +768,7 @@ public class Developercontroller implements Initializable {
         run3();
         run2();
         try {
-            show.setImage(new Image(employee.getPhoto()));
+            show.setImage(new Image("file:/"+employee.getPhoto()));
         }
         catch (Exception e){
             System.out.println(employee.getPhoto());

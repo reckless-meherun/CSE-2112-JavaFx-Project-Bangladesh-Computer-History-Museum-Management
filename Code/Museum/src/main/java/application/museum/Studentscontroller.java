@@ -876,7 +876,7 @@ public class Studentscontroller implements Initializable
         run3();
         run2();
         try {
-            show.setImage(new Image(employee.getPhoto()));
+            show.setImage(new Image("file:/"+employee.getPhoto()));
         }
         catch (Exception e){
             System.out.println(employee.getPhoto());
@@ -938,24 +938,24 @@ public class Studentscontroller implements Initializable
 
 
             if (finishingdate.getValue() == null && email.getText().isEmpty()) {
-                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + "', `institute` = '" + Institutename.getText()  + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `img` = '" + file_path+ "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `institute` = '" + Institutename.getText()  + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `img` = '" + file_path+ "' WHERE Id = '" + Id.getText() + "'";
             } else if (finishingdate.getValue() == null) {
-                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `Email` = '" + email.getText() + "', `institute` = '" + Institutename.getText() + "', `Department` = '" + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `img` = '" + file_path+ "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `Email` = '" + email.getText() + "', `institute` = '" + Institutename.getText() + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `img` = '" + file_path+ "' WHERE Id = '" + Id.getText() + "'";
             } else if (email.getText().isEmpty()) {
-                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(finishingdate.getValue()) + "', `institute` = '" + Institutename.getText()+ "', `Department` = '" + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `img` = '" + file_path+ "', `courses` = '" + "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(finishingdate.getValue()) + "', `institute` = '" + Institutename.getText()+ "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `img` = '" + file_path+ "', `courses` = '" + "' WHERE Id = '" + Id.getText() + "'";
             } else {
-                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(finishingdate.getValue()) + "', `Email` = '" + email.getText() + "', `institute` = '" + Institutename.getText() + "', `Department` = '" + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `img` = '" + file_path+ "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(finishingdate.getValue()) + "', `Email` = '" + email.getText() + "', `institute` = '" + Institutename.getText() + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `img` = '" + file_path+ "' WHERE Id = '" + Id.getText() + "'";
             }
         }
         else {
             if (finishingdate.getValue() == null && email.getText().isEmpty()) {
                 sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + "', `institute` = '" + Institutename.getText()  + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "' WHERE Id = '" + Id.getText() + "'";
             } else if (finishingdate.getValue() == null) {
-                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `Email` = '" + email.getText() + "', `institute` = '" + Institutename.getText() + "', `Department` = '" + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `Email` = '" + email.getText() + "', `institute` = '" + Institutename.getText() + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "' WHERE Id = '" + Id.getText() + "'";
             } else if (email.getText().isEmpty()) {
-                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(finishingdate.getValue()) + "', `institute` = '" + Institutename.getText()+ "', `Department` = '" + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `courses` = '" + "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(finishingdate.getValue()) + "', `institute` = '" + Institutename.getText()+ "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "', `courses` = '" + "' WHERE Id = '" + Id.getText() + "'";
             } else {
-                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(finishingdate.getValue()) + "', `Email` = '" + email.getText() + "', `institute` = '" + Institutename.getText() + "', `Department` = '" + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "' WHERE Id = '" + Id.getText() + "'";
+                sql = "UPDATE students SET `phoneNo` = '" + phonenumber.getText() + "', `adress` = '" + adress.getText() + "', `resign` = '" + java.sql.Date.valueOf(finishingdate.getValue()) + "', `Email` = '" + email.getText() + "', `institute` = '" + Institutename.getText() + "', `courses` = '" + Course.getSelectionModel().getSelectedItem()+ "' WHERE Id = '" + Id.getText() + "'";
             }
         }
 
