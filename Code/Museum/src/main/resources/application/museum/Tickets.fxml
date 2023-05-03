@@ -2,7 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -81,31 +81,37 @@
                         </AnchorPane>
                         <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="438.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                            <children>
-                              <TextField layoutX="40.0" layoutY="72.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
+                              <ComboBox fx:id="genderField" layoutX="40.0" layoutY="120.0" prefHeight="35.0" prefWidth="158.0" promptText="gender" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </ComboBox>
+                              <TextField fx:id="nameField" layoutX="40.0" layoutY="72.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField layoutX="40.0" layoutY="120.0" prefHeight="35.0" prefWidth="170.0" promptText="age" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="ageField" layoutX="208.0" layoutY="120.0" prefHeight="35.0" prefWidth="165.0" promptText="age" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField layoutX="40.0" layoutY="168.0" prefHeight="35.0" prefWidth="336.0" promptText="email" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="emailField" layoutX="40.0" layoutY="168.0" prefHeight="35.0" prefWidth="336.0" promptText="email" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField layoutX="40.0" layoutY="216.0" prefHeight="35.0" prefWidth="336.0" promptText="phone number" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="phoneField" layoutX="40.0" layoutY="216.0" prefHeight="35.0" prefWidth="336.0" promptText="phone number" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField layoutX="40.0" layoutY="312.0" prefHeight="35.0" prefWidth="158.0" promptText="previous visit count" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="prevVisitField" layoutX="40.0" layoutY="312.0" prefHeight="35.0" prefWidth="158.0" promptText="previous visit count" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
@@ -116,25 +122,13 @@
                                     <Font name="Cambria Bold" size="36.0" />
                                  </font>
                               </Text>
-                              <ChoiceBox layoutX="210.0" layoutY="312.0" prefHeight="35.0" prefWidth="166.0" styleClass="signUpScreenLeftInput">
-                                 <stylesheets>
-                                    <URL value="@../../CSS/TicketsScene.css" />
-                                    <URL value="@../../CSS/TicketsScene2.css" />
-                                 </stylesheets>
-                              </ChoiceBox>
-                              <DatePicker layoutX="41.0" layoutY="408.0" prefHeight="40.0" prefWidth="337.0" promptText="date" styleClass="textarea">
+                              <DatePicker fx:id="dateField" layoutX="41.0" layoutY="408.0" prefHeight="40.0" prefWidth="337.0" promptText="date" styleClass="textarea">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
-                              <ChoiceBox accessibleText="langauge" layoutX="42.0" layoutY="360.0" prefHeight="35.0" prefWidth="332.0" styleClass="signUpScreenLeftInput">
-                                 <stylesheets>
-                                    <URL value="@../../CSS/TicketsScene.css" />
-                                    <URL value="@../../CSS/TicketsScene2.css" />
-                                 </stylesheets>
-                              </ChoiceBox>
-                              <Button fx:id="home1" layoutX="166.0" layoutY="476.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="BOOK">
+                              <Button fx:id="bookButton" layoutX="166.0" layoutY="476.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="BOOK">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -143,18 +137,24 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <ChoiceBox layoutX="222.0" layoutY="120.0" prefHeight="35.0" prefWidth="154.0" styleClass="signUpScreenLeftInput">
-                                 <stylesheets>
-                                    <URL value="@../../CSS/TicketsScene.css" />
-                                    <URL value="@../../CSS/TicketsScene2.css" />
-                                 </stylesheets>
-                              </ChoiceBox>
-                              <TextField layoutX="40.0" layoutY="264.0" prefHeight="35.0" prefWidth="336.0" promptText="occupation" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="occupationField" layoutX="40.0" layoutY="264.0" prefHeight="35.0" prefWidth="336.0" promptText="occupation" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
+                              <ComboBox fx:id="ticketTypeField" layoutX="210.0" layoutY="312.0" prefHeight="35.0" prefWidth="165.0" promptText="ticket type" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </ComboBox>
+                              <ComboBox fx:id="languageField" layoutX="42.0" layoutY="360.0" prefHeight="35.0" prefWidth="332.0" promptText="preferred language" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </ComboBox>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="436.0" layoutY="148.0" prefHeight="534.0" prefWidth="670.0" stylesheets="@../../CSS/TicketCalculator.Css">
@@ -165,45 +165,36 @@
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </Button>
-                              <Text layoutX="548.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAResult" text=" 0.00৳" wrappingWidth="94.1368408203125" />
-                              <TextField alignment="CENTER" layoutX="553.0" layoutY="342.0" prefHeight="38.0" prefWidth="86.0" styleClass="markInputField" text="Final Price" />
-                              <TextField alignment="CENTER" layoutX="189.0" layoutY="345.0" prefHeight="38.0" prefWidth="154.0" styleClass="markInputField" text="Price without discount">
-                                 <font>
-                                    <Font name="Cambria" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField alignment="CENTER" layoutX="407.0" layoutY="345.0" prefHeight="38.0" prefWidth="72.0" styleClass="markInputField" text="Discount" />
-                              <TextField alignment="CENTER" layoutX="230.0" layoutY="407.0" prefHeight="38.0" prefWidth="72.0" styleClass="markInputField" text=" 0.00৳" />
-                              <TextField alignment="CENTER" layoutX="407.0" layoutY="407.0" prefHeight="38.0" prefWidth="74.0" styleClass="markInputField" text=" 0.00৳" />
-                              <Button layoutX="27.0" layoutY="477.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Reset" textFill="#ffd23c">
+                              <Text fx:id="finalPrice" layoutX="548.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAResult" text=" 0.00৳" wrappingWidth="94.1368408203125" />
+                              <Button fx:id="resetButton" layoutX="27.0" layoutY="477.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Reset" textFill="#ffd23c">
                                  <font>
                                     <Font name="Cambria" size="17.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="27.0" layoutY="345.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Print Ticket" textFill="#ffd23c">
+                              <Button fx:id="printTicketButton" layoutX="27.0" layoutY="345.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Print Ticket" textFill="#ffd23c">
                                  <font>
                                     <Font name="Cambria" size="17.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="27.0" layoutY="407.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Print Map" textFill="#ffd23c">
+                              <Button fx:id="printMapButton" layoutX="27.0" layoutY="407.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Print Map" textFill="#ffd23c">
                                  <font>
                                     <Font name="Cambria" size="17.0" />
                                  </font>
                               </Button>
-                              <TableView layoutX="3.0" layoutY="69.0" prefHeight="260.0" prefWidth="664.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="visitorTable" layoutX="3.0" layoutY="69.0" prefHeight="260.0" prefWidth="664.0" stylesheets="@../../CSS/TicketCalculator.Css">
                                 <columns>
-                                  <TableColumn prefWidth="100.80007934570312" text="Last Visit Date" />
-                                  <TableColumn prefWidth="76.79998779296875" text="Name" />
-                                    <TableColumn prefWidth="67.199951171875" text="Age" />
-                                    <TableColumn prefWidth="63.20001220703125" text="Gender" />
-                                    <TableColumn prefWidth="103.199951171875" text="Email" />
-                                    <TableColumn prefWidth="82.4000244140625" text="Phone" />
-                                    <TableColumn prefWidth="86.39990234375" text="Total Visit" />
-                                    <TableColumn prefWidth="100.79998779296875" text="Language" />
+                                  <TableColumn fx:id="dateCol" prefWidth="100.80007934570312" text="Last Visit Date" />
+                                  <TableColumn fx:id="nameCol" prefWidth="76.79998779296875" text="Name" />
+                                    <TableColumn fx:id="ageCol" prefWidth="67.199951171875" text="Age" />
+                                    <TableColumn fx:id="genderCol" prefWidth="63.20001220703125" text="Gender" />
+                                    <TableColumn fx:id="emailCol" prefWidth="103.199951171875" text="Email" />
+                                    <TableColumn fx:id="phoneCol" prefWidth="82.4000244140625" text="Phone" />
+                                    <TableColumn fx:id="totalVisitCol" prefWidth="86.39990234375" text="Total Visit" />
+                                    <TableColumn fx:id="languageCol" prefWidth="100.79998779296875" text="Language" />
                                     <TableColumn prefWidth="126.4000244140625" text="Occupation" />
                                 </columns>
                               </TableView>
-                              <TextField layoutX="56.0" layoutY="14.0" prefHeight="38.0" prefWidth="613.0" promptText="search" styleClass="markInputField">
+                              <TextField fx:id="searchBar" layoutX="56.0" layoutY="14.0" prefHeight="38.0" prefWidth="613.0" promptText="search" styleClass="markInputField">
                                  <font>
                                     <Font name="Cambria" size="14.0" />
                                  </font>
@@ -213,6 +204,51 @@
                                     <Image url="@../../Assets/search2.jpg" />
                                  </image>
                               </ImageView>
+                              <AnchorPane layoutX="189.0" layoutY="345.0" prefHeight="38.0" prefWidth="154.0" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">
+                                 <children>
+                                    <Text fx:id="finalPrice1" layoutX="7.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price Without Discount" wrappingWidth="141.33685302734375">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="407.0" layoutY="345.0" minWidth="-Infinity" prefHeight="38.0" prefWidth="72.0" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">
+                                 <children>
+                                    <Text fx:id="finalPrice11" layoutX="9.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount" wrappingWidth="54.9368896484375">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="553.0" layoutY="345.0" minWidth="-Infinity" prefHeight="38.0" prefWidth="86.0" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">
+                                 <children>
+                                    <Text fx:id="finalPrice111" layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final Price" wrappingWidth="70.9368896484375">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="230.0" layoutY="407.0" minWidth="-Infinity" prefHeight="38.0" prefWidth="72.0" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">
+                                 <children>
+                                    <Text fx:id="priceWithoutDiscount" layoutX="15.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 0.00৳" wrappingWidth="42.1368408203125">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="407.0" layoutY="407.0" minWidth="-Infinity" prefHeight="38.0" prefWidth="72.0" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">
+                                 <children>
+                                    <Text fx:id="discount" layoutX="15.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 0.00৳" wrappingWidth="42.1368408203125">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
                            </children>
                         </AnchorPane>
                         <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" styleClass="TransparentButtons" stylesheets="@../../CSS/DashboardScreen.css" />

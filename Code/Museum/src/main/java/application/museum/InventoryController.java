@@ -1,5 +1,6 @@
 package application.museum;
 
+import application.museum.People.Visitor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -54,9 +56,58 @@ public class InventoryController implements Initializable
     @FXML
     private Text studentName;
 
-
     @FXML
     private Button tickets;
+    @FXML
+    private Button browseImageButton;
+    @FXML
+    private Button addButton;
+    @FXML
+    private Button deleteButton;
+    @FXML
+    private Button updateButton;
+    @FXML
+    private Button clearButton;
+    @FXML
+    private ImageView imageView;
+    @FXML
+    private TextField searchBar;
+    @FXML
+    private TextField categoryField;
+    @FXML
+    private TextField docNoField;
+    @FXML
+    private TextArea descriptionField;
+    @FXML
+    private TextField rowField;
+    @FXML
+    private TextField roomField;
+    @FXML
+    private TextField levelField;
+    @FXML
+    private ComboBox<String> departmentField;
+
+    @FXML
+    private DatePicker dateField;
+
+    @FXML
+    private TableView<Visitor> inventoryTable;
+    @FXML
+    private TableColumn<Visitor, Integer> docNoCol;
+    @FXML
+    private TableColumn<Visitor, String> dateCol;
+    @FXML
+    private TableColumn<Visitor, String> categoryCol;
+    @FXML
+    private TableColumn<Visitor, String> descriptionCol;
+    @FXML
+    private TableColumn<Visitor, String> departmentCol;
+    @FXML
+    private TableColumn<Visitor, Integer> positionCol;
+    @FXML
+    private TableColumn<Visitor, Integer> roomCol;
+    @FXML
+    private TableColumn<Visitor, Integer> levelCol;
 
     static void pushTostack()
     {

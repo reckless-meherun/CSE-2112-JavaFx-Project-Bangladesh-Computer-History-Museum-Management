@@ -399,7 +399,6 @@ public class AdminsController implements Initializable
         username_table.setCellValueFactory(new PropertyValueFactory<>("username"));
         password_table.setCellValueFactory(new PropertyValueFactory<>("password"));
         table_view.setItems(showlist);
-
     }
 
     @FXML
@@ -451,8 +450,6 @@ public class AdminsController implements Initializable
                 showData();
                 clear();
             }
-
-
         } catch (Exception e)
         {
             System.out.println(e);
@@ -473,7 +470,6 @@ public class AdminsController implements Initializable
 
             }
         }
-
     }
 
     @FXML
@@ -590,6 +586,5 @@ public class AdminsController implements Initializable
 
             }
         }
-
     }
 }

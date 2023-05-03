@@ -1,5 +1,7 @@
 package application.museum;
 
+import application.museum.People.Employee;
+import application.museum.People.Visitor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -56,6 +58,62 @@ public class TicketController implements Initializable
 
     @FXML
     private Button tickets;
+    @FXML
+    private Button bookButton;
+    @FXML
+    private Button printTicketButton;
+    @FXML
+    private Button printMapButton;
+    @FXML
+    private Button resetButton;
+
+    @FXML
+    private TextField nameField;
+    @FXML
+    private TextField ageField;
+    @FXML
+    private TextField emailField;
+    @FXML
+    private TextField phoneField;
+    @FXML
+    private TextField occupationField;
+    @FXML
+    private TextField prevVisitField;
+    @FXML
+    private Text priceWithoutDiscount;
+    @FXML
+    private Text discount;
+    @FXML
+    private Text finalPrice;
+    @FXML
+    private TextField searchBar;
+    @FXML
+    private ComboBox<String> genderField;
+    @FXML
+    private ComboBox<String> ticketTypeField;
+    @FXML
+    private ComboBox<String> languageField;
+    @FXML
+    private DatePicker dateField;
+    @FXML
+    private TableView<Visitor> visitorTable;
+    @FXML
+    private TableColumn<Visitor, String> dateCol;
+    @FXML
+    private TableColumn<Visitor, String> nameCol;
+    @FXML
+    private TableColumn<Visitor, Integer> ageCol;
+    @FXML
+    private TableColumn<Visitor, String> genderCol;
+    @FXML
+    private TableColumn<Visitor, String> emailCol;
+    @FXML
+    private TableColumn<Visitor, Integer> phoneCol;
+    @FXML
+    private TableColumn<Visitor, Integer> totalVisitCol;
+    @FXML
+    private TableColumn<Visitor, String> languageCol;
+
 
     @FXML
     void goBack(ActionEvent event) throws IOException {
@@ -103,6 +161,8 @@ public class TicketController implements Initializable
             stage.show();
         }
     }
+
+
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle)
