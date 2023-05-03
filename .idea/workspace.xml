@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="db file of inventory, photoGallry and ticket controllers uploaded">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="oops forgot RESET button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/DBUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Employeecontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/People/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/People/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Gallerycontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Gallerycontroller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,12 +345,24 @@
       <option name="project" value="LOCAL" />
       <updated>1683061807674</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="database management of ticket page done except occupation field">
+      <created>1683132555093</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1683132555094</updated>
+    </task>
+    <task id="LOCAL-00040" summary="oops forgot RESET button">
+      <created>1683132753443</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1683132753443</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added admins option" />
-    <MESSAGE value="added sliding menu bar." />
     <MESSAGE value="connected tickets now you can nevigate to tickets" />
     <MESSAGE value="connected gallery" />
     <MESSAGE value="about us input form ready" />
@@ -379,7 +386,9 @@
     <MESSAGE value="home button along with all buttons in all scenes fixed" />
     <MESSAGE value="db file of inventory, photoGallry and ticket pages uploaded" />
     <MESSAGE value="db file of inventory, photoGallry and ticket controllers uploaded" />
-    <option name="LAST_COMMIT_MESSAGE" value="db file of inventory, photoGallry and ticket controllers uploaded" />
+    <MESSAGE value="database management of ticket page done except occupation field" />
+    <MESSAGE value="oops forgot RESET button" />
+    <option name="LAST_COMMIT_MESSAGE" value="oops forgot RESET button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
