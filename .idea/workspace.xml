@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Navigation edited for employee and educator">
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/database.db" afterDir="false" />
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Photo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Photo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682452961911</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="probelm found in educator database solved">
+      <created>1682927856841</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1682927856841</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -320,7 +328,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="buttons of dashboard screen updated" />
     <MESSAGE value="navigation handler created" />
     <MESSAGE value="Hover effect added" />
     <MESSAGE value="changed the color of the username and password to white." />
@@ -345,7 +352,8 @@
     <MESSAGE value="Navigation edited for Dashboard, PhotoGallery and Ticket scene controller" />
     <MESSAGE value="Navigation edited for aboutUs" />
     <MESSAGE value="Navigation edited for employee and educator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navigation edited for employee and educator" />
+    <MESSAGE value="probelm found in educator database solved" />
+    <option name="LAST_COMMIT_MESSAGE" value="probelm found in educator database solved" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
