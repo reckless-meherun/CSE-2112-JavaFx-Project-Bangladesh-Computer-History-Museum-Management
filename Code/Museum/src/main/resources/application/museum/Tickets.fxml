@@ -128,7 +128,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
-                              <Button fx:id="bookButton" layoutX="166.0" layoutY="476.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="BOOK">
+                              <Button fx:id="bookButton" layoutX="166.0" layoutY="480.0" mnemonicParsing="false" onAction="#insert" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="BOOK">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -166,7 +166,7 @@
                                  </font>
                               </Button>
                               <Text fx:id="finalPrice" layoutX="548.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAResult" text=" 0.00৳" wrappingWidth="94.1368408203125" />
-                              <Button fx:id="resetButton" layoutX="27.0" layoutY="477.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Reset" textFill="#ffd23c">
+                              <Button fx:id="resetButton" layoutX="27.0" layoutY="477.0" mnemonicParsing="false" onAction="#clear" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Reset" textFill="#ffd23c">
                                  <font>
                                     <Font name="Cambria" size="17.0" />
                                  </font>
@@ -181,7 +181,7 @@
                                     <Font name="Cambria" size="17.0" />
                                  </font>
                               </Button>
-                              <TableView fx:id="visitorTable" layoutX="3.0" layoutY="69.0" prefHeight="260.0" prefWidth="664.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="visitorTable" layoutX="3.0" layoutY="69.0" onMouseClicked="#selectData" prefHeight="260.0" prefWidth="664.0" stylesheets="@../../CSS/TicketCalculator.Css">
                                 <columns>
                                   <TableColumn fx:id="dateCol" prefWidth="100.80007934570312" text="Last Visit Date" />
                                   <TableColumn fx:id="nameCol" prefWidth="76.79998779296875" text="Name" />
@@ -194,7 +194,7 @@
                                     <TableColumn prefWidth="126.4000244140625" text="Occupation" />
                                 </columns>
                               </TableView>
-                              <TextField fx:id="searchBar" layoutX="56.0" layoutY="14.0" prefHeight="38.0" prefWidth="613.0" promptText="search" styleClass="markInputField">
+                              <TextField fx:id="searchBar" layoutX="56.0" layoutY="14.0" prefHeight="38.0" prefWidth="597.0" promptText="search" styleClass="markInputField">
                                  <font>
                                     <Font name="Cambria" size="14.0" />
                                  </font>

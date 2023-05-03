@@ -113,7 +113,6 @@ public class Gallerycontroller implements Initializable
 
     }
 
-
     @FXML
     void goBack(ActionEvent event) throws IOException
     {
@@ -132,7 +131,6 @@ public class Gallerycontroller implements Initializable
             DBUtils.changeScene(event, fxml, true);
         }
     }
-
 
     @FXML
     void switchToSceneOne(ActionEvent event) throws IOException

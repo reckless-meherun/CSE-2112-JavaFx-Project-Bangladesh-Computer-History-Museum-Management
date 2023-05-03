@@ -370,7 +370,6 @@ public class Employeecontroller implements Initializable
 
     }
 
-
     @FXML
     void run2()
     {
@@ -636,7 +635,6 @@ public class Employeecontroller implements Initializable
 
             }
         }
-
     }
 
     StringBuilder getrespath()
@@ -927,8 +925,5 @@ public class Employeecontroller implements Initializable
 
             }
         }
-
     }
-
-
 }
