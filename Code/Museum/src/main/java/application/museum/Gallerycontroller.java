@@ -351,10 +351,9 @@ public class Gallerycontroller implements Initializable
             tempImageView.setVisible(false);
         } else
         {
-            System.out.println("Student pic is missing");
+            System.out.println("Image is missing");
         }
     }
-
 
     public ObservableList<Photo> photolist()
     {
@@ -400,10 +399,10 @@ public class Gallerycontroller implements Initializable
 
     public void showData()
     {
-        System.out.println("Trying to show");
+        //   System.out.println("Trying to show");
         ObservableList<Photo> showlist = photolist();
-        //dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
-        System.out.println("showing date");
+        dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
+        //  System.out.println("showing date");
         catalogNoCol.setCellValueFactory(new PropertyValueFactory<>("catalog_no"));
         docNoCol.setCellValueFactory(new PropertyValueFactory<>("doc_no"));
         titleCol.setCellValueFactory(new PropertyValueFactory<>("title"));
@@ -413,7 +412,7 @@ public class Gallerycontroller implements Initializable
         roomCol.setCellValueFactory(new PropertyValueFactory<>("room"));
 
         photoGalleryTable.setItems(showlist);
-        System.out.println("showing");
+        // System.out.println("showing");
     }
 
     @FXML
@@ -449,7 +448,7 @@ public class Gallerycontroller implements Initializable
         roomField.setText((valueOf(photo.getRoom())));
         try
         {
-            showImageView.setImage(new Image(photo.getImagePath()));
+            showImageView.setImage(new Image("file:/" + photo.getImagePath()));
         } catch (Exception e)
         {
             System.out.println(photo.getImagePath());
