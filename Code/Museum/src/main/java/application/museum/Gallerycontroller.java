@@ -426,6 +426,9 @@ public class Gallerycontroller implements Initializable
         departmentField.getSelectionModel().clearSelection();
         rowField.setText(null);
         roomField.setText(null);
+        tempImageView.setVisible(true);
+        showImageView.setVisible(false);
+        isimageChanged=false;
     }
 
     @FXML
@@ -449,6 +452,9 @@ public class Gallerycontroller implements Initializable
         try
         {
             showImageView.setImage(new Image("file:/" + photo.getImagePath()));
+            showImageView.setVisible(true);
+            tempImageView.setVisible(false);
+            System.out.println(photo.getImagePath());
         } catch (Exception e)
         {
             System.out.println(photo.getImagePath());

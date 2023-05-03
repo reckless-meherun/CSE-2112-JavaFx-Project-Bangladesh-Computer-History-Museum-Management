@@ -172,7 +172,7 @@
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </TextField>
-                              <TableView fx:id="photoGalleryTable" layoutX="2.0" layoutY="165.0" onSort="#selectData" prefHeight="302.0" prefWidth="683.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="photoGalleryTable" layoutX="2.0" layoutY="165.0" onMouseClicked="#selectData" onSort="#selectData" prefHeight="302.0" prefWidth="683.0" stylesheets="@../../CSS/TicketCalculator.Css">
                                 <columns>
                                   <TableColumn fx:id="dateCol" prefWidth="48.800048828125" text="date" />
                                   <TableColumn fx:id="catalogNoCol" prefWidth="74.39999389648438" text="Catalog no." />
@@ -208,6 +208,7 @@
                                     </Label>
                                  </children>
                               </AnchorPane>
+                              <ImageView fx:id="showImageView" fitHeight="140.0" fitWidth="143.0" layoutX="532.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                         </AnchorPane>
                         <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
