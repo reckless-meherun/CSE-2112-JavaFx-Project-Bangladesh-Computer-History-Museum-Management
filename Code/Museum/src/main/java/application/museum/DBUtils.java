@@ -23,6 +23,8 @@ public class DBUtils
     public static ArrayList<course> courseArrayList=new ArrayList<>();
     public static ArrayList<educator> educators=new ArrayList<>();
     public static String[] dept={"Hardware","Software","Language","Public_Education","Photo_Gallery","Security","Auditorium"};
+    public static String[] language = {"English", "Bengali"};
+    public static String[] ticketTypes = {"Onsite-Booking", "Pre-Booking"};
     public static void changeScene(MouseEvent event, String fxmlfile, String username)
     {
         Parent root = null;

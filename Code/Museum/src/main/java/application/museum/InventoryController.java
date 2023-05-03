@@ -86,10 +86,8 @@ public class InventoryController implements Initializable
     private TextField levelField;
     @FXML
     private ComboBox<String> departmentField;
-
     @FXML
     private DatePicker dateField;
-
     @FXML
     private TableView<Visitor> inventoryTable;
     @FXML
@@ -113,7 +111,6 @@ public class InventoryController implements Initializable
     {
         DBUtils.prevfxml.push("Inventory.fxml");
     }
-
 
     @FXML
     void goBack(ActionEvent event) throws IOException
