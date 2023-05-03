@@ -166,7 +166,7 @@
                                  </font>
                               </Button>
                               <Text fx:id="finalPrice" layoutX="548.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAResult" text=" 0.00৳" wrappingWidth="94.1368408203125" />
-                              <Button fx:id="resetButton" layoutX="27.0" layoutY="477.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Reset" textFill="#ffd23c">
+                              <Button fx:id="resetButton" layoutX="27.0" layoutY="477.0" mnemonicParsing="false" onAction="#clear" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Reset" textFill="#ffd23c">
                                  <font>
                                     <Font name="Cambria" size="17.0" />
                                  </font>
