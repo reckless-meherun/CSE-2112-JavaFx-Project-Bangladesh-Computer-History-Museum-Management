@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Curatorial_dept implements Departments{
     private String DeptName;
-    private String DeptFloor;
+    private int DeptFloor;
     private String CuratorName;
     private String GuideName;
     private ArrayList<String> Artifacts; // Here I did not understand things. - Himel
@@ -14,6 +14,7 @@ public class Curatorial_dept implements Departments{
     {
         System.out.println("Curatorial Department created\n");
     }
+
     public void setDeptName(String name)
     {
         this.DeptName = name;
@@ -21,15 +22,15 @@ public class Curatorial_dept implements Departments{
     public String getDeptName() {
         return this.DeptName;
     }
-    public void setDeptFloor(String floor)
+    public void setDeptFloor(int floor)
     {
         this.DeptFloor = floor;
     }
-    public String getDeptFloor()
+    public int getDeptFloor()
     {
         return this.DeptFloor;
     }
-    public void addDept(String name, String floor)
+    public void addDept(String name, int floor)
     {
         this.DeptName = name;
         this.DeptFloor = floor;

@@ -4,20 +4,30 @@ import java.util.Date;
 
 public class Photo extends Non_Curatorial_Dept
 {
-    Date date;
-    int catalog_no;
-    int doc_no;
-    String title;
-    String description;
-    String department;
-    int position;
-    int room;
+    private Date date;
+    private int catalog_no;
+    private int doc_no;
+    private String title;
+    private String description;
+    private String department;
+    private int position;
+    private int room;
+    private String imagePath;
 
-    Photo()
+    public Photo()
     {
+        this.date = null;
+        this.catalog_no = 0;
+        this.doc_no = 0;
+        this.title = "";
+        this.description = "";
+        this.department = "";
+        this.position = 0;
+        this.room = 0;
+        this.imagePath = "";
 
     }
-    Photo(Date date, int catalog_no, int doc_no, String title, String description, String department, int position, int room)
+    public Photo(Date date, int catalog_no, int doc_no, String title, String description, String department, int position, int room, String imagePath)
     {
         this.date = date;
         this.doc_no = doc_no;
@@ -27,38 +37,43 @@ public class Photo extends Non_Curatorial_Dept
         this.department = department;
         this.position = position;
         this.room = room;
+        this.imagePath = imagePath;
     }
     // Photo class contains details of a photo
-    Date getDate()
+    public Date getDate()
     {
         return date;
     }
-    int getCatalog_no()
+    public int getCatalog_no()
     {
         return catalog_no;
     }
-    int getDoc_no()
+    public int getDoc_no()
     {
         return doc_no;
     }
-    String getTitle()
+    public String getTitle()
     {
         return title;
     }
-    String getDescription()
+    public String getDescription()
     {
         return description;
     }
-    String getDepartment()
+    public String getDepartment()
     {
         return department;
     }
-    int getPosition()
+    public int getPosition()
     {
         return position;
     }
-    int getRoom()
+    public int getRoom()
     {
         return room;
+    }
+    public String getImagePath()
+    {
+        return this.imagePath;
     }
 }

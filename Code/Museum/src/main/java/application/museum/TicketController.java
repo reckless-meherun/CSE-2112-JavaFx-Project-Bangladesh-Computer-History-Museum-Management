@@ -264,7 +264,6 @@ public class TicketController implements Initializable
                 datalist.add(vis);
                // System.out.println("oka4");
             }
-
         } catch (Exception e)
         {
             System.out.println("username database error");
@@ -408,7 +407,7 @@ public class TicketController implements Initializable
         {
             emailField.setText(valueOf(visitor.getEmail()));
         }
-        System.out.println("value set");
+        //System.out.println("value set");
     }
 
     @FXML

@@ -112,7 +112,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
-                              <Button fx:id="addButton" layoutX="26.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                              <Button fx:id="addButton" layoutX="26.0" layoutY="480.0" mnemonicParsing="false" onAction="#insert" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -128,14 +128,14 @@
                                  </stylesheets>
                               </TextField>
                               <TextArea fx:id="descriptionField" layoutX="40.0" layoutY="216.0" prefHeight="74.0" prefWidth="336.0" promptText="photo description" styleClass="textarea" />
-                              <Button fx:id="browseImageButton" layoutX="42.0" layoutY="396.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="336.0" styleClass="lightButton" stylesheets="@../../CSS/TicketsScene.css" text="Browse images" />
+                              <Button fx:id="browseImageButton" layoutX="42.0" layoutY="396.0" mnemonicParsing="false" onAction="#insertImage" prefHeight="40.0" prefWidth="336.0" styleClass="lightButton" stylesheets="@../../CSS/TicketsScene.css" text="Browse images" />
                               <TextField fx:id="docNoField" layoutX="40.0" layoutY="174.0" prefHeight="32.0" prefWidth="336.0" promptText="additional doc no." styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <Button fx:id="deleteButton" layoutX="121.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                              <Button fx:id="deleteButton" layoutX="121.0" layoutY="480.0" mnemonicParsing="false" onAction="#delete" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -144,7 +144,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <Button fx:id="updateButton" layoutX="213.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                              <Button fx:id="updateButton" layoutX="213.0" layoutY="480.0" mnemonicParsing="false" onAction="#update_Crud" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -154,7 +154,7 @@
                                  </stylesheets>
                               </Button>
                               <ComboBox fx:id="departmentField" layoutX="210.0" layoutY="129.0" prefHeight="32.0" prefWidth="164.0" promptText="department" styleClass="signUpScreenLeftInput" />
-                              <Button fx:id="clearButton" layoutX="305.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Clear">
+                              <Button fx:id="clearButton" layoutX="305.0" layoutY="480.0" mnemonicParsing="false" onAction="#clear" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Clear">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -165,23 +165,23 @@
                               </Button>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                        <AnchorPane fx:id="imageAnchor" layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">
                            <children>
                               <TextField fx:id="searchBar" layoutX="54.0" layoutY="14.0" prefHeight="38.0" prefWidth="465.0" promptText="search" styleClass="markInputField">
                                  <font>
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </TextField>
-                              <TableView fx:id="photoGalleryTable" layoutX="2.0" layoutY="165.0" prefHeight="302.0" prefWidth="686.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="photoGalleryTable" layoutX="2.0" layoutY="165.0" onSort="#selectData" prefHeight="302.0" prefWidth="683.0" stylesheets="@../../CSS/TicketCalculator.Css">
                                 <columns>
-                                  <TableColumn fx:id="dateCol" prefWidth="75.0" text="date" />
-                                  <TableColumn fx:id="catalogNoCol" prefWidth="84.00003051757812" text="Catalog no." />
-                                    <TableColumn fx:id="docNoCol" prefWidth="107.20001220703125" text="doc no." />
-                                    <TableColumn fx:id="titleCol" prefWidth="102.39996337890625" text="Title" />
-                                    <TableColumn fx:id="descriptionCol" prefWidth="89.60003662109375" text="Description" />
-                                    <TableColumn fx:id="departmentCol" prefWidth="114.39990234375" text="Department" />
-                                    <TableColumn fx:id="positionCol" prefWidth="53.60015869140625" text="Row" />
-                                    <TableColumn fx:id="roomCol" prefWidth="62.4000244140625" text="Room" />
+                                  <TableColumn fx:id="dateCol" prefWidth="48.800048828125" text="date" />
+                                  <TableColumn fx:id="catalogNoCol" prefWidth="74.39999389648438" text="Catalog no." />
+                                    <TableColumn fx:id="docNoCol" prefWidth="79.20001220703125" text="doc no." />
+                                    <TableColumn fx:id="titleCol" prefWidth="128.79998779296875" text="Title" />
+                                    <TableColumn fx:id="descriptionCol" prefWidth="95.20001220703125" text="Description" />
+                                    <TableColumn fx:id="departmentCol" prefWidth="89.5999755859375" text="Department" />
+                                    <TableColumn fx:id="positionCol" prefWidth="40.79998779296875" text="Row" />
+                                    <TableColumn fx:id="roomCol" minWidth="0.0" prefWidth="124.0001220703125" text="Room" />
                                 </columns>
                               </TableView>
                               <Button fx:id="GoBackButton" layoutX="52.0" layoutY="479.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="Go Back" textFill="#1e0202">
@@ -194,7 +194,7 @@
                                     <Image url="@../../Assets/search2.jpg" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="imageView" fitHeight="140.0" fitWidth="143.0" layoutX="533.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="tempImageView" fitHeight="140.0" fitWidth="143.0" layoutX="533.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Assets/14748d9c5aae6aa96520f8dc62226f2d.jpg" />
                                  </image>

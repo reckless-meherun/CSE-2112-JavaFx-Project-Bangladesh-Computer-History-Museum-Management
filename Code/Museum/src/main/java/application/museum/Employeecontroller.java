@@ -740,9 +740,7 @@ public class Employeecontroller implements Initializable
         dob_t.setCellValueFactory(new PropertyValueFactory<>("dob"));
         Adress_t.setCellValueFactory(new PropertyValueFactory<>("Adress"));
 
-
         table_view.setItems(showlist);
-
     }
 
     @FXML
@@ -778,7 +776,6 @@ public class Employeecontroller implements Initializable
         System.out.println(employee.getPhoto());
         //file_path=employee.getPhoto();
 
-
         run3();
         run2();
         try
@@ -788,8 +785,6 @@ public class Employeecontroller implements Initializable
         {
             System.out.println(employee.getPhoto());
         }
-
-
     }
 
     @FXML
