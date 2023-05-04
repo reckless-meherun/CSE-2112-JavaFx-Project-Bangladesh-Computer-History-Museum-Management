@@ -80,13 +80,13 @@
                         </AnchorPane>
                         <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                            <children>
-                              <TextField layoutX="40.0" layoutY="138.0" prefHeight="32.0" prefWidth="336.0" promptText="dept name" styleClass="signUpScreenLeftInput">
+                              <TextField layoutX="39.0" layoutY="138.0" prefHeight="32.0" prefWidth="336.0" promptText="dept name" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField layoutX="41.0" layoutY="182.0" prefHeight="32.0" prefWidth="160.0" promptText="gallery level" styleClass="signUpScreenLeftInput">
+                              <TextField layoutX="39.0" layoutY="182.0" prefHeight="32.0" prefWidth="160.0" promptText="gallery level" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
@@ -97,13 +97,13 @@
                                     <Font name="Cambria Bold" size="36.0" />
                                  </font>
                               </Text>
-                              <DatePicker layoutX="41.0" layoutY="358.0" prefHeight="28.0" prefWidth="336.0" promptText="date" styleClass="textarea">
+                              <DatePicker layoutX="39.0" layoutY="358.0" prefHeight="28.0" prefWidth="336.0" promptText="date" styleClass="textarea">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
-                              <Button fx:id="home1" layoutX="39.0" layoutY="436.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                              <Button fx:id="home1" layoutX="39.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -112,13 +112,13 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <TextField layoutX="217.0" layoutY="183.0" prefHeight="32.0" prefWidth="160.0" promptText="gallery no." styleClass="signUpScreenLeftInput">
+                              <TextField layoutX="215.0" layoutY="183.0" prefHeight="32.0" prefWidth="160.0" promptText="gallery no." styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <Button fx:id="home11" layoutX="291.0" layoutY="436.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                              <Button fx:id="home11" layoutX="291.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -145,7 +145,16 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <Button fx:id="home12" layoutX="165.0" layoutY="436.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                              <Button fx:id="home12" layoutX="165.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
+                              <Button fx:id="home121" layoutX="109.0" layoutY="419.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="200.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Upload Map">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
