@@ -34,8 +34,8 @@
 		<queryString>
 			<![CDATA[]]>
 		</queryString>
-		<field name="name" class="java.lang.String"/>
 		<field name="age" class="java.lang.Integer"/>
+		<field name="name" class="java.lang.String"/>
 		<variable name="age1" class="java.lang.Integer" resetType="Column" calculation="Count">
 			<variableExpression><![CDATA[$F{age}]]></variableExpression>
 		</variable>
@@ -92,8 +92,8 @@
 						</jr:tableHeader>
 						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
 							<textField>
-								<reportElement x="0" y="0" width="230" height="30" uuid="43cac3fa-0727-4650-8033-76b72f6057dd"/>
-								<textFieldExpression><![CDATA[$V{age1}]]></textFieldExpression>
+								<reportElement x="0" y="0" width="230" height="30" uuid="130140ce-96b3-4d7a-9504-1d9b4c067cee"/>
+								<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
 							</textField>
 						</jr:columnHeader>
 						<jr:detailCell style="Table_TD" height="30"/>
