@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="db file of inventory, photoGallry and ticket pages uploaded">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/employee.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/employee.db" afterDir="false" />
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Ticket jrxml edited">
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/GeneratedPDFs/MyTicket.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/GeneratedPDFs/MyTicket.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/MyReports/Ticket.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/MyReports/Ticket.jasper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/MyReports/Ticket.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/MyReports/Ticket.jrxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682497823212</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Ticket jrxml edited">
+      <created>1683238448822</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1683238448822</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,7 +356,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated logout" />
     <MESSAGE value="added admins option" />
     <MESSAGE value="added sliding menu bar." />
     <MESSAGE value="connected tickets now you can nevigate to tickets" />
@@ -378,7 +380,8 @@
     <MESSAGE value="Dashboard fxml updated" />
     <MESSAGE value="home button along with all buttons in all scenes fixed" />
     <MESSAGE value="db file of inventory, photoGallry and ticket pages uploaded" />
-    <option name="LAST_COMMIT_MESSAGE" value="db file of inventory, photoGallry and ticket pages uploaded" />
+    <MESSAGE value="Ticket jrxml edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ticket jrxml edited" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
