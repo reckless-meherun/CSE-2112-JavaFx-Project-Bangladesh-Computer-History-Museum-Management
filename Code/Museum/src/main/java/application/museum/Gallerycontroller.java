@@ -212,9 +212,8 @@ public class Gallerycontroller implements Initializable
             {
                 resourcesPath.replace(i, i + 3, " ");
             }
-            if (resourcesPath.charAt(i) == 'm')
-            {
-                resourcesPath.delete(i + 1, resourcesPath.length());
+            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
+                resourcesPath.delete(i-1,resourcesPath.length());
                 break;
             }
         }
@@ -251,9 +250,8 @@ public class Gallerycontroller implements Initializable
             {
                 resourcesPath.replace(i, i + 3, " ");
             }
-            if (resourcesPath.charAt(i) == 'm')
-            {
-                resourcesPath.delete(i + 1, resourcesPath.length());
+            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
+                resourcesPath.delete(i-1,resourcesPath.length());
                 break;
             }
         }

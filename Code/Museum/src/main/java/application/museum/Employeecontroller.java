@@ -531,9 +531,8 @@ public class Employeecontroller implements Initializable
             {
                 resourcesPath.replace(i, i + 3, " ");
             }
-            if (resourcesPath.charAt(i) == 'm')
-            {
-                resourcesPath.delete(i + 1, resourcesPath.length());
+            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
+                resourcesPath.delete(i-1,resourcesPath.length());
                 break;
             }
         }
@@ -642,15 +641,15 @@ public class Employeecontroller implements Initializable
         StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
         //int n=resourcesPath.length();
         resourcesPath.deleteCharAt(0);
+        System.out.println(resourcesPath);
         for (int i = 0; i < resourcesPath.length(); i++)
         {
             if (resourcesPath.charAt(i) == '%')
             {
                 resourcesPath.replace(i, i + 3, " ");
             }
-            if (resourcesPath.charAt(i) == 'm')
-            {
-                resourcesPath.delete(i + 1, resourcesPath.length());
+            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
+                resourcesPath.delete(i-1,resourcesPath.length());
                 break;
             }
         }
@@ -673,7 +672,9 @@ public class Employeecontroller implements Initializable
             while (result.next())
             {
                 StringBuilder resourcesPath = getrespath();
+                System.out.println(resourcesPath);
                 resourcesPath.append(result.getString("img"));
+
                 Gender gm;
                 if (result.getString("Gender").equals("MALE"))
                 {
