@@ -1,6 +1,7 @@
 package application.museum;
 
 import application.museum.People.Admins;
+import application.museum.People.developer;
 import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -107,6 +108,13 @@ public class AdminsController implements Initializable
 
     @FXML
     private AnchorPane scene2;
+
+
+    @FXML
+    private TextField stext;
+
+    @FXML
+    private Button sbut;
 
     @FXML
     private Button student;
@@ -400,6 +408,14 @@ public class AdminsController implements Initializable
         password_table.setCellValueFactory(new PropertyValueFactory<>("password"));
         table_view.setItems(showlist);
     }
+    public void showData(ObservableList<Admins> admins1)
+    {
+        //ObservableList<Admins> showlist = datalist();
+        id_table.setCellValueFactory(new PropertyValueFactory<>("id"));
+        username_table.setCellValueFactory(new PropertyValueFactory<>("username"));
+        password_table.setCellValueFactory(new PropertyValueFactory<>("password"));
+        table_view.setItems(admins1);
+    }
 
     @FXML
     void insert(ActionEvent event)
@@ -586,5 +602,32 @@ public class AdminsController implements Initializable
 
             }
         }
+    }
+    @FXML
+    void Search(ActionEvent event) {
+        String searchName = null;
+        if (!stext.getText().isEmpty())
+            searchName = stext.getText(); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<Admins> dev=datalist();
+        ObservableList<Admins> dev1=FXCollections.observableArrayList();
+        for(Admins d: dev){
+            if(searchName.equals(d.getUsername())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            Admin not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
 }

@@ -72,6 +72,9 @@ public class Developercontroller implements Initializable {
     private AnchorPane SceneTwo1;
 
     @FXML
+    private Button sbut;
+
+    @FXML
     private Button aboutus;
 
     @FXML
@@ -207,6 +210,12 @@ public class Developercontroller implements Initializable {
 
     @FXML
     private AnchorPane scene2;
+
+    @FXML
+    private ImageView search;
+
+    @FXML
+    private TextField stext;
 
     @FXML
     private ImageView show;
@@ -719,6 +728,36 @@ public class Developercontroller implements Initializable {
         table_view.setItems(showlist);
 
     }
+    public void showData(ObservableList<developer> dev1)
+    {
+        //ObservableList<developer> showlist = datalist();
+        id_t.setCellValueFactory(new PropertyValueFactory<>("employee_id"));
+        name_t.setCellValueFactory(new PropertyValueFactory<>("name"));
+        gender_t.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        department_t.setCellValueFactory(new PropertyValueFactory<>("department"));
+        designation_t.setCellValueFactory(new PropertyValueFactory<>("Designation"));
+        curpro_t.setCellValueFactory(new PropertyValueFactory<>("cur_project"));
+        jdate_t.setCellValueFactory(new PropertyValueFactory<>("JoiningDate"));
+        resign_t.setCellValueFactory(new PropertyValueFactory<>("resigningDate"));
+        phoneno_t.setCellValueFactory(new PropertyValueFactory<>("mobile_no"));
+        email_t.setCellValueFactory(new PropertyValueFactory<>("email"));
+        dob_t.setCellValueFactory(new PropertyValueFactory<>("dob"));
+        adress_t.setCellValueFactory(new PropertyValueFactory<>("Adress"));
+        projects_t.setCellValueFactory(cellData -> {
+            ObservableList<String> specializationList = FXCollections.observableArrayList(cellData.getValue().getProjects());
+            return Bindings.createStringBinding(() -> String.join(", ", specializationList));
+        });
+        development_t.setCellValueFactory(cellData -> {
+            ObservableList<String> specializationList = FXCollections.observableArrayList(cellData.getValue().getDeveopment_sectors());
+            return Bindings.createStringBinding(() -> String.join(", ", specializationList));
+        });
+
+
+
+
+        table_view.setItems(dev1);
+
+    }
     @FXML
     void selectData(MouseEvent event) {
         clear();
@@ -897,6 +936,33 @@ public class Developercontroller implements Initializable {
             }
         }
 
+    }
+    @FXML
+    void Search() {
+        String searchName = null;
+        if (!stext.getText().isEmpty())
+            searchName = stext.getText(); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<developer> dev=datalist();
+        ObservableList<developer> dev1=FXCollections.observableArrayList();
+        for(application.museum.People.developer d: dev){
+            if(searchName.equals(d.getName())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            developer not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
 
 
