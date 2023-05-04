@@ -171,7 +171,7 @@
                                     <Font name="Cambria" size="17.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="printTicketButton" layoutX="27.0" layoutY="345.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Print Ticket" textFill="#ffd23c">
+                              <Button fx:id="printTicketButton" layoutX="27.0" layoutY="345.0" mnemonicParsing="false" onAction="#printTicket" prefHeight="42.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="resetButton" text="Print Ticket" textFill="#ffd23c">
                                  <font>
                                     <Font name="Cambria" size="17.0" />
                                  </font>

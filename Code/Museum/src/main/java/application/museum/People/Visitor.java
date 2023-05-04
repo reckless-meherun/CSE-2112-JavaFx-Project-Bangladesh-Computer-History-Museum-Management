@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Visitor extends People_class
 {
+    private String name;
     private Date last_vis_date;
     private String email;
    // private String occupation;
@@ -14,11 +15,11 @@ public class Visitor extends People_class
     public Visitor()
     {
         this.last_vis_date = null;
-        this.email = null;
+        this.email = "";
         //this.occupation = null;
-        this.age = 0;
+        this.age = 18;
         this.TotalVisitCount = 0;
-        this.language = null;
+        this.language = "";
     }
 
     public Visitor(Date last_vis, String name, int ages, Gender gender, String email, String mobile, int cnt, String language)
@@ -100,11 +101,18 @@ public class Visitor extends People_class
         return super.getGender();
     }
 
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
     @Override
     public String getName()
     {
         return super.getName();
     }
+
 
     public String getLanguage()
     {

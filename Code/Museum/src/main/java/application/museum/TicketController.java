@@ -1,5 +1,7 @@
 package application.museum;
 
+import java.io.*;
+
 import application.museum.People.Employee;
 import application.museum.People.Gender;
 import application.museum.People.Visitor;
@@ -20,17 +22,21 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.lang.invoke.VolatileCallSite;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
+import java.util.jar.JarException;
+
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import static java.lang.String.valueOf;
 
@@ -258,11 +264,11 @@ public class TicketController implements Initializable
                     gm = Gender.FEMALE;
                 } else gm = Gender.OTHER;
                 Visitor vis;
-               // System.out.println("oka2");
+                // System.out.println("oka2");
                 vis = new Visitor(result.getDate("Last_Visit_Date"), result.getString("Name"), result.getInt("Age"), gm, result.getString("Email"), result.getString("Phone"), result.getInt("Total_Visit"), result.getString("Language"));
-              //  System.out.println("oka3");
+                //  System.out.println("oka3");
                 datalist.add(vis);
-               // System.out.println("oka4");
+                // System.out.println("oka4");
             }
         } catch (Exception e)
         {
@@ -463,7 +469,36 @@ public class TicketController implements Initializable
 
             }
         }
+    }
 
+    @FXML
+    public void printTicket()
+    {
+        try
+        {
+            String pdf = "C:\\University Stuff\\2-1\\OOP Project\\Museum 2\\Code\\Museum\\src\\main\\resources\\GeneratedPDFs\\TicketPDFs\\" + "MyTicket.pdf";
+            List<Visitor> visList = new ArrayList<Visitor>();
+            Visitor visitorOne = new Visitor();
+            visitorOne.setName("Meherun");
+            visitorOne.setAge(20);
+            visitorOne.set_mobile_no("01815803974");
+            visList.add(visitorOne);
+            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(visList);
+
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("TicketParam", dataSource);
+//            InputStream input = new FileInputStream(new File("src\\main\\resources\\JRXMLs\\Ticket.jrxml"));
+            JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/application/museum/Ticket.jrxml");
+            JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, new JREmptyDataSource());
+            JasperViewer.viewReport(jasperPrint);
+//            OutputStream output = new FileOutputStream(new File(pdf));
+//            JasperExportManager.exportReportToPdfStream(jasperPrint, output);
+            System.out.println("File generated");
+        } catch (Exception e)
+        {
+            System.out.println(e);
+        }
     }
 
     @FXML
