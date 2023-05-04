@@ -258,7 +258,6 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <ImageView fx:id="show" fitHeight="88.0" fitWidth="124.0" layoutX="255.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true" />
                               <TextField fx:id="worktime" layoutX="212.0" layoutY="215.0" prefHeight="35.0" prefWidth="163.0" promptText="Work Time" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
@@ -285,6 +284,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
+                              <ImageView fx:id="show" fitHeight="88.0" fitWidth="124.0" layoutX="255.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                         </AnchorPane>
                         <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">

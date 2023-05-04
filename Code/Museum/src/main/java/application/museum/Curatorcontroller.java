@@ -455,6 +455,8 @@ public class Curatorcontroller implements Initializable
         {
             StringBuilder im = new StringBuilder(file.toPath().toString());
             photo = file;
+            StringBuilder kj = copyImageToResources(photo);
+            //System.out.println(kj);
             for (int i = 0; i < im.length(); i++)
             {
                 if (im.charAt(i) == '\\')
@@ -549,15 +551,17 @@ public class Curatorcontroller implements Initializable
         {
             extension = name.substring(dotIndex + 1);
         }
-
+//
         String fileName = "image_" + System.currentTimeMillis() + "." + extension;
         StringBuilder destination = new StringBuilder("\\src\\main\\resources\\application\\museum\\StudentsPhotos\\" + fileName);
-
-        // Copy the image file to the resources folder with the unique file name
+//
+//        // Copy the image file to the resources folder with the unique file name
         Path sourcePath = imageFile.toPath();
-        Path destinationPath = Paths.get(resourcesPath + "\\src\\main\\resources\\application\\museum\\StudentsPhotos\\" + fileName);
+        System.out.println(sourcePath);
+        Path destinationPath = Paths.get(resourcesPath + "\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\StudentsPhotos\\\\" + fileName);
+        System.out.println(destinationPath);
         Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
-//        direction=destinationPath.toString();
+////        direction=destinationPath.toString();
         return destination;
     }
 
@@ -791,6 +795,7 @@ public class Curatorcontroller implements Initializable
         try
         {
             show.setImage(new Image("file:/"+employee.getPhoto()));
+            System.out.println("ok.");
         } catch (Exception e)
         {
             System.out.println(employee.getPhoto());

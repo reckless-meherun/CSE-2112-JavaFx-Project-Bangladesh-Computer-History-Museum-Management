@@ -341,9 +341,6 @@ public class PeducationController implements Initializable {
             }
             else
             {
-
-
-
                 prepare=connect.prepareStatement(sql);
                 if(!tstd.getText().isEmpty()) {
                     prepare.setInt(1, Integer.parseInt(tstd.getText()));
@@ -686,11 +683,6 @@ public class PeducationController implements Initializable {
         if(cour.getInstructor()!=null){
             ceducator.setValue(cour.getInstructor().getName());
         }
-
-
-
-
-
     }
     @FXML
     void delete(ActionEvent event) {
