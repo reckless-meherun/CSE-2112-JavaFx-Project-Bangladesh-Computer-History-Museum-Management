@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="font">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/com/example/font/ojdbc14-10.2.0.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/resources/com/example/font/mysql-connector-java-8.0.28.jar!/" />
+      <root url="file://$PROJECT_DIR$/src/main/resources/com/example/font" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src/main/resources/com/example/font" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/src/main/resources/com/example/font" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/src/main/resources/com/example/font" recursive="false" type="SOURCES" />
+  </library>
+</component>

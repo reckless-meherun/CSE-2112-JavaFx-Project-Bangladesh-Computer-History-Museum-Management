@@ -34,6 +34,7 @@ import java.util.jar.JarException;
 
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.design.JRDesignQuery;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
@@ -476,7 +477,8 @@ public class TicketController implements Initializable
     {
         try
         {
-            String pdf = "C:\\University Stuff\\2-1\\OOP Project\\Museum 2\\Code\\Museum\\src\\main\\resources\\GeneratedPDFs\\TicketPDFs\\" + "MyTicket.pdf";
+            String pdf = "C:\\University Stuff\\2-1\\OOP Project\\OurProject\\CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management\\Code\\Museum\\src\\main\\resources\\application\\museum\\GeneratedPDFs\\" + "MyTicket.pdf";
+
             List<Visitor> visList = new ArrayList<Visitor>();
             Visitor visitorOne = new Visitor();
             visitorOne.setName("Meherun");
@@ -486,18 +488,24 @@ public class TicketController implements Initializable
             JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(visList);
 
             Map<String, Object> parameters = new HashMap<>();
-            parameters.put("TicketParam", dataSource);
-//            InputStream input = new FileInputStream(new File("src\\main\\resources\\JRXMLs\\Ticket.jrxml"));
-            JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/application/museum/Ticket.jrxml");
-            JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
-            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, new JREmptyDataSource());
-            JasperViewer.viewReport(jasperPrint);
-//            OutputStream output = new FileOutputStream(new File(pdf));
-//            JasperExportManager.exportReportToPdfStream(jasperPrint, output);
-            System.out.println("File generated");
-        } catch (Exception e)
-        {
-            System.out.println(e);
+            parameters.put("parameterTicket", dataSource);
+
+            StringBuilder resourcesPath = getrespath();
+            JasperDesign jdesign= JRXmlLoader.load("C:\\University Stuff\\2-1\\OOP Project\\OurProject\\CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management\\Code\\Museum\\src\\main\\resources\\application\\museum\\MyReports\\Ticket.jrxml");
+            JRDesignQuery jq= new JRDesignQuery();
+            JasperReport jreport= JasperCompileManager.compileReport(jdesign);
+            JasperPrint jprint= JasperFillManager.fillReport(jreport,parameters, new JREmptyDataSource());
+//            JasperViewer viewer= new JasperViewer(jprint,false);
+//            viewer.setTitle("Report");
+//            viewer.show();
+            OutputStream outputStream = new FileOutputStream(new File(pdf));
+            /* Write content to PDF file */
+            JasperExportManager.exportReportToPdfStream(jprint, outputStream);
+
+            System.out.println("File Generated");
+
+        } catch (Exception ex) {
+            System.out.println(ex);
         }
     }
 

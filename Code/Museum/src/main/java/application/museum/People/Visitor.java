@@ -110,7 +110,7 @@ public class Visitor extends People_class
     @Override
     public String getName()
     {
-        return super.getName();
+        return name;
     }
 
 
