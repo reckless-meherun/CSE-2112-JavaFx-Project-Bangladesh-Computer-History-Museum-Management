@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Ticket jrxml edited">
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/GeneratedPDFs/MyTicket.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/GeneratedPDFs/MyTicket.pdf" afterDir="false" />
-    </list>
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Ticket pdf added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -341,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683238448822</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Ticket pdf added">
+      <created>1683238871326</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1683238871326</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,7 +361,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added admins option" />
     <MESSAGE value="added sliding menu bar." />
     <MESSAGE value="connected tickets now you can nevigate to tickets" />
     <MESSAGE value="connected gallery" />
@@ -381,7 +385,8 @@
     <MESSAGE value="home button along with all buttons in all scenes fixed" />
     <MESSAGE value="db file of inventory, photoGallry and ticket pages uploaded" />
     <MESSAGE value="Ticket jrxml edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ticket jrxml edited" />
+    <MESSAGE value="Ticket pdf added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ticket pdf added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
