@@ -132,7 +132,7 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </DatePicker>
-                                    <Button fx:id="add" layoutX="35.0" layoutY="480.0" mnemonicParsing="false" onAction="#insert" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                                    <Button fx:id="add" layoutX="40.0" layoutY="480.0" mnemonicParsing="false" onAction="#insert" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -175,7 +175,7 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </Button>
-                                    <Button fx:id="update" layoutX="218.0" layoutY="480.0" mnemonicParsing="false" onAction="#update_Crud" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                                    <Button fx:id="update" layoutX="212.0" layoutY="480.0" mnemonicParsing="false" onAction="#update_Crud" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -208,7 +208,7 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </DatePicker>
-                                    <Button fx:id="Clear" layoutX="310.0" layoutY="480.0" mnemonicParsing="false" onAction="#clear" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Clear">
+                                    <Button fx:id="Clear" layoutX="298.0" layoutY="480.0" mnemonicParsing="false" onAction="#clear" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Clear">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -288,6 +288,17 @@
                                     <String fx:value="TransparentButtons" />
                                  </styleClass>
                               </TreeView>
+                              <TextField fx:id="stext" layoutX="843.0" layoutY="113.0" prefHeight="26.0" prefWidth="255.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: brown; -fx-border-width: 0px 0px 2px 0px;">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="1071.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/search.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="sbut" layoutX="1065.0" layoutY="114.0" mnemonicParsing="false" onAction="#Search" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
                            </children>
                         </AnchorPane>
                      </right>

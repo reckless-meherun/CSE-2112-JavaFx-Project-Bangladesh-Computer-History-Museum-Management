@@ -1,9 +1,6 @@
 package application.museum;
 
-import application.museum.People.Gender;
-import application.museum.People.Students;
-import application.museum.People.course;
-import application.museum.People.educator;
+import application.museum.People.*;
 import javafx.animation.TranslateTransition;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.SimpleStringProperty;
@@ -21,6 +18,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -177,6 +175,13 @@ public class Studentscontroller implements Initializable
 
     @FXML
     private TableView<Students> table_view;
+
+    @FXML
+    private Button sbut;
+
+    @FXML
+    private TextField stext;
+
     private String st=null;
 
 
@@ -340,6 +345,38 @@ public class Studentscontroller implements Initializable
         bar3.setVisible(true);
         bar4.setVisible(false);
         scene2.setTranslateX(378);
+        stext.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                Search();
+            }
+        });
+    }
+    @FXML
+    void Search() {
+        String searchName = null;
+        if (!stext.getText().isEmpty())
+            searchName = stext.getText(); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<Students> dev=datalist();
+        ObservableList<Students> dev1=FXCollections.observableArrayList();
+        for(Students d: dev){
+            if(searchName.equals(d.getName())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            developer not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
     void getData(){
         DBUtils.courseArrayList.clear();
@@ -737,6 +774,68 @@ public class Studentscontroller implements Initializable
     public void showData()
     {
         ObservableList<Students> showlist = datalist();
+        t_id.setCellValueFactory(new PropertyValueFactory<>("StudentID"));
+        t_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        t_gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        t_institute.setCellValueFactory(new PropertyValueFactory<>("institute_name"));
+        //curcourse_t.setCellValueFactory(new PropertyValueFactory<>("cur_course"));
+        t_jdate.setCellValueFactory(new PropertyValueFactory<>("Starting_date"));
+        t_fdate.setCellValueFactory(new PropertyValueFactory<>("Finishing_date"));
+        t_phoneno.setCellValueFactory(new PropertyValueFactory<>("mobile_no"));
+        t_email.setCellValueFactory(new PropertyValueFactory<>("email"));
+        t_dob.setCellValueFactory(new PropertyValueFactory<>("dob"));
+        t_adress.setCellValueFactory(new PropertyValueFactory<>("Adress"));
+//        curcourse_t.setCellFactory(column -> new TableCell<educator, course>() {
+//            @Override
+//            protected void updateItem(course item, boolean empty) {
+//                super.updateItem(item, empty);
+//                if (empty || item == null) {
+//                    setText(null);
+//                } else {
+//                    setText(item.getCourseName());
+//                }
+//            }
+//        });
+        //curcourse_t.setCellValueFactory(new PropertyValueFactory<>("CourseName"));
+        t_course.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Students, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<Students, String> param) {
+                return new SimpleStringProperty(param.getValue().getCourse().getCourseName());
+            }
+        });
+//        course_t.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<educator, String>, ObservableValue<String>>() {
+//            @Override
+//            public ObservableValue<String> call(TableColumn.CellDataFeatures<educator, String> cellData) {
+//                educator educator = cellData.getValue();
+//                List<course> courses = educator.getCourses();
+//                String courseNames = "";
+//
+//                // Concatenate the names of all courses for this educator
+//                for (course course : courses) {
+//                    if (!courseNames.isEmpty()) {
+//                        courseNames += ", ";
+//                    }
+//                    courseNames += course.getCourseName();
+//                }
+//
+//                return new SimpleStringProperty(courseNames);
+//            }
+//        });
+//
+//        specialization_t.setCellValueFactory(cellData -> {
+//            ObservableList<String> specializationList = FXCollections.observableArrayList(cellData.getValue().getSpecializations());
+//            return Bindings.createStringBinding(() -> String.join(", ", specializationList));
+//        });
+
+
+
+
+        table_view.setItems(showlist);
+
+    }
+    public void showData(ObservableList<Students> showlist)
+    {
+
         t_id.setCellValueFactory(new PropertyValueFactory<>("StudentID"));
         t_name.setCellValueFactory(new PropertyValueFactory<>("name"));
         t_gender.setCellValueFactory(new PropertyValueFactory<>("gender"));

@@ -18,6 +18,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -226,6 +227,12 @@ public class Educatorcontroller implements Initializable
     @FXML
     private Button clear;
 
+    @FXML
+    private Button sbut;
+
+    @FXML
+    private TextField stext;
+
 
     private String url="jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\database.db";
 
@@ -415,6 +422,38 @@ public class Educatorcontroller implements Initializable
         bar3.setVisible(true);
         bar4.setVisible(false);
         scene2.setTranslateX(378);
+        stext.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                Search();
+            }
+        });
+    }
+    @FXML
+    void Search() {
+        String searchName = null;
+        if (!stext.getText().isEmpty())
+            searchName = stext.getText(); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<educator> dev=datalist();
+        ObservableList<educator> dev1=FXCollections.observableArrayList();
+        for(educator d: dev){
+            if(searchName.equals(d.getName())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            developer not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
     public ArrayList<course> detalist()
     {
@@ -858,6 +897,69 @@ public class Educatorcontroller implements Initializable
     public void showData()
     {
         ObservableList<educator> showlist = datalist();
+        id_t.setCellValueFactory(new PropertyValueFactory<>("employee_id"));
+        name_t.setCellValueFactory(new PropertyValueFactory<>("name"));
+        gender_t.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        department_t.setCellValueFactory(new PropertyValueFactory<>("department"));
+        designation_t.setCellValueFactory(new PropertyValueFactory<>("Designation"));
+        //curcourse_t.setCellValueFactory(new PropertyValueFactory<>("cur_course"));
+        jdate_t.setCellValueFactory(new PropertyValueFactory<>("JoiningDate"));
+        resign_t.setCellValueFactory(new PropertyValueFactory<>("resigningDate"));
+        phoneno_t.setCellValueFactory(new PropertyValueFactory<>("mobile_no"));
+        email_t.setCellValueFactory(new PropertyValueFactory<>("email"));
+        dob_t.setCellValueFactory(new PropertyValueFactory<>("dob"));
+        adress_t.setCellValueFactory(new PropertyValueFactory<>("Adress"));
+//        curcourse_t.setCellFactory(column -> new TableCell<educator, course>() {
+//            @Override
+//            protected void updateItem(course item, boolean empty) {
+//                super.updateItem(item, empty);
+//                if (empty || item == null) {
+//                    setText(null);
+//                } else {
+//                    setText(item.getCourseName());
+//                }
+//            }
+//        });
+        //curcourse_t.setCellValueFactory(new PropertyValueFactory<>("CourseName"));
+        curcourse_t.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<educator, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<educator, String> param) {
+                return new SimpleStringProperty(param.getValue().getCur_course().getCourseName());
+            }
+        });
+        course_t.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<educator, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<educator, String> cellData) {
+                educator educator = cellData.getValue();
+                List<course> courses = educator.getCourses();
+                String courseNames = "";
+
+                // Concatenate the names of all courses for this educator
+                for (course course : courses) {
+                    if (!courseNames.isEmpty()) {
+                        courseNames += ", ";
+                    }
+                    courseNames += course.getCourseName();
+                }
+
+                return new SimpleStringProperty(courseNames);
+            }
+        });
+
+        specialization_t.setCellValueFactory(cellData -> {
+            ObservableList<String> specializationList = FXCollections.observableArrayList(cellData.getValue().getSpecializations());
+            return Bindings.createStringBinding(() -> String.join(", ", specializationList));
+        });
+
+
+
+
+        table_view.setItems(showlist);
+
+    }
+    public void showData(ObservableList<educator> showlist)
+    {
+
         id_t.setCellValueFactory(new PropertyValueFactory<>("employee_id"));
         name_t.setCellValueFactory(new PropertyValueFactory<>("name"));
         gender_t.setCellValueFactory(new PropertyValueFactory<>("gender"));
