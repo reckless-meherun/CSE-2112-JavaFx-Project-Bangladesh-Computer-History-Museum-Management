@@ -390,6 +390,7 @@ public class TicketController implements Initializable
         ticketTypeField.getSelectionModel().clearSelection();
     }
 
+
     @FXML
     void selectData(MouseEvent event)
     {
@@ -471,13 +472,45 @@ public class TicketController implements Initializable
             }
         }
     }
+    public StringBuilder FilePath() throws IOException {
+        // Determine the path to the resources folder
+        StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
+        //int n=resourcesPath.length();
+        resourcesPath.deleteCharAt(0);
+        for(int i=0;i<resourcesPath.length();i++){
+            if(resourcesPath.charAt(i)=='/'){
+
+                resourcesPath.replace(i,i+1,"\\\\");
+            }
+            if(resourcesPath.charAt(i)=='%'){
+                resourcesPath.replace(i,i+3," ");
+            }
+            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
+                resourcesPath.delete(i-2,resourcesPath.length());
+                break;
+            }
+        }
+        System.out.println(resourcesPath);
+
+
+
+
+
+
+
+        return resourcesPath;
+    }
 
     @FXML
     public void printTicket()
     {
         try
         {
-            String pdf = "C:\\University Stuff\\2-1\\OOP Project\\OurProject\\CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management\\Code\\Museum\\src\\main\\resources\\application\\museum\\GeneratedPDFs\\" + "MyTicket.pdf";
+            String path="\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\GeneratedPDFs\\\\" + "MyTicket"+System.currentTimeMillis()+".pdf";
+            StringBuilder jr=FilePath();
+            jr.append(path);
+            System.out.println(jr);
+            String pdf = jr.toString();
 
             List<Visitor> visList = new ArrayList<Visitor>();
             Visitor visitorOne = new Visitor();
@@ -490,8 +523,11 @@ public class TicketController implements Initializable
             Map<String, Object> parameters = new HashMap<>();
             parameters.put("parameterTicket", dataSource);
 
-            StringBuilder resourcesPath = getrespath();
-            JasperDesign jdesign= JRXmlLoader.load("C:\\University Stuff\\2-1\\OOP Project\\OurProject\\CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management\\Code\\Museum\\src\\main\\resources\\application\\museum\\MyReports\\Ticket.jrxml");
+            StringBuilder resourcesPath = FilePath();
+            String p2="\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\MyReports\\\\Ticket.jrxml";
+            resourcesPath.append(p2);
+            //JasperDesign jdesign= JRXmlLoader.load("C:\\Users\\DELL\\IdeaProjects\\new project1\\Code\\Museum\\src\\main\\resources\\application\\museum\\MyReports\\Ticket.jrxml");
+            JasperDesign jdesign= JRXmlLoader.load(resourcesPath.toString());
             JRDesignQuery jq= new JRDesignQuery();
             JasperReport jreport= JasperCompileManager.compileReport(jdesign);
             JasperPrint jprint= JasperFillManager.fillReport(jreport,parameters, new JREmptyDataSource());
