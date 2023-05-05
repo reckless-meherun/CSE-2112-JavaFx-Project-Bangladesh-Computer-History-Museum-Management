@@ -3,6 +3,7 @@ package application.museum;
 import application.museum.People.course;
 import application.museum.People.educator;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -49,7 +50,7 @@ public class DBUtils
         //stage.setTitle(title);
         stage.show();
     }
-    public static void changeScene(ActionEvent event, String fxmlfile, String username)
+    public static void changeScene(Event event, String fxmlfile, String username)
     {
         Parent root = null;
         if (DBUtils.username != null)
@@ -109,7 +110,7 @@ public class DBUtils
     }
 
 
-    public static void loginuser(ActionEvent event, String username, String password)
+    public static void loginuser(Event event, String username, String password)
     {
         Connection connection = null;
         PreparedStatement preparedStatement = null;

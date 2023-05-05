@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -49,6 +50,13 @@ public class LoginSceneController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        password.setOnKeyPressed(event -> {
+            // Check if the Enter key was pressed
+            if (event.getCode() == KeyCode.ENTER) {
+                // Call your method here
+                DBUtils.loginuser(event, username.getText(), password.getText());
+            }
+        });
         loginButton.setOnAction(new EventHandler<ActionEvent>()
         {
             @Override
