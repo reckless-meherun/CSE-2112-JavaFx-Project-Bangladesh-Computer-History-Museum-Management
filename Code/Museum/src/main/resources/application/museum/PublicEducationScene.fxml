@@ -170,7 +170,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="420.0" layoutY="145.0" prefHeight="535.0" prefWidth="670.0" stylesheets="@../../CSS/TicketCalculator.Css">
                            <children>
-                              <TextField layoutX="50.0" layoutY="14.0" prefHeight="38.0" prefWidth="623.0" promptText="search" styleClass="markInputField">
+                              <TextField fx:id="stext" layoutX="50.0" layoutY="14.0" prefHeight="38.0" prefWidth="623.0" promptText="search" styleClass="markInputField">
                                  <font>
                                     <Font name="Cambria" size="14.0" />
                                  </font>

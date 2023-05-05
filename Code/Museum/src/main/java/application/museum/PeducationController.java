@@ -1,6 +1,7 @@
 package application.museum;
 
 import application.museum.People.Gender;
+import application.museum.People.Students;
 import application.museum.People.course;
 import application.museum.People.educator;
 import javafx.beans.property.SimpleStringProperty;
@@ -16,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -125,6 +127,9 @@ public class PeducationController implements Initializable {
     @FXML
     private Button update;
 
+    @FXML
+    private TextField stext;
+
     private String url="jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\database.db";
 
     private Connection connect;
@@ -233,6 +238,11 @@ public class PeducationController implements Initializable {
         getData();
         Combo_box();
         showData();
+        stext.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                Search();
+            }
+        });
 
     }
     public ArrayList<course> detalist1()
@@ -658,6 +668,38 @@ public class PeducationController implements Initializable {
         table_view.setItems(showlist);
 
     }
+    public void showData(ObservableList<course> showlist)
+    {
+        cname_t.setCellValueFactory(new PropertyValueFactory<>("CourseName"));
+        stdate_t.setCellValueFactory(new PropertyValueFactory<>("StartingDate"));
+        edate_t.setCellValueFactory(new PropertyValueFactory<>("finishingDate"));
+        //educator_t.setCellValueFactory(new PropertyValueFactory<>("instructor"));
+//        educator_t.setCellFactory(column -> {
+//            return new TableCell<course, educator>() {
+//                @Override
+//                protected void updateItem(educator educator, boolean empty) {
+//                    super.updateItem(educator, empty);
+//                    if (educator == null || empty) {
+//                        setText(null);
+//                    } else {
+//                        setText(educator.getName());
+//                    }
+//                }
+//            };
+//        });
+        educator_t.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<course, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<course, String> param) {
+                return new SimpleStringProperty(param.getValue().getInstructor().getName());
+            }
+        });
+        students_t.setCellValueFactory(new PropertyValueFactory<>("studencnt"));
+        cstats_t.setCellValueFactory(new PropertyValueFactory<course,Boolean>("courseCompleted"));
+
+
+        table_view.setItems(showlist);
+
+    }
 
     @FXML
     void selectData(MouseEvent event) {
@@ -796,6 +838,32 @@ public class PeducationController implements Initializable {
             }
         }
 
+    }
+    void Search() {
+        String searchName = null;
+        if (!stext.getText().isEmpty())
+            searchName = stext.getText(); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<course> dev=datalist();
+        ObservableList<course> dev1=FXCollections.observableArrayList();
+        for(course d: dev){
+            if(searchName.equals(d.getCourseName())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            developer not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
 
 }
