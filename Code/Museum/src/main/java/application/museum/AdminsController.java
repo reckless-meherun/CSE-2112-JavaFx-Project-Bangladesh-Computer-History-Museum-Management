@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -346,6 +347,11 @@ public class AdminsController implements Initializable
         bar3.setVisible(true);
         bar4.setVisible(false);
         scene2.setTranslateX(378);
+        stext.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                Search();
+            }
+        });
     }
 
     void clear()
@@ -604,7 +610,7 @@ public class AdminsController implements Initializable
         }
     }
     @FXML
-    void Search(ActionEvent event) {
+    void Search() {
         String searchName = null;
         if (!stext.getText().isEmpty())
             searchName = stext.getText(); // the name you want to search for
