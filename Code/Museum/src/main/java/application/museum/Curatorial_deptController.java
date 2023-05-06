@@ -36,6 +36,7 @@ public class Curatorial_deptController implements Initializable
     private Button photoGallery;
     @FXML
     private Button tickets;
+    private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Departments.db";
 
     static void pushToStack()
     {

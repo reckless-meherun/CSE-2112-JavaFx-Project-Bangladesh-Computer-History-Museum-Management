@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Ticket pdf added">
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Departments.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1683274308377.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1683274349715.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/PeducationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/PeducationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PublicEducationScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PublicEducationScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorial_deptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorial_deptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/employee.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/employee.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +51,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/IdeaProjects/new project1/Code/Museum/lib/sqlite-jdbc-3.7.2.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/University Stuff/2-1/OOP Project/Museum/Code/Museum/lib/sqlite-jdbc-3.7.2.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.14369158&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -350,35 +354,7 @@
       <option name="project" value="LOCAL" />
       <updated>1683238871326</updated>
     </task>
-    <task id="LOCAL-00040" summary="absolute path for all">
-      <created>1683274702667</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1683274702667</updated>
-    </task>
-    <task id="LOCAL-00041" summary="now afterfilling password press enter and see majic. :)">
-      <created>1683279860048</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1683279860048</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Enter button is a majic you know">
-      <created>1683280624008</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1683280624008</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Search in About us complete">
-      <created>1683285154310</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1683285154310</updated>
-    </task>
-    <option name="localTasksCounter" value="44" />
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,6 +369,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="added sliding menu bar." />
+    <MESSAGE value="connected tickets now you can nevigate to tickets" />
+    <MESSAGE value="connected gallery" />
+    <MESSAGE value="about us input form ready" />
     <MESSAGE value="Admins is now users." />
     <MESSAGE value="added the table of about us..." />
     <MESSAGE value="userpage complete... Eid Mubarak" />
@@ -414,11 +394,7 @@
     <MESSAGE value="db file of inventory, photoGallry and ticket pages uploaded" />
     <MESSAGE value="Ticket jrxml edited" />
     <MESSAGE value="Ticket pdf added" />
-    <MESSAGE value="absolute path for all" />
-    <MESSAGE value="now afterfilling password press enter and see majic. :)" />
-    <MESSAGE value="Enter button is a majic you know" />
-    <MESSAGE value="Search in About us complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search in About us complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ticket pdf added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
