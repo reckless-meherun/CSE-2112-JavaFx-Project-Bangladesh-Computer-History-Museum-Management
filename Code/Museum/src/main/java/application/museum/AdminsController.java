@@ -158,6 +158,14 @@ public class AdminsController implements Initializable
     @FXML
     void run3()
     {
+        if(!DBUtils.username.equals("Admin") && !DBUtils.username.equals(("Admin1"))){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("                        You are not Admin!  ");
+            alert.setContentText("                        You can't add, delete or edit users");
+            alert.showAndWait();
+            return;
+        }
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(0.6));
         slide.setNode(scene2);
@@ -340,6 +348,9 @@ public class AdminsController implements Initializable
         {
             throw new RuntimeException(e);
         }
+//        if(!DBUtils.username.equals("Admin") || !DBUtils.username.equals(("Admin1"))){
+//            scene2.setVisible(false);
+//        }
         showData();
         paneside.setTranslateX(0);
         bar2.setVisible(true);
@@ -503,10 +514,14 @@ public class AdminsController implements Initializable
         {
             return;
         }
+        run2();
+        if(!DBUtils.username.equals("Admin") && !DBUtils.username.equals(("Admin1"))){
+            return;
+        }
         id.setText(String.valueOf(user.getId()));
         username.setText(String.valueOf(user.getUsername()));
         run3();
-        run2();
+
 
     }
 
