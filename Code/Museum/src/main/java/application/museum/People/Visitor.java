@@ -14,6 +14,7 @@ public class Visitor extends People_class
 
     public Visitor()
     {
+        this.name = "";
         this.last_vis_date = null;
         this.email = "";
         //this.occupation = null;
@@ -101,17 +102,16 @@ public class Visitor extends People_class
         return super.getGender();
     }
 
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
-    @Override
-    public String getName()
-    {
-        return name;
-    }
+//    public void setName(String name)
+//    {
+//        this.name = name;
+//    }
+//
+//    @Override
+//    public String getName()
+//    {
+//        return name;
+//    }
 
 
     public String getLanguage()

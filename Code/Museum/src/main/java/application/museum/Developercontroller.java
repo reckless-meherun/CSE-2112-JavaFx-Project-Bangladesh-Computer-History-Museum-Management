@@ -311,7 +311,7 @@ public class Developercontroller implements Initializable {
 //    @FXML
 //    void switchToInventory(ActionEvent event) throws IOException {
 //        Developercontroller.pushtostack();
-//        DBUtils.changeScene(event,"Inventory.fxml",false);
+//        DBUtils.changeScene(event,"Artifacts.fxml",false);
 //    }
 //    @FXML
 //    void switchToGallery(ActionEvent event) throws IOException {

@@ -118,7 +118,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </DatePicker>
-                              <Button fx:id="addButton" layoutX="28.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
+                              <Button fx:id="addButton" layoutX="28.0" layoutY="480.0" mnemonicParsing="false" onAction="#insert" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -134,8 +134,8 @@
                                  </stylesheets>
                               </TextField>
                               <TextArea fx:id="descriptionField" layoutX="44.0" layoutY="195.0" prefHeight="89.0" prefWidth="332.0" promptText="artifact title and description" styleClass="textarea" />
-                              <Button fx:id="browseImageButton" layoutX="43.0" layoutY="391.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="336.0" styleClass="lightButton" stylesheets="@../../CSS/TicketsScene.css" text="Browse images" />
-                              <Button fx:id="deleteButton" layoutX="123.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                              <Button fx:id="browseImageButton" layoutX="43.0" layoutY="391.0" mnemonicParsing="false" onAction="#insertImage" prefHeight="40.0" prefWidth="336.0" styleClass="lightButton" stylesheets="@../../CSS/TicketsScene.css" text="Browse images" />
+                              <Button fx:id="deleteButton" layoutX="123.0" layoutY="480.0" mnemonicParsing="false" onAction="#delete" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -144,7 +144,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <Button fx:id="updateButton" layoutX="217.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                              <Button fx:id="updateButton" layoutX="217.0" layoutY="480.0" mnemonicParsing="false" onAction="#update_Crud" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -153,7 +153,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <Button fx:id="clearButton" layoutX="310.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Clear">
+                              <Button fx:id="clearButton" layoutX="310.0" layoutY="480.0" mnemonicParsing="false" onAction="#clear" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Clear">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -165,14 +165,14 @@
                               <ComboBox fx:id="departmentField" layoutX="211.0" layoutY="150.0" prefHeight="32.0" prefWidth="164.0" promptText="department" styleClass="signUpScreenLeftInput" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                        <AnchorPane fx:id="imageAnchor" layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">
                            <children>
                               <TextField fx:id="searchBar" layoutX="54.0" layoutY="14.0" prefHeight="38.0" prefWidth="465.0" promptText="search" styleClass="markInputField">
                                  <font>
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </TextField>
-                              <TableView fx:id="inventoryTable" layoutX="2.0" layoutY="165.0" prefHeight="302.0" prefWidth="686.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="inventoryTable" layoutX="2.0" layoutY="165.0" onMouseClicked="#selectData" prefHeight="302.0" prefWidth="686.0" stylesheets="@../../CSS/TicketCalculator.Css">
                                  <columns>
                                     <TableColumn fx:id="docNoCol" prefWidth="75.0" text="doc no." />
                                     <TableColumn fx:id="dateCol" prefWidth="79.20004272460938" text="Last Update" />
@@ -194,7 +194,7 @@
                                     <Image url="@../../Assets/search2.jpg" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="imageView" fitHeight="140.0" fitWidth="143.0" layoutX="533.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="tempImageView" fitHeight="140.0" fitWidth="143.0" layoutX="533.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Assets/14748d9c5aae6aa96520f8dc62226f2d.jpg" />
                                  </image>
@@ -208,6 +208,7 @@
                                     </Label>
                                  </children>
                               </AnchorPane>
+                              <ImageView fx:id="showImageView" fitHeight="140.0" fitWidth="143.0" layoutX="533.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                         </AnchorPane>
                      </children>

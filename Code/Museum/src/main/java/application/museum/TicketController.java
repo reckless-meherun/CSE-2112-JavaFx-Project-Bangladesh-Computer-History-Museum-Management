@@ -32,6 +32,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.jar.JarException;
 
+import net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JRDesignQuery;
@@ -253,9 +254,6 @@ public class TicketController implements Initializable
 
             while (result.next())
             {
-                //System.out.println("oka1");
-//                StringBuilder resourcesPath = getrespath();
-//                resourcesPath.append(result.getString("img"));
                 Gender gm;
                 if (result.getString("Gender").equals("MALE"))
                 {
@@ -267,6 +265,7 @@ public class TicketController implements Initializable
                 Visitor vis;
                 // System.out.println("oka2");
                 vis = new Visitor(result.getDate("Last_Visit_Date"), result.getString("Name"), result.getInt("Age"), gm, result.getString("Email"), result.getString("Phone"), result.getInt("Total_Visit"), result.getString("Language"));
+                System.out.println(vis.getName());
                 //  System.out.println("oka3");
                 datalist.add(vis);
                 // System.out.println("oka4");
@@ -311,16 +310,6 @@ public class TicketController implements Initializable
                 alert.showAndWait();
             } else
             {
-//                StringBuilder im = copyImageToResources(photo);
-//                for (int i = 0; i < im.length(); i++)
-//                {
-//                    if (im.charAt(i) == '\\')
-//                    {
-//                        im.setCharAt(i, '/');
-//                    }
-//                }
-//                String files_path = im.toString();
-
                 prepare = connect.prepareStatement(sql);
                 prepare.setDate(1, (java.sql.Date.valueOf(dateField.getValue())));
                 prepare.setString(2, nameField.getText());
@@ -472,30 +461,31 @@ public class TicketController implements Initializable
             }
         }
     }
-    public StringBuilder FilePath() throws IOException {
+
+    public StringBuilder FilePath() throws IOException
+    {
         // Determine the path to the resources folder
         StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
         //int n=resourcesPath.length();
         resourcesPath.deleteCharAt(0);
-        for(int i=0;i<resourcesPath.length();i++){
-            if(resourcesPath.charAt(i)=='/'){
+        for (int i = 0; i < resourcesPath.length(); i++)
+        {
+            if (resourcesPath.charAt(i) == '/')
+            {
 
-                resourcesPath.replace(i,i+1,"\\\\");
+                resourcesPath.replace(i, i + 1, "\\\\");
             }
-            if(resourcesPath.charAt(i)=='%'){
-                resourcesPath.replace(i,i+3," ");
+            if (resourcesPath.charAt(i) == '%')
+            {
+                resourcesPath.replace(i, i + 3, " ");
             }
-            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
-                resourcesPath.delete(i-2,resourcesPath.length());
+            if (resourcesPath.charAt(i) == 't' && resourcesPath.charAt(i + 1) == 'a' && resourcesPath.charAt(i + 2) == 'r' && resourcesPath.charAt(i + 3) == 'g' && resourcesPath.charAt(i + 4) == 'e' && resourcesPath.charAt(i + 5) == 't' && resourcesPath.charAt(i + 6) == '/')
+            {
+                resourcesPath.delete(i - 2, resourcesPath.length());
                 break;
             }
         }
         System.out.println(resourcesPath);
-
-
-
-
-
 
 
         return resourcesPath;
@@ -506,31 +496,34 @@ public class TicketController implements Initializable
     {
         try
         {
-            String path="\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\GeneratedPDFs\\\\" + "MyTicket"+System.currentTimeMillis()+".pdf";
-            StringBuilder jr=FilePath();
+            connect = DBUtils.connectDB(url);
+            String path = "\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\GeneratedPDFs\\\\" + "MyTicket" + System.currentTimeMillis() + ".pdf";
+            StringBuilder jr = FilePath();
             jr.append(path);
             System.out.println(jr);
             String pdf = jr.toString();
 
             List<Visitor> visList = new ArrayList<Visitor>();
             Visitor visitorOne = new Visitor();
-            visitorOne.setName("Meherun");
-            visitorOne.setAge(20);
-            visitorOne.set_mobile_no("01815803974");
+            visitorOne.setName(nameField.getText());
+            visitorOne.setAge(Integer.parseInt(ageField.getText()));
+            visitorOne.set_mobile_no(phoneField.getText());
             visList.add(visitorOne);
+
             JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(visList);
 
             Map<String, Object> parameters = new HashMap<>();
-            parameters.put("parameterTicket", dataSource);
-
+            //parameters.put("parameterTicket", dataSource);
+            parameters.put("VisitorName", visitorOne.getName());
             StringBuilder resourcesPath = FilePath();
-            String p2="\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\MyReports\\\\Ticket.jrxml";
+//            src/main/resources/application/museum/JaspersoftWorkspace/MyTickets/Ticket.jrxml
+            String p2 = "\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\JaspersoftWorkspace\\\\MyTickets\\\\Ticket.jrxml";
             resourcesPath.append(p2);
             //JasperDesign jdesign= JRXmlLoader.load("C:\\Users\\DELL\\IdeaProjects\\new project1\\Code\\Museum\\src\\main\\resources\\application\\museum\\MyReports\\Ticket.jrxml");
-            JasperDesign jdesign= JRXmlLoader.load(resourcesPath.toString());
-            JRDesignQuery jq= new JRDesignQuery();
-            JasperReport jreport= JasperCompileManager.compileReport(jdesign);
-            JasperPrint jprint= JasperFillManager.fillReport(jreport,parameters, new JREmptyDataSource());
+            JasperDesign jdesign = JRXmlLoader.load(resourcesPath.toString());
+            JRDesignQuery jq = new JRDesignQuery();
+            JasperReport jreport = JasperCompileManager.compileReport(jdesign);
+            JasperPrint jprint = JasperFillManager.fillReport(jreport, parameters, new JREmptyDataSource());
 //            JasperViewer viewer= new JasperViewer(jprint,false);
 //            viewer.setTitle("Report");
 //            viewer.show();
@@ -540,7 +533,8 @@ public class TicketController implements Initializable
 
             System.out.println("File Generated");
 
-        } catch (Exception ex) {
+        } catch (Exception ex)
+        {
             System.out.println(ex);
         }
     }

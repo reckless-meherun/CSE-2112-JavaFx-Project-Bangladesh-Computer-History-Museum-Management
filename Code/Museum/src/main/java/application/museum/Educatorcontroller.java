@@ -345,7 +345,7 @@ public class Educatorcontroller implements Initializable
 //    void switchToInventory(ActionEvent event) throws IOException
 //    {
 //        Educatorcontroller.pushtostack();
-//        DBUtils.changeScene(event, "Inventory.fxml", false);
+//        DBUtils.changeScene(event, "Artifacts.fxml", false);
 //    }
 //
 //    @FXML

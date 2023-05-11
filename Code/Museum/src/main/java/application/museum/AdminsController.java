@@ -284,7 +284,7 @@ public class AdminsController implements Initializable
 //    void switchToInventory(ActionEvent event) throws IOException
 //    {
 //        AdminsController.pushtostack();
-//        DBUtils.changeScene(event, "Inventory.fxml", false);
+//        DBUtils.changeScene(event, "Artifacts.fxml", false);
 //    }
 //
 //    @FXML

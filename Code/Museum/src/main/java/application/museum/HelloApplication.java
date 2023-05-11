@@ -11,11 +11,13 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class HelloApplication extends Application
 {
     public static void main(String[] args)
     {
+
         launch();
     }
 
@@ -25,7 +27,7 @@ public class HelloApplication extends Application
         try
         {
             Parent root = FXMLLoader.load(getClass().getResource("HelloScene.fxml"));
-            Scene scene = new Scene(root,1101,680);
+            Scene scene = new Scene(root, 1101, 680);
             String css = this.getClass().getResource("hello.css").toExternalForm();
             scene.getStylesheets().add(css);
             stage.setTitle("Bangladesh Computer History Museum Management System");
@@ -33,10 +35,10 @@ public class HelloApplication extends Application
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
-        }
-        catch (Exception e)
+        } catch (Exception e)
         {
             e.printStackTrace();
         }
     }
 }
+

@@ -335,7 +335,7 @@ public class Employeecontroller implements Initializable
 //    void switchToInventory(ActionEvent event) throws IOException
 //    {
 //        Employeecontroller.pushtostack();
-//        DBUtils.changeScene(event, "Inventory.fxml", false);
+//        DBUtils.changeScene(event, "Artifacts.fxml", false);
 //    }
 //
 //    @FXML
