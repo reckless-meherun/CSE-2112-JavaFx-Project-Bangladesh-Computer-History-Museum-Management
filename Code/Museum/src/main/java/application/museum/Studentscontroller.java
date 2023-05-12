@@ -897,7 +897,7 @@ public class Studentscontroller implements Initializable
     }
     @FXML
     void delete(ActionEvent event) {
-        String sql = "DELETE from students WHERE `ID` ='" + "1" + "'";
+        String sql = "DELETE from students WHERE `ID` ='" + Id.getText() + "'";
 
         try
         {
