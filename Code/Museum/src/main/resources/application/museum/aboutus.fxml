@@ -250,12 +250,6 @@
                               <Button fx:id="bar2" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run2" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                               <Button fx:id="bar1" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run1" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                            </children></AnchorPane>
-                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
-                           <styleClass>
-                              <String fx:value="tree-view" />
-                              <String fx:value="TransparentButtons" />
-                           </styleClass>
-                        </TreeView>
                         <AnchorPane fx:id="scene2" layoutX="687.0" layoutY="146.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                            <children>
                               <TextField fx:id="name" layoutX="40.0" layoutY="72.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
@@ -357,6 +351,12 @@
                               </Button>
                            </children>
                         </AnchorPane>
+                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="238.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
+                           <styleClass>
+                              <String fx:value="tree-view" />
+                              <String fx:value="TransparentButtons" />
+                           </styleClass>
+                        </TreeView>
                      </children>
                   </AnchorPane>
                </right>
