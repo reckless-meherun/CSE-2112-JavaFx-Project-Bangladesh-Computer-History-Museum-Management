@@ -507,7 +507,9 @@ public class TicketController implements Initializable
     {
         try
         {
-            connect = DBUtils.connectDB(url);
+            Random random = new Random();
+            random.setSeed(123456);
+            //src/main/resources/application/museum/GeneratedPDFs
             String path = "\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\GeneratedPDFs\\\\" + "MyTicket" + System.currentTimeMillis() + ".pdf";
             StringBuilder jr = FilePath();
             jr.append(path);
@@ -517,18 +519,19 @@ public class TicketController implements Initializable
             List<Visitor> visList = new ArrayList<Visitor>();
             Visitor visitorOne = new Visitor();
             visitorOne.setName(nameField.getText());
-            visitorOne.setAge(Integer.parseInt(ageField.getText()));
-            visitorOne.set_mobile_no(phoneField.getText());
             visList.add(visitorOne);
 
             JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(visList);
 
             Map<String, Object> parameters = new HashMap<>();
-            //parameters.put("parameterTicket", dataSource);
-            parameters.put("VisitorName", visitorOne.getName());
+            parameters.put("nameParam", visitorOne.getName());
+            parameters.put("TypeParam", ticketTypeField.getValue().toString());
+            Integer s = random.nextInt();
+            parameters.put("IDParam", s.toString());
+            parameters.put("priceParam", finalPriceField.getText().toString() + " tk");
             StringBuilder resourcesPath = FilePath();
-//            src/main/resources/application/museum/JaspersoftWorkspace/MyTickets/Ticket.jrxml
-            String p2 = "\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\JaspersoftWorkspace\\\\MyTickets\\\\Ticket.jrxml";
+//            src/main/resources/application/museum/MyReports/Ticket.jrxml
+            String p2 = "\\\\src\\\\main\\\\resources\\\\application\\\\museum\\\\MyReports\\\\Ticket.jrxml";
             resourcesPath.append(p2);
             //JasperDesign jdesign= JRXmlLoader.load("C:\\Users\\DELL\\IdeaProjects\\new project1\\Code\\Museum\\src\\main\\resources\\application\\museum\\MyReports\\Ticket.jrxml");
             JasperDesign jdesign = JRXmlLoader.load(resourcesPath.toString());
