@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Dashboard redesigned" />
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Aboutus.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Aboutus.db" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -422,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683903163451</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="okk bod">
+      <created>1683908116812</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1683908116812</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,7 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="employee page is now completed." />
     <MESSAGE value="some issue found and solved." />
     <MESSAGE value="changing screens with Departments treeview" />
     <MESSAGE value="Curatorial Department added" />
@@ -462,7 +470,8 @@
     <MESSAGE value="Tables edited" />
     <MESSAGE value="security okk.." />
     <MESSAGE value="Dashboard redesigned" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dashboard redesigned" />
+    <MESSAGE value="okk bod" />
+    <option name="LAST_COMMIT_MESSAGE" value="okk bod" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
