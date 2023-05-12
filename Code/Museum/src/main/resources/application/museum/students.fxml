@@ -235,58 +235,58 @@
                                     </ComboBox>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane fx:id="paneside" layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: linear-gradient(to top, #F2ECB6, #A96F44);">
+                              <AnchorPane fx:id="paneside" layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));">
                                  <children>
                                     <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="170.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../Assets/menu.png" />
                                        </image>
                                     </ImageView>
-                                    <Button fx:id="BOD" layoutX="63.0" layoutY="55.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="30.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="BOD" textFill="#fffefe">
+                                    <Button fx:id="BOD" layoutX="50.0" layoutY="51.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="BOD" textFill="#fffefe">
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="16.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="employee" layoutX="63.0" layoutY="126.0" mnemonicParsing="false" onAction="#switchToemployee" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Employee" textFill="#fffefe">
+                                    <Button fx:id="employee" layoutX="50.0" layoutY="111.0" mnemonicParsing="false" onAction="#switchToemployee" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Employee" textFill="#fffefe">
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="16.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="educator" layoutX="63.0" layoutY="186.0" mnemonicParsing="false" onAction="#switchToeducator" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Educator" textFill="#fffefe">
+                                    <Button fx:id="educator" layoutX="50.0" layoutY="171.0" mnemonicParsing="false" onAction="#switchToeducator" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Educator" textFill="#fffefe">
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="16.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="curator" layoutX="63.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchTocurator" prefHeight="26.0" prefWidth="80.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Curator" textFill="#fffefe">
+                                    <Button fx:id="curator" layoutX="50.0" layoutY="231.0" mnemonicParsing="false" onAction="#switchTocurator" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Curator" textFill="#fffefe">
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="16.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="developer" layoutX="59.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchTodevloper" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Developer" textFill="#fffefe">
+                                    <Button fx:id="developer" layoutX="50.0" layoutY="291.0" mnemonicParsing="false" onAction="#switchTodevloper" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Developer" textFill="#fffefe">
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="16.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="GoBackButton" layoutX="61.0" layoutY="478.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="GoBack" textFill="#1e0202">
+                                    <Button fx:id="GoBackButton" layoutX="61.0" layoutY="471.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="GoBack" textFill="#1e0202">
                                        <font>
-                                          <Font name="Cambria" size="14.0" />
+                                          <Font size="16.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="student" layoutX="59.0" layoutY="364.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Student" textFill="#fffefe">
+                                    <Button fx:id="student" layoutX="50.0" layoutY="351.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="non-TransparentButtons" text="Student" textFill="#fffefe">
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="16.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="admins" layoutX="76.0" layoutY="409.0" mnemonicParsing="false" onAction="#switchToadmins" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Users">
+                                    <Button fx:id="admins" layoutX="50.0" layoutY="411.0" mnemonicParsing="false" onAction="#switchToadmins" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" text="Users">
                                        <font>
-                                          <Font size="14.0" />
+                                          <Font size="16.0" />
                                        </font>
                                     </Button>
                                     <Button fx:id="bar2" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run2" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                                     <Button fx:id="bar1" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run1" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                                  </children>
                               </AnchorPane>
-                              <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
+                              <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="167.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
                                  <styleClass>
                                     <String fx:value="tree-view" />
                                     <String fx:value="TransparentButtons" />

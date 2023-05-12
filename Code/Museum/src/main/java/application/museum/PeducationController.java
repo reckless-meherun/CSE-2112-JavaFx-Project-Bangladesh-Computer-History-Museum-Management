@@ -215,7 +215,6 @@ public class PeducationController implements Initializable {
         }
     }
 
-
 //    @FXML
 //    void switchTotickets(ActionEvent event) throws IOException {
 //        PeducationController.pushTostack();

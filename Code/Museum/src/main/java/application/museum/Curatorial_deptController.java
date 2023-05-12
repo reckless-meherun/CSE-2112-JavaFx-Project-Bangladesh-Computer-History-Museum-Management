@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.net.URL;
@@ -36,6 +37,21 @@ public class Curatorial_deptController implements Initializable
     private Button photoGallery;
     @FXML
     private Button tickets;
+    @FXML
+    private TextField nameField;
+    @FXML
+    private TextField levelField;
+    @FXML
+    private TextField galleryNoField;
+    @FXML
+    private TextField guideField;
+    @FXML
+    private TextField cleanerField;
+    @FXML
+    private TextField envConField;
+    @FXML
+    private DatePicker dateField;
+
     private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Departments.db";
 
     static void pushToStack()

@@ -193,7 +193,7 @@
             </BorderPane>
          </children>
       </AnchorPane>
-      <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
+      <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="222.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
          <styleClass>
             <String fx:value="tree-view" />
             <String fx:value="TransparentButtons" />
