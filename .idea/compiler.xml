@@ -9,8 +9,5 @@
         <module name="Museum" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Museum" target="20" />
-    </bytecodeTargetLevel>
   </component>
 </project>

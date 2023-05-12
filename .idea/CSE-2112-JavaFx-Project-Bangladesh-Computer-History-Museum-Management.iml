@@ -84,7 +84,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="fontawesomefx-8.9" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>

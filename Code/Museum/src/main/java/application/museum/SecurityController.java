@@ -11,6 +11,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TreeView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -39,6 +41,34 @@ public class SecurityController implements Initializable {
     @FXML
     private Button tickets;
 
+
+
+    @FXML
+    private Button LogoutButton;
+
+    @FXML
+    private Text ProfileIcon;
+
+    @FXML
+    private AnchorPane SceneTwo;
+
+    @FXML
+    private Button aboutus;
+
+
+    @FXML
+    private Button home11;
+
+    @FXML
+    private Button home12;
+
+    @FXML
+    private Button photogallery;
+
+    @FXML
+    private Text studentName;
+
+
     private static String name_here = "SecurityScene.fxml";
 
     static void pushToStack()
@@ -50,7 +80,7 @@ public class SecurityController implements Initializable {
     {
         try
         {
-            NavigationHandler.HandleNavigation(name_here, home, treeView, photoGallery, articles, aboutUs, tickets, LogOutButton, GoBackButton);
+            NavigationHandler.HandleNavigation(name_here, home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
         }
         catch (IOException exception)
         {
