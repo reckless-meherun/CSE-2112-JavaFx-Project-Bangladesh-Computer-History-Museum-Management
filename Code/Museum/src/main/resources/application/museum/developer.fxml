@@ -96,12 +96,12 @@
                                     <Button fx:id="sbut" layoutX="1065.0" layoutY="114.0" mnemonicParsing="false" onAction="#Search" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
                                  </children>
                               </AnchorPane>
-                              <Text layoutX="474.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Developers" wrappingWidth="158.74346923828125">
+                              <Text layoutX="477.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Developers" wrappingWidth="158.74346923828125">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
-                              <TableView fx:id="table_view" layoutX="45.0" layoutY="181.0" onMouseClicked="#selectData" prefHeight="500.0" prefWidth="1021.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="table_view" layoutX="45.0" layoutY="248.0" onMouseClicked="#selectData" prefHeight="433.0" prefWidth="1022.0" styleClass="Scrollpane">
                                  <columns>
                                     <TableColumn fx:id="id_t" prefWidth="39.999996185302734" text="ID" />
                                     <TableColumn fx:id="name_t" prefWidth="127.20000457763672" text="Name" />
@@ -118,6 +118,10 @@
                                     <TableColumn fx:id="curpro_t" prefWidth="104.0" text="Curr Project" />
                                     <TableColumn fx:id="projects_t" prefWidth="104.0" text="Projects" />
                                  </columns>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketCalculator.Css" />
+                                    <URL value="@../../CSS/BODScreen.css" />
+                                 </stylesheets>
                               </TableView>
                               <AnchorPane fx:id="paneside" layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: linear-gradient(to top, #F2ECB6, #A96F44);">
                                  <children>

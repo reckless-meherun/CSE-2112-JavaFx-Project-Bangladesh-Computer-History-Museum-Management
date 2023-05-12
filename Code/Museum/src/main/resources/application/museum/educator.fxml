@@ -35,7 +35,7 @@
                      <right>
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                            <children>
-                              <TableView fx:id="table_view" layoutX="45.0" layoutY="181.0" onMouseClicked="#selectData" prefHeight="500.0" prefWidth="1021.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="table_view" layoutX="45.0" layoutY="248.0" onMouseClicked="#selectData" prefHeight="433.0" prefWidth="1022.0" styleClass="Scrollpane">
                                  <columns>
                                     <TableColumn fx:id="id_t" prefWidth="39.999996185302734" text="ID" />
                                     <TableColumn fx:id="name_t" prefWidth="127.20000457763672" text="Name" />
@@ -52,6 +52,10 @@
                                     <TableColumn fx:id="curcourse_t" prefWidth="104.0" text="Curr Course" />
                                     <TableColumn fx:id="course_t" prefWidth="104.0" text="Courses" />
                                  </columns>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketCalculator.Css" />
+                                    <URL value="@../../CSS/BODScreen.css" />
+                                 </stylesheets>
                               </TableView>
                               <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
                               <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
@@ -108,7 +112,7 @@
                                     </Text>
                                  </children>
                               </AnchorPane>
-                              <Text layoutX="478.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Educators" textAlignment="CENTER" wrappingWidth="145.1434326171875">
+                              <Text layoutX="480.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Educators" textAlignment="CENTER" wrappingWidth="145.1434326171875">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>

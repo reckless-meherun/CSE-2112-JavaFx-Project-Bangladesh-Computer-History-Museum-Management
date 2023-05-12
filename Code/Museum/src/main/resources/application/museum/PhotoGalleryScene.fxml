@@ -172,7 +172,7 @@
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </TextField>
-                              <TableView fx:id="photoGalleryTable" layoutX="2.0" layoutY="165.0" onMouseClicked="#selectData" onSort="#selectData" prefHeight="302.0" prefWidth="683.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="photoGalleryTable" layoutX="2.0" layoutY="165.0" onMouseClicked="#selectData" onSort="#selectData" prefHeight="302.0" prefWidth="683.0" styleClass="Scrollpane">
                                 <columns>
                                   <TableColumn fx:id="dateCol" prefWidth="48.800048828125" text="date" />
                                   <TableColumn fx:id="catalogNoCol" prefWidth="74.39999389648438" text="Catalog no." />
@@ -183,6 +183,10 @@
                                     <TableColumn fx:id="positionCol" prefWidth="40.79998779296875" text="Row" />
                                     <TableColumn fx:id="roomCol" minWidth="0.0" prefWidth="124.0001220703125" text="Room" />
                                 </columns>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketCalculator.Css" />
+                                    <URL value="@../../CSS/BODScreen.css" />
+                                 </stylesheets>
                               </TableView>
                               <Button fx:id="GoBackButton" layoutX="52.0" layoutY="479.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="Go Back" textFill="#1e0202">
                                  <font>

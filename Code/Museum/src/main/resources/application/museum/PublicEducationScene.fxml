@@ -175,7 +175,7 @@
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </TextField>
-                              <TableView fx:id="table_view" layoutY="70.0" onMouseClicked="#selectData" prefHeight="394.0" prefWidth="686.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="table_view" layoutY="70.0" onMouseClicked="#selectData" prefHeight="394.0" prefWidth="686.0" styleClass="Scrollpane">
                                 <columns>
                                   <TableColumn fx:id="stdate_t" prefWidth="96.80001831054688" text="Starting Date" />
                                     <TableColumn fx:id="edate_t" prefWidth="102.4000244140625" text="Ending Date" />
@@ -184,6 +184,10 @@
                                     <TableColumn fx:id="students_t" prefWidth="136.79998779296875" text="Total Students" />
                                     <TableColumn fx:id="cstats_t" prefWidth="136.79998779296875" text="Course Status" />
                                 </columns>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketCalculator.Css" />
+                                    <URL value="@../../CSS/BODScreen.css" />
+                                 </stylesheets>
                               </TableView>
                               <Button fx:id="GoBackButton" layoutX="52.0" layoutY="479.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="Go Back" textFill="#1e0202">
                                  <font>

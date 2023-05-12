@@ -23,13 +23,17 @@
                <right>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView fx:id="table_view" layoutX="45.0" layoutY="181.0" onMouseClicked="#selectData" prefHeight="500.0" prefWidth="1021.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                        <TableView fx:id="table_view" layoutX="45.0" layoutY="181.0" onMouseClicked="#selectData" prefHeight="500.0" prefWidth="1021.0" styleClass="Scrollpane">
                            <columns>
                               <TableColumn fx:id="id_table" prefWidth="236.80005264282227" text="ID" />
                               <TableColumn fx:id="username_table" prefWidth="331.9999694824219" text="Username" />
                               <TableColumn fx:id="password_table" minWidth="0.0" prefWidth="272.800048828125" text="Password" />
                               <TableColumn minWidth="0.0" prefWidth="272.800048828125" />
                            </columns>
+                           <stylesheets>
+                              <URL value="@../../CSS/TicketCalculator.Css" />
+                              <URL value="@../../CSS/BODScreen.css" />
+                           </stylesheets>
                         </TableView>
                         <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">

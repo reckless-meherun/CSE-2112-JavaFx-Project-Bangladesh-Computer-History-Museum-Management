@@ -24,7 +24,7 @@
                <right>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView fx:id="table_view" layoutX="45.0" layoutY="181.0" onMouseClicked="#selectData" prefHeight="500.0" prefWidth="1021.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                        <TableView fx:id="table_view" layoutX="45.0" layoutY="248.0" onMouseClicked="#selectData" prefHeight="433.0" prefWidth="1022.0" styleClass="Scrollpane">
                            <columns>
                               <TableColumn fx:id="id_t" prefWidth="46.399959564208984" text="ID" />
                               <TableColumn fx:id="name_t" prefWidth="160.80001068115234" text="Name" />
@@ -40,6 +40,10 @@
                               <TableColumn fx:id="resi_t" prefWidth="115.19997558593752" text="Resigning Date" />
                               <TableColumn fx:id="work_t" prefWidth="115.19997558593752" text="Work Time" />
                            </columns>
+                           <stylesheets>
+                              <URL value="@../../CSS/TicketCalculator.Css" />
+                              <URL value="@../../CSS/BODScreen.css" />
+                           </stylesheets>
                         </TableView>
                         <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
@@ -145,7 +149,7 @@
                               <Button fx:id="bar2" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run2" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                               <Button fx:id="bar1" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run1" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                            </children></AnchorPane>
-                        <Text layoutX="480.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Curator" textAlignment="CENTER" wrappingWidth="145.1434326171875">
+                        <Text layoutX="483.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Curator" textAlignment="CENTER" wrappingWidth="145.1434326171875">
                            <font>
                               <Font name="Colonna MT" size="36.0" />
                            </font>

@@ -86,12 +86,12 @@
                                     </Text>
                                  </children>
                               </AnchorPane>
-                              <Text layoutX="478.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Students" textAlignment="CENTER" wrappingWidth="145.1434326171875">
+                              <Text layoutX="478.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Students" textAlignment="CENTER" wrappingWidth="145.1434326171875">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
-                              <TableView fx:id="table_view" layoutX="45.0" layoutY="181.0" onMouseClicked="#selectData" prefHeight="500.0" prefWidth="1021.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="table_view" layoutX="45.0" layoutY="248.0" onMouseClicked="#selectData" prefHeight="433.0" prefWidth="1022.0" styleClass="Scrollpane">
                                  <columns>
                                     <TableColumn fx:id="t_id" prefWidth="39.999996185302734" text="ID" />
                                     <TableColumn fx:id="t_name" prefWidth="239.20000457763672" text="Name" />
@@ -105,6 +105,10 @@
                                     <TableColumn fx:id="t_jdate" prefWidth="117.60000000000002" text="Starting Date" />
                                     <TableColumn fx:id="t_fdate" prefWidth="117.60000000000002" text="Starting Date" />
                                  </columns>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketCalculator.Css" />
+                                    <URL value="@../../CSS/BODScreen.css" />
+                                 </stylesheets>
                               </TableView>
                               <AnchorPane fx:id="scene2" layoutX="687.0" layoutY="145.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                                  <children>

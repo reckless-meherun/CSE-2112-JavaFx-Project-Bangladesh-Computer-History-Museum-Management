@@ -35,7 +35,7 @@
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                            <children>
                               <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
-                              <Text layoutX="478.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Employee" wrappingWidth="145.1434326171875">
+                              <Text layoutX="478.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Employee" wrappingWidth="145.1434326171875">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
@@ -105,7 +105,7 @@
                                     <Button fx:id="sbut" layoutX="1065.0" layoutY="114.0" mnemonicParsing="false" onAction="#Search" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
                                  </children>
                               </AnchorPane>
-                              <TableView fx:id="table_view" layoutX="45.0" layoutY="181.0" onMouseClicked="#selectData" prefHeight="500.0" prefWidth="1020.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="table_view" layoutX="45.0" layoutY="250.0" onMouseClicked="#selectData" prefHeight="431.0" prefWidth="1020.0" styleClass="Scrollpane">
                                  <columns>
                                     <TableColumn fx:id="id_t" prefWidth="59.20001220703125" text="ID" />
                                     <TableColumn fx:id="name_t" prefWidth="143.99996185302734" text="Name" />
@@ -120,6 +120,10 @@
                                     <TableColumn fx:id="resi_t" prefWidth="104.800048828125" text="Resigning Date" />
                                     <TableColumn fx:id="worktime_t" prefWidth="104.800048828125" text="Work Time" />
                                  </columns>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketCalculator.Css" />
+                                    <URL value="@../../CSS/BODScreen.css" />
+                                 </stylesheets>
                               </TableView>
                               <AnchorPane fx:id="scene2" layoutX="687.0" layoutY="146.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                                  <children>
