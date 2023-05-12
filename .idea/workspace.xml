@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="BOD Page made">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Ticket Calculator made">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/DashboardScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/DashboardScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/BODScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/BODScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683880210902</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Ticket Calculator made">
+      <created>1683880654995</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1683880654995</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -392,7 +400,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="connected gallery" />
     <MESSAGE value="about us input form ready" />
     <MESSAGE value="Admins is now users." />
     <MESSAGE value="added the table of about us..." />
@@ -417,7 +424,8 @@
     <MESSAGE value="Ticket pdf added" />
     <MESSAGE value="database connected to Inventory" />
     <MESSAGE value="BOD Page made" />
-    <option name="LAST_COMMIT_MESSAGE" value="BOD Page made" />
+    <MESSAGE value="Ticket Calculator made" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ticket Calculator made" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

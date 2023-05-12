@@ -29,7 +29,7 @@
 }
 
 .ClassroomScreen,.Scrollpane{
-    -fx-background-color: #F3F3FF;
+    -fx-background-color: linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));
 }
 .ClassroomScreen,.ClassroomScreenItemTitle,.ClassroomScreenEnrolledButton{
     -fx-font-family:'Cambria';
@@ -77,10 +77,10 @@
     -fx-background-color:#E02A2A;
 }
 .scroll-pane > .corner {
-    -fx-background-color: #F3F3FF;
+    -fx-background-color: linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));
 }
 .scroll-pane {
-    -fx-background-color: #F3F3FF;
+     -fx-background-color: linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));
     -fx-padding-right: 20px;
 }
 
@@ -102,8 +102,8 @@
 
 .scroll-bar:horizontal .thumb,
 .scroll-bar:vertical .thumb {
-    -fx-background-color: #50238A;
-     -fx-background-width: 5em;
+    -fx-background-color:linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
+    -fx-background-width: 5em;
     -fx-background-radius: 5em;
 }
 .classroomCover{

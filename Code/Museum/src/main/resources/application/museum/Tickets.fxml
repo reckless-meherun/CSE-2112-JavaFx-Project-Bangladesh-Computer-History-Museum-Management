@@ -190,7 +190,7 @@
                                     <Font name="Cambria" size="17.0" />
                                  </font>
                               </Button>
-                              <TableView fx:id="visitorTable" layoutX="3.0" layoutY="125.0" onMouseClicked="#selectData" prefHeight="204.0" prefWidth="664.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="visitorTable" layoutX="3.0" layoutY="125.0" onMouseClicked="#selectData" prefHeight="204.0" prefWidth="664.0" styleClass="Scrollpane">
                                 <columns>
                                   <TableColumn fx:id="dateCol" prefWidth="100.80007934570312" text="Last Visit Date" />
                                   <TableColumn fx:id="nameCol" prefWidth="76.79998779296875" text="Name" />
@@ -202,6 +202,10 @@
                                     <TableColumn fx:id="languageCol" prefWidth="100.79998779296875" text="Language" />
                                     <TableColumn prefWidth="126.4000244140625" text="Occupation" />
                                 </columns>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketCalculator.Css" />
+                                    <URL value="@../../CSS/BODScreen.css" />
+                                 </stylesheets>
                               </TableView>
                               <TextField fx:id="searchBar" layoutX="56.0" layoutY="14.0" prefHeight="38.0" prefWidth="597.0" promptText="search" styleClass="markInputField">
                                  <font>
