@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -310,7 +311,15 @@
                                     <Button fx:id="bar1" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run1" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                                  </children>
                               </AnchorPane>
-                              <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="169.0" prefWidth="178.0" styleClass="TransparentButtons" stylesheets="@../../CSS/DashboardScreen.css" />
+                              <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="169.0" prefWidth="178.0">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/DashboardScreen.css" />
+                                    <URL value="@../../CSS/BODScreen.css" />
+                                 </stylesheets>
+                                 <styleClass>
+                                    <String fx:value="TransparentButtons" />
+                                    <String fx:value="Scrollpane" />
+                                 </styleClass></TreeView>
                            </children>
                         </AnchorPane>
                      </right>

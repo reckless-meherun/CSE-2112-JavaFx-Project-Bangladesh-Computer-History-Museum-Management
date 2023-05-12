@@ -291,10 +291,14 @@
                               <ImageView fx:id="show" fitHeight="88.0" fitWidth="124.0" layoutX="255.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                         </AnchorPane>
-                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="166.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
+                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="166.0" prefWidth="178.0">
+                           <stylesheets>
+                              <URL value="@../../CSS/DashboardScreen.css" />
+                              <URL value="@../../CSS/BODScreen.css" />
+                           </stylesheets>
                            <styleClass>
-                              <String fx:value="tree-view" />
                               <String fx:value="TransparentButtons" />
+                              <String fx:value="Scrollpane" />
                            </styleClass>
                         </TreeView>
                         <TextField fx:id="stext" layoutX="843.0" layoutY="113.0" prefHeight="26.0" prefWidth="255.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: brown; -fx-border-width: 0px 0px 2px 0px;">

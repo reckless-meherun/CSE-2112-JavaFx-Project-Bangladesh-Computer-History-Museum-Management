@@ -207,10 +207,14 @@
                               <Font name="Colonna MT" size="36.0" />
                            </font>
                         </Text>
-                        <TreeView fx:id="treeView" layoutX="273.0" layoutY="73.0" prefHeight="165.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
+                        <TreeView fx:id="treeView" layoutX="273.0" layoutY="73.0" prefHeight="165.0" prefWidth="178.0">
+                           <stylesheets>
+                              <URL value="@../../CSS/DashboardScreen.css" />
+                              <URL value="@../../CSS/BODScreen.css" />
+                           </stylesheets>
                            <styleClass>
-                              <String fx:value="tree-view" />
                               <String fx:value="TransparentButtons" />
+                              <String fx:value="Scrollpane" />
                            </styleClass>
                         </TreeView>
                      </children>

@@ -215,10 +215,14 @@
                               <ImageView fx:id="showImageView" fitHeight="140.0" fitWidth="143.0" layoutX="532.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                         </AnchorPane>
-                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="182.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
+                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="182.0" prefWidth="178.0">
+                           <stylesheets>
+                              <URL value="@../../CSS/DashboardScreen.css" />
+                              <URL value="@../../CSS/BODScreen.css" />
+                           </stylesheets>
                            <styleClass>
                               <String fx:value="TransparentButtons" />
-                              <String fx:value="tree-view" />
+                              <String fx:value="Scrollpane" />
                            </styleClass>
                         </TreeView>
                      </children>
