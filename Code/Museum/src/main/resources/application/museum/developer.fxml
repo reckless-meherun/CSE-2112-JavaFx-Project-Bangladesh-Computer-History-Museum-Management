@@ -227,12 +227,6 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </ComboBox>
-                                    <Button fx:id="image" layoutX="41.0" layoutY="399.0" mnemonicParsing="false" onAction="#insertImage" prefHeight="38.0" prefWidth="126.0" style="-fx-cursor: hand;" styleClass="signUpScreenLeftInput" text="Add Image">
-                                       <stylesheets>
-                                          <URL value="@../../CSS/TicketsScene2.css" />
-                                          <URL value="@../../CSS/TicketsScene.css" />
-                                       </stylesheets>
-                                    </Button>
                                     <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="5.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../Assets/download.png" />
@@ -313,6 +307,15 @@
                                        </stylesheets>
                                     </ComboBox>
                                     <Button fx:id="clear" layoutX="299.0" layoutY="480.0" mnemonicParsing="false" onAction="#clear" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Clear">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <stylesheets>
+                                          <URL value="@../../CSS/TicketsScene.css" />
+                                          <URL value="@../../CSS/TicketsScene2.css" />
+                                       </stylesheets>
+                                    </Button>
+                                    <Button fx:id="image" layoutX="42.0" layoutY="405.0" mnemonicParsing="false" onAction="#insertImage" prefHeight="42.0" prefWidth="175.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Browse Image">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
