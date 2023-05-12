@@ -84,6 +84,7 @@
                                                 <Image url="@../../Assets/Login/LoginLogo2.png" />
                                              </image>
                                           </ImageView>
+                                          <ImageView fx:id="imageViewCIO1" fitHeight="135.0" fitWidth="126.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
                                        </children></AnchorPane>
                                     <Text fx:id="heading12" fill="#511919" layoutX="16.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="Chief Information Officer" textAlignment="CENTER" wrappingWidth="154.74351501464844">
                                        <font>
@@ -249,6 +250,12 @@
                               <Button fx:id="bar2" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run2" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                               <Button fx:id="bar1" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run1" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                            </children></AnchorPane>
+                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
+                           <styleClass>
+                              <String fx:value="tree-view" />
+                              <String fx:value="TransparentButtons" />
+                           </styleClass>
+                        </TreeView>
                         <AnchorPane fx:id="scene2" layoutX="687.0" layoutY="146.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                            <children>
                               <TextField fx:id="name" layoutX="40.0" layoutY="72.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
@@ -302,7 +309,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </ComboBox>
-                              <Button fx:id="image" layoutX="41.0" layoutY="366.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="120.0" styleClass="signUpScreenLeftInput" text="Add Image">
+                              <Button fx:id="image" layoutX="41.0" layoutY="366.0" mnemonicParsing="false" onAction="#insertImage" prefHeight="38.0" prefWidth="120.0" style="-fx-cursor: hand;" styleClass="signUpScreenLeftInput" text="Add Image">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                     <URL value="@../../CSS/TicketsScene.css" />
@@ -315,7 +322,7 @@
                               </ImageView>
                               <Button fx:id="bar3" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" onAction="#run3" prefHeight="34.0" prefWidth="31.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
                               <Button fx:id="bar4" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" onAction="#run4" prefHeight="34.0" prefWidth="31.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
-                              <Button fx:id="delete" layoutX="168.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
+                              <Button fx:id="delete" layoutX="128.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Delete">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -324,7 +331,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <Button fx:id="update" layoutX="284.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
+                              <Button fx:id="update" layoutX="214.0" layoutY="480.0" mnemonicParsing="false" onAction="#switchToSceneOne" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -334,14 +341,22 @@
                                  </stylesheets>
                               </Button>
                               <ImageView fx:id="showimage" fitHeight="104.0" fitWidth="131.0" layoutX="228.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="showimage1" fitHeight="104.0" fitWidth="131.0" layoutX="219.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@149071.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="clear" layoutX="300.0" layoutY="480.0" mnemonicParsing="false" onAction="#clear" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Clear">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </Button>
                            </children>
                         </AnchorPane>
-                        <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="288.0" prefWidth="178.0" stylesheets="@../../CSS/DashboardScreen.css">
-                           <styleClass>
-                              <String fx:value="tree-view" />
-                              <String fx:value="TransparentButtons" />
-                           </styleClass>
-                        </TreeView>
                      </children>
                   </AnchorPane>
                </right>

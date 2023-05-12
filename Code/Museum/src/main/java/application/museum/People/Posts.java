@@ -1,5 +1,5 @@
 package application.museum.People;
 
 public enum Posts {
-    PRESIDENT, VICE_PRECIDENT, MEMBER;
+    President, Vice_President, Chief_Information_Officer,Chief_Financial_Officer,Chief_Development_Officer
 }
