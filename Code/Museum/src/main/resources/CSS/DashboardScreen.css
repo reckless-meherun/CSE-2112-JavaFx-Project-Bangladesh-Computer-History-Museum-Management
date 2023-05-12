@@ -42,11 +42,13 @@
   -fx-background-color: transparent;
   -fx-text-fill: #4B4B4B;
   -fx-background-radius: 13px;
+  -fx-font-size:15px;
 }
 
 .TransparentButtons:hover {
   -fx-background-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
-  -fx-text-fill: white;
+  -fx-text-fill: linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));
+  -fx-font-size:15px;
 }
 
 .non-TransparentButtons{
