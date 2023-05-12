@@ -3,6 +3,7 @@ module application.museum {
     requires javafx.fxml;
     requires java.sql;
     requires jasperreports;
+    requires java.desktop;
 
     opens application.museum to javafx.fxml;
     exports application.museum;

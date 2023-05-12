@@ -4,6 +4,7 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,11 +17,11 @@
    <children>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1100.0" styleClass="DashboardScreen" stylesheets="@../CSS/DashboardScreen.css">
          <right>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="deptPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" BorderPane.alignment="CENTER">
                <children>
                   <AnchorPane layoutX="330.0" layoutY="341.0" minWidth="-Infinity" prefHeight="84.0" prefWidth="540.0" styleClass="DashboardScreenUpcomingClassesItem">
                      <children>
-                        <Text fx:id="notice2" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice two" />
+                        <Text fx:id="notice2" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-cursor: hand;" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice two" />
                         <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Date:" />
                         <Text fx:id="upcomingclassteachername3" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" />
                         <Text fx:id="upcomingclasstime3" layoutX="428.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime">
@@ -29,7 +30,12 @@
                            </font>
                         </Text>
                         <Text fx:id="dateField2" layoutX="58.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="dateField2" wrappingWidth="125.57342529296875" />
-                        <Button layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
+                        <Button fx:id="update2" layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
+                        <TextField fx:id="noticefield2" layoutX="181.0" layoutY="8.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
                      </children>
                      <stylesheets>
                         <URL value="@../CSS/DashboardScreen.css" />
@@ -38,7 +44,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="330.0" layoutY="439.0" minWidth="-Infinity" prefHeight="84.0" prefWidth="540.0" styleClass="DashboardScreenUpcomingClassesItem">
                      <children>
-                        <Text fx:id="notice3" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice three" />
+                        <Text fx:id="notice3" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-cursor: hand;" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice three" />
                         <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Date:" />
                         <Text fx:id="upcomingclassteachername4" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" />
                         <Text fx:id="upcomingclasstime4" layoutX="428.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime">
@@ -47,7 +53,12 @@
                            </font>
                         </Text>
                         <Text fx:id="dateField3" layoutX="65.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="dateField3" wrappingWidth="125.57342529296875" />
-                        <Button layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
+                        <Button fx:id="update3" layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
+                        <TextField fx:id="noticefield3" layoutX="186.0" layoutY="7.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
                      </children>
                      <stylesheets>
                         <URL value="@../CSS/DashboardScreen.css" />
@@ -56,7 +67,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="330.0" layoutY="533.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="540.0" styleClass="DashboardScreenUpcomingClassesItem">
                      <children>
-                        <Text fx:id="notice4" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice four" />
+                        <Text fx:id="notice4" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-cursor: hand;" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice four" />
                         <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Date:" />
                         <Text fx:id="upcomingclassteachername5" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" />
                         <Text fx:id="upcomingclasstime5" layoutX="428.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime">
@@ -65,7 +76,12 @@
                            </font>
                         </Text>
                         <Text fx:id="dateField4" layoutX="60.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="dateField4" wrappingWidth="125.57342529296875" />
-                        <Button layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
+                        <Button fx:id="update4" layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
+                        <TextField fx:id="noticefield4" layoutX="186.0" layoutY="7.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
                      </children>
                      <stylesheets>
                         <URL value="@../CSS/DashboardScreen.css" />
@@ -183,7 +199,7 @@
                   </ImageView>
                   <AnchorPane layoutX="330.0" layoutY="246.0" minWidth="-Infinity" prefHeight="84.0" prefWidth="540.0" styleClass="DashboardScreenUpcomingClassesItem" stylesheets="@../../CSS/DashboardScreen.css">
                      <children>
-                        <Text fx:id="notice1" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice one" />
+                        <Text fx:id="notice1" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-cursor: hand;" styleClass="DashboardScreenUpcomingClassesItemHeader" text="Notice one" />
                         <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemScheduledBy" text="Date:" />
                         <Text fx:id="upcomingclassteachername2" layoutX="109.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTeacher" />
                         <Text fx:id="upcomingclasstime2" layoutX="428.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemTime">
@@ -192,7 +208,12 @@
                            </font>
                         </Text>
                         <Text fx:id="dateField1" layoutX="58.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="dateField1" wrappingWidth="125.57342529296875" />
-                        <Button layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
+                        <Button fx:id="update1" layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
+                        <TextField fx:id="noticefield1" layoutX="184.0" layoutY="4.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
                      </children>
                   </AnchorPane>
                   <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="168.0" prefWidth="178.0">
