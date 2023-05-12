@@ -90,6 +90,7 @@
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Text>
+                        <ImageView fx:id="imageViewPres11" fitHeight="125.0" fitWidth="126.0" layoutX="30.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutX="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
@@ -168,6 +169,7 @@
                               <Font name="Cambria Bold" size="18.0" />
                            </font>
                         </Text>
+                        <ImageView fx:id="imageViewPres2" fitHeight="125.0" fitWidth="126.0" layoutX="30.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </AnchorPane>
                   <Button fx:id="GoBackButton" layoutX="587.0" layoutY="624.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="GoBack" textFill="#1e0202">
