@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="scroll bar of department treeview edited">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/curator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/curator.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/developer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/developer.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="right side bar of aboutus edited" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,13 +86,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
-    </task>
-    <task id="LOCAL-00003" summary="navigation handler created">
-      <created>1681646753050</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1681646753050</updated>
     </task>
     <task id="LOCAL-00004" summary="Hover effect added">
       <created>1681656224055</created>
@@ -434,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683927616576</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="right side bar of aboutus edited">
+      <created>1683928617770</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1683928617770</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -450,7 +446,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changing screens with Departments treeview" />
     <MESSAGE value="Curatorial Department added" />
     <MESSAGE value="Security Scene added" />
     <MESSAGE value="auditorium scene added" />
@@ -475,7 +470,8 @@
     <MESSAGE value="Dashboard redesigned" />
     <MESSAGE value="Left side bar of about us edited" />
     <MESSAGE value="scroll bar of department treeview edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="scroll bar of department treeview edited" />
+    <MESSAGE value="right side bar of aboutus edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="right side bar of aboutus edited" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
