@@ -58,7 +58,7 @@
       </AnchorPane>
    </left>
    <center>
-      <ScrollPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../CSS/ClassroomScreen.css" BorderPane.alignment="CENTER">
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../CSS/BODScreen.css" BorderPane.alignment="CENTER">
          <content>
             <AnchorPane prefHeight="680.0" prefWidth="1039.0">
                <children>

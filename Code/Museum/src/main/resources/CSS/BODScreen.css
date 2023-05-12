@@ -1,3 +1,33 @@
+.BOD_Posts{
+     -fx-font-size:21px;
+     -fx-line-spacing:-5px;
+     -fx-font-weight:800;
+     -fx-fill:#664329;
+}
+
+.BOD_Names{
+     -fx-font-size:17px;
+     -fx-line-spacing:-5px;
+     -fx-font-weight:800;
+     -fx-fill:#574327;
+}
+
+.UpdateButtons {
+  -fx-font-family: 'Cambria';
+  -fx-font-weight:700;
+  -fx-background-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
+  -fx-text-fill: linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));
+  -fx-background-radius: 13px;
+  -fx-font-size:16px;
+}
+
+.UpdateButtons:hover {
+  -fx-background-color: linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));
+  -fx-text-fill: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
+  -fx-font-weight:700;
+  -fx-font-size:15px;
+}
+
 .ClassroomScreen,.Scrollpane{
     -fx-background-color: #F3F3FF;
 }
@@ -5,7 +35,7 @@
     -fx-font-family:'Cambria';
 }
 .ClassroomScreenItem{
-    -fx-background-color:#FFFFFF;
+-fx-background-color: #c8b99d;
     -fx-background-radius:12px;
 }
 .ClassroomScreenItemTitle{
@@ -30,9 +60,13 @@
       -fx-font-weight:400;
       -fx-fill:#FFFFFF;
 }
-.ClassroomScreenTeacherImageBackground{
-    -fx-background-color:#FFFFFF;
-    -fx-background-radius:0px 12px  0px 12px;
+.ClassroomScreenTeacherImageBackground1{
+    -fx-background-radius: 5px;
+    -fx-background-color:	#FFFAF0;
+}
+.ClassroomScreenTeacherImageBackground2{
+    -fx-background-radius: 5px;
+    -fx-background-color:	#F5F5DC;
 }
 .ClassroomScreenEnrolledButton,.ClassroomScreenEnrolledButtonSecondary{
     -fx-background-color:#05B958;
@@ -73,6 +107,8 @@
     -fx-background-radius: 5em;
 }
 .classroomCover{
-    -fx-background-color: #5D3B8A;
-    -fx-background-radius:12px 12px 0px 0px;
+    -fx-font-family: 'Cambria';
+      -fx-background-color: linear-gradient(to top, hsba(24, 100%, 29%, 1), hsba(36, 57%, 52%, 1));
+      -fx-text-fill: white;
+      -fx-background-radius: 13px;
 }

@@ -215,6 +215,8 @@ public class InventoryController implements Initializable
                 resourcesPath.append(result.getString("ImagePath"));
                 System.out.println("oka_4");
                 Artifacts artifact = new Artifacts(result.getInt("doc_no"), result.getDate("Last_Update"), result.getString("Category"), result.getString("Description"), result.getString("Department"), result.getInt("Position"), result.getInt("Room"), result.getInt("Level"), resourcesPath.toString());
+                System.out.println("cat " + artifact.getCategory());
+                System.out.println("doc " + artifact.getDoc_no());
                 System.out.println("oka_5");
                 artifactList.add(artifact);
                 System.out.println("oka_6");
@@ -335,14 +337,14 @@ public class InventoryController implements Initializable
                 String files_path = im.toString();
 
                 prepare = connect.prepareStatement(sql);
-                prepare.setDate(1, (java.sql.Date.valueOf(dateField.getValue())));
-                prepare.setString(2, categoryField.getText());
-                prepare.setString(3, docNoField.getText());
+                prepare.setString(1, docNoField.getText());
+                prepare.setDate(2, (java.sql.Date.valueOf(dateField.getValue())));
+                prepare.setString(3, categoryField.getText());
                 prepare.setString(4, descriptionField.getText());
-                prepare.setString(5, descriptionField.getText());
-                prepare.setString(6, (String) departmentField.getSelectionModel().getSelectedItem());
-                prepare.setString(7, rowField.getText());
-                prepare.setString(8, roomField.getText());
+                prepare.setString(5, (String) departmentField.getSelectionModel().getSelectedItem());
+                prepare.setString(6, rowField.getText());
+                prepare.setString(7, roomField.getText());
+                prepare.setString(8, levelField.getText());
                 //prepare.setString(13, (String) gender.getSelectionModel().getSelectedItem());
                 prepare.setString(9, files_path);
 

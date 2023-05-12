@@ -94,7 +94,20 @@ public class TicketController implements Initializable
     private Button printMapButton;
     @FXML
     private Button resetButton;
-
+    @FXML
+    private Button updatePriceButton;
+    @FXML
+    private Button calculatePriceButton;
+    @FXML
+    private Button updateDiscountButton;
+    @FXML
+    private TextField currentPriceField;
+    @FXML
+    private TextField currentDiscountField;
+    @FXML
+    private Label currentPriceLabel;
+    @FXML
+    private Label currentDiscountLabel;
     @FXML
     private TextField nameField;
     @FXML
@@ -112,7 +125,7 @@ public class TicketController implements Initializable
     @FXML
     private Text discount;
     @FXML
-    private Text finalPrice;
+    private Text finalPriceField;
     @FXML
     private TextField searchBar;
     @FXML
@@ -265,7 +278,7 @@ public class TicketController implements Initializable
                 Visitor vis;
                 // System.out.println("oka2");
                 vis = new Visitor(result.getDate("Last_Visit_Date"), result.getString("Name"), result.getInt("Age"), gm, result.getString("Email"), result.getString("Phone"), result.getInt("Total_Visit"), result.getString("Language"));
-                System.out.println(vis.getName());
+
                 //  System.out.println("oka3");
                 datalist.add(vis);
                 // System.out.println("oka4");
@@ -326,7 +339,6 @@ public class TicketController implements Initializable
 
                 prepare.execute();
                 showData();
-                System.out.println("ok12");
                 clear();
             }
 
@@ -390,7 +402,6 @@ public class TicketController implements Initializable
         {
             return;
         }
-        System.out.println("cleared");
         dateField.setValue(LocalDate.parse(valueOf(visitor.getLast_vis_date())));
         nameField.setText(valueOf(visitor.getName()));
         genderField.setValue(valueOf(visitor.getGender()));
@@ -537,6 +548,45 @@ public class TicketController implements Initializable
         {
             System.out.println(ex);
         }
+    }
+
+    @FXML
+    void updatePrice()
+    {
+        String newPrice = currentPriceField.getText();
+        currentPriceLabel.setText(newPrice);
+    }
+    @FXML
+    void updateDiscount()
+    {
+        String newDiscount = currentDiscountField.getText();
+        currentDiscountLabel.setText(newDiscount);
+    }
+
+    @FXML
+    void calculatePrice()
+    {
+        if(currentPriceLabel==null)
+        {
+            currentPriceLabel.setText("100.00");
+        }
+        if(currentDiscountLabel==null)
+        {
+            currentDiscountLabel.setText("00.00");
+        }
+
+        Double currentPrice = Double.valueOf(currentPriceLabel.getText());
+        Double currentDiscount = 0.0;
+        if(Integer.valueOf(prevVisitField.getText())>2)
+        {
+            currentDiscount = Double.valueOf(currentDiscountLabel.getText());
+        }
+        priceWithoutDiscount.setText(currentPrice.toString());
+        Double totalDiscount = currentPrice*currentDiscount/100.0;
+        discount.setText(totalDiscount.toString());
+
+        Double finalPrice = currentPrice - totalDiscount;
+        finalPriceField.setText(finalPrice.toString());
     }
 
     @FXML

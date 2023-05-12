@@ -22,130 +22,6 @@
                <right>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane layoutY="146.0" prefHeight="534.0" prefWidth="1100.0" stylesheets="@../../CSS/BODScreen.css">
-                           <children>
-                              <Text fx:id="heading" layoutX="381.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Board Of Directors" textAlignment="CENTER" wrappingWidth="337.9434814453125">
-                                 <font>
-                                    <Font name="Colonna MT" size="36.0" />
-                                 </font>
-                              </Text>
-                              <AnchorPane layoutX="62.0" layoutY="69.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css" AnchorPane.topAnchor="69.0">
-                                 <children>
-                                    <Text fx:id="namePres" layoutX="16.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
-                                    <AnchorPane layoutX="11.0" layoutY="28.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground1">
-                                       <children>
-                                          <ImageView fx:id="imageViewPres" fitHeight="135.0" fitWidth="126.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../../Assets/Login/LoginLogo2.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children></AnchorPane>
-                                    <Text fx:id="heading1" fill="#511919" layoutX="16.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="President &amp; Chief Executive Officer" textAlignment="CENTER" wrappingWidth="154.74351501464844">
-                                       <font>
-                                          <Font name="Cambria" size="19.0" />
-                                       </font>
-                                    </Text>
-                                    <Button fx:id="updatePresButton" layoutY="286.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane layoutX="263.0" layoutY="175.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css">
-                                 <children>
-                                    <AnchorPane layoutX="10.0" layoutY="162.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground2">
-                                       <children>
-                                          <ImageView fx:id="imageViewVicePres" fitHeight="135.0" fitWidth="126.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../../Assets/Login/LoginLogo2.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children></AnchorPane>
-                                    <Text fx:id="heading11" fill="#511919" layoutX="16.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="Vice President &amp; Secretary" textAlignment="CENTER" wrappingWidth="154.74351501464844">
-                                       <font>
-                                          <Font name="Cambria" size="19.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="nameVicePres" layoutX="16.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
-                                    <Button fx:id="updateVicePresButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane layoutX="464.0" layoutY="69.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css" AnchorPane.topAnchor="69.0">
-                                 <children>
-                                    <AnchorPane layoutX="11.0" layoutY="28.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground1">
-                                       <children>
-                                          <ImageView fx:id="imageViewCIO" fitHeight="135.0" fitWidth="126.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../../Assets/Login/LoginLogo2.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children></AnchorPane>
-                                    <Text fx:id="heading12" fill="#511919" layoutX="16.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="Chief Information Officer" textAlignment="CENTER" wrappingWidth="154.74351501464844">
-                                       <font>
-                                          <Font name="Cambria" size="19.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="nameCIO" layoutX="16.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
-                                    <Button fx:id="updateCIOButton" layoutY="286.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane layoutX="665.0" layoutY="175.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css">
-                                 <children>
-                                    <AnchorPane layoutX="11.0" layoutY="162.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground2">
-                                       <children>
-                                          <ImageView fx:id="imageViewCFO" fitHeight="135.0" fitWidth="126.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../../Assets/Login/LoginLogo2.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children></AnchorPane>
-                                    <Text fx:id="heading13" fill="#511919" layoutX="16.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="Chief Financial Officer" textAlignment="CENTER" wrappingWidth="154.74351501464844">
-                                       <font>
-                                          <Font name="Cambria" size="19.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="nameCFO" layoutX="16.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
-                                    <Button fx:id="updateCFOButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane layoutX="866.0" layoutY="69.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css" AnchorPane.topAnchor="69.0">
-                                 <children>
-                                    <AnchorPane layoutX="11.0" layoutY="28.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground1">
-                                       <children>
-                                          <ImageView fx:id="imageViewCDO" fitHeight="135.0" fitWidth="126.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../../Assets/Login/LoginLogo2.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children></AnchorPane>
-                                    <Text fx:id="heading14" fill="#511919" layoutX="16.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="Chief Development Officer" textAlignment="CENTER" wrappingWidth="154.74351501464844">
-                                       <font>
-                                          <Font name="Cambria" size="19.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="nameCDO" layoutX="16.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
-                                    <Button fx:id="updateCDOButton" layoutY="286.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </AnchorPane>
-                           </children>
-                        </AnchorPane>
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="146.0" prefWidth="1106.0" styleClass="DashboardScreenMenu" stylesheets="@../../CSS/DashboardScreen.css">
                            <children>
                               <ImageView fitHeight="119.0" fitWidth="134.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
@@ -342,6 +218,95 @@
                               <String fx:value="TransparentButtons" />
                            </styleClass>
                         </TreeView>
+                        <AnchorPane layoutY="146.0" prefHeight="534.0" prefWidth="1100.0" stylesheets="@../../CSS/BODScreen.css">
+                           <children>
+                              <Text fx:id="heading" layoutX="381.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Board Of Directors" textAlignment="CENTER" wrappingWidth="337.9434814453125">
+                                 <font>
+                                    <Font name="Colonna MT" size="36.0" />
+                                 </font>
+                              </Text>
+                              <AnchorPane layoutX="66.0" layoutY="72.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css" AnchorPane.topAnchor="72.0">
+                                 <children>
+                                    <Text fx:id="namePres" layoutX="16.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
+                                    <AnchorPane layoutX="11.0" layoutY="28.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground1" />
+                                    <Text fx:id="heading1" fill="#511919" layoutX="16.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="President &amp; Chief Executive Officer" textAlignment="CENTER" wrappingWidth="154.74351501464844">
+                                       <font>
+                                          <Font name="Cambria" size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="updatePresButton" layoutY="286.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="264.0" layoutY="178.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css">
+                                 <children>
+                                    <AnchorPane layoutX="10.0" layoutY="162.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground2" />
+                                    <Text fx:id="heading11" fill="#511919" layoutX="16.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="Vice President &amp; Secretary" textAlignment="CENTER" wrappingWidth="154.74351501464844">
+                                       <font>
+                                          <Font name="Cambria" size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="nameVicePres" layoutX="16.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
+                                    <Button fx:id="updateVicePresButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="470.0" layoutY="72.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css" AnchorPane.topAnchor="72.0">
+                                 <children>
+                                    <AnchorPane layoutX="11.0" layoutY="28.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground1" />
+                                    <Text fx:id="heading12" fill="#511919" layoutX="16.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="Chief Information Officer" textAlignment="CENTER" wrappingWidth="154.74351501464844">
+                                       <font>
+                                          <Font name="Cambria" size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="nameCIO" layoutX="16.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
+                                    <Button fx:id="updateCIOButton" layoutY="286.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="676.0" layoutY="178.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css">
+                                 <children>
+                                    <AnchorPane layoutX="11.0" layoutY="162.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground2" />
+                                    <Text fx:id="heading13" fill="#511919" layoutX="16.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="Chief Financial Officer" textAlignment="CENTER" wrappingWidth="154.74351501464844">
+                                       <font>
+                                          <Font name="Cambria" size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="nameCFO" layoutX="16.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
+                                    <Button fx:id="updateCFOButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="878.0" layoutY="72.0" prefHeight="335.0" prefWidth="187.0" styleClass="ClassroomScreenItem" stylesheets="@../../CSS/BODScreen.css" AnchorPane.topAnchor="72.0">
+                                 <children>
+                                    <AnchorPane layoutX="11.0" layoutY="28.0" prefHeight="145.0" prefWidth="166.0" styleClass="ClassroomScreenTeacherImageBackground1" />
+                                    <Text fx:id="heading14" fill="#511919" layoutX="16.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Posts" text="Chief Development Officer" textAlignment="CENTER" wrappingWidth="154.74351501464844">
+                                       <font>
+                                          <Font name="Cambria" size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="nameCDO" layoutX="16.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="BOD_Names" text="name" wrappingWidth="116.20001220703125" />
+                                    <Button fx:id="updateCDOButton" layoutY="286.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="187.0" styleClass="UpdateButtons" text="Update" textFill="#f4d524">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
                      </children>
                   </AnchorPane>
                </right>
