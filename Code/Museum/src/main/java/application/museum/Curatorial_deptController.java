@@ -678,7 +678,7 @@ public class Curatorial_deptController implements Initializable
         if(dev1.isEmpty()){
             Alert alert=new Alert(Alert.AlertType.ERROR);
             alert.setTitle("                                     Error!!!!!");
-            alert.setHeaderText("            Admin not found!  ");
+            alert.setHeaderText("            Department not found!  ");
             alert.setContentText("                             Please enter correct credentials");
             alert.showAndWait();
             showData();

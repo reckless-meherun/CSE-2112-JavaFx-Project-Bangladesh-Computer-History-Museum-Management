@@ -2,6 +2,7 @@ package application.museum;
 
 import application.museum.Departments.Artifacts;
 import application.museum.Departments.Photo;
+import application.museum.People.Admins;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,6 +16,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -100,7 +102,7 @@ public class InventoryController implements Initializable
     @FXML
     private ImageView showImageView;
     @FXML
-    private TextField searchBar;
+    private TextField stext;
     @FXML
     private TextField categoryField;
     @FXML
@@ -416,6 +418,20 @@ public class InventoryController implements Initializable
         inventoryTable.setItems(showlist);
         // System.out.println("showing");
     }
+    public void showData(ObservableList<Artifacts> showlist)
+    {
+
+        docNoCol.setCellValueFactory(new PropertyValueFactory<>("doc_no"));
+        dateCol.setCellValueFactory(new PropertyValueFactory<>("lastUpdate"));
+        categoryCol.setCellValueFactory(new PropertyValueFactory<>("category"));
+        descriptionCol.setCellValueFactory(new PropertyValueFactory<>("title_description"));
+        departmentCol.setCellValueFactory(new PropertyValueFactory<>("dept"));
+        positionCol.setCellValueFactory(new PropertyValueFactory<>("row"));
+        roomCol.setCellValueFactory(new PropertyValueFactory<>("room"));
+        levelCol.setCellValueFactory(new PropertyValueFactory<>("level"));
+        inventoryTable.setItems(showlist);
+        // System.out.println("showing");
+    }
 
     @FXML
     public void clear()
@@ -594,5 +610,37 @@ public class InventoryController implements Initializable
         }
         Combo_box();
         showData();
+        stext.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                Search();
+            }
+        });
+    }
+    @FXML
+    void Search() {
+        Integer searchName = null;
+        if (!stext.getText().isEmpty())
+            searchName = Integer.parseInt(stext.getText()); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<Artifacts> dev=artifactList();
+        ObservableList<Artifacts> dev1=FXCollections.observableArrayList();
+        for(Artifacts d: dev){
+            if(searchName.equals(d.getDoc_no())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            Artifact not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
 }
