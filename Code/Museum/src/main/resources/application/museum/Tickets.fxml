@@ -166,7 +166,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <Button fx:id="printMapButton" layoutX="121.0" layoutY="473.0" mnemonicParsing="false" onAction="#clear" prefHeight="42.0" prefWidth="197.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Print Museum Map">
+                              <Button fx:id="printMapButton" layoutX="121.0" layoutY="473.0" mnemonicParsing="false" onAction="#showFile" prefHeight="42.0" prefWidth="197.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Print Museum Map">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

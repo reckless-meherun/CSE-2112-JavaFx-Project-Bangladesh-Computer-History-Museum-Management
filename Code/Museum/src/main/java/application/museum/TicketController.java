@@ -1,5 +1,6 @@
 package application.museum;
 
+import java.awt.*;
 import java.io.*;
 
 import application.museum.People.Employee;
@@ -15,6 +16,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
@@ -30,6 +34,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.List;
 import java.util.jar.JarException;
 
 import net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl;
@@ -154,6 +159,7 @@ public class TicketController implements Initializable
     private TableColumn<Visitor, Integer> totalVisitCol;
     @FXML
     private TableColumn<Visitor, String> languageCol;
+    private String url1 = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Departments.db";
 
     public void Combo_box()
     {
@@ -233,25 +239,7 @@ public class TicketController implements Initializable
         }
     }
 
-    StringBuilder getrespath()
-    {
-        StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
-        //int n=resourcesPath.length();
-        resourcesPath.deleteCharAt(0);
-        for (int i = 0; i < resourcesPath.length(); i++)
-        {
-            if (resourcesPath.charAt(i) == '%')
-            {
-                resourcesPath.replace(i, i + 3, " ");
-            }
-            if (resourcesPath.charAt(i) == 'm')
-            {
-                resourcesPath.delete(i + 1, resourcesPath.length());
-                break;
-            }
-        }
-        return resourcesPath;
-    }
+
 
     public ObservableList<Visitor> datalist()
     {
@@ -604,6 +592,79 @@ public class TicketController implements Initializable
         }
         Combo_box();
         showData();
+    }
+    @FXML
+    public void showFile(){
+        String sql;
+        sql = "SELECT * FROM demo";
+        StringBuilder st=new StringBuilder();
+
+        try
+        {
+            connect = DBUtils.connectDB(url1);
+            prepare = connect.prepareStatement(sql);
+            result = prepare.executeQuery();
+
+            while (result.next())
+            {
+                st=new StringBuilder(getrespath().append(result.getString("Name")));
+                //System.out.println("oka4");
+            }
+        } catch (Exception e)
+        {
+            System.out.println("map database error");
+        } finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
+
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+        //System.out.println(st);
+        File file = new File(st.toString());
+        if (file.exists()) {
+            if (Desktop.isDesktopSupported()) {
+                try {
+                    Desktop.getDesktop().open(file);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                System.out.println("Desktop not supported.");
+            }
+        } else {
+            System.out.println("File not found.");
+        }
+
+    }
+    StringBuilder getrespath()
+    {
+        StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
+        //int n=resourcesPath.length();
+        resourcesPath.deleteCharAt(0);
+        //System.out.println(resourcesPath);
+        for (int i = 0; i < resourcesPath.length(); i++)
+        {
+            if (resourcesPath.charAt(i) == '%')
+            {
+                resourcesPath.replace(i, i + 3, " ");
+            }
+            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
+                resourcesPath.delete(i-1,resourcesPath.length());
+                break;
+            }
+        }
+        return resourcesPath;
     }
 }
 

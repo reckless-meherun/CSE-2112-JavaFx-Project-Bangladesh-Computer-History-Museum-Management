@@ -18,11 +18,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.w3c.dom.Text;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.sql.*;
 import java.sql.Date;
 import java.time.LocalDate;
@@ -94,6 +101,9 @@ public class Curatorial_deptController implements Initializable
     private TableColumn<Curatorial_dept, String> cleanerCol;
     @FXML
     private TableColumn<Curatorial_dept, String> envConCol;
+
+    @FXML
+    private AnchorPane scene2;
 
     private String url1 = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Departments.db";
     private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\employee.db";
@@ -538,5 +548,93 @@ public class Curatorial_deptController implements Initializable
             stage.setScene(scene);
             stage.show();
         }
+    }
+    @FXML
+    public void copyFileToResources() throws IOException
+    {
+        FileChooser open = new FileChooser();
+        Stage stage = (Stage) scene2.getScene().getWindow();
+        File imageFile = open.showOpenDialog(stage);
+        // Determine the path to the resources folder
+        StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
+        //int n=resourcesPath.length();
+        resourcesPath.deleteCharAt(0);
+        for (int i = 0; i < resourcesPath.length(); i++)
+        {
+            if (resourcesPath.charAt(i) == '/')
+            {
+
+                resourcesPath.replace(i, i + 1, "\\\\");
+            }
+            if (resourcesPath.charAt(i) == '%')
+            {
+                resourcesPath.replace(i, i + 3, " ");
+            }
+            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
+                resourcesPath.delete(i-1,resourcesPath.length());
+                break;
+            }
+        }
+        System.out.println(resourcesPath);
+
+        String name = imageFile.getName();
+        String extension = "";
+
+        int dotIndex = name.lastIndexOf(".");
+        if (dotIndex > 0 && dotIndex < name.length() - 1)
+        {
+            extension = name.substring(dotIndex + 1);
+        }
+
+        String fileName = "image_" + System.currentTimeMillis() + "." + extension;
+        StringBuilder destination = new StringBuilder("\\src\\main\\resources\\application\\museum\\Maps\\" + fileName);
+
+        // Copy the image file to the resources folder with the unique file name
+        Path sourcePath = imageFile.toPath();
+        Path destinationPath = Paths.get(resourcesPath + "\\src\\main\\resources\\application\\museum\\Maps\\" + fileName);
+        Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+//        direction=destinationPath.toString();
+        for (int i = 0; i < destination.length(); i++)
+        {
+            if (destination.charAt(i) == '\\')
+            {
+                destination.setCharAt(i, '/');
+            }
+        }
+        String sql = "UPDATE demo SET `Name` = '" + destination.toString() + "' WHERE ID = '" + 1 + "'";
+
+        try
+        {
+            connect = DBUtils.connectDB(url1);
+
+                statement = connect.createStatement();
+                statement.executeUpdate(sql);
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("                                      Update Successfull!!!");
+                alert.setHeaderText("       ");
+                alert.setContentText("                             Successfully updated the data. ");
+                alert.showAndWait();
+                showData();
+                clear();
+
+
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        } finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                statement.close();
+
+            } catch (Exception e)
+            {
+
+            }
+        }
+
     }
 }
