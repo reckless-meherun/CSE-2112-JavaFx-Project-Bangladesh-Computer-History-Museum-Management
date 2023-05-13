@@ -1,5 +1,9 @@
 package application.museum;
 
+import application.museum.People.Employee;
+import application.museum.People.Gender;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,16 +11,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TreeView;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class SecurityController implements Initializable {
@@ -68,8 +74,18 @@ public class SecurityController implements Initializable {
     @FXML
     private Text studentName;
 
+    @FXML
+    private ComboBox<String> watcher;
+
+    private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\employee.db";
+
 
     private static String name_here = "SecurityScene.fxml";
+
+    private Connection connect;
+    private PreparedStatement prepare;
+    private Statement statement;
+    private ResultSet result;
 
     static void pushToStack()
     {
@@ -86,6 +102,7 @@ public class SecurityController implements Initializable {
         {
             throw new RuntimeException(exception);
         }
+        comboBox();
     }
 
     @FXML
@@ -132,4 +149,104 @@ public class SecurityController implements Initializable {
 
         }
     }
+    ArrayList<Employee> wacherlist(){
+        ArrayList<Employee> list=new ArrayList<>();
+        String sql;
+        sql = "SELECT * FROM Employee";
+
+        try
+        {
+            connect = DBUtils.connectDB(url);
+            prepare = connect.prepareStatement(sql);
+            result = prepare.executeQuery();
+
+            while (result.next())
+            {
+                StringBuilder resourcesPath = getrespath();
+                System.out.println(resourcesPath);
+                resourcesPath.append(result.getString("img"));
+
+                Gender gm;
+                if (result.getString("Gender").equals("MALE"))
+                {
+                    gm = Gender.MALE;
+                } else if (result.getString("Gender").equals("FEMALE"))
+                {
+                    gm = Gender.FEMALE;
+                } else gm = Gender.OTHER;
+                Employee emp;
+
+                if (result.getDate("resign") != null)
+                {
+
+                    emp = new Employee(result.getString("Name"), gm, result.getString("phoneNo"), resourcesPath.toString(),
+                            result.getString("email"), result.getDate("dob"), result.getString("adress"),
+                            result.getInt("ID"), result.getString("Department"), result.getString("designation"),
+                            result.getString("worktime"), result.getDate("jdate"), result.getDate("resign"));
+                } else
+                {
+                    emp = new Employee(result.getString("Name"), gm, result.getString("phoneNo"), resourcesPath.toString(),
+                            result.getString("email"), result.getDate("dob"), result.getString("adress"),
+                            result.getInt("ID"), result.getString("Department"), result.getString("designation"),
+                            result.getString("worktime"), result.getDate("jdate"));
+                }
+
+                list.add(emp);
+            }
+
+        } catch (Exception e)
+        {
+            System.out.println("username database error");
+        } finally
+        {
+            try
+            {
+                connect.close();
+                result.close();
+                prepare.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
+
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+
+        return list;
+    }
+    public void comboBox(){
+        ArrayList<Employee> e=wacherlist();
+        ArrayList<String> list=new ArrayList<>();
+        for(Employee emp:e){
+            if(emp.getDepartment().equals("Security")){
+                list.add(emp.getName());
+            }
+        }
+        ObservableList data_list = FXCollections.observableArrayList(list);
+        watcher.setItems(data_list);
+    }
+
+    StringBuilder getrespath()
+    {
+        StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
+        //int n=resourcesPath.length();
+        resourcesPath.deleteCharAt(0);
+        System.out.println(resourcesPath);
+        for (int i = 0; i < resourcesPath.length(); i++)
+        {
+            if (resourcesPath.charAt(i) == '%')
+            {
+                resourcesPath.replace(i, i + 3, " ");
+            }
+            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
+                resourcesPath.delete(i-1,resourcesPath.length());
+                break;
+            }
+        }
+        return resourcesPath;
+    }
+
 }
