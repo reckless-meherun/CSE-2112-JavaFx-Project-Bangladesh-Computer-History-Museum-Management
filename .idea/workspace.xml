@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Curatorial dept controller modified">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/AuditoriumScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/AuditoriumScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +89,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
-    </task>
-    <task id="LOCAL-00014" summary="about us input form ready">
-      <created>1681922919570</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1681922919570</updated>
     </task>
     <task id="LOCAL-00015" summary="about us input form ready">
       <created>1681922947178</created>
@@ -433,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684018965332</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="project done">
+      <created>1684019303646</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1684019303647</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -449,7 +449,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Navigation edited for aboutUs" />
     <MESSAGE value="Navigation edited for employee and educator" />
     <MESSAGE value="Navigation edited for students and users" />
     <MESSAGE value="Navigation handler done for all pages" />
@@ -474,7 +473,8 @@
     <MESSAGE value="Curatorial controller done but not checked" />
     <MESSAGE value="Curatorial dept controller done" />
     <MESSAGE value="Done Auditorium" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done Auditorium" />
+    <MESSAGE value="project done" />
+    <option name="LAST_COMMIT_MESSAGE" value="project done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
