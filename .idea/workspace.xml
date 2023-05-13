@@ -4,10 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Curatorial dept controller modified">
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/AboutUs_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Add_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Curator_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Dashboard_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Educator_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Employee_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/GoBack_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Inventory_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Menu_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Notice_icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/PEducation_Icon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Student_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Ticket_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/User_Icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/__-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/curDept_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/curDept_Icon.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/security_icon-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Maps/image_1684006240430.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Gallerycontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Gallerycontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Dashboard_Icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Dashboard_Icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Developer_Icon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Icons/Developer_Icon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Departments.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Departments.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/CuratorialDeptScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/CuratorialDeptScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Inventory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PublicEducationScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PublicEducationScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/SecurityScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/SecurityScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/curator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/curator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/developer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/developer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/educator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/educator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/employee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/employee.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/students.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/students.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +124,48 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
+    </task>
+    <task id="LOCAL-00013" summary="connected gallery">
+      <created>1681896539194</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681896539194</updated>
+    </task>
+    <task id="LOCAL-00014" summary="about us input form ready">
+      <created>1681922919570</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681922919570</updated>
+    </task>
+    <task id="LOCAL-00015" summary="about us input form ready">
+      <created>1681922947178</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681922947178</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Admins is now users.">
+      <created>1681927658193</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681927658193</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added the table of about us...">
+      <created>1681996401181</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681996401181</updated>
+    </task>
+    <task id="LOCAL-00018" summary="userpage complete... Eid Mubarak">
+      <created>1682105598900</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682105598900</updated>
     </task>
     <task id="LOCAL-00019" summary="userpage complete... Eid Mubarak">
       <created>1682105615843</created>
@@ -392,49 +468,7 @@
       <option name="project" value="LOCAL" />
       <updated>1683999138292</updated>
     </task>
-    <task id="LOCAL-00062" summary="curatorial dept ok working combobox.">
-      <created>1684003270913</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1684003270914</updated>
-    </task>
-    <task id="LOCAL-00063" summary="map done">
-      <created>1684006062126</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1684006062126</updated>
-    </task>
-    <task id="LOCAL-00064" summary="map done">
-      <created>1684006099331</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1684006099331</updated>
-    </task>
-    <task id="LOCAL-00065" summary="search on curatorial deptcomplete">
-      <created>1684007790255</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1684007790255</updated>
-    </task>
-    <task id="LOCAL-00066" summary="search on Inventory complete">
-      <created>1684008365174</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1684008365174</updated>
-    </task>
-    <task id="LOCAL-00067" summary="search on security complete">
-      <created>1684009124161</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1684009124161</updated>
-    </task>
-    <option name="localTasksCounter" value="68" />
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -450,6 +484,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Navigation edited for Dashboard, PhotoGallery and Ticket scene controller" />
+    <MESSAGE value="Navigation edited for aboutUs" />
+    <MESSAGE value="Navigation edited for employee and educator" />
+    <MESSAGE value="Navigation edited for students and users" />
+    <MESSAGE value="Navigation handler done for all pages" />
     <MESSAGE value="Dashboard fxml updated" />
     <MESSAGE value="home button along with all buttons in all scenes fixed" />
     <MESSAGE value="db file of inventory, photoGallry and ticket pages uploaded" />
@@ -470,12 +509,7 @@
     <MESSAGE value="Icons downloaded" />
     <MESSAGE value="Curatorial controller done but not checked" />
     <MESSAGE value="Curatorial dept controller done" />
-    <MESSAGE value="curatorial dept ok working combobox." />
-    <MESSAGE value="map done" />
-    <MESSAGE value="search on curatorial deptcomplete" />
-    <MESSAGE value="search on Inventory complete" />
-    <MESSAGE value="search on security complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="search on security complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Curatorial dept controller done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

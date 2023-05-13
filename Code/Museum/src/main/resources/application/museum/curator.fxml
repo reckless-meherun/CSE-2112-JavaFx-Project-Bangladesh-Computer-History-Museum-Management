@@ -93,18 +93,23 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Text layoutX="504.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
+                              <Text layoutX="504.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="444.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/AboutUs_Icon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane fx:id="paneside" layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));">
                            <children>
                               <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="170.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../Assets/menu.png" />
+                                    <Image url="@../../Assets/Icons/Menu_Icon.jpg" />
                                  </image>
                               </ImageView>
                               <Button fx:id="BOD" layoutX="50.0" layoutY="51.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="BOD" textFill="#fffefe">
@@ -149,7 +154,7 @@
                               <Button fx:id="bar2" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run2" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                               <Button fx:id="bar1" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#run1" prefWidth="30.0" style="-fx-cursor: hand; -fx-background-color: transparent;" />
                            </children></AnchorPane>
-                        <Text layoutX="483.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Curator" textAlignment="CENTER" wrappingWidth="145.1434326171875">
+                        <Text layoutX="529.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Curator" textAlignment="CENTER" wrappingWidth="115.54345703125">
                            <font>
                               <Font name="Colonna MT" size="36.0" />
                            </font>
@@ -203,7 +208,7 @@
                               </ComboBox>
                               <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="5.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../Assets/download.png" />
+                                    <Image url="@../../Assets/Icons/Add_Icon-removebg-preview.png" />
                                  </image>
                               </ImageView>
                               <Button fx:id="bar3" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" onAction="#run3" prefHeight="34.0" prefWidth="31.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
@@ -315,6 +320,11 @@
                            </image>
                         </ImageView>
                         <Button fx:id="sbut" layoutX="1065.0" layoutY="114.0" mnemonicParsing="false" onAction="#Search" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="472.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Assets/Icons/Curator_Icon-removebg-preview.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
                </right>

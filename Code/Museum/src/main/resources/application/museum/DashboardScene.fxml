@@ -161,9 +161,14 @@
                               <Font size="14.0" />
                            </font>
                         </Button>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="393.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Assets/Icons/Dashboard_Icon.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
-                  <Text layoutX="491.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="NOTICE BOARD" wrappingWidth="217.14337158203125">
+                  <Text layoutX="551.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="NOTICE BOARD" wrappingWidth="217.14337158203125">
                      <font>
                         <Font name="Colonna MT" size="36.0" />
                      </font>
@@ -225,6 +230,16 @@
                         <String fx:value="TransparentButtons" />
                         <String fx:value="Scrollpane" />
                      </styleClass></TreeView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="493.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assets/Icons/Notice_icon-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="526.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assets/Icons/GoBack_Icon-removebg-preview.png" />
+                     </image>
+                  </ImageView>
                </children>
                <stylesheets>
                   <URL value="@../../CSS/DashboardScreen.css" />
