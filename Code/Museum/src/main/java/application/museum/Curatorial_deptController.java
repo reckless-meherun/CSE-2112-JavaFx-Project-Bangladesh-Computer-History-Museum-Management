@@ -24,11 +24,10 @@ import org.w3c.dom.Text;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.sql.Date;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
+
 
 import static java.lang.String.valueOf;
 
@@ -65,17 +64,18 @@ public class Curatorial_deptController implements Initializable
     @FXML
     private Button updateButton;
     @FXML
-    private ComboBox nameField;
+    private ComboBox<String> nameField;
+
     @FXML
     private TextField levelField;
     @FXML
     private TextField galleryNoField;
     @FXML
-    private ComboBox guideField;
+    private ComboBox<String> guideField;
     @FXML
-    private ComboBox cleanerField;
+    private ComboBox<String> cleanerField;
     @FXML
-    private ComboBox envConField;
+    private ComboBox<String> envConField;
     @FXML
     private DatePicker dateField;
     @FXML
@@ -108,6 +108,13 @@ public class Curatorial_deptController implements Initializable
 
     public void comboBox()
     {
+        List<String> deptList = new ArrayList<>();
+        for (String data : DBUtils.dept)
+        {
+            deptList.add(data);
+        }
+        ObservableList DEPTLIST = FXCollections.observableArrayList(deptList);
+        nameField.setItems(DEPTLIST);
 
         /** guide combo box */
         ArrayList<Employee> guideListEm = employeeList();

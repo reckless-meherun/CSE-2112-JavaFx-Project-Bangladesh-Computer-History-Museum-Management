@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Curatorial controller done but not checked">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Curatorial dept controller done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorial_deptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorial_deptController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,20 +89,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
-    </task>
-    <task id="LOCAL-00011" summary="connected tickets now you can nevigate to tickets">
-      <created>1681850935649</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1681850935649</updated>
-    </task>
-    <task id="LOCAL-00012" summary="connected gallery">
-      <created>1681896146178</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1681896146178</updated>
     </task>
     <task id="LOCAL-00013" summary="connected gallery">
       <created>1681896539194</created>
@@ -432,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683995134034</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Curatorial controller done but not checked">
+      <created>1683998860499</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1683998860499</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Curatorial dept controller done">
+      <created>1683999138292</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1683999138292</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,7 +449,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Delete button added where it is necessary" />
     <MESSAGE value="Navigation edited for Dashboard, PhotoGallery and Ticket scene controller" />
     <MESSAGE value="Navigation edited for aboutUs" />
     <MESSAGE value="Navigation edited for employee and educator" />
@@ -473,7 +473,8 @@
     <MESSAGE value="Some changes in classes" />
     <MESSAGE value="Icons downloaded" />
     <MESSAGE value="Curatorial controller done but not checked" />
-    <option name="LAST_COMMIT_MESSAGE" value="Curatorial controller done but not checked" />
+    <MESSAGE value="Curatorial dept controller done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Curatorial dept controller done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
