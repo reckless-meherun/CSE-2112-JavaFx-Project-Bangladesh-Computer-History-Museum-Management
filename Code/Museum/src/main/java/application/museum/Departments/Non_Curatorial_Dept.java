@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Non_Curatorial_Dept implements Departments{
     private String DeptName;
-    private int DeptLevel;
+    private Integer DeptLevel;
     private String DeptRoom;
 
     private Date date;
@@ -37,14 +37,20 @@ public class Non_Curatorial_Dept implements Departments{
     {
         return this.DeptName;
     }
+    public String getDeptRoom(){
+        return this.DeptRoom;
+    }
+
+    @Override
+    public int getDeptLevel() {
+        return this.DeptLevel;
+    }
+
     public void setDeptLevel(int floor)
     {
         this.DeptLevel = floor;
     }
-    public int getDeptLevel()
-    {
-        return this.DeptLevel;
-    }
+
     public void addDept(String name, int floor)
     {
         this.DeptName = name;
