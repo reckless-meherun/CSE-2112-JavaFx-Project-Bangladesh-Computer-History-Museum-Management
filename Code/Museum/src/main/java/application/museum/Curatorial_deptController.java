@@ -482,6 +482,8 @@ public class Curatorial_deptController implements Initializable
         {
             throw new RuntimeException(exception);
         }
+        showData();
+        comboBox();
     }
 
     @FXML

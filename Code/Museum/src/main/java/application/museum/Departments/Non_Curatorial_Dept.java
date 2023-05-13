@@ -8,6 +8,7 @@ public class Non_Curatorial_Dept implements Departments{
     private String DeptRoom;
 
     private Date date;
+    private String cleanerName;
 
     public Non_Curatorial_Dept()
     {
@@ -66,5 +67,9 @@ public class Non_Curatorial_Dept implements Departments{
     }
     public Date getDate(){
         return this.date;
+    }
+    public String getCleanerName()
+    {
+        return this.cleanerName;
     }
 }
