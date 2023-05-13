@@ -1,28 +1,30 @@
 package application.museum.Departments;
 
+import java.util.Date;
+
 public class Auditorium extends Non_Curatorial_Dept{
-    private String GalleryName;
+
     private String AttendantName;
     private String TechnicianName;
     private String SpeakerName;
 
     public Auditorium()
     {
-        this.GalleryName = "Not Set";
+
         this.AttendantName = "Not Set";
         this.SpeakerName = "Not Set";
         this.TechnicianName = "Not Set";
     }
-    public Auditorium(String gal, String att, String spk, String tech)
+    public Auditorium(String gal, String att, String spk, String tech,String name, int floor, String room, Date date)
     {
-        this.GalleryName = gal;
+        super(name, floor, room, date);
         this.AttendantName = att;
         this.SpeakerName = spk;
         this.TechnicianName = tech;
     }
-    public Auditorium(String[] s)
+    public Auditorium(String[] s,String name, int floor, String room, Date date)
     {
-        this.GalleryName = s[0];
+        super(name, floor, room, date);
         this.AttendantName = s[1];
         this.SpeakerName = s[2];
         this.TechnicianName = s[3];
@@ -35,14 +37,7 @@ public class Auditorium extends Non_Curatorial_Dept{
     {
         return this.AttendantName;
     }
-    public void setGalleryName(String gal)
-    {
-        this.GalleryName = gal;
-    }
-    public String getGalleryName()
-    {
-        return this.GalleryName;
-    }
+
     public void setTechnicianName(String tech)
     {
         this.TechnicianName = tech;

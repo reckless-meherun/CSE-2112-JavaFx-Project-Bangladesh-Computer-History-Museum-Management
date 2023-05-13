@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Non_Curatorial_Dept.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Non_Curatorial_Dept.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Security.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/SecurityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/SecurityScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/SecurityScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,13 +89,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
-    </task>
-    <task id="LOCAL-00005" summary="changed the color of the username and password to white.">
-      <created>1681667554274</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1681667554274</updated>
     </task>
     <task id="LOCAL-00006" summary="go back will take you where you were previously working.">
       <created>1681709985750</created>
@@ -436,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683970198117</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="security okk">
+      <created>1683980388757</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1683980388757</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -452,7 +449,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Security Scene added" />
     <MESSAGE value="auditorium scene added" />
     <MESSAGE value="auditorium scene updated" />
     <MESSAGE value="Delete button added where it is necessary" />
@@ -477,7 +473,8 @@
     <MESSAGE value="scroll bar of department treeview edited" />
     <MESSAGE value="right side bar of aboutus edited" />
     <MESSAGE value="combobox of Security added" />
-    <option name="LAST_COMMIT_MESSAGE" value="combobox of Security added" />
+    <MESSAGE value="security okk" />
+    <option name="LAST_COMMIT_MESSAGE" value="security okk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
