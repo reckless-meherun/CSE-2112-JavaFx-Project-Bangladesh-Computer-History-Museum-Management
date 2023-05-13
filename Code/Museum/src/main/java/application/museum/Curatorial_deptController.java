@@ -2,6 +2,7 @@ package application.museum;
 
 import application.museum.Departments.Curatorial_dept;
 import application.museum.Departments.Security;
+import application.museum.People.Admins;
 import application.museum.People.Employee;
 import application.museum.People.Gender;
 import application.museum.People.Visitor;
@@ -17,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
@@ -104,6 +106,9 @@ public class Curatorial_deptController implements Initializable
 
     @FXML
     private AnchorPane scene2;
+
+    @FXML
+    private TextField stext;
 
     private String url1 = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Departments.db";
     private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\employee.db";
@@ -370,6 +375,18 @@ public class Curatorial_deptController implements Initializable
 
         curatorialDeptable.setItems(showlist);
     }
+    public void showData(ObservableList<Curatorial_dept> showlist)
+    {
+        dateCol.setCellValueFactory(new PropertyValueFactory<>("lastUpdate"));
+        departmentCol.setCellValueFactory(new PropertyValueFactory<>("deptName"));
+        levelCol.setCellValueFactory(new PropertyValueFactory<>("deptLevel"));
+        guideCol.setCellValueFactory(new PropertyValueFactory<>("guideName"));
+        cleanerCol.setCellValueFactory(new PropertyValueFactory<>("cleanerName"));
+        envConCol.setCellValueFactory(new PropertyValueFactory<>("envConName"));
+        roomCol.setCellValueFactory(new PropertyValueFactory<>("room"));
+
+        curatorialDeptable.setItems(showlist);
+    }
 
     @FXML
     void delete(ActionEvent event)
@@ -504,6 +521,11 @@ public class Curatorial_deptController implements Initializable
         }
         showData();
         comboBox();
+        stext.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                Search();
+            }
+        });
     }
 
     @FXML
@@ -636,5 +658,32 @@ public class Curatorial_deptController implements Initializable
             }
         }
 
+    }
+    @FXML
+    void Search() {
+        String searchName = null;
+        if (!stext.getText().isEmpty())
+            searchName = stext.getText(); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<Curatorial_dept> dev=datalist();
+        ObservableList<Curatorial_dept> dev1=FXCollections.observableArrayList();
+        for(Curatorial_dept d: dev){
+            if(searchName.equals(d.getDeptName())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            Admin not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
 }
