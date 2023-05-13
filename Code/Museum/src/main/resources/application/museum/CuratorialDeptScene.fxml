@@ -146,12 +146,6 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </ComboBox>
-                              <ComboBox fx:id="guideField" layoutX="39.0" layoutY="226.0" prefHeight="32.0" prefWidth="336.0" promptText="guide" styleClass="signUpScreenLeftInput">
-                                 <stylesheets>
-                                    <URL value="@../../CSS/TicketsScene.css" />
-                                    <URL value="@../../CSS/TicketsScene2.css" />
-                                 </stylesheets>
-                              </ComboBox>
                               <ComboBox fx:id="cleanerField" layoutX="39.0" layoutY="270.0" prefHeight="32.0" prefWidth="336.0" promptText="cleaner" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
@@ -159,6 +153,12 @@
                                  </stylesheets>
                               </ComboBox>
                               <ComboBox fx:id="envConField" layoutX="39.0" layoutY="314.0" prefHeight="32.0" prefWidth="336.0" promptText="environment controller" styleClass="signUpScreenLeftInput">
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                 </stylesheets>
+                              </ComboBox>
+                              <ComboBox fx:id="guideField" layoutX="39.0" layoutY="225.0" prefHeight="32.0" prefWidth="336.0" promptText="Guide" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />

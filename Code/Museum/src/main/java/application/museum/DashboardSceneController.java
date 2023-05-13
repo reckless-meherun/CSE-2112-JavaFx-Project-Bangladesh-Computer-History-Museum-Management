@@ -374,8 +374,8 @@ public class DashboardSceneController extends NavigationHandler implements Initi
                 }
                 BOD bod= new BOD(result.getString("name"),gm,result.getString("phone"),resourcesPath.toString(),result.getString("email"),result.getDate("dob"),result.getString("adress"),p,result.getInt("ID"));
                 datalist.add(bod);
-                System.out.println(bod.getName());
-                System.out.println(bod.getDesignation());
+                //System.out.println(bod.getName());
+                //System.out.println(bod.getDesignation());
 
 
 

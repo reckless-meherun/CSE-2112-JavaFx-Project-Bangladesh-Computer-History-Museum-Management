@@ -122,13 +122,16 @@ public class Curatorial_deptController implements Initializable
         String designation = "Guide";
         for (Employee emp : guideListEm)
         {
-            if (emp.getDesignation().equals(designation.toLowerCase()) | emp.getDesignation().equals(designation.toUpperCase()))
+            System.out.println(emp.getDesignation().toLowerCase()+" "+designation.toLowerCase());
+            if (emp.getDesignation().toLowerCase().equals(designation.toLowerCase()))
             {
                 guideListStr.add(emp.getName());
+                System.out.println(emp.getName());
             }
         }
-        ObservableList data_list = FXCollections.observableArrayList(guideListStr);
-        guideField.setItems(data_list);
+        ObservableList data1_list = FXCollections.observableArrayList(guideListStr);
+        System.out.println(data1_list);
+        guideField.setItems(data1_list);
 
         /** cleaner combo box*/
         ArrayList<Employee> cleanerListEm = employeeList();
@@ -136,7 +139,7 @@ public class Curatorial_deptController implements Initializable
         designation = "Cleaner";
         for (Employee emp : cleanerListEm)
         {
-            if (emp.getDesignation().equals(designation.toLowerCase()) | emp.getDesignation().equals(designation.toUpperCase()))
+            if (emp.getDesignation().toLowerCase().equals(designation.toLowerCase()) )
             {
                 cleanerListStr.add(emp.getName());
             }
@@ -150,13 +153,13 @@ public class Curatorial_deptController implements Initializable
         designation = "Environment Controller";
         for (Employee emp : envListEm)
         {
-            if (emp.getDesignation().equals(designation.toLowerCase()) | emp.getDesignation().equals(designation.toUpperCase()))
+            if (emp.getDesignation().toLowerCase().equals(designation.toLowerCase()) )
             {
                 envListStr.add(emp.getName());
             }
         }
         ObservableList data3_list = FXCollections.observableArrayList(envListStr);
-        guideField.setItems(data3_list);
+        envConField.setItems(data3_list);
 
     }
 
@@ -175,7 +178,7 @@ public class Curatorial_deptController implements Initializable
             while (result.next())
             {
                 StringBuilder resourcesPath = getrespath();
-                System.out.println(resourcesPath);
+                //System.out.println(resourcesPath);
                 resourcesPath.append(result.getString("img"));
 
                 Gender gm;
@@ -234,7 +237,7 @@ public class Curatorial_deptController implements Initializable
         StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
         //int n=resourcesPath.length();
         resourcesPath.deleteCharAt(0);
-        System.out.println(resourcesPath);
+        //System.out.println(resourcesPath);
         for (int i = 0; i < resourcesPath.length(); i++)
         {
             if (resourcesPath.charAt(i) == '%')
