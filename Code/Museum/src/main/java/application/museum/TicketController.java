@@ -3,6 +3,8 @@ package application.museum;
 import java.awt.*;
 import java.io.*;
 
+import Tickets.Ticket_class;
+import application.museum.People.Admins;
 import application.museum.People.Employee;
 import application.museum.People.Gender;
 import application.museum.People.Visitor;
@@ -21,6 +23,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -363,6 +366,20 @@ public class TicketController implements Initializable
 
         visitorTable.setItems(showlist);
     }
+    public void showData(ObservableList<Visitor> showlist)
+    {
+
+        dateCol.setCellValueFactory(new PropertyValueFactory<>("last_vis_date"));
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        ageCol.setCellValueFactory(new PropertyValueFactory<>("age"));
+        genderCol.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        emailCol.setCellValueFactory(new PropertyValueFactory<>("email"));
+        phoneCol.setCellValueFactory(new PropertyValueFactory<>("mobile_no"));
+        totalVisitCol.setCellValueFactory(new PropertyValueFactory<>("TotalVisitCount"));
+        languageCol.setCellValueFactory(new PropertyValueFactory<>("language"));
+
+        visitorTable.setItems(showlist);
+    }
 
     @FXML
     public void clear()
@@ -592,6 +609,11 @@ public class TicketController implements Initializable
         }
         Combo_box();
         showData();
+        searchBar.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                Search();
+            }
+        });
     }
     @FXML
     public void showFile(){
@@ -665,6 +687,33 @@ public class TicketController implements Initializable
             }
         }
         return resourcesPath;
+    }
+    @FXML
+    void Search() {
+        String searchName = null;
+        if (!searchBar.getText().isEmpty())
+            searchName = searchBar.getText(); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<Visitor> dev=datalist();
+        ObservableList<Visitor> dev1=FXCollections.observableArrayList();
+        for(Visitor d: dev){
+            if(searchName.equals(d.getName())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            Visitor not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
 }
 
