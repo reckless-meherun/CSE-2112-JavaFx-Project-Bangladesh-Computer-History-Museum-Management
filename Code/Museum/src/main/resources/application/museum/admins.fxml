@@ -28,7 +28,6 @@
                               <TableColumn fx:id="id_table" prefWidth="236.80005264282227" text="ID" />
                               <TableColumn fx:id="username_table" prefWidth="216.00009155273438" text="Username" />
                               <TableColumn fx:id="password_table" minWidth="0.0" prefWidth="257.59991455078125" text="Password" />
-                              <TableColumn minWidth="0.0" prefWidth="406.4000244140625" />
                            </columns>
                            <stylesheets>
                               <URL value="@../../CSS/TicketCalculator.Css" />

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Icons updated">
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/PhotoGalleryScene.fxml" afterDir="false" />
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Curatorial dept controller modified">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +89,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
+    </task>
+    <task id="LOCAL-00014" summary="about us input form ready">
+      <created>1681922919570</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681922919570</updated>
     </task>
     <task id="LOCAL-00015" summary="about us input form ready">
       <created>1681922947178</created>
@@ -418,21 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683999138292</updated>
     </task>
-    <task id="LOCAL-00062" summary="Icons updated">
-      <created>1684018338034</created>
+    <task id="LOCAL-00062" summary="Done Auditorium">
+      <created>1684018965331</created>
       <option name="number" value="00062" />
       <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
-      <updated>1684018338035</updated>
+      <updated>1684018965332</updated>
     </task>
-    <task id="LOCAL-00063" summary="Icons updated">
-      <created>1684018717028</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1684018717028</updated>
-    </task>
-    <option name="localTasksCounter" value="64" />
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -472,8 +473,8 @@
     <MESSAGE value="Icons downloaded" />
     <MESSAGE value="Curatorial controller done but not checked" />
     <MESSAGE value="Curatorial dept controller done" />
-    <MESSAGE value="Icons updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Icons updated" />
+    <MESSAGE value="Done Auditorium" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done Auditorium" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
