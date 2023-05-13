@@ -1,6 +1,7 @@
 package application.museum;
 
 import application.museum.Departments.Security;
+import application.museum.People.Admins;
 import application.museum.People.Employee;
 import application.museum.People.Gender;
 import javafx.beans.binding.Bindings;
@@ -16,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -118,6 +120,10 @@ public class SecurityController implements Initializable
     private Statement statement;
     private ResultSet result;
 
+
+    @FXML
+    private TextField stext;
+
     static void pushToStack()
     {
         DBUtils.prevfxml.push(name_here);
@@ -134,6 +140,11 @@ public class SecurityController implements Initializable
         }
         comboBox();
         showData();
+        stext.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                Search();
+            }
+        });
     }
 
     @FXML
@@ -144,7 +155,7 @@ public class SecurityController implements Initializable
             return;
         }
         String fxml = DBUtils.prevfxml.pop();
-        System.out.println(fxml);
+        //System.out.println(fxml);
 
         if (fxml == name_here)
         {
@@ -195,7 +206,7 @@ public class SecurityController implements Initializable
             while (result.next())
             {
                 StringBuilder resourcesPath = getrespath();
-                System.out.println(resourcesPath);
+                //System.out.println(resourcesPath);
                 resourcesPath.append(result.getString("img"));
 
                 Gender gm;
@@ -270,7 +281,7 @@ public class SecurityController implements Initializable
         StringBuilder resourcesPath = new StringBuilder(getClass().getResource("").getPath());
         //int n=resourcesPath.length();
         resourcesPath.deleteCharAt(0);
-        System.out.println(resourcesPath);
+        //System.out.println(resourcesPath);
         for (int i = 0; i < resourcesPath.length(); i++)
         {
             if (resourcesPath.charAt(i) == '%')
@@ -331,7 +342,7 @@ public class SecurityController implements Initializable
                 prepare.setDate(8, (java.sql.Date.valueOf(sdate.getValue())));
                 prepare.execute();
                 showData();
-                System.out.println("ok12");
+                //System.out.println("ok12");
                 clear();
             }
 
@@ -401,6 +412,25 @@ public class SecurityController implements Initializable
     public void showData()
     {
         ObservableList<Security> showlist = datalist();
+        tlastup.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tcamid.setCellValueFactory(cellData ->
+        {
+            ObservableList<String> specializationList = FXCollections.observableArrayList(cellData.getValue().getCamera());
+            return Bindings.createStringBinding(() -> String.join(", ", specializationList));
+        });
+        tsecroom.setCellValueFactory(new PropertyValueFactory<>("DeptName"));
+        trow.setCellValueFactory(new PropertyValueFactory<>("row"));
+        troom.setCellValueFactory(new PropertyValueFactory<>("DeptRoom"));
+        tlevel.setCellValueFactory(new PropertyValueFactory<>("DeptLevel"));
+        ttcam.setCellValueFactory(new PropertyValueFactory<>("total_camera"));
+        twacher.setCellValueFactory(new PropertyValueFactory<>("watcher"));
+
+
+        table_view.setItems(showlist);
+    }
+    public void showData(ObservableList<Security> showlist)
+    {
+
         tlastup.setCellValueFactory(new PropertyValueFactory<>("date"));
         tcamid.setCellValueFactory(cellData ->
         {
@@ -532,6 +562,34 @@ public class SecurityController implements Initializable
 
             }
         }
+    }
+    @FXML
+    void Search() {
+        String searchName = null;
+        if (!stext.getText().isEmpty())
+            searchName = stext.getText(); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<Security> dev=datalist();
+        ObservableList<Security> dev1=FXCollections.observableArrayList();
+        for(Security d: dev){
+            //System.out.println(d.getDeptName());
+            if(searchName.equals(d.getDeptName())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            Security not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
 
 }
