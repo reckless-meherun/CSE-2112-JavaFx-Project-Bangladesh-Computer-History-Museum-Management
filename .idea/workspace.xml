@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Some changes in classes">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Icons downloaded">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorial_deptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Curatorial_deptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Auditorium.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Auditorium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Curatorial_dept.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Curatorial_dept.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Departments.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Departments.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Security.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Security.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/DashboardScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
-    </task>
-    <task id="LOCAL-00009" summary="added sliding menu bar.">
-      <created>1681845376005</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1681845376005</updated>
     </task>
     <task id="LOCAL-00010" summary="added sliding menu bar.">
       <created>1681845395413</created>
@@ -432,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683975806399</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Icons downloaded">
+      <created>1683982601104</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1683982601104</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -448,7 +455,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="auditorium scene added" />
     <MESSAGE value="auditorium scene updated" />
     <MESSAGE value="Delete button added where it is necessary" />
     <MESSAGE value="Navigation edited for Dashboard, PhotoGallery and Ticket scene controller" />
@@ -473,7 +479,8 @@
     <MESSAGE value="right side bar of aboutus edited" />
     <MESSAGE value="some changes in classes" />
     <MESSAGE value="Some changes in classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some changes in classes" />
+    <MESSAGE value="Icons downloaded" />
+    <option name="LAST_COMMIT_MESSAGE" value="Icons downloaded" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

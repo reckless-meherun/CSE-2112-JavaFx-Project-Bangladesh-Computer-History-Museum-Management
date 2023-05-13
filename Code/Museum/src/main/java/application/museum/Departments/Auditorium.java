@@ -10,24 +10,16 @@ public class Auditorium extends Non_Curatorial_Dept{
 
     public Auditorium()
     {
-
         this.AttendantName = "Not Set";
         this.SpeakerName = "Not Set";
         this.TechnicianName = "Not Set";
     }
-    public Auditorium(String gal, String att, String spk, String tech,String name, int floor, String room, Date date)
+    public Auditorium(String attendantName, String speakerName, String technicianName,String name, int floor, String room, Date date)
     {
         super(name, floor, room, date);
-        this.AttendantName = att;
-        this.SpeakerName = spk;
-        this.TechnicianName = tech;
-    }
-    public Auditorium(String[] s,String name, int floor, String room, Date date)
-    {
-        super(name, floor, room, date);
-        this.AttendantName = s[1];
-        this.SpeakerName = s[2];
-        this.TechnicianName = s[3];
+        this.AttendantName = attendantName;
+        this.SpeakerName = speakerName;
+        this.TechnicianName = technicianName;
     }
     public void setAttendantName(String name)
     {

@@ -32,7 +32,9 @@ import java.util.ResourceBundle;
 
 import static java.lang.String.valueOf;
 
-public class SecurityController implements Initializable {
+public class SecurityController implements Initializable
+{
+    private static String name_here = "SecurityScene.fxml";
     @FXML
     public TreeView<String> treeView;
     @FXML
@@ -53,101 +55,64 @@ public class SecurityController implements Initializable {
     private Button photoGallery;
     @FXML
     private Button tickets;
-
     @FXML
     private TableColumn<Security, Date> tlastup;
-
     @FXML
     private TableColumn<Security, Integer> tlevel;
-
-
     @FXML
     private TableColumn<Security, String> troom;
-
     @FXML
     private TableColumn<Security, Integer> trow;
-
     @FXML
     private TableColumn<Security, String> tsecroom;
-
     @FXML
     private TableColumn<Security, Integer> ttcam;
-
     @FXML
     private TableColumn<Security, String> twacher;
-
     @FXML
     private TableColumn<Security, String> tcamid;
-
-
-
     @FXML
     private Button LogoutButton;
-
     @FXML
     private Text ProfileIcon;
-
     @FXML
     private AnchorPane SceneTwo;
-
     @FXML
     private Button aboutus;
-
-
     @FXML
     private Button home11;
-
     @FXML
     private Button home12;
-
     @FXML
     private Button photogallery;
-
     @FXML
     private Text studentName;
-
     @FXML
     private ComboBox<String> watcher;
-
     @FXML
     private Button clear;
-
     @FXML
     private Button delete;
-
     @FXML
     private TextField scamid;
-
     @FXML
     private DatePicker sdate;
-
     @FXML
     private TextField slevel;
-
     @FXML
     private TextField sroom;
-
     @FXML
     private TextField srow;
-
     @FXML
     private TextField ssroom;
-
     @FXML
     private Button update;
-
-
     @FXML
     private TableView<Security> table_view;
-
-
-
+    //employee.db
     private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\employee.db";
+    //departments.db
     private String url1 = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Security.db";
-
-
-    private static String name_here = "SecurityScene.fxml";
-
     private Connection connect;
     private PreparedStatement prepare;
     private Statement statement;
@@ -163,8 +128,7 @@ public class SecurityController implements Initializable {
         try
         {
             NavigationHandler.HandleNavigation(name_here, home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
-        }
-        catch (IOException exception)
+        } catch (IOException exception)
         {
             throw new RuntimeException(exception);
         }
@@ -185,8 +149,7 @@ public class SecurityController implements Initializable {
         if (fxml == name_here)
         {
             DBUtils.changeScene(event, fxml, DBUtils.username);
-        }
-        else
+        } else
         {
             DBUtils.changeScene(event, fxml, true);
         }
@@ -199,7 +162,7 @@ public class SecurityController implements Initializable {
     }
 
     @FXML
-    void switchToSceneOne (ActionEvent event) throws IOException
+    void switchToSceneOne(ActionEvent event) throws IOException
     {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
@@ -216,8 +179,10 @@ public class SecurityController implements Initializable {
 
         }
     }
-    ArrayList<Employee> wacherlist(){
-        ArrayList<Employee> list=new ArrayList<>();
+
+    ArrayList<Employee> wacherlist()
+    {
+        ArrayList<Employee> list = new ArrayList<>();
         String sql;
         sql = "SELECT * FROM Employee";
 
@@ -284,11 +249,15 @@ public class SecurityController implements Initializable {
 
         return list;
     }
-    public void comboBox(){
-        ArrayList<Employee> e=wacherlist();
-        ArrayList<String> list=new ArrayList<>();
-        for(Employee emp:e){
-            if(emp.getDepartment().equals("Security")){
+
+    public void comboBox()
+    {
+        ArrayList<Employee> e = wacherlist();
+        ArrayList<String> list = new ArrayList<>();
+        for (Employee emp : e)
+        {
+            if (emp.getDepartment().equals("Security"))
+            {
                 list.add(emp.getName());
             }
         }
@@ -308,13 +277,15 @@ public class SecurityController implements Initializable {
             {
                 resourcesPath.replace(i, i + 3, " ");
             }
-            if(resourcesPath.charAt(i)=='t'&&resourcesPath.charAt(i+1)=='a'&&resourcesPath.charAt(i+2)=='r'&& resourcesPath.charAt(i+3)=='g'&& resourcesPath.charAt(i+4)=='e'&& resourcesPath.charAt(i+5)=='t'&& resourcesPath.charAt(i+6)=='/'){
-                resourcesPath.delete(i-1,resourcesPath.length());
+            if (resourcesPath.charAt(i) == 't' && resourcesPath.charAt(i + 1) == 'a' && resourcesPath.charAt(i + 2) == 'r' && resourcesPath.charAt(i + 3) == 'g' && resourcesPath.charAt(i + 4) == 'e' && resourcesPath.charAt(i + 5) == 't' && resourcesPath.charAt(i + 6) == '/')
+            {
+                resourcesPath.delete(i - 1, resourcesPath.length());
                 break;
             }
         }
         return resourcesPath;
     }
+
     @FXML
     public void clear()
     {
@@ -327,6 +298,7 @@ public class SecurityController implements Initializable {
         sdate.setValue(null);
 
     }
+
     @FXML
     void insert(ActionEvent event)
     {
@@ -338,7 +310,7 @@ public class SecurityController implements Initializable {
             connect = DBUtils.connectDB(url1);
             if (scamid.getText().isEmpty() | ssroom.getText().isEmpty() | srow.getText().isEmpty() |
                     watcher.getSelectionModel().isEmpty() | sroom.getText().isEmpty() |
-                    sdate.getValue() == null | slevel.getText().isEmpty() )
+                    sdate.getValue() == null | slevel.getText().isEmpty())
             {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
@@ -347,7 +319,6 @@ public class SecurityController implements Initializable {
                 alert.showAndWait();
             } else
             {
-
 
 
                 prepare = connect.prepareStatement(sql);
@@ -382,6 +353,7 @@ public class SecurityController implements Initializable {
             }
         }
     }
+
     public ObservableList<Security> datalist()
     {
         ObservableList<Security> datalist = FXCollections.observableArrayList();
@@ -397,9 +369,9 @@ public class SecurityController implements Initializable {
 
             while (result.next())
             {
-                String projects=result.getString("camid");
-                String s1[]=projects.split("\\s+");
-                Security sec=new Security(s1,result.getString("wacher"),result.getInt("row"),result.getString("sroom"),result.getInt("level"),result.getString("room"),result.getDate("lup"));
+                String projects = result.getString("camid");
+                String s1[] = projects.split("\\s+");
+                Security sec = new Security(s1, result.getString("wacher"), result.getInt("row"), result.getString("sroom"), result.getInt("level"), result.getString("room"), result.getDate("lup"));
                 datalist.add(sec);
             }
 
@@ -425,11 +397,13 @@ public class SecurityController implements Initializable {
         }
         return datalist;
     }
+
     public void showData()
     {
         ObservableList<Security> showlist = datalist();
         tlastup.setCellValueFactory(new PropertyValueFactory<>("date"));
-        tcamid.setCellValueFactory(cellData -> {
+        tcamid.setCellValueFactory(cellData ->
+        {
             ObservableList<String> specializationList = FXCollections.observableArrayList(cellData.getValue().getCamera());
             return Bindings.createStringBinding(() -> String.join(", ", specializationList));
         });
@@ -443,6 +417,7 @@ public class SecurityController implements Initializable {
 
         table_view.setItems(showlist);
     }
+
     @FXML
     void selectData(MouseEvent event)
     {
@@ -453,9 +428,10 @@ public class SecurityController implements Initializable {
         {
             return;
         }
-        String st="";
-        for(String s:security.getCamera()){
-            st+=s+" ";
+        String st = "";
+        for (String s : security.getCamera())
+        {
+            st += s + " ";
         }
         scamid.setText(st);
         ssroom.setText(valueOf(security.getDeptName()));
@@ -467,10 +443,11 @@ public class SecurityController implements Initializable {
         sdate.setValue(LocalDate.parse(valueOf(security.getDate())));
 
     }
+
     @FXML
     void delete(ActionEvent event)
     {
-        String sql = "DELETE from security WHERE `row` ='" + srow + "'";
+        String sql = "DELETE from security WHERE `row` ='" + srow.getText() + "'";
 
         try
         {
@@ -506,8 +483,8 @@ public class SecurityController implements Initializable {
 
             }
         }
-
     }
+
     @FXML
     void update_Crud(ActionEvent event) throws IOException
     {
@@ -518,7 +495,7 @@ public class SecurityController implements Initializable {
             connect = DBUtils.connectDB(url1);
             if (scamid.getText().isEmpty() | ssroom.getText().isEmpty() | srow.getText().isEmpty() |
                     watcher.getSelectionModel().isEmpty() | sroom.getText().isEmpty() |
-                    sdate.getValue() == null | slevel.getText().isEmpty() )
+                    sdate.getValue() == null | slevel.getText().isEmpty())
             {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("                                     Error!!!!!");
