@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="">
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Some changes in classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/SecurityController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,27 +88,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
-    </task>
-    <task id="LOCAL-00006" summary="go back will take you where you were previously working.">
-      <created>1681709985750</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1681709985750</updated>
-    </task>
-    <task id="LOCAL-00007" summary="updated logout">
-      <created>1681712401725</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1681712401725</updated>
-    </task>
-    <task id="LOCAL-00008" summary="added admins option">
-      <created>1681816092185</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1681816092185</updated>
     </task>
     <task id="LOCAL-00009" summary="added sliding menu bar.">
       <created>1681845376005</created>
@@ -419,21 +397,42 @@
       <option name="project" value="LOCAL" />
       <updated>1683928617770</updated>
     </task>
-    <task id="LOCAL-00053" summary="combobox of Security added">
-      <created>1683970198117</created>
+    <task id="LOCAL-00053" summary="right side bar of aboutus edited">
+      <created>1683929090454</created>
       <option name="number" value="00053" />
       <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
-      <updated>1683970198117</updated>
+      <updated>1683929090454</updated>
     </task>
-    <task id="LOCAL-00054" summary="security okk">
-      <created>1683980388757</created>
+    <task id="LOCAL-00054" summary="right side bar of aboutus edited">
+      <created>1683929286965</created>
       <option name="number" value="00054" />
       <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
-      <updated>1683980388757</updated>
+      <updated>1683929286965</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="right side bar of aboutus edited">
+      <created>1683967460808</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1683967460809</updated>
+    </task>
+    <task id="LOCAL-00056" summary="some changes in classes">
+      <created>1683975581051</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1683975581051</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Some changes in classes">
+      <created>1683975806399</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1683975806399</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -472,9 +471,9 @@
     <MESSAGE value="Left side bar of about us edited" />
     <MESSAGE value="scroll bar of department treeview edited" />
     <MESSAGE value="right side bar of aboutus edited" />
-    <MESSAGE value="combobox of Security added" />
-    <MESSAGE value="security okk" />
-    <option name="LAST_COMMIT_MESSAGE" value="security okk" />
+    <MESSAGE value="some changes in classes" />
+    <MESSAGE value="Some changes in classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes in classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
