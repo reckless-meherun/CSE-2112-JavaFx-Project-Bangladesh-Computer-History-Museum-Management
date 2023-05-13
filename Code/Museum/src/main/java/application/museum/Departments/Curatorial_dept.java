@@ -25,11 +25,11 @@ public class Curatorial_dept implements Departments{
     public String getDeptName() {
         return this.DeptName;
     }
-    public void setDeptFloor(int floor)
+    public void setDeptLevel(int floor)
     {
         this.DeptLevel = floor;
     }
-    public int getDeptFloor()
+    public int getDeptLevel()
     {
         return this.DeptLevel;
     }
