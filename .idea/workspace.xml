@@ -87,20 +87,6 @@
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
     </task>
-    <task id="LOCAL-00004" summary="Hover effect added">
-      <created>1681656224055</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1681656224055</updated>
-    </task>
-    <task id="LOCAL-00005" summary="changed the color of the username and password to white.">
-      <created>1681667554274</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1681667554274</updated>
-    </task>
     <task id="LOCAL-00006" summary="go back will take you where you were previously working.">
       <created>1681709985750</created>
       <option name="number" value="00006" />
@@ -430,7 +416,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683928617770</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="right side bar of aboutus edited">
+      <created>1683929090454</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1683929090454</updated>
+    </task>
+    <task id="LOCAL-00054" summary="right side bar of aboutus edited">
+      <created>1683929286965</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1683929286965</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
