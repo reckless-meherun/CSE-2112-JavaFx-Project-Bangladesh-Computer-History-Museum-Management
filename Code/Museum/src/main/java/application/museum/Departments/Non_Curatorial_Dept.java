@@ -16,12 +16,13 @@ public class Non_Curatorial_Dept implements Departments{
         this.DeptLevel = 0;
         this.DeptRoom = "No room attached";
     }
-    public Non_Curatorial_Dept(String[] s, Date date)
+    public Non_Curatorial_Dept(String deptName,String cleanerName, Date date)
     {
-        this.DeptName = s[0];
-        this.DeptLevel = Integer.valueOf(s[1]);
-        this.DeptRoom = s[2];
+        this.DeptName = deptName;
+        this.DeptLevel = 0;
+        this.DeptRoom = "nai";
         this.date = date;
+        this.cleanerName=cleanerName;
     }
     public Non_Curatorial_Dept(String name, int floor, String room, Date date)
     {

@@ -71,16 +71,11 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Text layoutX="484.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="AUDITORIUM" wrappingWidth="189.94332885742188">
+                              <Text layoutX="484.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="AUDITORIUM" wrappingWidth="189.94332885742188">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="419.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../Assets/Icons/auditoriumIcon-removebg-preview.png" />
-                                 </image>
-                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
@@ -153,11 +148,6 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="188.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../Assets/Icons/Add_Icon-removebg-preview.png" />
-                                 </image>
-                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">
@@ -195,7 +185,7 @@
             </BorderPane>
          </children>
       </AnchorPane>
-      <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="235.0" prefWidth="178.0">
+      <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="245.0" prefWidth="178.0">
          <stylesheets>
             <URL value="@../../CSS/DashboardScreen.css" />
             <URL value="@../../CSS/BODScreen.css" />

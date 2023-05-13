@@ -21,6 +21,13 @@ public class Auditorium extends Non_Curatorial_Dept{
         this.SpeakerName = speakerName;
         this.TechnicianName = technicianName;
     }
+    public Auditorium(String attendantName, String speakerName, String technicianName,String name, String cleanerName, Date date)
+    {
+        super(name, cleanerName, date);
+        this.AttendantName = attendantName;
+        this.SpeakerName = speakerName;
+        this.TechnicianName = technicianName;
+    }
     public void setAttendantName(String name)
     {
         this.AttendantName = name;
@@ -36,7 +43,7 @@ public class Auditorium extends Non_Curatorial_Dept{
     }
     public String getSpeakerName()
     {
-        return this.TechnicianName;
+        return this.SpeakerName;
     }
     public void setSpeakerName(String speaker)
     {

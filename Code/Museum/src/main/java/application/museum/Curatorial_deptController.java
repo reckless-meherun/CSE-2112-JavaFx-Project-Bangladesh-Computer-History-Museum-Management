@@ -137,11 +137,11 @@ public class Curatorial_deptController implements Initializable
         String designation = "Guide";
         for (Employee emp : guideListEm)
         {
-            System.out.println(emp.getDesignation().toLowerCase()+" "+designation.toLowerCase());
+            //System.out.println(emp.getDesignation().toLowerCase()+" "+designation.toLowerCase());
             if (emp.getDesignation().toLowerCase().equals(designation.toLowerCase()))
             {
                 guideListStr.add(emp.getName());
-                System.out.println(emp.getName());
+                //System.out.println(emp.getName());
             }
         }
         ObservableList data1_list = FXCollections.observableArrayList(guideListStr);
