@@ -1,5 +1,6 @@
 package application.museum;
 
+import application.museum.Departments.Curatorial_dept;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,7 @@ import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class Curatorial_deptController implements Initializable
@@ -24,7 +26,7 @@ public class Curatorial_deptController implements Initializable
     @FXML
     private Button LogoutButton;
     @FXML
-    private Button aboutUs;
+    private Button aboutus;
     @FXML
     private Button articles;
     @FXML
@@ -34,25 +36,51 @@ public class Curatorial_deptController implements Initializable
     @FXML
     private Button home1;
     @FXML
-    private Button photoGallery;
+    private Button photogallery;
     @FXML
     private Button tickets;
     @FXML
-    private TextField nameField;
+    private TextField searchBar;
+    @FXML
+    private Button uploadMapButton;
+    @FXML
+    private Button addButton;
+    @FXML
+    private Button deleteButton;
+    @FXML
+    private Button updateButton;
+    @FXML
+    private ComboBox nameField;
     @FXML
     private TextField levelField;
     @FXML
     private TextField galleryNoField;
     @FXML
-    private TextField guideField;
+    private ComboBox guideField;
     @FXML
-    private TextField cleanerField;
+    private ComboBox cleanerField;
     @FXML
-    private TextField envConField;
+    private ComboBox envConField;
     @FXML
     private DatePicker dateField;
+    @FXML
+    private TableView<Curatorial_dept> curatorialDeptable;
+    @FXML
+    private TableColumn<Curatorial_dept, Date> dateCol;
+    @FXML
+    private TableColumn<Curatorial_dept, String> departmentCol;
+    @FXML
+    private TableColumn<Curatorial_dept, Integer> roomCol;
+    @FXML
+    private TableColumn<Curatorial_dept, Integer> levelCol;
+    @FXML
+    private TableColumn<Curatorial_dept, String> guideCol;
+    @FXML
+    private TableColumn<Curatorial_dept, String> cleanerCol;
+    @FXML
+    private TableColumn<Curatorial_dept, String> envConCol;
 
-    private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Departments.db";
+   // private String url = "jdbc:sqlite:Code\\Museum\\src\\main\\resources\\Database\\Departments.db";
 
     static void pushToStack()
     {
@@ -63,7 +91,7 @@ public class Curatorial_deptController implements Initializable
     {
         try
         {
-            NavigationHandler.HandleNavigation("CuratorialDeptScene.fxml", home, treeView, photoGallery, articles, aboutUs, tickets, LogoutButton, GoBackButton);
+            NavigationHandler.HandleNavigation("CuratorialDeptScene.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
         }
         catch (IOException exception)
         {

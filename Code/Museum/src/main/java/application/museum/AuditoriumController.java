@@ -29,7 +29,7 @@ public class AuditoriumController implements Initializable {
     @FXML
     private Button LogOutButton;
     @FXML
-    private Button aboutUs;
+    private Button aboutus;
     @FXML
     private Button articles;
     @FXML
@@ -56,7 +56,7 @@ public class AuditoriumController implements Initializable {
     @FXML
     private Button home1;
     @FXML
-    private Button photoGallery;
+    private Button photogallery;
     @FXML
     private Button tickets;
     @FXML
@@ -77,7 +77,7 @@ public class AuditoriumController implements Initializable {
     {
         try
         {
-            NavigationHandler.HandleNavigation(name_here, home, treeView, photoGallery, articles, aboutUs, tickets, LogOutButton, GoBackButton);
+            NavigationHandler.HandleNavigation(name_here, home, treeView, photogallery, articles, aboutus, tickets, LogOutButton, GoBackButton);
         }
         catch (IOException exception)
         {

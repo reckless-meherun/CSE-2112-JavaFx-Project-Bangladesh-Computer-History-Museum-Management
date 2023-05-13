@@ -1,18 +1,21 @@
 package application.museum.Departments;
-
+import java.util.Date;
 import java.util.ArrayList;
 
 public class Curatorial_dept implements Departments{
     private String DeptName;
-    private int DeptFloor;
+    private int DeptLevel;
     private String CuratorName;
     private String GuideName;
-    private ArrayList<String> Artifacts; // Here I did not understand things. - Himel
-    private ArrayList<String> Visitors; // Same goes for this
+    private Date lastUpdate;
 
     public Curatorial_dept()
     {
-        System.out.println("Curatorial Department created\n");
+        DeptName = null;
+        DeptLevel = 0;
+        CuratorName = null;
+        GuideName = null;
+        lastUpdate = null;
     }
 
     public void setDeptName(String name)
@@ -24,16 +27,16 @@ public class Curatorial_dept implements Departments{
     }
     public void setDeptFloor(int floor)
     {
-        this.DeptFloor = floor;
+        this.DeptLevel = floor;
     }
     public int getDeptFloor()
     {
-        return this.DeptFloor;
+        return this.DeptLevel;
     }
     public void addDept(String name, int floor)
     {
         this.DeptName = name;
-        this.DeptFloor = floor;
+        this.DeptLevel = floor;
     }
     public void setCleaner(String[] s)
     {

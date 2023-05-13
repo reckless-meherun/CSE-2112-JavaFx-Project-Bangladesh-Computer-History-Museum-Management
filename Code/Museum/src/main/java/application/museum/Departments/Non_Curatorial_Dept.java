@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Non_Curatorial_Dept implements Departments{
     private String DeptName;
-    private int DeptFloor;
+    private int DeptLevel;
     private String DeptRoom;
 
     private Date date;
@@ -12,20 +12,20 @@ public class Non_Curatorial_Dept implements Departments{
     public Non_Curatorial_Dept()
     {
         this.DeptName = "New NC Department";
-        this.DeptFloor = 0;
+        this.DeptLevel = 0;
         this.DeptRoom = "No room attached";
     }
     public Non_Curatorial_Dept(String[] s, Date date)
     {
         this.DeptName = s[0];
-        this.DeptFloor = Integer.valueOf(s[1]);
+        this.DeptLevel = Integer.valueOf(s[1]);
         this.DeptRoom = s[2];
         this.date = date;
     }
     public Non_Curatorial_Dept(String name, int floor, String room, Date date)
     {
         this.DeptName = name;
-        this.DeptFloor = floor;
+        this.DeptLevel = floor;
         this.DeptRoom = room;
         this.date = date;
     }
@@ -37,18 +37,18 @@ public class Non_Curatorial_Dept implements Departments{
     {
         return this.DeptName;
     }
-    public void setDeptFloor(int floor)
+    public void setDeptLevel(int floor)
     {
-        this.DeptFloor = floor;
+        this.DeptLevel = floor;
     }
-    public int getDeptFloor()
+    public int getDeptLevel()
     {
-        return this.DeptFloor;
+        return this.DeptLevel;
     }
     public void addDept(String name, int floor)
     {
         this.DeptName = name;
-        this.DeptFloor = floor;
+        this.DeptLevel = floor;
     }
     public void setCleaner(String[] s)
     {
