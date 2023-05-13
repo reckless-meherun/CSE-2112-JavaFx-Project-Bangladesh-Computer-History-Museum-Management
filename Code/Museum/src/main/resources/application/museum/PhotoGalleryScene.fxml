@@ -79,7 +79,7 @@
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="411.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="409.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Assets/Icons/PhotoGallery_Icon-removebg-preview.png" />
                                  </image>
