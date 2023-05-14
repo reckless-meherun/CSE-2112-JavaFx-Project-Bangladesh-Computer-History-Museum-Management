@@ -202,7 +202,7 @@
                               </Button>
                               <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="12.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../Assets/search2.jpg" />
+                                    <Image url="@../../Assets/Icons/searchIcon-removebg-preview.png" />
                                  </image>
                               </ImageView>
                            </children>

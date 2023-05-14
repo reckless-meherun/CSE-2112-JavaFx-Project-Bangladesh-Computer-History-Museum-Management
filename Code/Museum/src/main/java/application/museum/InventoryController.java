@@ -540,19 +540,19 @@ public class InventoryController implements Initializable
 
             if (dateField.getValue() == null)
             {
-                sql = "UPDATE Inventory_Table SET doc_no = '" + docNoField.getText() + "', category = '" + categoryField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + ", room = '" + roomField.getText() + ", level = '" + levelField.getText() + "', imagepath = '" + file_path + "' WHERE doc_no = '" + docNoField.getText() + "';";
+                sql = "UPDATE Inventory_Table SET doc_no = '" + docNoField.getText() + "', category = '" + categoryField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + "', room = '" + roomField.getText() + ", level = '" + levelField.getText() + "', imagepath = '" + file_path + "' WHERE doc_no = '" + docNoField.getText() + "';";
             } else
             {
-                sql = "UPDATE Inventory_Table SET doc_no = '" + docNoField.getText() + "', date = '" + java.sql.Date.valueOf(dateField.getValue()) + "', category = '" + categoryField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + ", room = '" + roomField.getText() + ", level = '" + levelField.getText() + "', imagepath = '" + file_path + "' WHERE doc_no = '" + docNoField.getText() + "';";
+                sql = "UPDATE Inventory_Table SET doc_no = '" + docNoField.getText() + "', date = '" + java.sql.Date.valueOf(dateField.getValue()) + "', category = '" + categoryField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + "', room = '" + roomField.getText() + ", level = '" + levelField.getText() + "', imagepath = '" + file_path + "' WHERE doc_no = '" + docNoField.getText() + "';";
             }
         } else
         {
             if (dateField.getValue() == null)
             {
-                sql = "UPDATE Inventory_Table SET doc_no = '" + docNoField.getText() + "', category = '" + categoryField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + ", room = '" + roomField.getText() + ", level = '" + levelField.getText() + "' WHERE doc_no = '" + docNoField.getText() + "';";
+                sql = "UPDATE Inventory_Table SET doc_no = '" + docNoField.getText() + "', category = '" + categoryField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + "', room = '" + roomField.getText() + ", level = '" + levelField.getText() + "' WHERE doc_no = '" + docNoField.getText() + "';";
             } else
             {
-                sql = "UPDATE Inventory_Table SET doc_no = '" + docNoField.getText() + "', date = '" + java.sql.Date.valueOf(dateField.getValue()) + "', category = '" + categoryField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + ", room = '" + roomField.getText() + ", level = '" + levelField.getText() + "' WHERE doc_no = '" + docNoField.getText() + "';";
+                sql = "UPDATE Inventory_Table SET doc_no = '" + docNoField.getText() + "', date = '" + java.sql.Date.valueOf(dateField.getValue()) + "', category = '" + categoryField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + "', room = '" + roomField.getText() + ", level = '" + levelField.getText() + "' WHERE doc_no = '" + docNoField.getText() + "';";
             }
         }
 

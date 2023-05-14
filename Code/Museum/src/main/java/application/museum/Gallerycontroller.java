@@ -538,19 +538,19 @@ public class Gallerycontroller implements Initializable
 
             if (dateField.getValue() == null)
             {
-                sql = "UPDATE PhotoGallery_Table SET catalog_no = '" + catalogNoField.getText() + "', doc_no = '" + docNoField.getText() + "', title = '" + titleField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + ", room = '" + roomField.getText() + "', imagepath = '" + file_path + "' WHERE doc_no = '" + docNoField.getText() + "';";
+                sql = "UPDATE PhotoGallery_Table SET catalog_no = '" + catalogNoField.getText() + "', doc_no = '" + docNoField.getText() + "', title = '" + titleField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + "', room = '" + roomField.getText() + "', imagepath = '" + file_path + "' WHERE doc_no = '" + docNoField.getText() + "';";
             } else
             {
-                sql = "UPDATE PhotoGallery_Table SET date = '" + java.sql.Date.valueOf(dateField.getValue()) + "', catalog_no = '" + catalogNoField.getText() + "', doc_no = '" + docNoField.getText() + "', title = '" + titleField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + ", room = '" + roomField.getText() + "', imagepath = '" + file_path + "' WHERE doc_no = '" + docNoField.getText() + "';";
+                sql = "UPDATE PhotoGallery_Table SET date = '" + java.sql.Date.valueOf(dateField.getValue()) + "', catalog_no = '" + catalogNoField.getText() + "', doc_no = '" + docNoField.getText() + "', title = '" + titleField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + "', room = '" + roomField.getText() + "', imagepath = '" + file_path + "' WHERE doc_no = '" + docNoField.getText() + "';";
             }
         } else
         {
             if (dateField.getValue() == null)
             {
-                sql = "UPDATE PhotoGallery_Table SET catalog_no = '" + catalogNoField.getText() + "', doc_no = '" + docNoField.getText() + "', title = '" + titleField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + ", room = '" + roomField.getText() + "' WHERE doc_no = '" + docNoField.getText() + "';";
+                sql = "UPDATE PhotoGallery_Table SET catalog_no = '" + catalogNoField.getText() + "', doc_no = '" + docNoField.getText() + "', title = '" + titleField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + "', room = '" + roomField.getText() + "' WHERE doc_no = '" + docNoField.getText() + "';";
             } else
             {
-                sql = "UPDATE PhotoGallery_Table SET date = '" + java.sql.Date.valueOf(dateField.getValue()) + "', catalog_no = '" + catalogNoField.getText() + "', doc_no = '" + docNoField.getText() + "', title = '" + titleField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + ", room = '" + roomField.getText() + "' WHERE doc_no = '" + docNoField.getText() + "';";
+                sql = "UPDATE PhotoGallery_Table SET date = '" + java.sql.Date.valueOf(dateField.getValue()) + "', catalog_no = '" + catalogNoField.getText() + "', doc_no = '" + docNoField.getText() + "', title = '" + titleField.getText() + "', description = '" + descriptionField.getText() + "', department = '" + departmentField.getValue() + "', position = '" + rowField.getText() + "', room = '" + roomField.getText() + "' WHERE doc_no = '" + docNoField.getText() + "';";
             }
         }
 

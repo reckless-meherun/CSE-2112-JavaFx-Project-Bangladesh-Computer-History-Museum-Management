@@ -205,7 +205,7 @@
                               </Button>
                               <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="13.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../Assets/search2.jpg" />
+                                    <Image url="@../../Assets/Icons/searchIcon-removebg-preview.png" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="tempImageView" fitHeight="140.0" fitWidth="143.0" layoutX="533.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">

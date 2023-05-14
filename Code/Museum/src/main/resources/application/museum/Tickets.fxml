@@ -218,7 +218,7 @@
                               </TextField>
                               <ImageView fitHeight="37.0" fitWidth="39.0" layoutX="12.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../Assets/search2.jpg" />
+                                    <Image url="@../../Assets/Icons/searchIcon-removebg-preview.png" />
                                  </image>
                               </ImageView>
                               <AnchorPane layoutX="313.0" layoutY="345.0" prefHeight="38.0" prefWidth="109.0" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">

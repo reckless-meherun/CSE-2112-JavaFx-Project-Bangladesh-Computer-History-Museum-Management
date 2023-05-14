@@ -77,6 +77,11 @@
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
+                              <ImageView fitHeight="47.0" fitWidth="41.0" layoutX="428.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/auditoriumIcon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
@@ -158,6 +163,11 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
+                              <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="183.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/Add_Icon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">
@@ -184,7 +194,7 @@
                               </Button>
                               <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="12.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../Assets/search2.jpg" />
+                                    <Image url="@../../Assets/Icons/searchIcon-removebg-preview.png" />
                                  </image>
                               </ImageView>
                            </children>
