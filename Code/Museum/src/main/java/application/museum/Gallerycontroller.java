@@ -481,7 +481,7 @@ public class Gallerycontroller implements Initializable
     @FXML
     void delete(ActionEvent event)
     {
-        String sql = "DELETE FROM PhotoGallery_Table WHERE doc_no = " + docNoField.getText() + ";";
+        String sql = "DELETE FROM PhotoGallery_Table WHERE doc_no = '" + docNoField.getText() + "';";
 
         try
         {

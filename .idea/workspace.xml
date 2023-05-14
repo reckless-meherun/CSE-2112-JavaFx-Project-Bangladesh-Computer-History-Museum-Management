@@ -5,11 +5,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="Ticket is now printable">
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/PDFS/MuseumMap.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/PDFS/blank.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/StudentsImage/marlyn-wescoff-and-ruth-lichterman-were-two-of-the-female-programmers-of-eniac.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/Gottfried_Wilhelm_Leibniz,_Bernhard_Christoph_Francke.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/John_Backus_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/Screenshot 2023-05-14 213710.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/Screenshot 2023-05-14 214208.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1684077395986.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1684077766851.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1684078664448.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1684078746384.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1684078956631.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1684079107999.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1684079507045.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/image_1684079597725.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/StudentsPhotos/univaccbs-4e712c9-intro.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Gallerycontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Gallerycontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/AbstractCircle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Booklet/EDITION-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/CSEDU PORTAL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/CSEDULOGO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/CSEDUPORTALPRIMARY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Classroom/CheckedIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Classroom/ClassroomActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Classroom/HomeIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Classroom/PendingIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Classroom/TeacherIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Classroom/classroomTeacher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/AboveAverage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/AttendanceIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/BookletIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/CGPAICON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/ClassroomIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/HomeIconActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/Logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/Schedule.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/SettingsIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/Student.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Dashboard/belowAvera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Login/LoginPlanet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Login/loginCover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationPrimary/Attendance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationPrimary/Booklet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationPrimary/CGPA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationPrimary/Classroom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationPrimary/Home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationPrimary/Logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationSecondary/AttendanceActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationSecondary/BookletActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationSecondary/CGPAActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationSecondary/ClassroomActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationSecondary/HomeActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/NavigationSecondary/LogoutActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/Onboarding.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/SignUpScreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/abstraxt c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/abstraxtc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Assets/classroomCoverIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/TicketsScene.css" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/CSS/TicketsScene.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Aboutus.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/Aboutus.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/InvPhotoTick.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/InvPhotoTick.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/userpassword.db" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/Database/userpassword.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/admins.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/AttendanceGraph.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/AttendanceScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/BookletScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/CGPACalculatorScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/ClassroomScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/DashboardScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/LoginScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/OnBoardingScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/SetAttendanceScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/SignupScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/Models/WelcomeScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/AuditoriumScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/AuditoriumScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/Tickets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/resources/application/museum/aboutus.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -515,11 +588,6 @@
           <url>file://$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java</url>
           <line>355</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/TicketController.java</url>
-          <line>582</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

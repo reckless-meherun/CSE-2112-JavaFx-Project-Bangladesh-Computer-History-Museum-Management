@@ -24,7 +24,7 @@
                      <children>
                         <AnchorPane layoutY="146.0" prefHeight="534.0" prefWidth="1100.0" stylesheets="@../../CSS/BODScreen.css">
                            <children>
-                              <Text fx:id="heading" layoutX="529.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Board Of Directors" textAlignment="CENTER" wrappingWidth="284.343505859375">
+                              <Text fx:id="heading" layoutX="474.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Board Of Directors" textAlignment="CENTER" wrappingWidth="284.343505859375">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
@@ -149,7 +149,7 @@
                                     </Button>
                                  </children>
                               </AnchorPane>
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="479.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="424.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Assets/Icons/__-removebg-preview.png" />
                                  </image>

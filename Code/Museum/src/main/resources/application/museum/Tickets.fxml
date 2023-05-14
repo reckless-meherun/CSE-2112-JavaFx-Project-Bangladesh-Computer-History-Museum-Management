@@ -189,7 +189,7 @@
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </Button>
-                              <Text fx:id="finalPriceField" layoutX="553.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAResult" text=" 0.00৳" wrappingWidth="91.7369384765625" />
+                              <Text fx:id="finalPriceField" layoutX="547.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAResult" text=" 0.00" wrappingWidth="71.7369384765625" />
                               <Button fx:id="printTicketButton" layoutX="176.0" layoutY="472.0" mnemonicParsing="false" onAction="#printTicket" prefHeight="42.0" prefWidth="244.0" style="-fx-cursor: hand;" styleClass="UpdateButtons" text="Print Ticket" textFill="#ffd23c">
                                  <font>
                                     <Font name="Cambria" size="17.0" />
@@ -250,7 +250,12 @@
                               </AnchorPane>
                               <AnchorPane layoutX="314.0" layoutY="407.0" prefHeight="38.0" prefWidth="120.0" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">
                                  <children>
-                                    <Text fx:id="priceWithoutDiscount" layoutX="39.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 0.00৳" wrappingWidth="42.1368408203125">
+                                    <Text fx:id="priceWithoutDiscount" layoutX="39.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 0.00" wrappingWidth="42.1368408203125">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="finalPrice1321" layoutX="96.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tk" wrappingWidth="13.33685302734375">
                                        <font>
                                           <Font name="Cambria" size="14.0" />
                                        </font>
@@ -259,7 +264,12 @@
                               </AnchorPane>
                               <AnchorPane layoutX="450.0" layoutY="407.0" minWidth="-Infinity" prefHeight="38.0" prefWidth="72.0" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">
                                  <children>
-                                    <Text fx:id="discount" layoutX="15.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 0.00৳" wrappingWidth="42.1368408203125">
+                                    <Text fx:id="discount" layoutX="15.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 0.00" wrappingWidth="42.1368408203125">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="finalPrice132" layoutX="52.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tk" wrappingWidth="13.33685302734375">
                                        <font>
                                           <Font name="Cambria" size="14.0" />
                                        </font>
@@ -273,7 +283,12 @@
                                           <Font name="Cambria" size="14.0" />
                                        </font>
                                     </Text>
-                                    <Label fx:id="currentPriceLabel" layoutX="277.0" layoutY="10.0" text="50.00" />
+                                    <Label fx:id="currentPriceLabel" layoutX="255.0" layoutY="10.0" prefHeight="18.0" prefWidth="37.0" text="50.00" />
+                                    <Text fx:id="finalPrice13" layoutX="305.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tk" wrappingWidth="13.33685302734375">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Text>
                                  </children>
                               </AnchorPane>
                               <Button fx:id="updatePriceButton" layoutX="17.0" layoutY="343.0" mnemonicParsing="false" onAction="#updatePrice" prefHeight="42.0" prefWidth="143.0" style="-fx-cursor: hand;" styleClass="UpdateButtons" stylesheets="@../../CSS/BODScreen.css" text="Update Price" textFill="#ffd23c">
@@ -310,9 +325,15 @@
                                           <Font name="Cambria" size="14.0" />
                                        </font>
                                     </Text>
-                                    <Label fx:id="currentDiscountLabel" layoutX="162.0" layoutY="10.0" text="25.00" />
+                                    <Label fx:id="currentDiscountLabel" layoutX="151.0" layoutY="10.0" prefHeight="18.0" prefWidth="36.0" text="25.00" />
+                                    <Text fx:id="finalPrice131" layoutX="189.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tk" wrappingWidth="19.73687744140625">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Text>
                                  </children>
                               </AnchorPane>
+                              <Text fx:id="finalPriceField1" layoutX="623.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CGPAResult" text="tk" wrappingWidth="31.7369384765625" />
                            </children>
                            <stylesheets>
                               <URL value="@../../CSS/TicketCalculator.Css" />

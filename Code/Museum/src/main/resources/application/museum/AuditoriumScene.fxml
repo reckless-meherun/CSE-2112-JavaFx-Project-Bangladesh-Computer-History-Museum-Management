@@ -130,7 +130,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <ComboBox fx:id="attend" layoutX="43.0" layoutY="225.0" prefHeight="32.0" prefWidth="165.0" promptText="Attrndant" style="-fx-cursor: hand;" styleClass="signUpScreenLeftInput">
+                              <ComboBox fx:id="attend" layoutX="43.0" layoutY="225.0" prefHeight="32.0" prefWidth="165.0" promptText="Attendant" style="-fx-cursor: hand;" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
