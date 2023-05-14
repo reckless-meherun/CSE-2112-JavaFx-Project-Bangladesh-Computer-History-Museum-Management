@@ -388,7 +388,6 @@ public class TicketController implements Initializable
         ageField.setText("");
         emailField.setText("");
         phoneField.setText("");
-        occupationField.setText("");
         prevVisitField.setText("");
         genderField.getSelectionModel().clearSelection();
         languageField.getSelectionModel().clearSelection();

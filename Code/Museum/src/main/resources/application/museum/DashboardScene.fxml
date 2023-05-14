@@ -31,7 +31,7 @@
                         </Text>
                         <Text fx:id="dateField2" layoutX="58.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="dateField2" wrappingWidth="125.57342529296875" />
                         <Button fx:id="update2" layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
-                        <TextField fx:id="noticefield2" layoutX="202.0" layoutY="25.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css">
+                        <TextField fx:id="noticefield2" layoutX="202.0" layoutY="25.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title" styleClass="updateBars" stylesheets="@../../CSS/TicketsScene.css">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -54,7 +54,7 @@
                         </Text>
                         <Text fx:id="dateField3" layoutX="65.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="dateField3" wrappingWidth="125.57342529296875" />
                         <Button fx:id="update3" layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
-                        <TextField fx:id="noticefield3" layoutX="202.0" layoutY="25.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css">
+                        <TextField fx:id="noticefield3" layoutX="202.0" layoutY="25.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title" styleClass="updateBars" stylesheets="@../../CSS/TicketsScene.css">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -77,7 +77,7 @@
                         </Text>
                         <Text fx:id="dateField4" layoutX="60.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="dateField4" wrappingWidth="125.57342529296875" />
                         <Button fx:id="update4" layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
-                        <TextField fx:id="noticefield4" layoutX="202.0" layoutY="25.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css">
+                        <TextField fx:id="noticefield4" layoutX="202.0" layoutY="25.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title" styleClass="updateBars" stylesheets="@../../CSS/TicketsScene.css">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -128,7 +128,7 @@
                         </Button>
                         <AnchorPane layoutX="1033.0" layoutY="11.0" prefHeight="48.0" prefWidth="48.0" styleClass="DashboardScreenStudentImageBackground" stylesheets="@../../CSS/DashboardScreen.css">
                            <children>
-                              <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="A" />
+                              <Text fx:id="ProfileIcon" layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesIcon" text="M" />
                            </children>
                         </AnchorPane>
                         <Label fx:id="loggedIn" layoutX="458.0" layoutY="29.0" prefHeight="40.0" prefWidth="303.0" styleClass="DashboardScreenUpcomingClasses" stylesheets="@../../CSS/DashboardScreen.css" text="Hello " textFill="#664329">
@@ -214,7 +214,7 @@
                         </Text>
                         <Text fx:id="dateField1" layoutX="58.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClassesItemDate" text="dateField1" wrappingWidth="125.57342529296875" />
                         <Button fx:id="update1" layoutX="406.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="133.0" styleClass="UpdateButtons" text="Update" />
-                        <TextField fx:id="noticefield1" layoutX="202.0" layoutY="25.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css">
+                        <TextField fx:id="noticefield1" layoutX="202.0" layoutY="25.0" prefHeight="34.0" prefWidth="168.0" promptText="Notice Title" styleClass="updateBars" stylesheets="@../../CSS/TicketsScene.css">
                            <font>
                               <Font size="14.0" />
                            </font>

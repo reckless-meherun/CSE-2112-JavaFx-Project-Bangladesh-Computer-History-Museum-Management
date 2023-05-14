@@ -88,43 +88,43 @@
                         </AnchorPane>
                         <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="438.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
                            <children>
-                              <ComboBox fx:id="genderField" layoutX="40.0" layoutY="120.0" prefHeight="35.0" prefWidth="158.0" promptText="gender" styleClass="signUpScreenLeftInput">
+                              <ComboBox fx:id="genderField" layoutX="50.0" layoutY="147.0" prefHeight="35.0" prefWidth="158.0" promptText="gender" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </ComboBox>
-                              <TextField fx:id="nameField" layoutX="40.0" layoutY="72.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="nameField" layoutX="50.0" layoutY="99.0" prefHeight="35.0" prefWidth="336.0" promptText="name" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField fx:id="ageField" layoutX="208.0" layoutY="120.0" prefHeight="35.0" prefWidth="165.0" promptText="age" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="ageField" layoutX="218.0" layoutY="147.0" prefHeight="35.0" prefWidth="165.0" promptText="age" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField fx:id="emailField" layoutX="40.0" layoutY="168.0" prefHeight="35.0" prefWidth="336.0" promptText="email" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="emailField" layoutX="50.0" layoutY="195.0" prefHeight="35.0" prefWidth="336.0" promptText="email" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField fx:id="phoneField" layoutX="40.0" layoutY="216.0" prefHeight="35.0" prefWidth="336.0" promptText="phone number" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="phoneField" layoutX="50.0" layoutY="243.0" prefHeight="35.0" prefWidth="336.0" promptText="phone number" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <TextField fx:id="prevVisitField" layoutX="40.0" layoutY="312.0" prefHeight="35.0" prefWidth="158.0" promptText="previous visit count" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="prevVisitField" layoutX="50.0" layoutY="291.0" prefHeight="35.0" prefWidth="158.0" promptText="previous visit count" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <DatePicker fx:id="dateField" layoutX="41.0" layoutY="408.0" prefHeight="40.0" prefWidth="337.0" promptText="date" styleClass="textarea">
+                              <DatePicker fx:id="dateField" layoutX="51.0" layoutY="387.0" prefHeight="40.0" prefWidth="337.0" promptText="date" styleClass="textarea">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
@@ -139,19 +139,13 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <TextField fx:id="occupationField" layoutX="40.0" layoutY="264.0" prefHeight="35.0" prefWidth="336.0" promptText="occupation" styleClass="signUpScreenLeftInput">
-                                 <stylesheets>
-                                    <URL value="@../../CSS/TicketsScene.css" />
-                                    <URL value="@../../CSS/TicketsScene2.css" />
-                                 </stylesheets>
-                              </TextField>
-                              <ComboBox fx:id="ticketTypeField" layoutX="210.0" layoutY="312.0" prefHeight="35.0" prefWidth="165.0" promptText="ticket type" styleClass="signUpScreenLeftInput">
+                              <ComboBox fx:id="ticketTypeField" layoutX="220.0" layoutY="291.0" prefHeight="35.0" prefWidth="165.0" promptText="ticket type" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </ComboBox>
-                              <ComboBox fx:id="languageField" layoutX="42.0" layoutY="360.0" prefHeight="35.0" prefWidth="332.0" promptText="preferred language" styleClass="signUpScreenLeftInput">
+                              <ComboBox fx:id="languageField" layoutX="52.0" layoutY="339.0" prefHeight="35.0" prefWidth="332.0" promptText="preferred language" styleClass="signUpScreenLeftInput">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
@@ -175,12 +169,12 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="77.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Assets/Icons/Add_Icon-removebg-preview.png" />
                                  </image>
                               </ImageView>
-                              <Text fill="#ffd23c" layoutX="129.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New visitor!" wrappingWidth="202.74337768554688">
+                              <Text fill="#ffd23c" layoutX="139.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New visitor!" wrappingWidth="202.74337768554688">
                                  <font>
                                     <Font name="Cambria Bold" size="36.0" />
                                  </font>
@@ -203,15 +197,14 @@
                               </Button>
                               <TableView fx:id="visitorTable" layoutX="3.0" layoutY="125.0" onMouseClicked="#selectData" prefHeight="204.0" prefWidth="664.0" styleClass="Scrollpane">
                                 <columns>
-                                  <TableColumn fx:id="dateCol" prefWidth="100.80007934570312" text="Last Visit Date" />
-                                  <TableColumn fx:id="nameCol" prefWidth="76.79998779296875" text="Name" />
+                                  <TableColumn fx:id="dateCol" prefWidth="95.20001220703125" text="Last Visit Date" />
+                                  <TableColumn fx:id="nameCol" prefWidth="83.20001220703125" text="Name" />
                                     <TableColumn fx:id="ageCol" prefWidth="67.199951171875" text="Age" />
                                     <TableColumn fx:id="genderCol" prefWidth="63.20001220703125" text="Gender" />
-                                    <TableColumn fx:id="emailCol" prefWidth="103.199951171875" text="Email" />
-                                    <TableColumn fx:id="phoneCol" prefWidth="82.4000244140625" text="Phone" />
-                                    <TableColumn fx:id="totalVisitCol" prefWidth="86.39990234375" text="Total Visit" />
-                                    <TableColumn fx:id="languageCol" prefWidth="100.79998779296875" text="Language" />
-                                    <TableColumn prefWidth="126.4000244140625" text="Occupation" />
+                                    <TableColumn fx:id="emailCol" prefWidth="94.39996337890625" text="Email" />
+                                    <TableColumn fx:id="phoneCol" prefWidth="92.00006103515625" text="Phone" />
+                                    <TableColumn fx:id="totalVisitCol" minWidth="0.0" prefWidth="79.9998779296875" text="Total Visit" />
+                                    <TableColumn fx:id="languageCol" prefWidth="88.7999267578125" text="Language" />
                                 </columns>
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketCalculator.Css" />
@@ -288,7 +281,7 @@
                                     <Font name="Cambria" size="17.0" />
                                  </font>
                               </Button>
-                              <TextField fx:id="currentDiscountField" layoutX="168.0" layoutY="405.0" prefHeight="42.0" prefWidth="140.0" promptText="new discount(%)" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="currentDiscountField" layoutX="168.0" layoutY="405.0" prefHeight="42.0" prefWidth="140.0" promptText="new discount(%)" styleClass="updateBars">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
@@ -304,7 +297,7 @@
                                     <Font name="Cambria" size="17.0" />
                                  </font>
                               </Button>
-                              <TextField fx:id="currentPriceField" layoutX="168.0" layoutY="343.0" prefHeight="42.0" prefWidth="140.0" promptText="new price" styleClass="signUpScreenLeftInput">
+                              <TextField fx:id="currentPriceField" layoutX="168.0" layoutY="343.0" prefHeight="42.0" prefWidth="140.0" promptText="new price" styleClass="updateBars">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
                                     <URL value="@../../CSS/TicketsScene2.css" />
