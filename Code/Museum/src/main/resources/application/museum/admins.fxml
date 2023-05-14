@@ -87,11 +87,6 @@
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="stext" layoutX="845.0" layoutY="113.0" prefHeight="26.0" prefWidth="255.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: brown; -fx-border-width: 0px 0px 2px 0px;">
-                                 <font>
-                                    <Font size="13.0" />
-                                 </font>
-                              </TextField>
                               <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="1071.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Assets/search.png" />
@@ -204,6 +199,21 @@
                               </TextField>
                               <PasswordField fx:id="password" layoutX="41.0" layoutY="136.0" prefHeight="35.0" prefWidth="338.0" promptText="Password" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css" />
                               <PasswordField fx:id="confirmpass" layoutX="41.0" layoutY="194.0" prefHeight="35.0" prefWidth="338.0" promptText="Confirm Password" styleClass="signUpScreenLeftInput" stylesheets="@../../CSS/TicketsScene.css" />
+                              <AnchorPane layoutX="-235.0" layoutY="64.0" prefHeight="52.0" prefWidth="224.0">
+                                 <children>
+                                    <TextField fx:id="stext" layoutX="52.0" layoutY="7.0" prefHeight="30.0" prefWidth="170.0" promptText="Search" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="-17.0" layoutY="-51.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="27.0" fitWidth="36.0" layoutX="10.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Assets/Icons/searchIcon-removebg-preview.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
                            </children>
                         </AnchorPane>
                         <Text layoutX="519.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Users" textAlignment="CENTER" wrappingWidth="91.54345703125">

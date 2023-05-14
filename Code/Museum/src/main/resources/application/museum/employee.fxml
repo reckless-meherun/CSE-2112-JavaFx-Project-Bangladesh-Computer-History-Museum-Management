@@ -93,11 +93,6 @@
                                           <Font name="Colonna MT" size="36.0" />
                                        </font>
                                     </Text>
-                                    <TextField fx:id="stext" layoutX="843.0" layoutY="113.0" prefHeight="26.0" prefWidth="255.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: brown; -fx-border-width: 0px 0px 2px 0px;">
-                                       <font>
-                                          <Font size="13.0" />
-                                       </font>
-                                    </TextField>
                                     <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="1071.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../Assets/search.png" />
@@ -263,6 +258,20 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </Button>
+                                    <AnchorPane layoutX="-237.0" layoutY="68.0" prefHeight="54.0" prefWidth="230.0">
+                                       <children>
+                                          <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="20.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../Assets/Icons/searchIcon-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="stext" layoutX="56.0" layoutY="5.0" prefHeight="28.0" prefWidth="177.0" promptText="Search" styleClass="markInputField" stylesheets="@../../CSS/TicketCalculator.Css">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
                               <AnchorPane fx:id="paneside" layoutY="146.0" prefHeight="534.0" prefWidth="205.0" style="-fx-background-color: linear-gradient(to top, hsba(46, 71%, 100%, 1), hsba(38, 91%, 80%, 1));">

@@ -297,6 +297,20 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
+                              <AnchorPane layoutX="-243.0" layoutY="64.0" prefHeight="35.0" prefWidth="234.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                                 <children>
+                                    <TextField fx:id="stext" layoutX="41.0" prefHeight="30.0" prefWidth="190.0" promptText="Search" styleClass="markInputField">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Assets/Icons/searchIcon-removebg-preview.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
                            </children>
                         </AnchorPane>
                         <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="166.0" prefWidth="178.0">
@@ -309,11 +323,6 @@
                               <String fx:value="Scrollpane" />
                            </styleClass>
                         </TreeView>
-                        <TextField fx:id="stext" layoutX="843.0" layoutY="113.0" prefHeight="26.0" prefWidth="255.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: brown; -fx-border-width: 0px 0px 2px 0px;">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </TextField>
                         <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="1071.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../Assets/search.png" />

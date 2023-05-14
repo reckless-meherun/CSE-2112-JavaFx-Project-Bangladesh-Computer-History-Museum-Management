@@ -84,17 +84,11 @@
                                           <Font name="Colonna MT" size="36.0" />
                                        </font>
                                     </Text>
-                                    <TextField fx:id="stext" layoutX="843.0" layoutY="113.0" prefHeight="26.0" prefWidth="255.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: brown; -fx-border-width: 0px 0px 2px 0px;">
-                                       <font>
-                                          <Font size="13.0" />
-                                       </font>
-                                    </TextField>
                                     <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="1071.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../Assets/search.png" />
                                        </image>
                                     </ImageView>
-                                    <Button fx:id="sbut" layoutX="1065.0" layoutY="114.0" mnemonicParsing="false" onAction="#Search" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
                                     <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="443.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../Assets/Icons/AboutUs_Icon-removebg-preview.png" />
@@ -329,6 +323,20 @@
                                           <URL value="@../../CSS/TicketsScene2.css" />
                                        </stylesheets>
                                     </Button>
+                                    <AnchorPane layoutX="-230.0" layoutY="66.0" prefHeight="30.0" prefWidth="222.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                                       <children>
+                                          <TextField fx:id="stext" layoutX="46.0" layoutY="-1.0" prefHeight="30.0" prefWidth="173.0" promptText="Search" styleClass="markInputField">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </TextField>
+                                          <ImageView fitHeight="28.0" fitWidth="27.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../Assets/Icons/searchIcon-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
                               <TreeView fx:id="treeView" layoutX="278.0" layoutY="72.0" prefHeight="170.0" prefWidth="168.0">
@@ -340,7 +348,7 @@
                                     <String fx:value="TransparentButtons" />
                                     <String fx:value="Scrollpane" />
                                  </styleClass></TreeView>
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="469.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="487.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Assets/Icons/Developer_Icon.jpg" />
                                  </image>
