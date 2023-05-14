@@ -4,7 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="right side bar of aboutus edited" />
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="DB files of Department added">
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/groovy_4_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-ant-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-ant-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-astbuilder-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-astbuilder-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-cli-commons-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-cli-commons-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-cli-picocli-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-cli-picocli-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-console-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-console-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-contracts-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-contracts-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-datetime-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-datetime-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-dateutil-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-dateutil-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-docgenerator-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-docgenerator-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-ginq-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-ginq-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-groovydoc-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-groovydoc-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-groovysh-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-groovysh-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-jmx-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-jmx-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-json-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-json-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-jsr223-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-jsr223-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-macro-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-macro-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-macro-library-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-macro-library-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-nio-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-nio-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-servlet-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-servlet-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-sql-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-sql-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-swing-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-swing-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-templates-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-templates-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-test-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-test-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-test-junit5-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-test-junit5-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-testng-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-testng-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-toml-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-toml-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-typecheckers-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-typecheckers-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-xml-4.0.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/groovy-xml-4.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Curatorial_dept.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/Departments/Curatorial_dept.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/WelcomeToBCM.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -488,7 +559,17 @@
           <properties class="java.lang.IllegalArgumentException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/AuditoriumController.java</url>
+          <line>335</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CSE_2112_JavaFx_Project_Bangladesh_Computer_History_Museum_Management$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1684031543477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>application.museum.*</FILTER>
+    </SUITE>
   </component>
 </project>

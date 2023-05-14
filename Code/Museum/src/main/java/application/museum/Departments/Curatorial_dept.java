@@ -1,7 +1,4 @@
 package application.museum.Departments;
-import net.sf.jasperreports.engine.util.JRExpressionUtil;
-import net.sf.jasperreports.renderers.SimpleRenderToImageAwareDataRenderer;
-
 import java.util.Date;
 import java.util.ArrayList;
 
