@@ -1,6 +1,7 @@
 package application.museum;
 
 import application.museum.Departments.Photo;
+import application.museum.People.Admins;
 import application.museum.People.Employee;
 import application.museum.People.Gender;
 import application.museum.Departments.Photo;
@@ -18,6 +19,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -412,6 +414,23 @@ public class Gallerycontroller implements Initializable
         photoGalleryTable.setItems(showlist);
         // System.out.println("showing");
     }
+    public void showData(ObservableList<Photo> showlist )
+    {
+        //   System.out.println("Trying to show");
+
+        dateCol.setCellValueFactory(new PropertyValueFactory<>("date"));
+        //  System.out.println("showing date");
+        catalogNoCol.setCellValueFactory(new PropertyValueFactory<>("catalog_no"));
+        docNoCol.setCellValueFactory(new PropertyValueFactory<>("doc_no"));
+        titleCol.setCellValueFactory(new PropertyValueFactory<>("title"));
+        descriptionCol.setCellValueFactory(new PropertyValueFactory<>("description"));
+        departmentCol.setCellValueFactory(new PropertyValueFactory<>("department"));
+        positionCol.setCellValueFactory(new PropertyValueFactory<>("position"));
+        roomCol.setCellValueFactory(new PropertyValueFactory<>("room"));
+
+        photoGalleryTable.setItems(showlist);
+        // System.out.println("showing");
+    }
 
     @FXML
     public void clear()
@@ -591,5 +610,37 @@ public class Gallerycontroller implements Initializable
         }
         Combo_box();
         showData();
+        searchBar.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                Search();
+            }
+        });
+    }
+    @FXML
+    void Search() {
+        Integer searchName = null;
+        if (!searchBar.getText().isEmpty())
+            searchName = Integer.parseInt(searchBar.getText()); // the name you want to search for
+        else {
+            showData();
+            return;
+        }
+        ObservableList<Photo> dev=photolist();
+        ObservableList<Photo> dev1=FXCollections.observableArrayList();
+        for(Photo d: dev){
+            if(searchName.equals(d.getCatalog_no())){
+                dev1.add(d);
+            }
+        }
+        if(dev1.isEmpty()){
+            Alert alert=new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("                                     Error!!!!!");
+            alert.setHeaderText("            Photo not found!  ");
+            alert.setContentText("                             Please enter correct credentials");
+            alert.showAndWait();
+            showData();
+            return;
+        }
+        showData(dev1);
     }
 }

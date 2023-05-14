@@ -77,6 +77,11 @@
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="390.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/PEducation_Icon.jpg" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
@@ -87,7 +92,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <Text fill="#ffd23c" layoutX="38.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add/Update Courses" wrappingWidth="345.9433288574219">
+                              <Text fill="#ffd23c" layoutX="77.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Courses" wrappingWidth="263.5433044433594">
                                  <font>
                                     <Font name="Cambria Bold" size="36.0" />
                                  </font>
@@ -122,7 +127,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <Button fx:id="students" layoutX="20.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchTOStudents" prefHeight="42.0" prefWidth="180.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add/Update Students">
+                              <Button fx:id="students" layoutX="31.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchTOStudents" prefHeight="42.0" prefWidth="150.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update Students">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -131,7 +136,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <Button fx:id="educators" layoutX="219.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchTOeducators" prefHeight="42.0" prefWidth="180.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Add/Update Educators">
+                              <Button fx:id="educators" layoutX="233.0" layoutY="69.0" mnemonicParsing="false" onAction="#switchTOeducators" prefHeight="42.0" prefWidth="150.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Update Educators">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -166,6 +171,11 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="182.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/Add_Icon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="420.0" layoutY="145.0" prefHeight="535.0" prefWidth="670.0" stylesheets="@../../CSS/TicketCalculator.Css">

@@ -74,11 +74,16 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Text layoutX="511.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="INVENTORY" wrappingWidth="167.54336547851562">
+                              <Text layoutX="511.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="INVENTORY" wrappingWidth="167.54336547851562">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="444.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/Inventory_Icon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="418.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
@@ -107,7 +112,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <Text fill="#ffd23c" layoutX="68.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new artifact" wrappingWidth="285.1433410644531">
+                              <Text fill="#ffd23c" layoutX="89.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Artifacts" wrappingWidth="285.1433410644531">
                                  <font>
                                     <Font name="Cambria Bold" size="36.0" />
                                  </font>
@@ -163,11 +168,16 @@
                                  </stylesheets>
                               </Button>
                               <ComboBox fx:id="departmentField" layoutX="211.0" layoutY="150.0" prefHeight="32.0" prefWidth="164.0" promptText="department" styleClass="signUpScreenLeftInput" />
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="28.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/Add_Icon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane fx:id="imageAnchor" layoutX="418.0" layoutY="145.0" prefHeight="535.0" prefWidth="690.0" stylesheets="@../../CSS/TicketCalculator.Css">
                            <children>
-                              <TextField fx:id="searchBar" layoutX="54.0" layoutY="14.0" prefHeight="38.0" prefWidth="465.0" promptText="search" styleClass="markInputField">
+                              <TextField fx:id="stext" layoutX="54.0" layoutY="14.0" prefHeight="38.0" prefWidth="465.0" promptText="search" styleClass="markInputField">
                                  <font>
                                     <Font name="Cambria" size="14.0" />
                                  </font>

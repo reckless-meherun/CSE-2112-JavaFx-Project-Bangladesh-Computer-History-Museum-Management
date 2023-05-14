@@ -36,7 +36,7 @@
                         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1102.0" styleClass="DashboardBelowScreenMenu" stylesheets="@../../CSS/DashboardScreen.css" BorderPane.alignment="CENTER">
                            <children>
                               <Text fx:id="studentName" layoutX="754.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenStudentName" />
-                              <Text layoutX="478.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Employee" wrappingWidth="145.1434326171875">
+                              <Text layoutX="529.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="Employee" wrappingWidth="145.1434326171875">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
@@ -88,7 +88,7 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Button>
-                                    <Text layoutX="504.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
+                                    <Text layoutX="504.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="ABOUT US" wrappingWidth="145.1434326171875">
                                        <font>
                                           <Font name="Colonna MT" size="36.0" />
                                        </font>
@@ -104,6 +104,11 @@
                                        </image>
                                     </ImageView>
                                     <Button fx:id="sbut" layoutX="1065.0" layoutY="114.0" mnemonicParsing="false" onAction="#Search" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="444.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Assets/Icons/AboutUs_Icon-removebg-preview.png" />
+                                       </image>
+                                    </ImageView>
                                  </children>
                               </AnchorPane>
                               <TableView fx:id="table_view" layoutX="45.0" layoutY="250.0" onMouseClicked="#selectData" prefHeight="431.0" prefWidth="1020.0" styleClass="Scrollpane">
@@ -175,7 +180,7 @@
                                     </ComboBox>
                                     <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="5.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../Assets/download.png" />
+                                          <Image url="@../../Assets/Icons/Add_Icon-removebg-preview.png" />
                                        </image>
                                     </ImageView>
                                     <Button fx:id="bar3" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" onAction="#run3" prefHeight="34.0" prefWidth="31.0" style="-fx-background-color: transparent; -fx-cursor: hand;" />
@@ -264,7 +269,7 @@
                                  <children>
                                     <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="170.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../Assets/menu.png" />
+                                          <Image url="@../../Assets/Icons/Menu_Icon.jpg" />
                                        </image>
                                     </ImageView>
                                     <Button fx:id="BOD" layoutX="50.0" layoutY="51.0" mnemonicParsing="false" onAction="#switchTobod" prefHeight="40.0" prefWidth="110.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@SignupScreen.css" text="BOD" textFill="#fffefe">
@@ -320,6 +325,11 @@
                                     <String fx:value="TransparentButtons" />
                                     <String fx:value="Scrollpane" />
                                  </styleClass></TreeView>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="472.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/Employee_Icon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                      </right>

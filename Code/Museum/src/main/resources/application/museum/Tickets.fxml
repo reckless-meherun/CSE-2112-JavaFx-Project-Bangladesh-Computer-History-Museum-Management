@@ -74,11 +74,16 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Text layoutX="490.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="TICKETS" wrappingWidth="126.74337768554688">
+                              <Text layoutX="504.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="DashboardScreenUpcomingClasses" text="TICKETS" wrappingWidth="126.74337768554688">
                                  <font>
                                     <Font name="Colonna MT" size="36.0" />
                                  </font>
                               </Text>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="444.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/Ticket_Icon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="2.0" layoutY="145.0" prefHeight="536.0" prefWidth="438.0" style="-fx-background-color: linear-gradient(to top,hsba(24, 100%, 29%, 1),hsba(36, 57%, 52%, 1));;" styleClass="signUpScreen" stylesheets="@../../CSS/TicketsScene.css">
@@ -119,11 +124,6 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </TextField>
-                              <Text fill="#ffd23c" layoutX="109.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New visitor!" wrappingWidth="202.74337768554688">
-                                 <font>
-                                    <Font name="Cambria Bold" size="36.0" />
-                                 </font>
-                              </Text>
                               <DatePicker fx:id="dateField" layoutX="41.0" layoutY="408.0" prefHeight="40.0" prefWidth="337.0" promptText="date" styleClass="textarea">
                                  <stylesheets>
                                     <URL value="@../../CSS/TicketsScene.css" />
@@ -166,7 +166,7 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
-                              <Button fx:id="printMapButton" layoutX="121.0" layoutY="473.0" mnemonicParsing="false" onAction="#clear" prefHeight="42.0" prefWidth="197.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Print Museum Map">
+                              <Button fx:id="printMapButton" layoutX="121.0" layoutY="473.0" mnemonicParsing="false" onAction="#showFile" prefHeight="42.0" prefWidth="197.0" style="-fx-cursor: hand;" styleClass="lightButton" text="Print Museum Map">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -175,6 +175,16 @@
                                     <URL value="@../../CSS/TicketsScene2.css" />
                                  </stylesheets>
                               </Button>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Assets/Icons/Add_Icon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#ffd23c" layoutX="129.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New visitor!" wrappingWidth="202.74337768554688">
+                                 <font>
+                                    <Font name="Cambria Bold" size="36.0" />
+                                 </font>
+                              </Text>
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="436.0" layoutY="148.0" prefHeight="534.0" prefWidth="670.0">

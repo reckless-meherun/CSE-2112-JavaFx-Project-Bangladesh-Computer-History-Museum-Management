@@ -1,27 +1,35 @@
 package application.museum.Departments;
 
+import java.util.Date;
+
 public class Non_Curatorial_Dept implements Departments{
     private String DeptName;
-    private int DeptFloor;
+    private Integer DeptLevel;
     private String DeptRoom;
+
+    private Date date;
+    private String cleanerName;
 
     public Non_Curatorial_Dept()
     {
         this.DeptName = "New NC Department";
-        this.DeptFloor = 0;
+        this.DeptLevel = 0;
         this.DeptRoom = "No room attached";
     }
-    public Non_Curatorial_Dept(String[] s)
+    public Non_Curatorial_Dept(String deptName,String cleanerName, Date date)
     {
-        this.DeptName = s[0];
-        this.DeptFloor = Integer.valueOf(s[1]);
-        this.DeptRoom = s[2];
+        this.DeptName = deptName;
+        this.DeptLevel = 0;
+        this.DeptRoom = "nai";
+        this.date = date;
+        this.cleanerName=cleanerName;
     }
-    public Non_Curatorial_Dept(String name, int floor, String room)
+    public Non_Curatorial_Dept(String name, int floor, String room, Date date)
     {
         this.DeptName = name;
-        this.DeptFloor = floor;
+        this.DeptLevel = floor;
         this.DeptRoom = room;
+        this.date = date;
     }
     public void setDeptName(String name)
     {
@@ -31,18 +39,24 @@ public class Non_Curatorial_Dept implements Departments{
     {
         return this.DeptName;
     }
-    public void setDeptFloor(int floor)
-    {
-        this.DeptFloor = floor;
+    public String getDeptRoom(){
+        return this.DeptRoom;
     }
-    public int getDeptFloor()
-    {
-        return this.DeptFloor;
+
+    @Override
+    public int getDeptLevel() {
+        return this.DeptLevel;
     }
+
+    public void setDeptLevel(int floor)
+    {
+        this.DeptLevel = floor;
+    }
+
     public void addDept(String name, int floor)
     {
         this.DeptName = name;
-        this.DeptFloor = floor;
+        this.DeptLevel = floor;
     }
     public void setCleaner(String[] s)
     {
@@ -51,5 +65,12 @@ public class Non_Curatorial_Dept implements Departments{
     public String getCleaner()
     {
         return "Cleaner er kaaj ki?";
+    }
+    public Date getDate(){
+        return this.date;
+    }
+    public String getCleanerName()
+    {
+        return this.cleanerName;
     }
 }

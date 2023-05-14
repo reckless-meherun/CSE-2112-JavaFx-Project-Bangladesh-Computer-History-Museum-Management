@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="DB files of Department added">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Museum/src/main/java/application/museum/HelloApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="9cd796e0-45fb-4090-88f1-1c8b09ef8002" name="Changes" comment="right side bar of aboutus edited" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,12 +21,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OCmKgwVlEGMTkKqQPofBexNfI9" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -39,6 +36,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
@@ -46,7 +44,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/University Stuff/2-1/OOP Project/Museum/Code/Museum/lib/sqlite-jdbc-3.7.2.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/meher/OneDrive/Desktop/OurProject/CSE-2112-JavaFx-Project-Bangladesh-Computer-History-Museum-Management/Code/Museum/lib/sqlite-jdbc-3.7.2.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.14369158&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -67,6 +65,19 @@
       <recent name="application.museum.controller" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,27 +86,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681072875681</updated>
-    </task>
-    <task id="LOCAL-00001" summary="DashboardController updated">
-      <created>1681646113946</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1681646113946</updated>
-    </task>
-    <task id="LOCAL-00002" summary="buttons of dashboard screen updated">
-      <created>1681646278824</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1681646278824</updated>
-    </task>
-    <task id="LOCAL-00003" summary="navigation handler created">
-      <created>1681646753050</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1681646753050</updated>
     </task>
     <task id="LOCAL-00004" summary="Hover effect added">
       <created>1681656224055</created>
@@ -349,7 +339,98 @@
       <option name="project" value="LOCAL" />
       <updated>1683238871326</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="database connected to Inventory">
+      <created>1683808178525</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1683808178525</updated>
+    </task>
+    <task id="LOCAL-00041" summary="database connected to Inventory">
+      <created>1683808220938</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1683808220938</updated>
+    </task>
+    <task id="LOCAL-00042" summary="database connected to Inventory">
+      <created>1683815431386</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1683815431386</updated>
+    </task>
+    <task id="LOCAL-00043" summary="BOD Page made">
+      <created>1683880210902</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1683880210902</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Ticket Calculator made">
+      <created>1683880654995</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1683880654995</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Scroll bar edited">
+      <created>1683881561930</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1683881561930</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Tables edited">
+      <created>1683882133330</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1683882133330</updated>
+    </task>
+    <task id="LOCAL-00047" summary="security okk..">
+      <created>1683887565302</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1683887565302</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Dashboard redesigned">
+      <created>1683903163451</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1683903163451</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Dashboard redesigned">
+      <created>1683904261858</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1683904261858</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Left side bar of about us edited">
+      <created>1683926942673</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1683926942673</updated>
+    </task>
+    <task id="LOCAL-00051" summary="scroll bar of department treeview edited">
+      <created>1683927616576</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1683927616576</updated>
+    </task>
+    <task id="LOCAL-00052" summary="right side bar of aboutus edited">
+      <created>1683928617770</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1683928617770</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -364,16 +445,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added sliding menu bar." />
-    <MESSAGE value="connected tickets now you can nevigate to tickets" />
-    <MESSAGE value="connected gallery" />
-    <MESSAGE value="about us input form ready" />
-    <MESSAGE value="Admins is now users." />
-    <MESSAGE value="added the table of about us..." />
-    <MESSAGE value="userpage complete... Eid Mubarak" />
-    <MESSAGE value="employee page is now completed." />
-    <MESSAGE value="some issue found and solved." />
-    <MESSAGE value="changing screens with Departments treeview" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Curatorial Department added" />
     <MESSAGE value="Security Scene added" />
     <MESSAGE value="auditorium scene added" />
@@ -389,7 +461,17 @@
     <MESSAGE value="db file of inventory, photoGallry and ticket pages uploaded" />
     <MESSAGE value="Ticket jrxml edited" />
     <MESSAGE value="Ticket pdf added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ticket pdf added" />
+    <MESSAGE value="database connected to Inventory" />
+    <MESSAGE value="BOD Page made" />
+    <MESSAGE value="Ticket Calculator made" />
+    <MESSAGE value="Scroll bar edited" />
+    <MESSAGE value="Tables edited" />
+    <MESSAGE value="security okk.." />
+    <MESSAGE value="Dashboard redesigned" />
+    <MESSAGE value="Left side bar of about us edited" />
+    <MESSAGE value="scroll bar of department treeview edited" />
+    <MESSAGE value="right side bar of aboutus edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="right side bar of aboutus edited" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

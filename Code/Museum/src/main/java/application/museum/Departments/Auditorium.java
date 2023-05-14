@@ -1,31 +1,32 @@
 package application.museum.Departments;
 
+import java.util.Date;
+
 public class Auditorium extends Non_Curatorial_Dept{
-    private String GalleryName;
+
     private String AttendantName;
     private String TechnicianName;
     private String SpeakerName;
 
     public Auditorium()
     {
-        this.GalleryName = "Not Set";
         this.AttendantName = "Not Set";
         this.SpeakerName = "Not Set";
         this.TechnicianName = "Not Set";
     }
-    public Auditorium(String gal, String att, String spk, String tech)
+    public Auditorium(String attendantName, String speakerName, String technicianName,String name, int floor, String room, Date date)
     {
-        this.GalleryName = gal;
-        this.AttendantName = att;
-        this.SpeakerName = spk;
-        this.TechnicianName = tech;
+        super(name, floor, room, date);
+        this.AttendantName = attendantName;
+        this.SpeakerName = speakerName;
+        this.TechnicianName = technicianName;
     }
-    public Auditorium(String[] s)
+    public Auditorium(String attendantName, String speakerName, String technicianName,String name, String cleanerName, Date date)
     {
-        this.GalleryName = s[0];
-        this.AttendantName = s[1];
-        this.SpeakerName = s[2];
-        this.TechnicianName = s[3];
+        super(name, cleanerName, date);
+        this.AttendantName = attendantName;
+        this.SpeakerName = speakerName;
+        this.TechnicianName = technicianName;
     }
     public void setAttendantName(String name)
     {
@@ -35,21 +36,14 @@ public class Auditorium extends Non_Curatorial_Dept{
     {
         return this.AttendantName;
     }
-    public void setGalleryName(String gal)
-    {
-        this.GalleryName = gal;
-    }
-    public String getGalleryName()
-    {
-        return this.GalleryName;
-    }
+
     public void setTechnicianName(String tech)
     {
         this.TechnicianName = tech;
     }
     public String getSpeakerName()
     {
-        return this.TechnicianName;
+        return this.SpeakerName;
     }
     public void setSpeakerName(String speaker)
     {

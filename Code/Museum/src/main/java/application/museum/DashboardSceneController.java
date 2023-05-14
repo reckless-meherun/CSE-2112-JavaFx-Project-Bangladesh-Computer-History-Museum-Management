@@ -374,8 +374,8 @@ public class DashboardSceneController extends NavigationHandler implements Initi
                 }
                 BOD bod= new BOD(result.getString("name"),gm,result.getString("phone"),resourcesPath.toString(),result.getString("email"),result.getDate("dob"),result.getString("adress"),p,result.getInt("ID"));
                 datalist.add(bod);
-                System.out.println(bod.getName());
-                System.out.println(bod.getDesignation());
+                //System.out.println(bod.getName());
+                //System.out.println(bod.getDesignation());
 
 
 
@@ -487,7 +487,7 @@ public class DashboardSceneController extends NavigationHandler implements Initi
                 //System.out.println("11");
             }
             catch (Exception e){
-                System.out.println(president.getPhoto());
+                //System.out.println(president.getPhoto());
             }
 
         }
@@ -503,7 +503,7 @@ public class DashboardSceneController extends NavigationHandler implements Initi
             imageViewPres11.setVisible(true);
             try {
                 imageViewPres11.setImage(new Image("file:/"+vpres.getPhoto()));
-                System.out.println(vpres.getPhoto());
+                //System.out.println(vpres.getPhoto());
             }
             catch (Exception e){
                 System.out.println(vpres.getPhoto());
@@ -638,7 +638,7 @@ public class DashboardSceneController extends NavigationHandler implements Initi
                 break;
             }
         }
-        System.out.println(resourcesPath);
+        //System.out.println(resourcesPath);
 
         String name = imageFile.getName();
         String extension = "";

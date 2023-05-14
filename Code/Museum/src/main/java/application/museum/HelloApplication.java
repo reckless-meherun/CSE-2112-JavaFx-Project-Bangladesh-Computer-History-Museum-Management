@@ -30,6 +30,7 @@ public class HelloApplication extends Application
             String css = this.getClass().getResource("hello.css").toExternalForm();
             scene.getStylesheets().add(css);
             stage.setTitle("Bangladesh Computer History Museum Management System");
+            //stage.setFullScreen(true);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
@@ -39,3 +40,4 @@ public class HelloApplication extends Application
         }
     }
 }
+
