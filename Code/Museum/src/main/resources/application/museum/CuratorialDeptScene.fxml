@@ -183,7 +183,7 @@
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </TextField>
-                              <TableView fx:id="curatorialDeptable" layoutY="106.0" onSort="#selectData" prefHeight="358.0" prefWidth="686.0" stylesheets="@../../CSS/TicketCalculator.Css">
+                              <TableView fx:id="curatorialDeptable" layoutY="106.0" onSort="#selectData" prefHeight="358.0" prefWidth="686.0" styleClass="Scrollpane">
                                 <columns>
                                   <TableColumn fx:id="dateCol" prefWidth="79.20004272460938" text="Last Update" />
                                     <TableColumn fx:id="departmentCol" prefWidth="109.60006713867188" text="Department" />
@@ -193,6 +193,12 @@
                                     <TableColumn fx:id="cleanerCol" prefWidth="80.800048828125" text="Cleaner" />
                                     <TableColumn fx:id="envConCol" prefWidth="191.1999389648438" text="Environment Controller" />
                                 </columns>
+                                 <stylesheets>
+                                    <URL value="@../../CSS/TicketCalculator.Css" />
+                                    <URL value="@../../CSS/TicketsScene.css" />
+                                    <URL value="@../../CSS/TicketsScene2.css" />
+                                    <URL value="@../../CSS/BODScreen.css" />
+                                 </stylesheets>
                               </TableView>
                               <Button fx:id="GoBackButton" layoutX="52.0" layoutY="479.0" mnemonicParsing="false" onAction="#goBack" prefHeight="41.0" prefWidth="83.0" style="-fx-cursor: hand;" styleClass="TransparentButtons" stylesheets="@hello.css" text="Go Back" textFill="#1e0202">
                                  <font>
