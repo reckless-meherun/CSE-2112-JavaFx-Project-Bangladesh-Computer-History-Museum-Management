@@ -183,7 +183,7 @@
                                     <Font name="Cambria" size="14.0" />
                                  </font>
                               </TextField>
-                              <TableView fx:id="curatorialDeptable" layoutY="106.0" onSort="#selectData" prefHeight="358.0" prefWidth="686.0" styleClass="Scrollpane">
+                              <TableView fx:id="curatorialDeptable" layoutY="106.0" onMouseClicked="#selectData" onSort="#selectData" prefHeight="358.0" prefWidth="686.0" styleClass="Scrollpane">
                                 <columns>
                                   <TableColumn fx:id="dateCol" prefWidth="79.20004272460938" text="Last Update" />
                                     <TableColumn fx:id="departmentCol" prefWidth="109.60006713867188" text="Department" />
