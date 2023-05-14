@@ -231,7 +231,7 @@
                                        </stylesheets>
                                     </TextField>
                                     <ImageView fx:id="show" fitHeight="79.0" fitWidth="91.0" layoutX="280.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ComboBox fx:id="Department" layoutX="209.0" layoutY="107.0" prefHeight="35.0" prefWidth="166.0" promptText="Dpartment" styleClass="signUpScreenLeftInput">
+                                    <ComboBox fx:id="Department" layoutX="209.0" layoutY="107.0" prefHeight="35.0" prefWidth="166.0" promptText="Department" styleClass="signUpScreenLeftInput">
                                        <stylesheets>
                                           <URL value="@../../CSS/TicketsScene.css" />
                                           <URL value="@../../CSS/TicketsScene2.css" />

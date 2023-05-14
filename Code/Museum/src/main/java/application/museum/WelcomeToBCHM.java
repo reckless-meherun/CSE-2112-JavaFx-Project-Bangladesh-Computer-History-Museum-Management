@@ -49,7 +49,7 @@ public class WelcomeToBCHM extends Application
             StringBuilder st=new StringBuilder(getrespath().append("\\src\\main\\resources\\Assets\\SmallLogo.png"));
             Image img = new Image(st.toString());
             stage.getIcons().add(img);
-            //stage.setFullScreen(true);
+//            stage.setFullScreen(true);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();

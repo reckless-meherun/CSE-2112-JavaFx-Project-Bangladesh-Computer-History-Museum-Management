@@ -1192,7 +1192,7 @@ public class Educatorcontroller implements Initializable
     }
     @FXML
     void delete(ActionEvent event) {
-        String sql = "DELETE from educator WHERE `ID` ='" + "1" + "'";
+        String sql = "DELETE from educator WHERE `ID` ='" + Id.getText() + "'";
 
         try
         {
