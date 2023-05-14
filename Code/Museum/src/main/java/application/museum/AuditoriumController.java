@@ -306,6 +306,7 @@ public class AuditoriumController implements Initializable {
     }
     public void showData()
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         ObservableList<Auditorium> showlist = datalist();
         tlastup.setCellValueFactory(new PropertyValueFactory<>("date"));
         tgalary.setCellValueFactory(new PropertyValueFactory<>("DeptName"));

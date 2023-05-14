@@ -131,6 +131,7 @@ public class SecurityController implements Initializable
 
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         try
         {
             NavigationHandler.HandleNavigation(name_here, home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);
@@ -430,7 +431,7 @@ public class SecurityController implements Initializable
     }
     public void showData(ObservableList<Security> showlist)
     {
-
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         tlastup.setCellValueFactory(new PropertyValueFactory<>("date"));
         tcamid.setCellValueFactory(cellData ->
         {

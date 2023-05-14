@@ -706,6 +706,7 @@ public class Developercontroller implements Initializable {
     }
     public void showData()
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         ObservableList<developer> showlist = datalist();
         id_t.setCellValueFactory(new PropertyValueFactory<>("employee_id"));
         name_t.setCellValueFactory(new PropertyValueFactory<>("name"));

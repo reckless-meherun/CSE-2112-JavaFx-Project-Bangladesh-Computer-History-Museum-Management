@@ -419,6 +419,7 @@ public class AdminsController implements Initializable
 
     public void showData()
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         ObservableList<Admins> showlist = datalist();
         id_table.setCellValueFactory(new PropertyValueFactory<>("id"));
         username_table.setCellValueFactory(new PropertyValueFactory<>("username"));

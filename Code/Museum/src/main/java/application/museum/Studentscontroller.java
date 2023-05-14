@@ -835,7 +835,7 @@ public class Studentscontroller implements Initializable
     }
     public void showData(ObservableList<Students> showlist)
     {
-
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         t_id.setCellValueFactory(new PropertyValueFactory<>("StudentID"));
         t_name.setCellValueFactory(new PropertyValueFactory<>("name"));
         t_gender.setCellValueFactory(new PropertyValueFactory<>("gender"));

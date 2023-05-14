@@ -21,9 +21,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,6 +42,8 @@ import static java.lang.String.valueOf;
 
 public class Curatorial_deptController implements Initializable
 {
+    @FXML
+    private Text ProfileIcon;
     @FXML
     public TreeView<String> treeView;
     @FXML
@@ -456,7 +458,7 @@ public class Curatorial_deptController implements Initializable
         guideField.setValue(valueOf(curDept.getGuideName()));
         cleanerField.setValue(valueOf(curDept.getCleanerName()));
         envConField.setValue(valueOf(curDept.getEnvConName()));
-        galleryNoField.setText("");
+        galleryNoField.setText(valueOf(curDept.getRoom()));
         levelField.setText(valueOf(curDept.getDeptLevel()));
     }
 
@@ -511,6 +513,7 @@ public class Curatorial_deptController implements Initializable
 
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         try
         {
             NavigationHandler.HandleNavigation("CuratorialDeptScene.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);

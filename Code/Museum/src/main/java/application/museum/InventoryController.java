@@ -406,6 +406,7 @@ public class InventoryController implements Initializable
 
     public void showData()
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         ObservableList<Artifacts> showlist = artifactList();
         docNoCol.setCellValueFactory(new PropertyValueFactory<>("doc_no"));
         dateCol.setCellValueFactory(new PropertyValueFactory<>("lastUpdate"));

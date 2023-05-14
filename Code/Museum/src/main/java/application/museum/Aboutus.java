@@ -760,6 +760,7 @@ public class Aboutus implements Initializable
     }
     public void showData()
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         ArrayList<BOD> Datalist=datalist();
         worklist.clear();
         BOD president=null;

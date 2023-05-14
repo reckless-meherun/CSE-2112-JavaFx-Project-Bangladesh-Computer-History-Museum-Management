@@ -740,6 +740,7 @@ public class Employeecontroller implements Initializable
 
     public void showData()
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         ObservableList<Employee> showlist = datalist();
         id_t.setCellValueFactory(new PropertyValueFactory<>("employee_id"));
         name_t.setCellValueFactory(new PropertyValueFactory<>("name"));

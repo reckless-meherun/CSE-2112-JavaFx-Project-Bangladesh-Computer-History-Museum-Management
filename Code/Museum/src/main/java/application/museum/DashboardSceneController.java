@@ -550,7 +550,7 @@ public class DashboardSceneController extends NavigationHandler implements Initi
             notice4.setText("Notice Four");
             dateField4.setText("dateField4");
         }
-
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
     }
     @FXML
     void update_Crud(Integer a, String notice) throws IOException

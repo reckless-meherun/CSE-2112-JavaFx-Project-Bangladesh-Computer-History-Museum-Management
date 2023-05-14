@@ -368,7 +368,7 @@ public class TicketController implements Initializable
     }
     public void showData(ObservableList<Visitor> showlist)
     {
-
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         dateCol.setCellValueFactory(new PropertyValueFactory<>("last_vis_date"));
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         ageCol.setCellValueFactory(new PropertyValueFactory<>("age"));
@@ -600,6 +600,7 @@ public class TicketController implements Initializable
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         try
         {
             NavigationHandler.HandleNavigation("Tickets.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);

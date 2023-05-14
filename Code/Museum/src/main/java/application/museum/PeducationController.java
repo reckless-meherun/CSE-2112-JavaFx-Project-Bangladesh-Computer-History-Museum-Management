@@ -636,6 +636,7 @@ public class PeducationController implements Initializable {
 
     public void showData()
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         ObservableList<course> showlist = datalist();
         cname_t.setCellValueFactory(new PropertyValueFactory<>("CourseName"));
         stdate_t.setCellValueFactory(new PropertyValueFactory<>("StartingDate"));

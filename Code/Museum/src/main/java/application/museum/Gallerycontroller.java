@@ -601,6 +601,7 @@ public class Gallerycontroller implements Initializable
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         try
         {
             NavigationHandler.HandleNavigation("PhotoGalleryScene.fxml", home, treeView, photogallery, articles, aboutus, tickets, LogoutButton, GoBackButton);

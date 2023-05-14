@@ -959,7 +959,7 @@ public class Educatorcontroller implements Initializable
     }
     public void showData(ObservableList<educator> showlist)
     {
-
+        ProfileIcon.setText(String.valueOf(DBUtils.username.charAt(0)));
         id_t.setCellValueFactory(new PropertyValueFactory<>("employee_id"));
         name_t.setCellValueFactory(new PropertyValueFactory<>("name"));
         gender_t.setCellValueFactory(new PropertyValueFactory<>("gender"));
