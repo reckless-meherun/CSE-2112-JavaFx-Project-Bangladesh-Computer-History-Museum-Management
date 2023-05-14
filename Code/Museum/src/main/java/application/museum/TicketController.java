@@ -551,6 +551,21 @@ public class TicketController implements Initializable
 
             System.out.println("File Generated");
 
+            File file = new File(pdf);
+            if (file.exists()) {
+                if (Desktop.isDesktopSupported()) {
+                    try {
+                        Desktop.getDesktop().open(file);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    System.out.println("Desktop not supported.");
+                }
+            } else {
+                System.out.println("File not found.");
+            }
+
         } catch (Exception ex)
         {
             System.out.println(ex);
