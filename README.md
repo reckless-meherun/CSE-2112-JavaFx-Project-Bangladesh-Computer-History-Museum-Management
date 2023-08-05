@@ -7,8 +7,8 @@ Database: SQLite
 Style: CSS
 
 Developers: 
-1. Meherun Farzana, Roll 05
-2. Himel Roy, Roll 13
-3. Aniket Joarder, Roll 48
+1. Meherun Farzana
+2. Aniket Joarder
+3. Himel Roy
 
 YouTube Link: https://youtu.be/3IZPSrC3JgI 
